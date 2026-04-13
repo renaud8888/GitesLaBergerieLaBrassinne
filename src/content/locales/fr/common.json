@@ -1,0 +1,497 @@
+{
+  "meta": {
+    "siteTitle": "La Bergerie & La Brassine - Gites de charme a Libin",
+    "siteDescription": "Deux gites romantiques a Libin, dans les Ardennes belges, pour une escapade chaleureuse, chic et authentique en amoureux."
+  },
+  "nav": {
+    "home": "Accueil",
+    "bergerie": "La Bergerie",
+    "brassine": "La Brassine",
+    "around": "Experiences",
+    "guide": "Guide pratique",
+    "contact": "Contact",
+    "reserve": "Reserver"
+  },
+  "footer": {
+    "tagline": "Deux gites de charme installes dans une ancienne batisse a Libin, penses pour les sejours a deux, les attentions delicates et les reservations directes en toute simplicite.",
+    "quickLinks": "Navigation",
+    "contactTitle": "Nous joindre",
+    "reserveTitle": "Reservation directe",
+    "reserveText": "WhatsApp est le moyen le plus simple pour verifier une disponibilite, poser une question ou preparer une attention romantique.",
+    "copyright": "La Bergerie & La Brassine - Libin, Belgique"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Escapade romantique en Ardenne",
+      "title": "Deux gites de charme pour ralentir, se retrouver et savourer l'instant.",
+      "description": "A Libin, La Bergerie et La Brassine accueillent les voyageurs dans une ambiance chic, douce et chaleureuse. Une ancienne batisse pleine d'ame, deux cocons pensés pour les sejours a deux, et une region qui invite a la deconnexion.",
+      "primaryCta": "Voir les disponibilites",
+      "secondaryCta": "Ecrire sur WhatsApp",
+      "imageAlt": "Vue du domaine des gites a Libin",
+      "stats": [
+        { "value": "2", "label": "gites de charme pour 2 personnes" },
+        { "value": "5,0/5", "label": "sur Airbnb pour les deux adresses" },
+        { "value": "Libin", "label": "au coeur des Ardennes belges" }
+      ]
+    },
+    "intro": {
+      "eyebrow": "L'esprit des lieux",
+      "title": "Recus avec soin, presque comme a la maison",
+      "paragraphs": [
+        "La Bergerie & La Brassine sont deux gites de charme niches a Libin, dans les Ardennes. Ils ont ete amenages avec douceur dans une ancienne batisse authentique, en melant matieres naturelles, confort soigne et petits details qui changent tout.",
+        "Ici, les lits sont faits avant votre arrivee, les serviettes sont pretes, la cuisine est vraiment equipee, et l'accueil se fait simplement, humainement, avec cette envie sincere que vous passiez un tres beau sejour.",
+        "Le site a ete pense pour vous aider a vous projeter, reserver facilement et trouver rapidement toutes les informations pratiques utiles avant votre venue."
+      ],
+      "highlights": [
+        { "title": "Une adresse pour les sejours a deux", "text": "Chaque gite accueille 2 personnes dans une atmosphere romantique, cocooning et rassurante." },
+        { "title": "Une region parfaite pour un week-end", "text": "Balades, bonnes tables, villages de caractere et jolies decouvertes autour de Libin, Redu, Mirwart et Saint-Hubert." },
+        { "title": "Reservation directe simple", "text": "WhatsApp, email ou Airbnb selon votre preference, sans moteur complexe ni parcours inutile." },
+        { "title": "Des attentions a personnaliser", "text": "Champagne, fleurs, decoration romantique, bon cadeau ou box surprise pour preparer une vraie parenthese a deux." }
+      ]
+    },
+    "gites": {
+      "eyebrow": "Les deux gites",
+      "title": "Deux ambiances, un meme sens du charme",
+      "description": "La Bergerie seduit par son espace et sa lumiere. La Brassine enveloppe par son cote plus intime et cocooning. Les deux partagent le meme soin dans les finitions et la meme envie de faire plaisir.",
+      "discover": "Decouvrir le gite",
+      "items": {
+        "bergerie": {
+          "name": "La Bergerie",
+          "tagline": "Spacieuse, romantique, lumineuse",
+          "capacity": "2 personnes",
+          "description": "Le plus grand des deux gites, ideal pour ceux qui aiment l'espace, la douceur d'un decor shabby chic et les matinées calmes dans le jardin a l'arriere.",
+          "bullets": [
+            "Le plus spacieux des deux gites",
+            "Jardin a l'arriere",
+            "Ambiance chic et chaleureuse"
+          ]
+        },
+        "brassine": {
+          "name": "La Brassine",
+          "tagline": "Intime, douce, cocooning",
+          "capacity": "2 personnes",
+          "description": "Plus petite, plus enveloppante, pensee pour l'intimite. Un cocon de plain-pied avec jardin a l'avant et une vraie sensation de retraite a deux.",
+          "bullets": [
+            "Le plus cocooning des deux",
+            "Plain-pied",
+            "Jardin a l'avant"
+          ]
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Bien pense",
+      "title": "Tout ce qu'il faut pour profiter sans se poser mille questions",
+      "description": "Le site et le sejour ont ete imagines pour rendre les choses fluides, belles et simples du premier clic jusqu'au depart.",
+      "items": [
+        { "icon": "bed", "title": "Lits faits a l'arrivee", "text": "Draps en lin de qualite, chambre prete et sensation de confort des les premieres minutes." },
+        { "icon": "utensils", "title": "Cuisine vraiment equipee", "text": "Four, lave-vaisselle, machine a cafe, verres a vin et tout le necessaire pour cuisiner a deux." },
+        { "icon": "wifi", "title": "Wi-Fi partout", "text": "Connexion stable dans tout le logement, avec Ethernet disponible si besoin." },
+        { "icon": "tv", "title": "TV 4K et streaming", "text": "Pour les soirees au chaud, les jours de pluie ou les parenthèses cocooning apres une balade." },
+        { "icon": "car", "title": "Parking facile", "text": "7 places disponibles au total et borne de recharge electrique sur demande." },
+        { "icon": "heart", "title": "Accueil tres humain", "text": "Remise des cles en main propre, conseils sur la region et grande disponibilite en cas de souci." }
+      ]
+    },
+    "romantic": {
+      "eyebrow": "Bons cadeaux & options",
+      "title": "Preparer une surprise romantique",
+      "description": "Pour un anniversaire, une demande speciale ou simplement l'envie de faire plaisir, certaines attentions peuvent etre preparees sur demande.",
+      "items": [
+        { "title": "Champagne a l'arrivee", "text": "Une bouteille fraiche pour ouvrir le week-end avec elegance." },
+        { "title": "Bouquet de fleurs", "text": "Un accueil encore plus doux avec une touche florale pleine de charme." },
+        { "title": "Decoration romantique", "text": "Une ambiance soignee pour surprendre son ou sa partenaire des l'ouverture de la porte." },
+        { "title": "Bon cadeau", "text": "Une belle idee a offrir pour une escapade a deux en Ardenne." }
+      ]
+    },
+    "region": {
+      "title": "Nos coups de coeur dans la region",
+      "text": "Bonnes tables, balades, villages pleins de caractere, idees a deux et adresses faciles a recommander sans hesitation autour de Libin.",
+      "cta": "Explorer les alentours",
+      "guideCta": "Lire le guide pratique"
+    },
+    "gallery": {
+      "title": "Apercu du domaine",
+      "images": [
+        { "src": "/images/home/2.avif", "alt": "Ambiance La Bergerie" },
+        { "src": "/images/home/2b.avif", "alt": "Ambiance La Brassine" },
+        { "src": "/images/home/3.avif", "alt": "Detail La Bergerie" },
+        { "src": "/images/home/3b.avif", "alt": "Detail La Brassine" }
+      ]
+    },
+    "reviews": {
+      "eyebrow": "Avis voyageurs",
+      "title": "Des sejours qui laissent une belle impression",
+      "description": "Quelques temoignages selectionnes pour refleter l'experience vecue sur place, avec des liens directs vers Airbnb et Google a remplacer ou enrichir facilement plus tard.",
+      "items": [
+        { "author": "Marie & Thomas", "origin": "Bruxelles", "gite": "La Bergerie", "text": "Un vrai cocon. Tout etait elegant, apaisant, tres propre, et l'accueil etait absolument charmant." },
+        { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "On a adore le cote intime, la douceur de la decoration et le calme des lieux. Parfait pour se retrouver a deux." },
+        { "author": "Sophie & Antoine", "origin": "Liege", "gite": "La Bergerie", "text": "Le niveau de soin est rare. On sent qu'ici tout a ete pense pour que le sejour soit simple, beau et confortable." }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Reservation",
+      "title": "Envie d'une parenthese romantique dans les Ardennes ?",
+      "text": "Choisissez le gite qui vous ressemble, contactez l'hote en direct sur WhatsApp ou retrouvez aussi les deux adresses sur Airbnb.",
+      "whatsapp": "Parler du sejour sur WhatsApp",
+      "contact": "Faire une demande via le formulaire"
+    }
+  },
+  "gites": {
+    "common": {
+      "bookAirbnb": "Reserver sur Airbnb",
+      "bookWhatsapp": "Reserver via WhatsApp",
+      "galleryEyebrow": "Galerie immersive",
+      "galleryTitle": "Photos & ambiance",
+      "practicalSheet": "Fiche pratique",
+      "capacity": "Capacite",
+      "persons": "personnes",
+      "bedroom": "Chambre",
+      "bed": "Lit",
+      "bathroom": "Salle de bain",
+      "reviews": "avis",
+      "highlights": "Points forts",
+      "stayInfo": "Informations de sejour",
+      "guestLove": "Ce que les voyageurs apprecient",
+      "faqEyebrow": "FAQ",
+      "faqTitle": "Questions frequentes",
+      "otherGite": "Et si vous preferiez l'autre ambiance ?"
+    },
+    "bergerie": {
+      "meta": {
+        "title": "La Bergerie - Gite romantique a Libin",
+        "description": "Le plus grand des deux gites de charme a Libin. Une adresse romantique, lumineuse, avec jardin a l'arriere, cuisine equipee et ambiance shabby chic."
+      },
+      "hero": {
+        "eyebrow": "Gite de charme a Libin",
+        "title": "La Bergerie",
+        "description": "Une escapade romantique plus spacieuse, lumineuse et douce, dans un decor shabby chic pense pour les sejours a deux."
+      },
+      "story": {
+        "eyebrow": "Presentation",
+        "title": "Le charme d'un lieu qui respire la douceur",
+        "lead": "La Bergerie est le plus grand des deux gites. Elle seduit par ses volumes confortables, sa lumiere naturelle et sa sensation d'espace sans perdre l'intimite du lieu.",
+        "paragraphs": [
+          "Dans cette ancienne batisse renovee avec soin, la decoration melange les matieres naturelles, les tonalites douces et des details shabby chic qui donnent au sejour une vraie personnalite.",
+          "La piece de vie invite a ralentir, la chambre a se retirer du rythme quotidien, et la cuisine permet de preparer un diner a deux sans rien improviser.",
+          "A l'arriere, le jardin prolonge l'experience avec un espace calme et verdoyant pour le cafe du matin, l'apero du soir ou un moment simplement paisible."
+        ]
+      },
+      "galleryIntro": "Une galerie prevue pour tes propres visuels plus tard, deja structuree avec lightbox et convention de fichiers claire.",
+      "highlights": [
+        "Le plus spacieux des deux gites",
+        "Ambiance romantique et shabby chic",
+        "Acces au jardin a l'arriere",
+        "Cuisine tres bien equipee",
+        "TV QLED 4K et streaming",
+        "Lits faits a l'arrivee et linge soigne",
+        "Parfait pour un week-end a deux au calme"
+      ],
+      "stayInfo": [
+        { "title": "Arrivee & accueil", "text": "Arrivee entre 16:00 et 23:00, avec remise des cles en main propre et accueil simple, chaleureux et attentionne." },
+        { "title": "Confort au quotidien", "text": "Serviettes fournies, lits prepares, Wi-Fi, television, cuisine equipee et hotes disponibles en cas de besoin." },
+        { "title": "Stationnement", "text": "Parking gratuit sur place. Borne de recharge electrique possible sur demande." }
+      ],
+      "reviewHighlight": {
+        "author": "Avis mis en avant",
+        "text": "Un sejour qui allie charme, confort et vraie sensation d'etre bien recu. La Bergerie plait souvent aux couples qui veulent plus d'espace et une atmosphere tres apaisante."
+      },
+      "outdoor": {
+        "title": "Le jardin a l'arriere",
+        "text": "C'est l'un de ses grands atouts. Cet espace prolonge le gite vers l'exterieur avec une sensation de tranquillite tres agreable."
+      },
+      "faqIntro": "Une FAQ specifique pour aider a se projeter et limiter les questions repetitives avant reservation ou avant l'arrivee.",
+      "faq": [
+        { "question": "La Bergerie est-elle plus grande que La Brassine ?", "answer": "Oui. C'est le gite le plus spacieux des deux, ce qui plait beaucoup aux couples qui souhaitent davantage d'espace de vie." },
+        { "question": "Le jardin est-il bien accessible depuis le gite ?", "answer": "Oui, La Bergerie donne acces au jardin a l'arriere, un vrai plus pour profiter du calme en exterieur." },
+        { "question": "Peut-on cuisiner facilement sur place ?", "answer": "Oui, la cuisine est tres bien equipee pour un week-end a deux: four, cuisiniere, lave-vaisselle, machine a cafe et les essentiels sont deja prevus." },
+        { "question": "Le gite convient-il pour une occasion speciale ?", "answer": "Oui, tout a fait. C'est une tres belle option pour une surprise romantique, un anniversaire ou un week-end a deux avec options sur demande." }
+      ]
+    },
+    "brassine": {
+      "meta": {
+        "title": "La Brassine - Gite cocooning a Libin",
+        "description": "Un gite plus intime et cocooning a Libin, de plain-pied, avec jardin a l'avant et une ambiance romantique pensee pour l'intimite."
+      },
+      "hero": {
+        "eyebrow": "Gite de charme a Libin",
+        "title": "La Brassine",
+        "description": "Un cocon de charme plus intime, plus enveloppant, ideal pour les couples qui cherchent douceur, calme et intimite."
+      },
+      "story": {
+        "eyebrow": "Presentation",
+        "title": "Un nid douillet pense pour l'intimite",
+        "lead": "La Brassine est plus petite que La Bergerie, mais c'est justement ce qui fait tout son charme. Elle est pensee comme un cocon chaleureux, rassurant et tres agreable a vivre a deux.",
+        "paragraphs": [
+          "Le logement est de plain-pied, ce qui rend le sejour tres fluide et confortable. L'ambiance est douce, romantique et enveloppante, avec une vraie impression de retraite intime.",
+          "Chaque espace a ete compose pour offrir une sensation de bien-etre immediat: une chambre cosy, une piece de vie chaleureuse et tout ce qu'il faut pour cuisiner, ralentir et profiter du moment.",
+          "Le jardin a l'avant ajoute encore a cette impression d'intimite, comme une petite bulle reservee a votre week-end."
+        ]
+      },
+      "galleryIntro": "La galerie est deja prete a accueillir tes visuels definitifs et a proposer une consultation fluide sur mobile comme sur desktop.",
+      "highlights": [
+        "Le plus cocooning des deux gites",
+        "Atmosphere intime et rassurante",
+        "Logement entierement de plain-pied",
+        "Jardin a l'avant",
+        "Cuisine tres bien equipee",
+        "TV QLED 4K et streaming",
+        "Parfait pour surprendre son ou sa partenaire"
+      ],
+      "stayInfo": [
+        { "title": "Arrivee & accueil", "text": "Arrivee entre 16:00 et 23:00, avec remise des cles en main propre et accueil attentionne." },
+        { "title": "Confort cocooning", "text": "Lits faits, linge fourni, stores occultants, Wi-Fi et equipements complets pour profiter sans sortir si vous avez envie de rester entre vous." },
+        { "title": "Accessibilite & exterieur", "text": "Le logement est de plain-pied et dispose d'un jardin a l'avant, tres agreable pour un moment au calme." }
+      ],
+      "reviewHighlight": {
+        "author": "Avis mis en avant",
+        "text": "La Brassine est souvent choisie pour son atmosphere tres intime. Les voyageurs aiment le cote cocooning, la douceur generale et la sensation d'un vrai refuge a deux."
+      },
+      "outdoor": {
+        "title": "Le jardin a l'avant",
+        "text": "Cet espace renforce le sentiment d'intimite et offre un prolongement agreable pour un cafe, un verre ou un petit dejeuner dehors."
+      },
+      "faqIntro": "Une FAQ specifique pour aider les voyageurs a comprendre tout de suite l'ambiance et le type de sejour que propose La Brassine.",
+      "faq": [
+        { "question": "La Brassine est-elle plus petite que La Bergerie ?", "answer": "Oui, elle est plus compacte, mais c'est justement ce qui renforce son cote cocooning et intime." },
+        { "question": "Le logement est-il de plain-pied ?", "answer": "Oui, entierement. C'est un vrai point de confort pour de nombreux voyageurs." },
+        { "question": "L'ambiance est-elle differente de La Bergerie ?", "answer": "Oui. La Brassine est plus enveloppante, plus intime, avec un esprit tres cocon pour les couples qui cherchent une parenthese douce." },
+        { "question": "Peut-on tout de meme cuisiner et profiter du sejour sur place ?", "answer": "Oui, bien sur. La cuisine est equipee, la television permet le streaming et tout est pense pour un week-end tres confortable a deux." }
+      ]
+    }
+  },
+  "equipment": {
+    "title": "Equipements",
+    "categories": [
+      { "title": "Confort & bien-etre", "items": ["Seche-cheveux", "Eau chaude", "Cintres", "Linge de lit", "Stores occultants", "Etendoir a linge", "Rangements", "Climatisation", "Chauffage"] },
+      { "title": "Divertissement", "items": ["Television", "Connexion ethernet", "Jeux de societe", "Wi-Fi"] },
+      { "title": "Cuisine", "items": ["Cuisine", "Refrigerateur", "Micro-ondes", "Equipements de cuisine de base", "Huile, sel, poivre", "Vaisselle et couverts", "Congelateur", "Lave-vaisselle", "Cuisiniere", "Four", "Bouilloire electrique", "Machine a cafe", "Verres a vin", "Grille-pain"] },
+      { "title": "Exterieur", "items": ["Jardin", "Mobilier exterieur", "Espace repas exterieur", "Barbecue", "Ustensiles de barbecue", "Chaises longues"] },
+      { "title": "Pratique & securite", "items": ["Entree privee", "Parking gratuit", "Detecteur de fumee", "Extincteur", "Borne de recharge electrique sur demande"] }
+    ]
+  },
+  "around": {
+    "meta": {
+      "title": "Experiences & alentours - Libin et Ardennes",
+      "description": "Restaurants, promenades, idees de week-end romantique, villages de charme et activites autour de Libin, Redu, Mirwart et Saint-Hubert."
+    },
+    "hero": {
+      "eyebrow": "A vivre a deux",
+      "title": "Les Ardennes comme on aime les recommander",
+      "description": "Pas une simple liste d'adresses, mais une selection de lieux et d'idees qui correspondent vraiment a l'esprit du sejour: beau, simple, gourmand, nature et chaleureux."
+    },
+    "intro": {
+      "eyebrow": "Nos reperes",
+      "title": "De belles idees autour de Libin",
+      "text": "Voici une structure facile a enrichir plus tard avec tes propres coups de coeur. Elle est deja pre-remplie avec des suggestions coherentes pour guider les voyageurs et repondre a leurs questions."
+    },
+    "sections": [
+      {
+        "key": "restaurants",
+        "eyebrow": "Bonnes tables",
+        "title": "Nos restaurants favoris",
+        "intro": "Des adresses pour un diner romantique, un repas local ou une pause gourmande bien choisie.",
+        "items": [
+          { "name": "Le Cor de Chasse", "location": "Wierde / proche Saint-Hubert", "distance": "environ 20 min", "description": "Une belle table pour une sortie plus gastronomique, quand on veut marquer le coup avec elegance.", "tags": ["gastronomique", "occasion speciale"] },
+          { "name": "Le Relais de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "Le cadre, la nature tout autour et le charme du village en font une belle idee de repas a deux.", "tags": ["nature", "charme"] },
+          { "name": "Le Fournil de Redu", "location": "Redu", "distance": "10 min", "description": "Parfait pour une pause dejeuner, un brunch ou une douceur apres la promenade dans le village du livre.", "tags": ["tea room", "gourmand"] },
+          { "name": "Une bonne table a Libin", "location": "Libin", "distance": "5 min", "description": "Structure prevue pour integrer facilement tes vraies adresses preferees au fil du temps.", "tags": ["a personnaliser"] }
+        ]
+      },
+      {
+        "key": "walks",
+        "eyebrow": "Nature",
+        "title": "Nos idees de promenades",
+        "intro": "Des balades faciles a recommander selon l'envie du moment: foret, village, eau, panoramas.",
+        "items": [
+          { "name": "Le domaine de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "Un grand classique pour marcher dans un cadre tres ardennais, entre patrimoine et nature.", "tags": ["foret", "beau cadre"] },
+          { "name": "Les chemins autour de Redu", "location": "Redu", "distance": "10 min", "description": "Ideal pour combiner balade douce, librairies, galeries et pause gourmande.", "tags": ["village", "romantique"] },
+          { "name": "Saint-Hubert cote nature", "location": "Saint-Hubert", "distance": "15 min", "description": "Une option parfaite pour les voyageurs qui veulent alterner patrimoine et immersion en foret.", "tags": ["patrimoine", "foret"] },
+          { "name": "Promenade libre autour de Libin", "location": "Libin", "distance": "sur place", "description": "Le secteur se prete tres bien aux marches tranquilles en fin de journee ou au petit matin.", "tags": ["simple", "sur place"] }
+        ]
+      },
+      {
+        "key": "romantic",
+        "eyebrow": "Week-end a deux",
+        "title": "Idees de week-end romantique",
+        "intro": "Quelques combinaisons simples et tres efficaces pour faire de deux jours une vraie parenthese.",
+        "items": [
+          { "name": "Arriver, s'installer, ne rien presser", "description": "Un verre, une douche chaude, un diner simple au gite et une soiree cocooning avec streaming.", "tags": ["slow stay", "cocooning"] },
+          { "name": "Marcher puis bien diner", "description": "Une balade a Mirwart ou Redu, puis une belle table pour prolonger le moment.", "tags": ["balade", "diner"] },
+          { "name": "Surprendre son ou sa partenaire", "description": "Ajouter champagne, fleurs ou decoration romantique pour donner au sejour une dimension encore plus memorielle.", "tags": ["surprise", "option romantique"] },
+          { "name": "Un week-end sans programme lourd", "description": "Quelques reperes, peu de contraintes, et beaucoup de temps pour etre simplement bien ensemble.", "tags": ["detente", "a deux"] }
+        ]
+      },
+      {
+        "key": "activities",
+        "eyebrow": "A partager",
+        "title": "Activites a deux",
+        "intro": "Pour ceux qui aiment ponctuer leur sejour de petites sorties bien choisies.",
+        "items": [
+          { "name": "Le village du livre de Redu", "location": "Redu", "distance": "10 min", "description": "Une promenade tres agreable entre bouquineries, ateliers et ambiance unique.", "tags": ["culture", "flaner"] },
+          { "name": "Euro Space Center", "location": "Transinne", "distance": "10 min", "description": "Une sortie originale et facile d'acces pour varier les plaisirs.", "tags": ["insolite", "couple"] },
+          { "name": "Balades a velo", "location": "autour de Libin", "distance": "variable", "description": "Routes et paysages se pretent bien a une sortie tranquille ou plus sportive.", "tags": ["velo", "nature"] },
+          { "name": "Patrimoine de Saint-Hubert", "location": "Saint-Hubert", "distance": "15 min", "description": "Une jolie idee pour combiner architecture, atmosphere et pause en terrasse.", "tags": ["ville", "patrimoine"] }
+        ]
+      },
+      {
+        "key": "rainy",
+        "eyebrow": "Quand il pleut",
+        "title": "Activites en cas de pluie",
+        "intro": "Parce qu'un sejour reussi ne depend pas du soleil. La pluie peut tres bien aller avec les Ardennes.",
+        "items": [
+          { "name": "Journee cocooning au gite", "description": "Streaming, jeux de societe, cuisine a deux et plaisir de rester au chaud sans culpabiliser.", "tags": ["sur place", "douceur"] },
+          { "name": "Librairies et galeries de Redu", "location": "Redu", "distance": "10 min", "description": "Le village du livre garde tout son charme sous un ciel gris.", "tags": ["culture", "couvert partiel"] },
+          { "name": "Une belle table en milieu de journee", "description": "Profiter de la pluie pour s'offrir un dejeuner plus long et plus tranquille.", "tags": ["gourmand"] },
+          { "name": "Patrimoine local", "description": "Musees, basilique ou visite de village selon vos envies du moment.", "tags": ["decouverte"] }
+        ]
+      },
+      {
+        "key": "villages",
+        "eyebrow": "A decouvrir",
+        "title": "Villages & patrimoine",
+        "intro": "Des reperes faciles a citer aux voyageurs qui veulent explorer sans aller trop loin.",
+        "items": [
+          { "name": "Libin", "distance": "sur place", "description": "Point de depart ideal pour rayonner dans la region sans faire trop de route.", "tags": ["base ideale"] },
+          { "name": "Redu", "distance": "10 min", "description": "Le village du livre reste une sortie incontournable, pleine de charme et d'identite.", "tags": ["livres", "charme"] },
+          { "name": "Saint-Hubert", "distance": "15 min", "description": "Une ville de caractere, facile a recommander pour son patrimoine et son atmosphere.", "tags": ["basilique", "terrasses"] },
+          { "name": "Mirwart", "distance": "20 min", "description": "Un village a la fois paisible et spectaculaire, tres photogenique, tres coherent avec l'esprit du sejour.", "tags": ["nature", "patrimoine"] }
+        ]
+      },
+      {
+        "key": "cycling",
+        "eyebrow": "En mouvement",
+        "title": "Balades a velo",
+        "intro": "Une rubrique deja prete pour integrer ensuite tes plus beaux parcours ou partenariats location.",
+        "items": [
+          { "name": "Boucle douce autour de Libin", "distance": "variable", "description": "Pour les couples qui veulent sortir a velo sans se lancer dans une grosse journee.", "tags": ["facile"] },
+          { "name": "Vers Redu et les villages voisins", "distance": "25 km", "description": "Un itineraire ideal pour combiner campagne, charme et pause gourmande.", "tags": ["panorama"] },
+          { "name": "Version sportive en Ardenne", "distance": "a definir", "description": "Structure prete pour ajouter plus tard des parcours typiquement ardennais.", "tags": ["sportif", "a completer"] }
+        ]
+      }
+    ],
+    "finalCta": {
+      "title": "Besoin d'aide pour organiser votre sejour ?",
+      "text": "Le guide pratique repond aux questions les plus courantes et la page contact permet de preparer une reservation directe ou une surprise romantique.",
+      "primary": "Passer a la reservation",
+      "secondary": "Lire le guide pratique"
+    }
+  },
+  "guide": {
+    "meta": {
+      "title": "Guide pratique - Preparer votre sejour a Libin",
+      "description": "Toutes les informations utiles avant l'arrivee: check-in, check-out, parking, linge, Wi-Fi, television, chauffage, tri des dechets et depart."
+    },
+    "hero": {
+      "eyebrow": "Preparer votre sejour",
+      "title": "Des informations utiles, simples et rassurantes",
+      "description": "Cette page sert a repondre rapidement aux questions recurrentes et a rendre l'experience fluide avant, pendant et apres le sejour."
+    },
+    "quickFacts": [
+      { "title": "Arrivee", "text": "Entre 16:00 et 23:00" },
+      { "title": "Depart", "text": "Avant 10:00" },
+      { "title": "Cles", "text": "Remise en main propre" },
+      { "title": "Parking", "text": "7 places au total" }
+    ],
+    "sections": [
+      {
+        "eyebrow": "Avant votre venue",
+        "title": "Arrivee, accueil et installation",
+        "text": "L'arrivee se fait entre 16:00 et 23:00. Les cles sont remises en main propre, dans un esprit simple et chaleureux. Si vous avez une heure approximative d'arrivee, il est utile de la communiquer a l'avance.",
+        "points": [
+          { "title": "Linge fourni", "text": "Les serviettes sont prevues et les lits sont faits avant votre arrivee." },
+          { "title": "Maison attenante", "text": "La maison de l'hote est attenante, ce qui permet une aide rapide en cas de besoin tout en laissant votre sejour tranquille." }
+        ]
+      },
+      {
+        "eyebrow": "Sur place",
+        "title": "Confort, cuisine, Wi-Fi et television",
+        "text": "Tout est prevu pour que vous puissiez profiter du gite sans devoir improviser. La cuisine est bien equipee, le Wi-Fi est disponible dans tout le logement et la television permet le streaming.",
+        "points": [
+          { "title": "Cuisine", "text": "Four, cuisiniere, micro-ondes, lave-vaisselle, refrigerateur, congelateur, machine a cafe, bouilloire, grille-pain, vaisselle, verres a vin et essentiels de cuisine." },
+          { "title": "TV & streaming", "text": "Allumez la television, choisissez l'entree ou l'application deja accessible, puis connectez-vous a votre service si besoin. Pensez simplement a vous deconnecter avant le depart." },
+          { "title": "Wi-Fi", "text": "Le Wi-Fi couvre tout le logement. Une connexion Ethernet est egalement disponible." },
+          { "title": "Recharge electrique", "text": "Une borne de recharge peut etre proposee sur demande. Mieux vaut prevenir avant l'arrivee." }
+        ]
+      },
+      {
+        "eyebrow": "A savoir",
+        "title": "Chauffage, dechets et petites consignes utiles",
+        "text": "Le chauffage fonctionne via une pompe a chaleur. Pour garder le logement agreable et eviter les deregulations, il vaut mieux ne pas modifier fortement les reglages sans necessite.",
+        "points": [
+          { "title": "Pompe a chaleur", "text": "Le systeme est regle pour offrir une temperature confortable. Si quelque chose vous semble inhabituel, mieux vaut prevenir l'hote plutot que de changer plusieurs reglages." },
+          { "title": "Tri des dechets", "text": "Le tri est demande. Les sacs peuvent etre laisses devant la porte en le signalant, puis l'hote se charge du reste." },
+          { "title": "Petit rappel", "text": "Merci de respecter le calme des lieux, le materiel mis a disposition et l'esprit chaleureux de la maison." }
+        ]
+      },
+      {
+        "eyebrow": "Avant de partir",
+        "title": "Que faire avant le depart",
+        "text": "L'idee n'est pas de transformer la fin du sejour en corvee. Quelques gestes simples suffisent pour rendre le depart fluide.",
+        "bullets": [
+          "Verifier de ne rien oublier dans le logement",
+          "Laisser la cuisine dans un etat raisonnablement propre",
+          "Rassembler les dechets tries et les signaler si necessaire",
+          "Fermer les fenetres et couper les appareils non utiles",
+          "Respecter l'heure de depart avant 10:00"
+        ]
+      }
+    ],
+    "faqEyebrow": "Questions utiles",
+    "faqTitle": "FAQ pratique",
+    "faqDescription": "Une FAQ pensee pour reduire les messages repetitifs sans donner une impression rigide ou froide.",
+    "faq": [
+      { "question": "Peut-on arriver tard ?", "answer": "L'arrivee est prevue entre 16:00 et 23:00. Si vous pensez arriver en fin de plage, mieux vaut prevenir." },
+      { "question": "Le parking est-il simple ?", "answer": "Oui. Il y a 7 places de parking au total, ce qui rend l'arrivee tres facile." },
+      { "question": "Doit-on apporter le linge de lit ou les serviettes ?", "answer": "Non, tout est fourni. Les lits sont faits a l'arrivee et les serviettes sont deja prevues." },
+      { "question": "Peut-on regler le chauffage soi-meme ?", "answer": "Le chauffage par pompe a chaleur est deja regle pour etre confortable. En cas de souci, le mieux est de contacter l'hote avant de modifier les reglages." },
+      { "question": "Comment gerer les dechets ?", "answer": "Le tri est demande. Vous pouvez laisser les sacs devant la porte en le signalant, puis l'hote s'occupe du reste." },
+      { "question": "Y a-t-il quelqu'un a joindre facilement en cas de souci ?", "answer": "Oui. L'hote est disponible en cas de besoin, et la maison attenante permet une aide rapide si necessaire." }
+    ]
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact & reservation - La Bergerie & La Brassine",
+      "description": "Contactez facilement l'hote via WhatsApp, email ou formulaire pour reserver La Bergerie ou La Brassine a Libin."
+    },
+    "hero": {
+      "eyebrow": "Contact & reservation",
+      "title": "Parler d'un sejour, poser une question, reserver simplement",
+      "description": "WhatsApp est privilegie pour les reservations directes et les demandes rapides. Le formulaire est deja pret pour une future connexion a un vrai backend."
+    },
+    "direct": {
+      "eyebrow": "Reservation directe",
+      "title": "Le moyen le plus simple pour commencer",
+      "text": "Pour verifier une disponibilite, demander un conseil ou preparer une surprise romantique, WhatsApp est mis en avant. Les liens Airbnb restent egalement visibles pour rassurer et laisser le choix.",
+      "whatsapp": "Contacter sur WhatsApp"
+    },
+    "practicalTitle": "Informations utiles",
+    "practicalCards": [
+      { "title": "Adresse", "text": "Rue du Cure 19, 6890 Libin, Belgique. Affichee ici pour les voyageurs qui ont vraiment besoin de la retrouver facilement." },
+      { "title": "Check-in / check-out", "text": "Arrivee entre 16:00 et 23:00, depart avant 10:00." },
+      { "title": "Reservations", "text": "Directement via WhatsApp ou via les liens Airbnb de chaque gite selon la preference du voyageur." }
+    ],
+    "addressTitle": "Adresse",
+    "form": {
+      "eyebrow": "Formulaire de prise de contact",
+      "title": "Envoyer une demande",
+      "text": "Le formulaire est front-end only pour l'instant, avec une structure propre et facile a connecter ensuite a EmailJS, Resend, Formspree ou une route API Next.js.",
+      "labels": {
+        "firstName": "Prenom",
+        "lastName": "Nom",
+        "email": "Email",
+        "phone": "Telephone",
+        "dates": "Dates souhaitees",
+        "gite": "Gite souhaite",
+        "guests": "Nombre de voyageurs",
+        "message": "Message",
+        "submit": "Envoyer la demande",
+        "success": "Le formulaire est pret cote interface. Il reste a le brancher a ton outil d'envoi prefere.",
+        "options": {
+          "bergerie": "La Bergerie",
+          "brassine": "La Brassine",
+          "undecided": "Je ne sais pas encore"
+        }
+      }
+    }
+  }
+}

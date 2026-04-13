@@ -1,0 +1,50 @@
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
+
+type ButtonLinkProps = {
+  href: string;
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'whatsapp';
+  external?: boolean;
+  className?: string;
+  showArrow?: boolean;
+};
+
+export function ButtonLink({
+  href,
+  children,
+  variant = 'primary',
+  external = false,
+  className,
+  showArrow = false,
+}: ButtonLinkProps) {
+  const classes = cn(
+    variant === 'primary' && 'button-primary',
+    variant === 'secondary' && 'button-secondary',
+    variant === 'whatsapp' && 'button-whatsapp',
+    className,
+  );
+
+  const content = (
+    <>
+      <span>{children}</span>
+      {showArrow ? <ArrowRight size={16} /> : null}
+    </>
+  );
+
+  if (external) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer" className={classes}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={classes}>
+      {content}
+    </Link>
+  );
+}
