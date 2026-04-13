@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { MobileActionBar } from '@/components/layout/mobile-action-bar';
 import { WhatsappFab } from '@/components/layout/whatsapp-fab';
 import { getDictionary } from '@/lib/dictionaries';
 import { isLocale, locales, type Locale } from '@/lib/i18n';
@@ -46,6 +47,7 @@ export default async function LocaleLayout({
       <Header locale={locale as Locale} nav={dict.nav} />
       <main>{children}</main>
       <Footer locale={locale as Locale} nav={dict.nav} footer={dict.footer} />
+      <MobileActionBar locale={locale as Locale} reserveLabel={dict.nav.reserve} />
       <WhatsappFab />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     </>
