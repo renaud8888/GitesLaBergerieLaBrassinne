@@ -61,15 +61,17 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
                   {contact.direct.whatsapp}
                 </ButtonLink>
-                <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external>
-                  Airbnb - La Bergerie
-                </ButtonLink>
-                <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external>
-                  Airbnb - La Brassine
-                </ButtonLink>
-                <ButtonLink href={`mailto:${siteConfig.email}`} variant="secondary" external>
+                <div className="grid gap-3 md:grid-cols-2">
+                  <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external>
+                    Airbnb · La Bergerie
+                  </ButtonLink>
+                  <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external>
+                    Airbnb · La Brassine
+                  </ButtonLink>
+                </div>
+                <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center rounded-[1.15rem] border border-taupe-100 bg-white/78 px-4 py-3 text-sm text-taupe-700 transition hover:bg-white">
                   {siteConfig.email}
-                </ButtonLink>
+                </a>
               </div>
             </article>
 
@@ -117,11 +119,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="rounded-[1.5rem] border border-taupe-100 bg-white/78 p-5">
-                <p className="inline-flex items-center gap-2 font-display text-2xl text-taupe-900">
-                  <WhatsAppIcon className="h-4 w-4 text-[#25D366]" />
-                  Canal principal
-                </p>
-                <p className="mt-3 text-sm leading-7 text-taupe-500">WhatsApp reste le meilleur moyen pour une réponse rapide, une question pratique ou une demande de surprise romantique.</p>
+                <p className="font-display text-2xl text-taupe-900">Réponse rapide</p>
+                <p className="mt-3 text-sm leading-7 text-taupe-500">Vous pouvez réserver en direct, poser une question simple ou, si vous préférez, poursuivre via Airbnb ensuite.</p>
               </div>
               <div className="rounded-[1.5rem] border border-taupe-100 bg-white/78 p-5">
                 <p className="inline-flex items-center gap-2 font-display text-2xl text-taupe-900">

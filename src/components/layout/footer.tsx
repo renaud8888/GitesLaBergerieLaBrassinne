@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { Mail, MapPin, MessageCircle, Star } from 'lucide-react';
 
-import { ButtonLink } from '@/components/common/button-link';
-import { GoogleIcon, WhatsAppIcon } from '@/components/common/brand-icons';
+import { GoogleIcon } from '@/components/common/brand-icons';
 import { siteConfig } from '@/data/site';
 import type { Locale } from '@/lib/i18n';
 
@@ -31,30 +30,34 @@ export function Footer({
 }) {
   return (
     <footer className="mt-24 overflow-hidden bg-[linear-gradient(180deg,#4c3b33,#2b211d)] text-cream-100">
-      <div className="section-shell relative py-14 md:py-18">
+      <div className="section-shell relative py-12 md:py-16">
         <div className="absolute right-[-8rem] top-[-5rem] h-64 w-64 rounded-full bg-rose-200/12 blur-3xl" />
-        <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr_1fr]">
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.85fr_0.95fr]">
           <div className="relative">
             <p className="eyebrow-chip border-white/12 bg-white/8 text-cream-100">Maison d’hôtes romantique</p>
-            <p className="mt-5 font-display text-4xl text-cream-50 md:text-5xl">La Bergerie & La Brassine</p>
+            <p className="mt-5 font-display text-4xl text-cream-50 md:text-[3.6rem]">La Bergerie & La Brassine</p>
             <p className="mt-4 max-w-md text-sm leading-7 text-cream-100/78">{footer.tagline}</p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`}>{nav.contact}</ButtonLink>
-              <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm text-cream-100/82">
+              <Link href={`/${locale}/contact`} className="inline-flex items-center gap-2 transition hover:text-cream-50">
+                <MessageCircle size={15} />
+                {nav.contact}
+              </Link>
+              <a href={siteConfig.whatsapp.default} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-cream-50">
+                <MessageCircle size={15} />
                 WhatsApp
-              </ButtonLink>
+              </a>
             </div>
           </div>
 
           <div className="rounded-[1.6rem] border border-white/10 bg-white/6 p-6">
             <p className="font-display text-2xl text-cream-50">{footer.quickLinks}</p>
             <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
-              <Link href={`/${locale}`} className="hover:text-cream-50">{nav.home}</Link>
-              <Link href={`/${locale}/gites/la-bergerie`} className="hover:text-cream-50">{nav.bergerie}</Link>
-              <Link href={`/${locale}/gites/la-brassine`} className="hover:text-cream-50">{nav.brassine}</Link>
-              <Link href={`/${locale}/alentours`} className="hover:text-cream-50">{nav.around}</Link>
-              <Link href={`/${locale}/guide-pratique`} className="hover:text-cream-50">{nav.guide}</Link>
-              <Link href={`/${locale}/contact`} className="hover:text-cream-50">{nav.contact}</Link>
+              <Link href={`/${locale}`} className="transition hover:text-cream-50">{nav.home}</Link>
+              <Link href={`/${locale}/gites/la-bergerie`} className="transition hover:text-cream-50">{nav.bergerie}</Link>
+              <Link href={`/${locale}/gites/la-brassine`} className="transition hover:text-cream-50">{nav.brassine}</Link>
+              <Link href={`/${locale}/alentours`} className="transition hover:text-cream-50">{nav.around}</Link>
+              <Link href={`/${locale}/guide-pratique`} className="transition hover:text-cream-50">{nav.guide}</Link>
+              <Link href={`/${locale}/contact`} className="transition hover:text-cream-50">{nav.contact}</Link>
             </div>
           </div>
 
@@ -62,11 +65,11 @@ export function Footer({
             <div className="rounded-[1.6rem] border border-white/10 bg-white/6 p-6">
               <p className="font-display text-2xl text-cream-50">{footer.contactTitle}</p>
               <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
-                <a href={siteConfig.whatsapp.default} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3">
+                <a href={siteConfig.whatsapp.default} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 transition hover:text-cream-50">
                   <MessageCircle size={16} />
                   WhatsApp
                 </a>
-                <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-3">
+                <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-3 transition hover:text-cream-50">
                   <Mail size={16} />
                   {siteConfig.email}
                 </a>
@@ -84,12 +87,12 @@ export function Footer({
             <div className="rounded-[1.6rem] border border-white/10 bg-white/8 p-6">
               <p className="font-display text-2xl text-cream-50">{footer.reserveTitle}</p>
               <p className="mt-2 text-sm leading-7 text-cream-100/75">{footer.reserveText}</p>
-              <div className="mt-5 grid gap-3">
-                <a href={siteConfig.googleReviews.bergerie} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 text-sm">
+              <div className="mt-5 grid gap-3 text-sm text-cream-100/82">
+                <a href={siteConfig.googleReviews.bergerie} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 transition hover:bg-white/12">
                   <GoogleIcon className="h-4 w-4" />
                   Avis Google
                 </a>
-                <a href={siteConfig.airbnb.bergerie} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 text-sm">
+                <a href={siteConfig.airbnb.bergerie} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 transition hover:bg-white/12">
                   <Star size={15} fill="currentColor" />
                   Airbnb
                 </a>

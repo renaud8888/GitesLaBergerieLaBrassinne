@@ -1,4 +1,4 @@
-import { Quote, Sparkles, Star } from 'lucide-react';
+import { Bath, BedDouble, Quote, Sparkles, Star, Trees, UserRound } from 'lucide-react';
 
 import { GoogleIcon, WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
@@ -31,6 +31,13 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
       ...home.gites.items.brassine,
     },
   ];
+  const totalReviews = giteStats.bergerie.reviews + giteStats.brassine.reviews;
+  const compactFacts = [
+    { icon: UserRound, label: '2 personnes' },
+    { icon: Trees, label: '1 chambre' },
+    { icon: BedDouble, label: '1 lit' },
+    { icon: Bath, label: '1 salle de bain' },
+  ];
 
   return (
     <>
@@ -61,13 +68,20 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
                 {home.hero.secondaryCta}
               </ButtonLink>
             </div>
-            <div className="mt-12 grid gap-4 rounded-[2rem] border border-white/15 bg-white/10 p-5 backdrop-blur md:grid-cols-3">
-              {home.hero.stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-3xl font-display text-cream-50">{stat.value}</p>
-                  <p className="mt-1 text-sm text-cream-100/82">{stat.label}</p>
-                </div>
-              ))}
+            <div className="mt-10 flex flex-wrap gap-3 rounded-[1.75rem] border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-50">
+                <Star size={14} fill="currentColor" />
+                5,0/5 Airbnb
+              </span>
+              <span className="inline-flex items-center rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-100/88">
+                {totalReviews} avis
+              </span>
+              <span className="inline-flex items-center rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-100/88">
+                Libin, Ardennes
+              </span>
+              <span className="inline-flex items-center rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-100/88">
+                Séjour à deux
+              </span>
             </div>
           </div>
         </div>
@@ -90,6 +104,17 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
                     </div>
                     <div className="rounded-full bg-rose-100 px-4 py-2 text-xs uppercase tracking-[0.2em] text-taupe-700">{gite.capacity}</div>
                   </div>
+                  <div className="mt-5 flex flex-wrap gap-3 text-sm text-taupe-700">
+                    {compactFacts.map((fact) => {
+                      const Icon = fact.icon;
+                      return (
+                        <span key={fact.label} className="inline-flex items-center gap-2 rounded-full border border-taupe-100 bg-white/80 px-3 py-2">
+                          <Icon size={14} className="text-wood" />
+                          {fact.label}
+                        </span>
+                      );
+                    })}
+                  </div>
                   <p className="mt-5 text-base leading-8 text-taupe-500">{gite.description}</p>
                   <ul className="mt-5 grid gap-2 text-sm text-taupe-700">
                     {gite.bullets.map((bullet: string) => (
@@ -106,8 +131,8 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <ButtonLink href={gite.href}>{home.gites.discover}</ButtonLink>
-                      <ButtonLink href={gite.google} variant="secondary" external icon={<GoogleIcon className="h-4 w-4" />}>
-                        Google
+                      <ButtonLink href={gite.airbnb} variant="secondary" external>
+                        Airbnb
                       </ButtonLink>
                     </div>
                   </div>
@@ -257,19 +282,18 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
               <h2 className="mt-3 font-display text-4xl text-taupe-900 md:text-5xl">{home.finalCta.title}</h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-taupe-500">{home.finalCta.text}</p>
             </div>
-            <div className="grid gap-4">
-              <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external className="w-full justify-between" icon={<WhatsAppIcon className="h-4 w-4" />}>
-                {home.finalCta.whatsapp}
-              </ButtonLink>
+            <div className="grid gap-3">
               <ButtonLink href={`/${locale}/contact`} className="w-full justify-between">
                 {home.finalCta.contact}
               </ButtonLink>
-              <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="w-full justify-between">
-                Airbnb · La Bergerie
-              </ButtonLink>
-              <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external className="w-full justify-between">
-                Airbnb · La Brassine
-              </ButtonLink>
+              <div className="flex flex-wrap gap-3">
+                <ButtonLink href={siteConfig.whatsapp.default} variant="secondary" external className="flex-1 justify-center" icon={<WhatsAppIcon className="h-4 w-4" />}>
+                  {home.finalCta.whatsapp}
+                </ButtonLink>
+                <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="flex-1 justify-center">
+                  Airbnb
+                </ButtonLink>
+              </div>
             </div>
           </div>
         </div>

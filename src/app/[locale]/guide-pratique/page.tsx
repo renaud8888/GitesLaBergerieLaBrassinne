@@ -1,19 +1,14 @@
 import type { Metadata } from 'next';
-import { MessageCircle, Sparkles } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 import { ButtonLink } from '@/components/common/button-link';
 import { WhatsAppIcon } from '@/components/common/brand-icons';
-import { FaqAccordion } from '@/components/common/faq-accordion';
+import { GuidePanels } from '@/components/common/guide-panels';
 import { ImageFallback } from '@/components/common/image-fallback';
-import { SectionHeading } from '@/components/common/section-heading';
 import { siteConfig } from '@/data/site';
-import { getDictionary, type SiteDictionary } from '@/lib/dictionaries';
+import { getDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
-
-type GuideSection = SiteDictionary['guide']['sections'][number];
-type GuidePoint = NonNullable<GuideSection['points']>[number];
-type GuideQuickFact = SiteDictionary['guide']['quickFacts'][number];
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -56,59 +51,15 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
 
       <section className="section-space">
         <div className="section-shell-wide">
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {guide.quickFacts.map((fact: GuideQuickFact) => (
-              <article key={fact.title} className="surface-card-strong p-6">
-                <p className="text-xs uppercase tracking-[0.22em] text-wood">{fact.title}</p>
-                <p className="mt-3 font-display text-4xl text-taupe-900">{fact.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space pt-0">
-        <div className="section-shell-wide">
-          <div className="surface-card-strong flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between md:p-8">
-            <div>
-              <p className="eyebrow-chip"><Sparkles size={14} /> En un coup d’œil</p>
-              <p className="mt-4 font-display text-4xl text-taupe-900">Une page pensée pour éviter les questions répétitives</p>
-              <p className="mt-3 max-w-2xl text-base leading-8 text-taupe-500">Arrivée, départ, chauffage, télévision, tri, parking, aide sur place : l’essentiel est structuré ici pour être lu très vite sans effet “mode d’emploi”.</p>
-            </div>
-            <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<MessageCircle size={16} />}>
-              WhatsApp
-            </ButtonLink>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space pt-0">
-        <div className="section-shell-wide grid gap-8">
-          {guide.sections.map((section: GuideSection) => (
-            <section key={section.title} className="surface-card-strong p-6 md:p-8">
-              <SectionHeading eyebrow={section.eyebrow} title={section.title} description={section.text} />
-              {section.points?.length ? (
-                <div className="mt-6 grid gap-4 md:grid-cols-2">
-                  {section.points.map((point: GuidePoint) => (
-                    <article key={point.title} className="rounded-[1.5rem] border border-white/70 bg-white/80 p-5">
-                      <p className="font-display text-2xl text-taupe-900">{point.title}</p>
-                      <p className="mt-3 text-sm leading-7 text-taupe-500">{point.text}</p>
-                    </article>
-                  ))}
-                </div>
-              ) : null}
-              {section.bullets?.length ? (
-                <ul className="mt-6 grid gap-3 text-sm leading-7 text-taupe-500">
-                  {section.bullets.map((bullet: string) => (
-                    <li key={bullet} className="inline-flex gap-2 rounded-[1.25rem] border border-white/70 bg-white/80 px-4 py-3">
-                      <span className="mt-[0.6rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </section>
-          ))}
+          <GuidePanels
+            overviewTitle="Une page pensée pour être lue vite"
+            overviewText="Arrivée, départ, chauffage, télévision, tri, parking et aide sur place : l’essentiel est regroupé ici pour trouver l’information utile sans faire défiler de longs blocs."
+            quickFacts={guide.quickFacts}
+            sections={guide.sections}
+            faq={guide.faq}
+            faqTitle={guide.faqTitle}
+            faqEyebrow={guide.faqEyebrow}
+          />
         </div>
       </section>
 
@@ -128,9 +79,14 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
 
       <section className="section-space bg-white/35">
         <div className="section-shell-wide">
-          <SectionHeading eyebrow={guide.faqEyebrow} title={guide.faqTitle} description={guide.faqDescription} />
-          <div className="mt-8">
-            <FaqAccordion items={guide.faq} />
+          <div className="surface-card-strong flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between md:p-8">
+            <div>
+              <p className="font-display text-4xl text-taupe-900">{guide.faqTitle}</p>
+              <p className="mt-3 max-w-2xl text-base leading-8 text-taupe-500">{guide.faqDescription}</p>
+            </div>
+            <ButtonLink href={`/${locale}/contact`} variant="secondary" icon={<MessageCircle size={16} />}>
+              Besoin d’aide ?
+            </ButtonLink>
           </div>
         </div>
       </section>

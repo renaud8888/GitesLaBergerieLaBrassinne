@@ -30,18 +30,24 @@ export function Gallery({ images, previewCount = 8 }: GalleryProps) {
 
   return (
     <>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid auto-rows-[150px] gap-3 sm:grid-cols-2 md:auto-rows-[180px] lg:grid-cols-4">
         {previewImages.map((image, index) => {
           const isLastVisible = index === previewImages.length - 1 && remaining > 0;
+          const tileClass =
+            index === 0
+              ? 'sm:col-span-2 sm:row-span-2'
+              : index === 1
+                ? 'lg:col-span-2'
+                : '';
 
           return (
           <button
             key={image.src}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className="group relative overflow-hidden rounded-[1.4rem] border border-white/60 bg-white/60 text-left shadow-[0_10px_30px_rgba(89,63,49,0.08)]"
+            className={`group relative overflow-hidden rounded-[1.55rem] border border-white/60 bg-white/60 text-left shadow-[0_10px_30px_rgba(89,63,49,0.08)] ${tileClass}`}
           >
-            <div className="relative aspect-[4/3]">
+            <div className="relative h-full min-h-[150px]">
               <ImageFallback
                 src={image.src}
                 alt={image.alt}
@@ -51,9 +57,9 @@ export function Gallery({ images, previewCount = 8 }: GalleryProps) {
               />
             </div>
             {isLastVisible ? (
-              <div className="absolute inset-0 flex items-center justify-center bg-taupe-900/42 text-white">
-                <div className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold tracking-[0.14em]">
-                  +{remaining}
+              <div className="absolute inset-0 flex items-end justify-start bg-[linear-gradient(180deg,rgba(55,42,36,0.06),rgba(55,42,36,0.66))] p-5 text-white">
+                <div className="rounded-full border border-white/30 bg-white/12 px-5 py-3 text-sm font-semibold tracking-[0.14em] backdrop-blur">
+                  +{remaining} photos
                 </div>
               </div>
             ) : null}

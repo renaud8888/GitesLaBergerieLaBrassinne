@@ -48,21 +48,21 @@ export function Header({ locale, nav }: HeaderProps) {
   useEffect(() => setOpen(false), [pathname]);
 
   const shellClass = immersive && !scrolled
-    ? 'border-white/10 bg-[linear-gradient(180deg,rgba(45,34,29,0.35),rgba(45,34,29,0.06))] shadow-none'
+    ? 'border-white/60 bg-[rgba(255,250,245,0.92)] shadow-[0_12px_34px_rgba(89,63,49,0.08)] md:border-white/10 md:bg-[linear-gradient(180deg,rgba(45,34,29,0.35),rgba(45,34,29,0.06))] md:shadow-none'
     : 'border-white/35 bg-[rgba(255,250,245,0.78)] shadow-[0_12px_34px_rgba(89,63,49,0.08)]';
 
   const brandCardClass = immersive && !scrolled
-    ? 'border-white/12 bg-white/8 text-cream-50'
+    ? 'border-white/60 bg-[rgba(255,250,245,0.94)] text-taupe-900 md:border-white/12 md:bg-white/8 md:text-cream-50'
     : 'border-white/50 bg-[rgba(255,250,245,0.72)] text-taupe-900';
 
   return (
     <header className={cn('sticky top-0 z-50 backdrop-blur-xl transition-all duration-300', shellClass)}>
       <div className="section-shell flex items-center justify-between py-4">
         <Link href={`/${locale}`} className={cn('min-w-0 rounded-[1.45rem] border px-4 py-3 transition-all', brandCardClass)}>
-          <p className={cn('font-display text-2xl leading-none md:text-3xl', immersive && !scrolled ? 'text-cream-50' : 'text-taupe-900')}>
+          <p className={cn('font-display text-2xl leading-none md:text-3xl', immersive && !scrolled ? 'text-taupe-900 md:text-cream-50' : 'text-taupe-900')}>
             La Bergerie & La Brassine
           </p>
-          <p className={cn('mt-1 truncate text-[11px] uppercase tracking-[0.28em]', immersive && !scrolled ? 'text-cream-100/75' : 'text-taupe-500')}>
+          <p className={cn('mt-1 truncate text-[11px] uppercase tracking-[0.28em]', immersive && !scrolled ? 'text-taupe-500 md:text-cream-100/75' : 'text-taupe-500')}>
             Gîtes de charme à Libin
           </p>
         </Link>
@@ -79,9 +79,9 @@ export function Header({ locale, nav }: HeaderProps) {
                 className={cn(
                   'rounded-full border px-4 py-2.5 text-sm shadow-[0_8px_24px_rgba(89,63,49,0.08)] transition',
                   active
-                    ? 'border-taupe-700 bg-taupe-700 text-cream-50'
+                    ? 'border-taupe-800 bg-taupe-800 text-cream-50'
                     : immersive && !scrolled
-                      ? 'border-white/15 bg-white/8 text-cream-50 hover:bg-white/14'
+                      ? 'border-white/18 bg-white/10 text-cream-50 hover:bg-white/18'
                       : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900 hover:bg-white',
                 )}
               >
@@ -118,7 +118,7 @@ export function Header({ locale, nav }: HeaderProps) {
           onClick={() => setOpen((current) => !current)}
           className={cn(
             'rounded-full border p-3 shadow-[0_8px_24px_rgba(89,63,49,0.08)] xl:hidden',
-            immersive && !scrolled ? 'border-white/14 bg-white/8 text-cream-50' : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900',
+            immersive && !scrolled ? 'border-white/60 bg-[rgba(255,250,245,0.94)] text-taupe-900' : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900',
           )}
           aria-label="Open menu"
         >
@@ -128,23 +128,23 @@ export function Header({ locale, nav }: HeaderProps) {
 
       <div className={cn('fixed inset-0 z-50 transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
         <div className="absolute inset-0 bg-taupe-900/55 backdrop-blur-sm" onClick={() => setOpen(false)} />
-        <div className={cn('absolute right-0 top-0 h-full w-[88vw] max-w-sm border-l border-white/15 bg-[linear-gradient(180deg,#4e3d34,#2f241f)] p-6 text-cream-50 shadow-[0_30px_90px_rgba(0,0,0,0.24)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
+        <div className={cn('absolute right-0 top-0 h-full w-[90vw] max-w-sm border-l border-white/10 bg-[linear-gradient(180deg,#fffaf5,#efe2d4)] p-6 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.24)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
           <div className="flex items-center justify-between">
             <div>
               <p className="font-display text-3xl">La Bergerie & La Brassine</p>
-              <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-cream-100/70">Gîtes de charme à Libin</p>
+              <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gîtes de charme à Libin</p>
             </div>
-            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-white/15 bg-white/8 p-3">
+            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-taupe-200 bg-white/90 p-3">
               <X size={18} />
             </button>
           </div>
 
-          <div className="mt-8 grid gap-2">
+          <div className="mt-10 grid gap-3">
             {navItems.map((item) => (
               <Link
                 key={item.key}
                 href={`/${locale}${item.path}`}
-                className="rounded-[1.25rem] border border-white/10 bg-white/6 px-4 py-3 text-base text-cream-50/92"
+                className="rounded-[1.35rem] border border-white/80 bg-white/80 px-5 py-4 text-base font-medium text-taupe-900 shadow-[0_12px_24px_rgba(89,63,49,0.06)]"
                 onClick={() => setOpen(false)}
               >
                 {nav[item.key]}
@@ -157,7 +157,7 @@ export function Header({ locale, nav }: HeaderProps) {
               <Link
                 key={entry}
                 href={`/${entry}${normalized === '/' ? '' : normalized}`}
-                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em]', locale === entry ? 'bg-rose-200 text-taupe-900' : 'border border-white/14 bg-white/8 text-cream-100')}
+                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em]', locale === entry ? 'bg-taupe-800 text-cream-50' : 'border border-taupe-200 bg-white/90 text-taupe-700')}
               >
                 {localeLabels[entry]}
               </Link>
