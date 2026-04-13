@@ -102,6 +102,16 @@ export const featureIcons = {
   monitor: MonitorPlay,
 } as const;
 
+export const aroundSectionImages = {
+  restaurants: '/images/around/redu.jpg',
+  walks: '/images/around/foret.webp',
+  romantic: '/images/around/mirwart1.jpg',
+  activities: '/images/around/lesse1.jpg',
+  rainy: '/images/around/redu1.jpeg',
+  villages: '/images/around/mirwart.jpg',
+  cycling: '/images/around/velo.jpg',
+} as const;
+
 export function getBaseUrlForLocale(locale: Locale) {
   return `${siteConfig.url}/${locale}`;
 }

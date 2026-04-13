@@ -113,29 +113,30 @@ img {
   justify-content: center;
   gap: 0.625rem;
   border-radius: 999px;
-  padding: 0.95rem 1.35rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  padding: 0.95rem 1.4rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, color 180ms ease;
 }
 
 .button-primary {
-  background: var(--taupe-700);
+  background: linear-gradient(135deg, #6f5345, #9b775f);
   color: var(--cream-50);
-  box-shadow: 0 14px 34px rgba(90, 71, 60, 0.22);
+  box-shadow: 0 18px 38px rgba(111, 83, 69, 0.24);
 }
 
 .button-secondary {
-  border: 1px solid rgba(90, 71, 60, 0.18);
-  color: var(--taupe-700);
-  background: rgba(255, 250, 245, 0.75);
+  border: 1px solid rgba(90, 71, 60, 0.16);
+  color: var(--taupe-900);
+  background: rgba(255, 250, 245, 0.92);
+  box-shadow: 0 14px 30px rgba(89, 63, 49, 0.08);
 }
 
 .button-whatsapp {
   background: #25d366;
   color: white;
-  box-shadow: 0 16px 34px rgba(37, 211, 102, 0.22);
+  box-shadow: 0 18px 38px rgba(37, 211, 102, 0.26);
 }
 
 .button-primary:hover,

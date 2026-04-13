@@ -1,8 +1,10 @@
-import { Quote, Star } from 'lucide-react';
+import { Quote, Sparkles, Star } from 'lucide-react';
 
+import { GoogleIcon, WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
+import { StackedGallery } from '@/components/common/stacked-gallery';
 import { featureIcons, giteStats, siteConfig } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
 import type { Locale } from '@/lib/i18n';
@@ -16,6 +18,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
       image: giteStats.bergerie.heroImage,
       airbnb: giteStats.bergerie.airbnbUrl,
       rating: giteStats.bergerie.reviews,
+      google: giteStats.bergerie.googleUrl,
       ...home.gites.items.bergerie,
     },
     {
@@ -24,6 +27,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
       image: giteStats.brassine.heroImage,
       airbnb: giteStats.brassine.airbnbUrl,
       rating: giteStats.brassine.reviews,
+      google: giteStats.brassine.googleUrl,
       ...home.gites.items.brassine,
     },
   ];
@@ -33,7 +37,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0">
           <ImageFallback src="/images/home/1.avif" alt={home.hero.imageAlt} fill priority sizes="100vw" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,37,30,0.16),rgba(53,37,30,0.72))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,37,30,0.14),rgba(53,37,30,0.76))]" />
         </div>
         <div className="section-shell relative z-10 py-20 md:py-28 lg:py-32">
           <div className="max-w-3xl">
@@ -43,17 +47,17 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
               </div>
               <div>
                 <p className="font-display text-xl text-cream-50">La Bergerie & La Brassine</p>
-                <p className="text-[11px] uppercase tracking-[0.28em] text-cream-100/80">Gites de charme a Libin</p>
+                <p className="text-[11px] uppercase tracking-[0.28em] text-cream-100/80">Gîtes de charme à Libin</p>
               </div>
             </div>
             <p className="text-xs uppercase tracking-[0.35em] text-cream-100/90">{home.hero.eyebrow}</p>
             <h1 className="mt-4 font-display text-5xl leading-none text-cream-50 md:text-7xl">{home.hero.title}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-cream-100/88 md:text-xl">{home.hero.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`} className="bg-white text-taupe-900 shadow-none">
+              <ButtonLink href={`/${locale}/contact`} className="bg-[#f0c9c6] text-taupe-900 shadow-[0_18px_38px_rgba(240,201,198,0.32)]">
                 {home.hero.primaryCta}
               </ButtonLink>
-              <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external>
+              <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
                 {home.hero.secondaryCta}
               </ButtonLink>
             </div>
@@ -70,28 +74,6 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
       </section>
 
       <section className="section-space">
-        <div className="section-shell grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-          <div className="surface-card p-6 md:p-8">
-            <p className="text-xs uppercase tracking-[0.35em] text-wood">{home.intro.eyebrow}</p>
-            <h2 className="mt-3 font-display text-4xl text-taupe-900 md:text-5xl">{home.intro.title}</h2>
-            <div className="prose-copy mt-5 text-base text-taupe-500">
-              {home.intro.paragraphs.map((paragraph: string) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {home.intro.highlights.map((item) => (
-              <article key={item.title} className="surface-card p-6">
-                <p className="font-display text-3xl text-taupe-900">{item.title}</p>
-                <p className="mt-3 text-sm leading-7 text-taupe-500">{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space pt-0">
         <div className="section-shell">
           <SectionHeading eyebrow={home.gites.eyebrow} title={home.gites.title} description={home.gites.description} align="center" />
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
@@ -120,16 +102,47 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
                   <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
                     <div>
                       <p className="text-sm text-taupe-500">Airbnb</p>
-                      <p className="font-display text-2xl text-taupe-900">5,0/5 - {gite.rating} avis</p>
+                      <p className="font-display text-2xl text-taupe-900">5,0/5 · {gite.rating} avis</p>
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <ButtonLink href={gite.href}>{home.gites.discover}</ButtonLink>
-                      <ButtonLink href={gite.airbnb} variant="secondary" external>
-                        Airbnb
+                      <ButtonLink href={gite.google} variant="secondary" external icon={<GoogleIcon className="h-4 w-4" />}>
+                        Google
                       </ButtonLink>
                     </div>
                   </div>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space pt-0">
+        <div className="section-shell">
+          <SectionHeading eyebrow={home.gallery.eyebrow} title={home.gallery.title} description={home.gallery.description} align="center" />
+          <div className="mt-10">
+            <StackedGallery images={home.gallery.images} />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space pt-0">
+        <div className="section-shell grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+          <div className="surface-card p-6 md:p-8">
+            <p className="text-xs uppercase tracking-[0.35em] text-wood">{home.intro.eyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl text-taupe-900 md:text-5xl">{home.intro.title}</h2>
+            <div className="prose-copy mt-5 text-base text-taupe-500">
+              {home.intro.paragraphs.map((paragraph: string) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {home.intro.highlights.map((item) => (
+              <article key={item.title} className="surface-card p-6">
+                <p className="font-display text-3xl text-taupe-900">{item.title}</p>
+                <p className="mt-3 text-sm leading-7 text-taupe-500">{item.text}</p>
               </article>
             ))}
           </div>
@@ -185,14 +198,17 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
                 </ButtonLink>
               </div>
             </article>
-            <article className="surface-card p-6">
-              <p className="font-display text-4xl text-taupe-900">{home.gallery.title}</p>
-              <div className="mt-5 grid grid-cols-2 gap-3">
-                {home.gallery.images.map((image) => (
-                  <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem]">
-                    <ImageFallback src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 50vw, 25vw" />
-                  </div>
-                ))}
+            <article className="surface-card overflow-hidden p-0">
+              <div className="relative aspect-[4/3]">
+                <ImageFallback src="/images/home/5b.avif" alt="Escapade romantique en Ardenne" fill sizes="(max-width: 1024px) 100vw, 30vw" />
+              </div>
+              <div className="p-6">
+                <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-wood">
+                  <Sparkles size={14} />
+                  {home.gallery.sideEyebrow}
+                </p>
+                <p className="mt-3 font-display text-4xl text-taupe-900">{home.gallery.sideTitle}</p>
+                <p className="mt-3 text-base leading-8 text-taupe-500">{home.gallery.sideText}</p>
               </div>
             </article>
           </div>
@@ -203,21 +219,32 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
         <div className="section-shell">
           <SectionHeading eyebrow={home.reviews.eyebrow} title={home.reviews.title} description={home.reviews.description} align="center" />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
-            {home.reviews.items.map((review) => (
-              <article key={review.author} className="surface-card p-6">
-                <Quote size={24} className="text-rose-300" />
-                <p className="mt-5 text-base leading-8 text-taupe-500">{review.text}</p>
-                <div className="mt-5 flex items-center gap-1 text-wood">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} size={14} fill="currentColor" />
-                  ))}
-                </div>
-                <p className="mt-5 font-display text-2xl text-taupe-900">{review.author}</p>
-                <p className="text-sm uppercase tracking-[0.2em] text-taupe-500">
-                  {review.origin} - {review.gite}
-                </p>
-              </article>
-            ))}
+            {home.reviews.items.map((review) => {
+              const isBergerie = review.gite === 'La Bergerie';
+              return (
+                <article key={review.author} className="surface-card p-6">
+                  <Quote size={24} className="text-rose-300" />
+                  <p className="mt-5 text-base leading-8 text-taupe-500">{review.text}</p>
+                  <div className="mt-5 flex items-center gap-1 text-wood">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star key={index} size={14} fill="currentColor" />
+                    ))}
+                  </div>
+                  <p className="mt-5 font-display text-2xl text-taupe-900">{review.author}</p>
+                  <p className="text-sm uppercase tracking-[0.2em] text-taupe-500">
+                    {review.origin} - {review.gite}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <ButtonLink href={isBergerie ? siteConfig.googleReviews.bergerie : siteConfig.googleReviews.brassine} variant="secondary" external icon={<GoogleIcon className="h-4 w-4" />}>
+                      Google
+                    </ButtonLink>
+                    <ButtonLink href={isBergerie ? siteConfig.airbnb.bergerie : siteConfig.airbnb.brassine} variant="secondary" external icon={<Star size={14} fill="currentColor" />}>
+                      Airbnb
+                    </ButtonLink>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -231,17 +258,17 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
               <p className="mt-4 max-w-2xl text-base leading-8 text-taupe-500">{home.finalCta.text}</p>
             </div>
             <div className="grid gap-4">
-              <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external className="w-full justify-between">
+              <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external className="w-full justify-between" icon={<WhatsAppIcon className="h-4 w-4" />}>
                 {home.finalCta.whatsapp}
               </ButtonLink>
               <ButtonLink href={`/${locale}/contact`} className="w-full justify-between">
                 {home.finalCta.contact}
               </ButtonLink>
               <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="w-full justify-between">
-                Airbnb - La Bergerie
+                Airbnb · La Bergerie
               </ButtonLink>
               <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external className="w-full justify-between">
-                Airbnb - La Brassine
+                Airbnb · La Brassine
               </ButtonLink>
             </div>
           </div>

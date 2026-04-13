@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
+import { aroundSectionImages } from '@/data/site';
 import { getDictionary, type SiteDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
@@ -53,28 +54,38 @@ export default async function AroundPage({ params }: { params: Promise<{ locale:
                 </div>
                 <div className="mt-8 grid gap-4 lg:grid-cols-2">
                   {section.items.map((item: AroundItem) => (
-                    <article key={item.name} className="rounded-[1.5rem] border border-taupe-100 bg-white p-5">
-                      <div>
-                        <p className="font-display text-3xl text-taupe-900">{item.name}</p>
-                        <p className="mt-1 text-sm uppercase tracking-[0.18em] text-wood">
-                          {[
-                            'location' in item ? item.location : undefined,
-                            'distance' in item ? item.distance : undefined,
-                          ]
-                            .filter(Boolean)
-                            .join(' - ')}
-                        </p>
+                    <article key={item.name} className="overflow-hidden rounded-[1.5rem] border border-taupe-100 bg-white">
+                      <div className="relative aspect-[16/10]">
+                        <ImageFallback
+                          src={aroundSectionImages[section.key as keyof typeof aroundSectionImages]}
+                          alt={item.name}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
                       </div>
-                      <p className="mt-4 text-sm leading-7 text-taupe-500">{item.description}</p>
-                      {item.tags?.length ? (
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {item.tags.map((tag: string) => (
-                            <span key={tag} className="rounded-full bg-cream-100 px-3 py-1 text-xs uppercase tracking-[0.15em] text-taupe-500">
-                              {tag}
-                            </span>
-                          ))}
+                      <div className="p-5">
+                        <div>
+                          <p className="font-display text-3xl text-taupe-900">{item.name}</p>
+                          <p className="mt-1 text-sm uppercase tracking-[0.18em] text-wood">
+                            {[
+                              'location' in item ? item.location : undefined,
+                              'distance' in item ? item.distance : undefined,
+                            ]
+                              .filter(Boolean)
+                              .join(' - ')}
+                          </p>
                         </div>
-                      ) : null}
+                        <p className="mt-4 text-sm leading-7 text-taupe-500">{item.description}</p>
+                        {item.tags?.length ? (
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            {item.tags.map((tag: string) => (
+                              <span key={tag} className="rounded-full bg-cream-100 px-3 py-1 text-xs uppercase tracking-[0.15em] text-taupe-500">
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        ) : null}
+                      </div>
                     </article>
                   ))}
                 </div>

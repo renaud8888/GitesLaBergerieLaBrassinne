@@ -110,7 +110,12 @@
       "guideCta": "Read the practical guide"
     },
     "gallery": {
-      "title": "A glimpse of the property",
+      "eyebrow": "Gallery",
+      "title": "Browse the atmosphere like a keepsake album",
+      "description": "A more immersive gallery, designed like a collection of pages you want to leaf through before booking.",
+      "sideEyebrow": "Romantic escape",
+      "sideTitle": "Images that already make you want to be there",
+      "sideText": "Soft materials, evening light, decorative details and the gardens together create a stay you can already feel before arriving.",
       "images": [
         { "src": "/images/home/2.avif", "alt": "La Bergerie atmosphere" },
         { "src": "/images/home/2b.avif", "alt": "La Brassine atmosphere" },

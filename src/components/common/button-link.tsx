@@ -10,6 +10,8 @@ type ButtonLinkProps = {
   external?: boolean;
   className?: string;
   showArrow?: boolean;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
 };
 
 export function ButtonLink({
@@ -19,6 +21,8 @@ export function ButtonLink({
   external = false,
   className,
   showArrow = false,
+  icon,
+  iconPosition = 'left',
 }: ButtonLinkProps) {
   const classes = cn(
     variant === 'primary' && 'button-primary',
@@ -29,7 +33,9 @@ export function ButtonLink({
 
   const content = (
     <>
+      {icon && iconPosition === 'left' ? icon : null}
       <span>{children}</span>
+      {icon && iconPosition === 'right' ? icon : null}
       {showArrow ? <ArrowRight size={16} /> : null}
     </>
   );

@@ -36,9 +36,9 @@ export function Header({ locale, nav }: HeaderProps) {
   const normalized = stripLocaleFromPath(pathname);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/50 bg-[rgba(255,250,245,0.82)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/35 bg-[rgba(255,250,245,0.68)] backdrop-blur-xl">
       <div className="section-shell flex items-center justify-between py-4">
-        <Link href={`/${locale}`} className="min-w-0">
+        <Link href={`/${locale}`} className="min-w-0 rounded-[1.4rem] border border-white/50 bg-[rgba(255,250,245,0.72)] px-4 py-3 shadow-[0_10px_30px_rgba(89,63,49,0.08)]">
           <p className="font-display text-2xl leading-none text-taupe-900 md:text-3xl">La Bergerie & La Brassine</p>
           <p className="mt-1 truncate text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gites de charme a Libin</p>
         </Link>
@@ -53,8 +53,10 @@ export function Header({ locale, nav }: HeaderProps) {
                 key={item.key}
                 href={href}
                 className={cn(
-                  'rounded-full px-4 py-2 text-sm transition',
-                  active ? 'bg-taupe-700 text-cream-50' : 'text-taupe-700 hover:bg-white',
+                  'rounded-full border px-4 py-2 text-sm shadow-[0_8px_24px_rgba(89,63,49,0.08)] transition',
+                  active
+                    ? 'border-taupe-700 bg-taupe-700 text-cream-50'
+                    : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900 hover:bg-white',
                 )}
               >
                 {nav[item.key]}
@@ -64,14 +66,14 @@ export function Header({ locale, nav }: HeaderProps) {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <div className="flex items-center rounded-full border border-taupe-200 bg-white/70 p-1">
+          <div className="flex items-center rounded-full border border-white/60 bg-[rgba(255,250,245,0.88)] p-1 shadow-[0_8px_24px_rgba(89,63,49,0.08)]">
             {locales.map((entry) => (
               <Link
                 key={entry}
                 href={`/${entry}${normalized === '/' ? '' : normalized}`}
                 className={cn(
                   'rounded-full px-3 py-2 text-xs tracking-[0.2em]',
-                  locale === entry ? 'bg-rose-200 text-taupe-900' : 'text-taupe-500',
+                  locale === entry ? 'bg-rose-200 text-taupe-900' : 'text-taupe-700',
                 )}
               >
                 {localeLabels[entry]}
@@ -86,7 +88,7 @@ export function Header({ locale, nav }: HeaderProps) {
         <button
           type="button"
           onClick={() => setOpen((current) => !current)}
-          className="rounded-full border border-taupe-200 bg-white/70 p-3 lg:hidden"
+          className="rounded-full border border-white/60 bg-[rgba(255,250,245,0.88)] p-3 text-taupe-900 shadow-[0_8px_24px_rgba(89,63,49,0.08)] lg:hidden"
           aria-label="Open menu"
         >
           {open ? <X size={18} /> : <Menu size={18} />}

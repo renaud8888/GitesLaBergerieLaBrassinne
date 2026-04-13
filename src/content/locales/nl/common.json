@@ -110,7 +110,12 @@
       "guideCta": "Lees de praktische gids"
     },
     "gallery": {
-      "title": "Sfeerbeelden van het domein",
+      "eyebrow": "Galerij",
+      "title": "Blader door de sfeer van het verblijf",
+      "description": "Een meer meeslepende galerij, opgevat als een mooi album waarin je graag blijft bladeren voor je boekt.",
+      "sideEyebrow": "Romantisch verblijf",
+      "sideTitle": "Beelden die meteen zin geven om er te zijn",
+      "sideText": "Zachte materialen, avondlicht, decoratieve details en de sfeer van de tuinen maken het verblijf al voelbaar nog voor aankomst.",
       "images": [
         { "src": "/images/home/2.avif", "alt": "Sfeer van La Bergerie" },
         { "src": "/images/home/2b.avif", "alt": "Sfeer van La Brassine" },
