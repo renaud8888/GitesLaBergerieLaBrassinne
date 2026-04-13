@@ -40,7 +40,7 @@ export function Header({ locale, nav }: HeaderProps) {
       <div className="section-shell flex items-center justify-between py-4">
         <Link href={`/${locale}`} className="min-w-0 rounded-[1.4rem] border border-white/50 bg-[rgba(255,250,245,0.72)] px-4 py-3 shadow-[0_10px_30px_rgba(89,63,49,0.08)]">
           <p className="font-display text-2xl leading-none text-taupe-900 md:text-3xl">La Bergerie & La Brassine</p>
-          <p className="mt-1 truncate text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gites de charme a Libin</p>
+          <p className="mt-1 truncate text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gîtes de charme à Libin</p>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
