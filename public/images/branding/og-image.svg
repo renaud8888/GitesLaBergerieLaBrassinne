@@ -1,0 +1,9 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F8F1EA"/>
+  <rect x="48" y="48" width="1104" height="534" rx="42" fill="#FFF9F3" stroke="#D4C5B6"/>
+  <circle cx="1032" cy="168" r="126" fill="#F3DFDC"/>
+  <circle cx="186" cy="474" r="112" fill="#E7DDD4"/>
+  <text x="120" y="252" fill="#372A24" font-family="Georgia, serif" font-size="72">La Bergerie &amp; La Brassine</text>
+  <text x="120" y="322" fill="#5A473C" font-family="Arial, sans-serif" font-size="28" letter-spacing="7">GITES DE CHARME A LIBIN</text>
+  <text x="120" y="410" fill="#8F7868" font-family="Arial, sans-serif" font-size="30">Escapades romantiques dans les Ardennes belges</text>
+</svg>
