@@ -47,6 +47,13 @@ export function Header({ locale, nav }: HeaderProps) {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   const shellClass = immersive && !scrolled
     ? 'border-white/60 bg-[rgba(255,250,245,0.92)] shadow-[0_12px_34px_rgba(89,63,49,0.08)] md:border-white/10 md:bg-[linear-gradient(180deg,rgba(45,34,29,0.35),rgba(45,34,29,0.06))] md:shadow-none'
     : 'border-white/35 bg-[rgba(255,250,245,0.78)] shadow-[0_12px_34px_rgba(89,63,49,0.08)]';
@@ -79,9 +86,9 @@ export function Header({ locale, nav }: HeaderProps) {
                 className={cn(
                   'rounded-full border px-4 py-2.5 text-sm shadow-[0_8px_24px_rgba(89,63,49,0.08)] transition',
                   active
-                    ? 'border-taupe-800 bg-taupe-800 text-cream-50'
+                    ? 'border-rose-200 bg-[rgba(239,226,212,0.96)] text-taupe-900 shadow-[0_10px_24px_rgba(89,63,49,0.1)]'
                     : immersive && !scrolled
-                      ? 'border-white/18 bg-white/10 text-cream-50 hover:bg-white/18'
+                      ? 'border-white/55 bg-[rgba(255,250,245,0.88)] text-taupe-900 hover:bg-white'
                       : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900 hover:bg-white',
                 )}
               >
@@ -100,9 +107,9 @@ export function Header({ locale, nav }: HeaderProps) {
                 className={cn(
                   'rounded-full px-3 py-2 text-xs tracking-[0.2em] transition',
                   locale === entry
-                    ? 'bg-rose-200 text-taupe-900'
+                    ? 'bg-[rgba(239,226,212,0.96)] text-taupe-900'
                     : immersive && !scrolled
-                      ? 'text-cream-100/75 hover:text-cream-50'
+                      ? 'text-taupe-700 hover:text-taupe-900'
                       : 'text-taupe-700',
                 )}
               >
@@ -126,25 +133,30 @@ export function Header({ locale, nav }: HeaderProps) {
         </button>
       </div>
 
-      <div className={cn('fixed inset-0 z-50 transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
-        <div className="absolute inset-0 bg-taupe-900/55 backdrop-blur-sm" onClick={() => setOpen(false)} />
-        <div className={cn('absolute right-0 top-0 h-full w-[90vw] max-w-sm border-l border-white/10 bg-[linear-gradient(180deg,#fffaf5,#efe2d4)] p-6 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.24)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
-          <div className="flex items-center justify-between">
+      <div className={cn('fixed inset-0 z-[70] transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
+        <div className="absolute inset-0 bg-[rgba(255,250,245,0.98)] backdrop-blur-xl" onClick={() => setOpen(false)} />
+        <div className={cn('absolute inset-0 flex flex-col bg-[linear-gradient(180deg,#fffaf5,#f4e8dc)] px-5 pb-8 pt-5 text-taupe-900 transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
+          <div className="flex items-start justify-between gap-4">
             <div>
-              <p className="font-display text-3xl">La Bergerie & La Brassine</p>
-              <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gîtes de charme à Libin</p>
+              <p className="font-display text-4xl leading-none">La Bergerie & La Brassine</p>
+              <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gîtes de charme à Libin</p>
             </div>
-            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-taupe-200 bg-white/90 p-3">
+            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-taupe-200 bg-white/92 p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)]">
               <X size={18} />
             </button>
           </div>
 
-          <div className="mt-10 grid gap-3">
+          <div className="mt-8 grid gap-3">
             {navItems.map((item) => (
               <Link
                 key={item.key}
                 href={`/${locale}${item.path}`}
-                className="rounded-[1.35rem] border border-white/80 bg-white/80 px-5 py-4 text-base font-medium text-taupe-900 shadow-[0_12px_24px_rgba(89,63,49,0.06)]"
+                className={cn(
+                  'rounded-[1.35rem] border px-5 py-4 text-base font-medium shadow-[0_12px_24px_rgba(89,63,49,0.06)] transition',
+                  (item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path))
+                    ? 'border-rose-200 bg-[rgba(239,226,212,0.96)] text-taupe-900'
+                    : 'border-white/80 bg-white/90 text-taupe-900'
+                )}
                 onClick={() => setOpen(false)}
               >
                 {nav[item.key]}
@@ -157,14 +169,14 @@ export function Header({ locale, nav }: HeaderProps) {
               <Link
                 key={entry}
                 href={`/${entry}${normalized === '/' ? '' : normalized}`}
-                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em]', locale === entry ? 'bg-taupe-800 text-cream-50' : 'border border-taupe-200 bg-white/90 text-taupe-700')}
+                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em]', locale === entry ? 'bg-[rgba(239,226,212,0.96)] text-taupe-900' : 'border border-taupe-200 bg-white/92 text-taupe-700')}
               >
                 {localeLabels[entry]}
               </Link>
             ))}
           </div>
 
-          <ButtonLink href={`/${locale}/contact`} className="mt-8 w-full justify-center">
+          <ButtonLink href={`/${locale}/contact`} className="mt-auto w-full justify-center">
             {nav.reserve}
           </ButtonLink>
         </div>
