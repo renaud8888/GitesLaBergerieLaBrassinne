@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description:
     'Deux gîtes romantiques de charme à Libin, dans les Ardennes belges, pour une escapade chaleureuse, élégante et pleine de douceur.',
+  icons: {
+    icon: '/images/branding/favicon.ico',
+    shortcut: '/images/branding/favicon.ico',
+    apple: '/images/branding/logo.png',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
