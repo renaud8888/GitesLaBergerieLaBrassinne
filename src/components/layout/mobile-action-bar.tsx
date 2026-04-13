@@ -3,9 +3,9 @@ import type { Locale } from '@/lib/i18n';
 
 export function MobileActionBar({ locale, reserveLabel }: { locale: Locale; reserveLabel: string }) {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/70 bg-[rgba(255,250,245,0.88)] px-4 py-2.5 backdrop-blur-xl md:hidden">
-      <div className="mx-auto flex max-w-md justify-center">
-        <ButtonLink href={`/${locale}/contact`} className="min-w-0 px-6 py-3 text-sm shadow-[0_14px_30px_rgba(111,83,69,0.18)]">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-taupe-100 bg-[#fbf4ed] px-4 py-3 shadow-[0_-10px_30px_rgba(89,63,49,0.08)] md:hidden">
+      <div className="mx-auto flex max-w-sm justify-center">
+        <ButtonLink href={`/${locale}/contact`} className="min-w-0 px-6 py-3 text-sm shadow-[0_14px_30px_rgba(111,83,69,0.16)]">
           {reserveLabel}
         </ButtonLink>
       </div>
