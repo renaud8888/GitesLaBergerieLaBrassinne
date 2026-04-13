@@ -134,8 +134,8 @@ export function Header({ locale, nav }: HeaderProps) {
       </div>
 
       <div className={cn('fixed inset-0 z-[70] transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
-        <div className="absolute inset-0 bg-[rgba(255,250,245,0.98)] backdrop-blur-xl" onClick={() => setOpen(false)} />
-        <div className={cn('absolute inset-0 flex flex-col bg-[linear-gradient(180deg,#fffaf5,#f4e8dc)] px-5 pb-8 pt-5 text-taupe-900 transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
+        <div className="absolute inset-0 bg-taupe-900/40 backdrop-blur-[2px]" onClick={() => setOpen(false)} />
+        <div className={cn('absolute right-0 top-0 flex h-full w-[82vw] max-w-sm flex-col border-l border-white/70 bg-[#fbf4ed] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="font-display text-4xl leading-none">La Bergerie & La Brassine</p>
@@ -154,8 +154,8 @@ export function Header({ locale, nav }: HeaderProps) {
                 className={cn(
                   'rounded-[1.35rem] border px-5 py-4 text-base font-medium shadow-[0_12px_24px_rgba(89,63,49,0.06)] transition',
                   (item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path))
-                    ? 'border-rose-200 bg-[rgba(239,226,212,0.96)] text-taupe-900'
-                    : 'border-white/80 bg-white/90 text-taupe-900'
+                    ? 'border-rose-200 bg-[#efe2d4] text-taupe-900'
+                    : 'border-taupe-100 bg-white text-taupe-900'
                 )}
                 onClick={() => setOpen(false)}
               >
@@ -169,7 +169,7 @@ export function Header({ locale, nav }: HeaderProps) {
               <Link
                 key={entry}
                 href={`/${entry}${normalized === '/' ? '' : normalized}`}
-                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em]', locale === entry ? 'bg-[rgba(239,226,212,0.96)] text-taupe-900' : 'border border-taupe-200 bg-white/92 text-taupe-700')}
+                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em]', locale === entry ? 'bg-[#efe2d4] text-taupe-900' : 'border border-taupe-200 bg-white text-taupe-700')}
               >
                 {localeLabels[entry]}
               </Link>
