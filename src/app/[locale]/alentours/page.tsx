@@ -10,6 +10,19 @@ import { type Locale } from '@/lib/i18n';
 type AroundSection = SiteDictionary['around']['sections'][number];
 type AroundItem = AroundSection['items'][number];
 
+function getAroundImage(sectionKey: string, itemName: string) {
+  const name = itemName.toLowerCase();
+
+  if (sectionKey === 'cycling') return '/images/around/velo.jpg';
+  if (name.includes('mirwart')) return '/images/around/mirwart.jpg';
+  if (name.includes('redu')) return '/images/around/redu.jpg';
+  if (name.includes('livre')) return '/images/around/redu1.jpeg';
+  if (name.includes('lesse') || name.includes('kayak')) return '/images/around/lesse1.jpg';
+  if (name.includes('forêt') || name.includes('foret') || name.includes('saint-hubert')) return '/images/around/foret1.jpg';
+
+  return aroundSectionImages[sectionKey as keyof typeof aroundSectionImages] ?? '/images/around/default.jpg';
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
   const dict = await getDictionary(locale);
@@ -57,7 +70,7 @@ export default async function AroundPage({ params }: { params: Promise<{ locale:
                     <article key={item.name} className="overflow-hidden rounded-[1.5rem] border border-taupe-100 bg-white">
                       <div className="relative aspect-[16/10]">
                         <ImageFallback
-                          src={aroundSectionImages[section.key as keyof typeof aroundSectionImages]}
+                          src={getAroundImage(section.key, item.name)}
                           alt={item.name}
                           fill
                           sizes="(max-width: 1024px) 100vw, 50vw"

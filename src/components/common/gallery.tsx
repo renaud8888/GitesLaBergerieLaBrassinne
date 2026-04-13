@@ -8,10 +8,13 @@ import { ImageFallback } from '@/components/common/image-fallback';
 
 type GalleryProps = {
   images: Array<{ src: string; alt: string }>;
+  previewCount?: number;
 };
 
-export function Gallery({ images }: GalleryProps) {
+export function Gallery({ images, previewCount = 8 }: GalleryProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const previewImages = images.slice(0, previewCount);
+  const remaining = Math.max(images.length - previewImages.length, 0);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -28,7 +31,10 @@ export function Gallery({ images }: GalleryProps) {
   return (
     <>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {images.map((image, index) => (
+        {previewImages.map((image, index) => {
+          const isLastVisible = index === previewImages.length - 1 && remaining > 0;
+
+          return (
           <button
             key={image.src}
             type="button"
@@ -44,8 +50,15 @@ export function Gallery({ images }: GalleryProps) {
                 className="transition duration-500 group-hover:scale-[1.03]"
               />
             </div>
+            {isLastVisible ? (
+              <div className="absolute inset-0 flex items-center justify-center bg-taupe-900/42 text-white">
+                <div className="rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold tracking-[0.14em]">
+                  +{remaining}
+                </div>
+              </div>
+            ) : null}
           </button>
-        ))}
+        )})}
       </div>
 
       <AnimatePresence>

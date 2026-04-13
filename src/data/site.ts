@@ -40,6 +40,10 @@ export const siteConfig = {
   },
 } as const;
 
+function createNumberedGallery(folder: 'la-bergerie' | 'la-brassine', count: number) {
+  return Array.from({ length: count }, (_, index) => `/images/${folder}/${index + 1}.avif`);
+}
+
 export const giteStats = {
   bergerie: {
     guests: 2,
@@ -52,16 +56,7 @@ export const giteStats = {
     googleUrl: siteConfig.googleReviews.bergerie,
     whatsappUrl: siteConfig.whatsapp.bergerie,
     heroImage: '/images/la-bergerie/1.avif',
-    gallery: [
-      '/images/la-bergerie/1.avif',
-      '/images/la-bergerie/2.avif',
-      '/images/la-bergerie/3.avif',
-      '/images/la-bergerie/4.avif',
-      '/images/la-bergerie/5.avif',
-      '/images/la-bergerie/6.avif',
-      '/images/la-bergerie/7.avif',
-      '/images/la-bergerie/8.avif',
-    ],
+    gallery: createNumberedGallery('la-bergerie', 45),
   },
   brassine: {
     guests: 2,
@@ -74,16 +69,7 @@ export const giteStats = {
     googleUrl: siteConfig.googleReviews.brassine,
     whatsappUrl: siteConfig.whatsapp.brassine,
     heroImage: '/images/la-brassine/1.avif',
-    gallery: [
-      '/images/la-brassine/1.avif',
-      '/images/la-brassine/2.avif',
-      '/images/la-brassine/3.avif',
-      '/images/la-brassine/4.avif',
-      '/images/la-brassine/5.avif',
-      '/images/la-brassine/6.avif',
-      '/images/la-brassine/7.avif',
-      '/images/la-brassine/8.avif',
-    ],
+    gallery: createNumberedGallery('la-brassine', 31),
   },
 } as const;
 
@@ -103,12 +89,12 @@ export const featureIcons = {
 } as const;
 
 export const aroundSectionImages = {
-  restaurants: '/images/around/redu.jpg',
+  restaurants: '/images/around/redu1.jpeg',
   walks: '/images/around/foret.webp',
   romantic: '/images/around/mirwart1.jpg',
   activities: '/images/around/lesse1.jpg',
-  rainy: '/images/around/redu1.jpeg',
-  villages: '/images/around/mirwart.jpg',
+  rainy: '/images/around/default.jpg',
+  villages: '/images/around/redu.jpg',
   cycling: '/images/around/velo.jpg',
 } as const;
 
