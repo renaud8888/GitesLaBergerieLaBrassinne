@@ -5,16 +5,17 @@ import { getContactDestinationEmail, parseContactRequest, validateContactRequest
 export async function POST(request: Request) {
   const payload = parseContactRequest(await request.json());
   const destinationEmail = getContactDestinationEmail();
+  const successMessage = 'Votre demande a bien ete envoyee. Nous vous repondrons rapidement.';
 
   if (payload.company) {
-    return NextResponse.json({ ok: true, destinationEmail });
+    return NextResponse.json({ success: true, message: successMessage, destinationEmail });
   }
 
   const validation = validateContactRequest(payload);
 
   if (!validation.valid) {
     return NextResponse.json(
-      { ok: false, error: validation.error, destinationEmail },
+      { success: false, error: validation.error, message: 'Merci de verifier les champs obligatoires et votre adresse email.', destinationEmail },
       { status: 400 },
     );
   }
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
 
   if (!resendApiKey) {
     return NextResponse.json(
-      { ok: false, error: 'not_configured', destinationEmail },
+      { success: false, error: 'not_configured', message: 'Une erreur est survenue lors de l’envoi.', destinationEmail },
       { status: 503 },
     );
   }
@@ -63,8 +64,9 @@ export async function POST(request: Request) {
 
     return NextResponse.json(
       {
-        ok: false,
+        success: false,
         error: 'send_failed',
+        message: 'Une erreur est survenue lors de l’envoi.',
         destinationEmail,
         details: resendError,
       },
@@ -72,5 +74,5 @@ export async function POST(request: Request) {
     );
   }
 
-  return NextResponse.json({ ok: true, destinationEmail });
+  return NextResponse.json({ success: true, message: successMessage, destinationEmail });
 }

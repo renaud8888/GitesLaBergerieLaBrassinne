@@ -20,7 +20,6 @@ type ContactFormProps = {
     sending: string;
     invalid: string;
     error: string;
-    notConfigured: string;
     options: {
       bergerie: string;
       brassine: string;
@@ -29,9 +28,17 @@ type ContactFormProps = {
   };
 };
 
+type ApiResult = {
+  success?: boolean;
+  message?: string;
+  error?: string;
+  destinationEmail?: string;
+};
+
 export function ContactForm({ labels }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [feedback, setFeedback] = useState('');
+  const [showFallback, setShowFallback] = useState(false);
 
   return (
     <form
@@ -55,6 +62,7 @@ export function ContactForm({ labels }: ContactFormProps) {
 
         setStatus('loading');
         setFeedback(labels.sending);
+        setShowFallback(false);
 
         try {
           const response = await fetch('/api/contact', {
@@ -65,32 +73,36 @@ export function ContactForm({ labels }: ContactFormProps) {
             body: JSON.stringify(requestPayload),
           });
 
-          const result = await response.json();
+          let result: ApiResult | null = null;
 
-          if (response.ok) {
+          try {
+            result = await response.json();
+          } catch {
+            result = null;
+          }
+
+          if (response.ok && result?.success === true) {
             setStatus('success');
-            setFeedback(labels.success.replace('{email}', result.destinationEmail || siteConfig.email));
+            setFeedback(result.message || labels.success);
+            setShowFallback(false);
             event.currentTarget.reset();
             return;
           }
 
-          if (result?.error === 'missing_required_fields' || result?.error === 'invalid_email') {
+          if (response.status === 400 && (result?.error === 'missing_required_fields' || result?.error === 'invalid_email')) {
             setStatus('error');
-            setFeedback(labels.invalid);
-            return;
-          }
-
-          if (result?.error === 'not_configured') {
-            setStatus('error');
-            setFeedback(labels.notConfigured.replace('{email}', result.destinationEmail || siteConfig.email));
+            setFeedback(result?.message || labels.invalid);
+            setShowFallback(false);
             return;
           }
 
           setStatus('error');
           setFeedback(labels.error.replace('{email}', result?.destinationEmail || siteConfig.email));
+          setShowFallback(true);
         } catch {
           setStatus('error');
           setFeedback(labels.error.replace('{email}', siteConfig.email));
+          setShowFallback(true);
         }
       }}
     >
@@ -144,7 +156,22 @@ export function ContactForm({ labels }: ContactFormProps) {
         <button type="submit" className="button-primary w-full md:w-fit" disabled={status === 'loading'}>
           {status === 'loading' ? labels.sending : labels.submit}
         </button>
-        {feedback ? <p className={`text-sm ${status === 'success' ? 'text-sage' : 'text-taupe-700'}`} aria-live="polite">{feedback}</p> : null}
+        {feedback ? (
+          <div className={`text-sm ${status === 'success' ? 'text-sage' : 'text-taupe-700'}`} aria-live="polite">
+            <p>{feedback}</p>
+            {showFallback ? (
+              <p className="mt-2">
+                <a href={`mailto:${siteConfig.email}`} className="underline underline-offset-2">
+                  {siteConfig.email}
+                </a>
+                {' · '}
+                <a href={siteConfig.whatsapp.default} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+                  WhatsApp
+                </a>
+              </p>
+            ) : null}
+          </div>
+        ) : null}
       </div>
     </form>
   );

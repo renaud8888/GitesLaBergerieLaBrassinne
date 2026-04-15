@@ -490,11 +490,10 @@
         "guests": "Nombre de voyageurs",
         "message": "Message",
         "submit": "Envoyer la demande",
-        "success": "Votre demande a bien ete preparee et transmise a {email}.",
+        "success": "Votre demande a bien ete envoyee. Nous vous repondrons rapidement.",
         "sending": "Envoi en cours...",
         "invalid": "Merci de verifier les champs obligatoires et votre adresse email.",
-        "error": "L'envoi n'a pas abouti. Vous pouvez contacter directement {email} ou utiliser WhatsApp.",
-        "notConfigured": "Cette mise en ligne n'a pas encore de service email actif. Les demandes ne partent donc pas automatiquement pour l'instant. Vous pouvez ecrire a {email} ou utiliser WhatsApp.",
+        "error": "Une erreur est survenue lors de l'envoi. Vous pouvez contacter directement {email} ou utiliser WhatsApp.",
         "options": {
           "bergerie": "La Bergerie",
           "brassine": "La Brassine",
