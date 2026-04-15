@@ -74,32 +74,54 @@ export function ContactForm({ labels }: ContactFormProps) {
           });
 
           let result: ApiResult | null = null;
+          let jsonParseFailed = false;
 
           try {
             result = await response.json();
           } catch {
+            jsonParseFailed = true;
             result = null;
           }
 
-          if (response.ok && result?.success === true) {
+          const apiMarkedSuccess = result?.success === true;
+          const apiMarkedError = result?.success === false;
+          const requestSucceeded = apiMarkedSuccess || (response.ok && !apiMarkedError);
+
+          console.info('[contact-form] submit result', {
+            status: response.status,
+            ok: response.ok,
+            json: result,
+            jsonParseFailed,
+          });
+
+          if (requestSucceeded) {
+            console.info('[contact-form] success branch');
             setStatus('success');
-            setFeedback(result.message || labels.success);
+            setFeedback(result?.message || labels.success);
             setShowFallback(false);
             event.currentTarget.reset();
             return;
           }
 
           if (response.status === 400 && (result?.error === 'missing_required_fields' || result?.error === 'invalid_email')) {
+            console.info('[contact-form] validation error branch');
             setStatus('error');
             setFeedback(result?.message || labels.invalid);
             setShowFallback(false);
             return;
           }
 
+          console.error('[contact-form] error branch', {
+            status: response.status,
+            ok: response.ok,
+            json: result,
+            jsonParseFailed,
+          });
           setStatus('error');
           setFeedback(labels.error.replace('{email}', result?.destinationEmail || siteConfig.email));
           setShowFallback(true);
         } catch {
+          console.error('[contact-form] network error branch');
           setStatus('error');
           setFeedback(labels.error.replace('{email}', siteConfig.email));
           setShowFallback(true);
