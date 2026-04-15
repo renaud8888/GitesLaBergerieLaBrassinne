@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { siteConfig } from '@/data/site';
 import type { ContactRequestPayload } from '@/lib/contact-request';
@@ -39,6 +39,7 @@ export function ContactForm({ labels }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [feedback, setFeedback] = useState('');
   const [showFallback, setShowFallback] = useState(false);
+  const isSubmittingRef = useRef(false);
 
   return (
     <form
@@ -46,7 +47,13 @@ export function ContactForm({ labels }: ContactFormProps) {
       onSubmit={async (event) => {
         event.preventDefault();
 
-        const formData = new FormData(event.currentTarget);
+        if (isSubmittingRef.current) {
+          console.warn('[contact-form] duplicate submit prevented');
+          return;
+        }
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
         const payload = Object.fromEntries(formData.entries()) as Record<string, string>;
         const requestPayload: ContactRequestPayload = {
           firstName: payload.firstName ?? '',
@@ -60,6 +67,7 @@ export function ContactForm({ labels }: ContactFormProps) {
           company: payload.company ?? '',
         };
 
+        isSubmittingRef.current = true;
         setStatus('loading');
         setFeedback(labels.sending);
         setShowFallback(false);
@@ -103,7 +111,8 @@ export function ContactForm({ labels }: ContactFormProps) {
             setStatus('success');
             setFeedback(result?.message || labels.success);
             setShowFallback(false);
-            event.currentTarget.reset();
+            form.reset();
+            isSubmittingRef.current = false;
             return;
           }
 
@@ -112,6 +121,7 @@ export function ContactForm({ labels }: ContactFormProps) {
             setStatus('error');
             setFeedback(result?.message || labels.invalid);
             setShowFallback(false);
+            isSubmittingRef.current = false;
             return;
           }
 
@@ -127,11 +137,15 @@ export function ContactForm({ labels }: ContactFormProps) {
           setStatus('error');
           setFeedback(labels.error.replace('{email}', result?.destinationEmail || siteConfig.email));
           setShowFallback(true);
-        } catch {
-          console.error('[contact-form] network error branch');
+          isSubmittingRef.current = false;
+          return;
+        } catch (error) {
+          console.error('[contact-form] network error branch', error);
           setStatus('error');
           setFeedback(labels.error.replace('{email}', siteConfig.email));
           setShowFallback(true);
+          isSubmittingRef.current = false;
+          return;
         }
       }}
     >
