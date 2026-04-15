@@ -74,22 +74,26 @@ export function ContactForm({ labels }: ContactFormProps) {
           });
 
           let result: ApiResult | null = null;
+          let rawBody = '';
           let jsonParseFailed = false;
 
           try {
-            result = await response.json();
+            rawBody = await response.text();
+            result = rawBody ? JSON.parse(rawBody) as ApiResult : null;
           } catch {
             jsonParseFailed = true;
             result = null;
           }
 
-          const apiMarkedSuccess = result?.success === true;
           const apiMarkedError = result?.success === false;
-          const requestSucceeded = apiMarkedSuccess || (response.ok && !apiMarkedError);
+          const requestSucceeded = response.ok && !apiMarkedError;
 
           console.info('[contact-form] submit result', {
             status: response.status,
             ok: response.ok,
+            redirected: response.redirected,
+            url: response.url,
+            rawBody,
             json: result,
             jsonParseFailed,
           });
@@ -114,6 +118,9 @@ export function ContactForm({ labels }: ContactFormProps) {
           console.error('[contact-form] error branch', {
             status: response.status,
             ok: response.ok,
+            redirected: response.redirected,
+            url: response.url,
+            rawBody,
             json: result,
             jsonParseFailed,
           });
