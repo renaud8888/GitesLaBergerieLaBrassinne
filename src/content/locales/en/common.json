@@ -490,7 +490,11 @@
         "guests": "Number of guests",
         "message": "Message",
         "submit": "Send enquiry",
-        "success": "The form UI is ready. It only needs to be connected to your preferred sending service.",
+        "success": "Your request was prepared and sent to {email}.",
+        "sending": "Sending...",
+        "invalid": "Please check the required fields and your email address.",
+        "error": "The email could not be sent. You can contact {email} directly or use WhatsApp.",
+        "notConfigured": "This deployment does not have email delivery configured yet. Requests are not sent automatically for now. You can write to {email} or use WhatsApp.",
         "options": {
           "bergerie": "La Bergerie",
           "brassine": "La Brassine",

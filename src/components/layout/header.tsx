@@ -55,11 +55,11 @@ export function Header({ locale, nav }: HeaderProps) {
   }, [open]);
 
   const shellClass = immersive && !scrolled
-    ? 'border-white/60 bg-[rgba(255,250,245,0.92)] shadow-[0_12px_34px_rgba(89,63,49,0.08)] md:border-white/10 md:bg-[linear-gradient(180deg,rgba(45,34,29,0.35),rgba(45,34,29,0.06))] md:shadow-none'
+    ? 'border-white/60 bg-[rgba(255,250,245,0.94)] shadow-[0_12px_34px_rgba(89,63,49,0.08)] md:border-white/14 md:bg-[linear-gradient(180deg,rgba(45,34,29,0.56),rgba(45,34,29,0.14))] md:shadow-none'
     : 'border-white/35 bg-[rgba(255,250,245,0.78)] shadow-[0_12px_34px_rgba(89,63,49,0.08)]';
 
   const brandCardClass = immersive && !scrolled
-    ? 'border-white/60 bg-[rgba(255,250,245,0.94)] text-taupe-900 md:border-white/12 md:bg-white/8 md:text-cream-50'
+    ? 'border-white/60 bg-[rgba(255,250,245,0.95)] text-taupe-900 shadow-[0_10px_28px_rgba(89,63,49,0.08)] md:border-white/18 md:bg-[rgba(255,250,245,0.16)] md:text-cream-50 md:shadow-[0_18px_36px_rgba(18,12,10,0.12)]'
     : 'border-white/50 bg-[rgba(255,250,245,0.72)] text-taupe-900';
 
   return (
@@ -88,7 +88,7 @@ export function Header({ locale, nav }: HeaderProps) {
                   active
                     ? 'border-rose-200 bg-[rgba(239,226,212,0.96)] text-taupe-900 shadow-[0_10px_24px_rgba(89,63,49,0.1)]'
                     : immersive && !scrolled
-                      ? 'border-white/55 bg-[rgba(255,250,245,0.88)] text-taupe-900 hover:bg-white'
+                      ? 'border-white/40 bg-[rgba(255,250,245,0.2)] text-cream-50 hover:bg-[rgba(255,250,245,0.28)]'
                       : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900 hover:bg-white',
                 )}
               >
@@ -109,7 +109,7 @@ export function Header({ locale, nav }: HeaderProps) {
                   locale === entry
                     ? 'bg-[rgba(239,226,212,0.96)] text-taupe-900'
                     : immersive && !scrolled
-                      ? 'text-taupe-700 hover:text-taupe-900'
+                      ? 'text-cream-100/84 hover:text-cream-50'
                       : 'text-taupe-700',
                 )}
               >
@@ -135,13 +135,13 @@ export function Header({ locale, nav }: HeaderProps) {
 
       <div className={cn('fixed inset-0 z-[70] transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
         <div className="absolute inset-0 bg-taupe-900/40 backdrop-blur-[2px]" onClick={() => setOpen(false)} />
-        <div className={cn('absolute right-0 top-0 flex h-full w-[82vw] max-w-sm flex-col border-l border-white/70 bg-[#fbf4ed] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
+        <div className={cn('absolute right-0 top-0 flex h-full w-[82vw] max-w-sm flex-col border-l border-white/55 bg-[linear-gradient(180deg,rgba(255,250,245,0.98),rgba(244,232,224,0.98))] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="font-display text-4xl leading-none">La Bergerie & La Brassine</p>
               <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gîtes de charme à Libin</p>
             </div>
-            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-taupe-200 bg-white/92 p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)]">
+            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-taupe-200 bg-white p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50">
               <X size={18} />
             </button>
           </div>
@@ -152,10 +152,10 @@ export function Header({ locale, nav }: HeaderProps) {
                 key={item.key}
                 href={`/${locale}${item.path}`}
                 className={cn(
-                  'rounded-[1.35rem] border px-5 py-4 text-base font-medium shadow-[0_12px_24px_rgba(89,63,49,0.06)] transition',
+                  'rounded-[1.35rem] border px-5 py-4 text-base font-medium shadow-[0_12px_24px_rgba(89,63,49,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(89,63,49,0.1)]',
                   (item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path))
-                    ? 'border-rose-200 bg-[#efe2d4] text-taupe-900'
-                    : 'border-taupe-100 bg-white text-taupe-900'
+                    ? 'border-rose-200 bg-[linear-gradient(135deg,#f2dfd7,#efe2d4)] text-taupe-900'
+                    : 'border-white/70 bg-white/96 text-taupe-900'
                 )}
                 onClick={() => setOpen(false)}
               >
@@ -169,14 +169,14 @@ export function Header({ locale, nav }: HeaderProps) {
               <Link
                 key={entry}
                 href={`/${entry}${normalized === '/' ? '' : normalized}`}
-                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em]', locale === entry ? 'bg-[#efe2d4] text-taupe-900' : 'border border-taupe-200 bg-white text-taupe-700')}
+                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em] transition', locale === entry ? 'bg-[#efe2d4] text-taupe-900' : 'border border-taupe-200 bg-white text-taupe-700 hover:bg-cream-50')}
               >
                 {localeLabels[entry]}
               </Link>
             ))}
           </div>
 
-          <ButtonLink href={`/${locale}/contact`} className="mt-auto w-full justify-center">
+          <ButtonLink href={`/${locale}/contact`} className="mt-auto w-full justify-center bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_40px_rgba(240,201,198,0.34)]">
             {nav.reserve}
           </ButtonLink>
         </div>

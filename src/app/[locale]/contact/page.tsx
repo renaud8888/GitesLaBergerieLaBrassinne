@@ -125,9 +125,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <div className="rounded-[1.5rem] border border-taupe-100 bg-white/78 p-5">
                 <p className="inline-flex items-center gap-2 font-display text-2xl text-taupe-900">
                   <Mail size={16} />
-                  Choisir son gîte
+                  Adresse de réception
                 </p>
-                <p className="mt-3 text-sm leading-7 text-taupe-500">La Bergerie pour plus d’espace et de lumière. La Brassine pour plus d’intimité et d’effet cocon.</p>
+                <p className="mt-3 text-sm leading-7 text-taupe-500">Les demandes sont prévues pour être reçues sur {siteConfig.email}. Si le service email de la mise en ligne n’est pas configuré, le formulaire vous le signale clairement.</p>
               </div>
             </div>
           </div>

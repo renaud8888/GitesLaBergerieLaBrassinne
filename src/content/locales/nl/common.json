@@ -490,7 +490,11 @@
         "guests": "Aantal reizigers",
         "message": "Bericht",
         "submit": "Aanvraag versturen",
-        "success": "De formulierinterface is klaar. Alleen de koppeling met je favoriete verzenddienst ontbreekt nog.",
+        "success": "Je aanvraag werd voorbereid en verzonden naar {email}.",
+        "sending": "Bezig met verzenden...",
+        "invalid": "Controleer de verplichte velden en je e-mailadres.",
+        "error": "Het bericht kon niet worden verzonden. Je kunt rechtstreeks contact opnemen via {email} of WhatsApp gebruiken.",
+        "notConfigured": "Voor deze live versie is e-mailverzending nog niet ingesteld. Aanvragen worden voorlopig dus niet automatisch verzonden. Je kunt schrijven naar {email} of WhatsApp gebruiken.",
         "options": {
           "bergerie": "La Bergerie",
           "brassine": "La Brassine",

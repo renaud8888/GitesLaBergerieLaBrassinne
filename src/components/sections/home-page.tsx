@@ -5,7 +5,7 @@ import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
 import { StackedGallery } from '@/components/common/stacked-gallery';
-import { featureIcons, giteStats, siteConfig } from '@/data/site';
+import { featureIcons, getHomeGalleryImages, giteStats, siteConfig } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
 import type { Locale } from '@/lib/i18n';
 
@@ -32,6 +32,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
     },
   ];
   const totalReviews = giteStats.bergerie.reviews + giteStats.brassine.reviews;
+  const homeGalleryImages = getHomeGalleryImages(locale);
   const compactFacts = [
     { icon: UserRound, label: '2 personnes' },
     { icon: Trees, label: '1 chambre' },
@@ -44,44 +45,53 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0">
           <ImageFallback src="/images/home/1.avif" alt={home.hero.imageAlt} fill priority sizes="100vw" />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,37,30,0.14),rgba(53,37,30,0.76))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,37,30,0.28),rgba(53,37,30,0.82))]" />
         </div>
         <div className="section-shell relative z-10 py-20 md:py-28 lg:py-32">
           <div className="max-w-3xl">
-            <div className="mb-8 inline-flex items-center gap-4 rounded-full border border-white/20 bg-white/10 px-4 py-3 backdrop-blur">
-              <div className="relative h-11 w-11 overflow-hidden rounded-full bg-white/90">
+            <div className="mb-8 inline-flex items-center gap-4 rounded-full border border-white/30 bg-[rgba(255,250,245,0.18)] px-4 py-3 text-cream-50 shadow-[0_22px_44px_rgba(37,25,20,0.16)] backdrop-blur-md">
+              <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/35 bg-white/95 shadow-[0_8px_18px_rgba(37,25,20,0.12)]">
                 <ImageFallback src="/images/branding/logo.png" alt="Logo La Bergerie & La Brassine" fill sizes="44px" />
               </div>
               <div>
                 <p className="font-display text-xl text-cream-50">La Bergerie & La Brassine</p>
-                <p className="text-[11px] uppercase tracking-[0.28em] text-cream-100/80">Gîtes de charme à Libin</p>
+                <p className="text-[11px] uppercase tracking-[0.28em] text-cream-100/90">Gîtes de charme à Libin</p>
               </div>
             </div>
-            <p className="text-xs uppercase tracking-[0.35em] text-cream-100/90">{home.hero.eyebrow}</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-cream-100">{home.hero.eyebrow}</p>
             <h1 className="mt-4 font-display text-5xl leading-none text-cream-50 md:text-7xl">{home.hero.title}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-cream-100/88 md:text-xl">{home.hero.description}</p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-cream-100 md:text-xl">{home.hero.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`} className="bg-[#f0c9c6] text-taupe-900 shadow-[0_18px_38px_rgba(240,201,198,0.32)]">
+              <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] px-6 py-4 text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.4)] ring-1 ring-white/35">
                 {home.hero.primaryCta}
               </ButtonLink>
-              <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+              <ButtonLink href={siteConfig.whatsapp.default} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />} className="border-white/30 bg-white/14 text-cream-50 backdrop-blur-md">
                 {home.hero.secondaryCta}
               </ButtonLink>
             </div>
-            <div className="mt-10 flex flex-wrap gap-3 rounded-[1.75rem] border border-white/15 bg-white/10 p-4 backdrop-blur">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-50">
-                <Star size={14} fill="currentColor" />
-                5,0/5 Airbnb
-              </span>
-              <span className="inline-flex items-center rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-100/88">
-                {totalReviews} avis
-              </span>
-              <span className="inline-flex items-center rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-100/88">
-                Libin, Ardennes
-              </span>
-              <span className="inline-flex items-center rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm text-cream-100/88">
-                Séjour à deux
-              </span>
+            <div className="mt-10 grid gap-3 rounded-[2rem] border border-white/18 bg-[rgba(255,250,245,0.14)] p-4 shadow-[0_24px_60px_rgba(37,25,20,0.18)] backdrop-blur-md md:grid-cols-[minmax(0,1.2fr)_repeat(2,minmax(0,0.75fr))] md:p-5">
+              <div className="rounded-[1.5rem] border border-white/22 bg-[linear-gradient(135deg,rgba(244,216,210,0.32),rgba(255,250,245,0.18))] p-4 text-cream-50 shadow-[0_18px_40px_rgba(37,25,20,0.14)]">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.28em] text-cream-100/82">Preuve sociale</p>
+                    <p className="mt-2 font-display text-3xl leading-none md:text-4xl">5/5 Airbnb</p>
+                  </div>
+                  <span className="inline-flex rounded-full bg-white/18 p-2 text-cream-50">
+                    <Star size={16} fill="currentColor" />
+                  </span>
+                </div>
+                <p className="mt-3 text-base text-cream-100">{totalReviews} avis cumulés</p>
+              </div>
+              <div className="rounded-[1.5rem] border border-white/18 bg-white/10 p-4 text-cream-50">
+                <p className="text-xs uppercase tracking-[0.26em] text-cream-100/76">Lieu</p>
+                <p className="mt-2 font-display text-2xl">Libin</p>
+                <p className="mt-1 text-sm text-cream-100/88">Ardennes belges</p>
+              </div>
+              <div className="rounded-[1.5rem] border border-white/18 bg-white/10 p-4 text-cream-50">
+                <p className="text-xs uppercase tracking-[0.26em] text-cream-100/76">Séjour</p>
+                <p className="mt-2 font-display text-2xl">À deux</p>
+                <p className="mt-1 text-sm text-cream-100/88">Escapade romantique</p>
+              </div>
             </div>
           </div>
         </div>
@@ -147,7 +157,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
         <div className="section-shell">
           <SectionHeading eyebrow={home.gallery.eyebrow} title={home.gallery.title} description={home.gallery.description} align="center" />
           <div className="mt-10">
-            <StackedGallery images={home.gallery.images} />
+            <StackedGallery images={homeGalleryImages} />
           </div>
         </div>
       </section>

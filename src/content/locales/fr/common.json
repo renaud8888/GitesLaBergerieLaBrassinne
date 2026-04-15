@@ -461,7 +461,7 @@
     "hero": {
       "eyebrow": "Contact & reservation",
       "title": "Parler d'un séjour, poser une question, réserver simplement",
-      "description": "WhatsApp est privilégié pour les réservations directes et les demandes rapides. Le formulaire est déjà prêt pour une future connexion à un vrai backend."
+      "description": "WhatsApp reste privilégié pour les demandes rapides. Le formulaire envoie désormais via une route serveur si le service email est configuré sur la mise en ligne."
     },
     "direct": {
       "eyebrow": "Réservation directe",
@@ -479,7 +479,7 @@
     "form": {
       "eyebrow": "Formulaire de prise de contact",
       "title": "Envoyer une demande",
-      "text": "Le formulaire est front-end only pour l'instant, avec une structure propre et facile a connecter ensuite a EmailJS, Resend, Formspree ou une route API Next.js.",
+      "text": "Le formulaire passe par une route serveur avec validation. L'envoi email fonctionne si la mise en ligne dispose des variables d'environnement prévues.",
       "labels": {
         "firstName": "Prenom",
         "lastName": "Nom",
@@ -490,7 +490,11 @@
         "guests": "Nombre de voyageurs",
         "message": "Message",
         "submit": "Envoyer la demande",
-        "success": "Le formulaire est pret côté interface. Il reste a le brancher a ton outil d'envoi prefere.",
+        "success": "Votre demande a bien ete preparee et transmise a {email}.",
+        "sending": "Envoi en cours...",
+        "invalid": "Merci de verifier les champs obligatoires et votre adresse email.",
+        "error": "L'envoi n'a pas abouti. Vous pouvez contacter directement {email} ou utiliser WhatsApp.",
+        "notConfigured": "Cette mise en ligne n'a pas encore de service email actif. Les demandes ne partent donc pas automatiquement pour l'instant. Vous pouvez ecrire a {email} ou utiliser WhatsApp.",
         "options": {
           "bergerie": "La Bergerie",
           "brassine": "La Brassine",

@@ -88,8 +88,8 @@ export function GuidePanels({ overviewTitle, overviewText, quickFacts, sections,
               <ChevronDown className={cn('transition-transform', openId === 'overview' && 'rotate-180')} size={18} />
             </span>
           </button>
-          <div className={cn('grid transition-[grid-template-rows] duration-300', openId === 'overview' ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]')}>
-            <div className="overflow-hidden px-5 pb-5 md:px-8 md:pb-8">
+          <div className={cn('px-5 pb-5 md:px-8 md:pb-8', openId !== 'overview' && 'hidden')}>
+            <div>
               <p className="max-w-2xl text-base leading-8 text-taupe-500">{overviewText}</p>
               <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {quickFacts.map((fact) => (
@@ -123,8 +123,8 @@ export function GuidePanels({ overviewTitle, overviewText, quickFacts, sections,
                 </span>
               </button>
 
-              <div className={cn('grid transition-[grid-template-rows] duration-300', isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]')}>
-                <div className="overflow-hidden px-5 pb-5 md:px-8 md:pb-8">
+              <div className={cn('px-5 pb-5 md:px-8 md:pb-8', !isOpen && 'hidden')}>
+                <div>
                   <p className="max-w-3xl text-base leading-8 text-taupe-500">{section.text}</p>
                   {section.points?.length ? (
                     <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -166,8 +166,8 @@ export function GuidePanels({ overviewTitle, overviewText, quickFacts, sections,
               <ChevronDown className={cn('transition-transform', openId === 'faq' && 'rotate-180')} size={18} />
             </span>
           </button>
-          <div className={cn('grid transition-[grid-template-rows] duration-300', openId === 'faq' ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]')}>
-            <div className="overflow-hidden px-3 pb-3 md:px-4 md:pb-4">
+          <div className={cn('px-3 pb-3 md:px-4 md:pb-4', openId !== 'faq' && 'hidden')}>
+            <div>
               <FaqAccordion items={faq} />
             </div>
           </div>

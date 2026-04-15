@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 
+import { siteConfig } from '@/data/site';
+import type { ContactRequestPayload } from '@/lib/contact-request';
+
 type ContactFormProps = {
   labels: {
     firstName: string;
@@ -14,6 +17,10 @@ type ContactFormProps = {
     message: string;
     submit: string;
     success: string;
+    sending: string;
+    invalid: string;
+    error: string;
+    notConfigured: string;
     options: {
       bergerie: string;
       brassine: string;
@@ -23,14 +30,68 @@ type ContactFormProps = {
 };
 
 export function ContactForm({ labels }: ContactFormProps) {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [feedback, setFeedback] = useState('');
 
   return (
     <form
       className="surface-card-strong grid gap-4 p-5 md:grid-cols-2 md:p-8"
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
-        setSubmitted(true);
+
+        const formData = new FormData(event.currentTarget);
+        const payload = Object.fromEntries(formData.entries()) as Record<string, string>;
+        const requestPayload: ContactRequestPayload = {
+          firstName: payload.firstName ?? '',
+          lastName: payload.lastName ?? '',
+          email: payload.email ?? '',
+          phone: payload.phone ?? '',
+          dates: payload.dates ?? '',
+          gite: payload.gite ?? 'undecided',
+          guests: payload.guests ?? '2',
+          message: payload.message ?? '',
+          company: payload.company ?? '',
+        };
+
+        setStatus('loading');
+        setFeedback(labels.sending);
+
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestPayload),
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            setStatus('success');
+            setFeedback(labels.success.replace('{email}', result.destinationEmail || siteConfig.email));
+            event.currentTarget.reset();
+            return;
+          }
+
+          if (result?.error === 'missing_required_fields' || result?.error === 'invalid_email') {
+            setStatus('error');
+            setFeedback(labels.invalid);
+            return;
+          }
+
+          if (result?.error === 'not_configured') {
+            setStatus('error');
+            setFeedback(labels.notConfigured.replace('{email}', result.destinationEmail || siteConfig.email));
+            return;
+          }
+
+          setStatus('error');
+          setFeedback(labels.error.replace('{email}', result?.destinationEmail || siteConfig.email));
+        } catch {
+          setStatus('error');
+          setFeedback(labels.error.replace('{email}', siteConfig.email));
+        }
       }}
     >
       <div className="md:col-span-2">
@@ -38,7 +99,7 @@ export function ContactForm({ labels }: ContactFormProps) {
       </div>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.firstName}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" />
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" required />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.lastName}</span>
@@ -46,7 +107,7 @@ export function ContactForm({ labels }: ContactFormProps) {
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.email}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" />
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" required />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.phone}</span>
@@ -68,18 +129,22 @@ export function ContactForm({ labels }: ContactFormProps) {
         <span className="font-medium tracking-[0.01em]">{labels.guests}</span>
         <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="guests" type="number" min="1" max="2" defaultValue="2" />
       </label>
+      <label className="hidden" aria-hidden="true">
+        <span>Company</span>
+        <input tabIndex={-1} autoComplete="off" name="company" />
+      </label>
       <div className="rounded-[1.35rem] border border-rose-200/40 bg-rose-100/72 p-4 text-sm leading-7 text-taupe-600">
         Réponse rapide, ton chaleureux et possibilité de réserver en direct ou de basculer sur Airbnb selon votre préférence.
       </div>
       <label className="grid gap-2 text-sm text-taupe-700 md:col-span-2">
         <span className="font-medium tracking-[0.01em]">{labels.message}</span>
-        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" />
+        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" required />
       </label>
       <div className="md:col-span-2 flex flex-col gap-3">
-        <button type="submit" className="button-primary w-full md:w-fit">
-          {labels.submit}
+        <button type="submit" className="button-primary w-full md:w-fit" disabled={status === 'loading'}>
+          {status === 'loading' ? labels.sending : labels.submit}
         </button>
-        {submitted ? <p className="text-sm text-sage">{labels.success}</p> : null}
+        {feedback ? <p className={`text-sm ${status === 'success' ? 'text-sage' : 'text-taupe-700'}`} aria-live="polite">{feedback}</p> : null}
       </div>
     </form>
   );

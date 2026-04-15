@@ -6,7 +6,7 @@ import { formatWhatsappLink } from '@/lib/utils';
 export const siteConfig = {
   name: 'La Bergerie & La Brassine – Gîtes de charme à Libin',
   shortName: 'La Bergerie & La Brassine',
-  url: 'https://gites-libin.vercel.app',
+  url: 'https://bergerie-brassine.com',
   phone: '+32496929355',
   email: 'claranicolay@gmail.com',
   address: {
@@ -44,6 +44,108 @@ function createNumberedGallery(folder: 'la-bergerie' | 'la-brassine', count: num
   return Array.from({ length: count }, (_, index) => `/images/${folder}/${index + 1}.avif`);
 }
 
+const homeGalleryFrames = [
+  {
+    src: '/images/home/1.avif',
+    alt: {
+      fr: 'La Bergerie et la Brassine, une arrivée romantique à Libin',
+      en: 'La Bergerie and La Brassine, a romantic arrival in Libin',
+      nl: 'La Bergerie en La Brassine, een romantische aankomst in Libin',
+    },
+  },
+  {
+    src: '/images/home/2.avif',
+    alt: {
+      fr: 'La Bergerie, la lumière et les matières naturelles',
+      en: 'La Bergerie, light and natural textures',
+      nl: 'La Bergerie, licht en natuurlijke materialen',
+    },
+  },
+  {
+    src: '/images/home/2b.avif',
+    alt: {
+      fr: 'La Brassine, plus intime et enveloppante',
+      en: 'La Brassine, more intimate and cocooning',
+      nl: 'La Brassine, intiemer en omhullend',
+    },
+  },
+  {
+    src: '/images/home/3.avif',
+    alt: {
+      fr: 'Une table dressée pour un séjour à deux',
+      en: 'A table set for a stay for two',
+      nl: 'Een gedekte tafel voor een verblijf met twee',
+    },
+  },
+  {
+    src: '/images/home/3b.avif',
+    alt: {
+      fr: 'Des détails shabby chic pleins de douceur',
+      en: 'Soft shabby chic details',
+      nl: 'Zachte shabby chic details',
+    },
+  },
+  {
+    src: '/images/home/4.avif',
+    alt: {
+      fr: 'Une atmosphère chic et chaleureuse',
+      en: 'A chic and warm atmosphere',
+      nl: 'Een chique en warme sfeer',
+    },
+  },
+  {
+    src: '/images/home/4b.avif',
+    alt: {
+      fr: "Le charme d'un séjour romantique dans les Ardennes",
+      en: 'The charm of a romantic stay in the Ardennes',
+      nl: 'De charme van een romantisch verblijf in de Ardennen',
+    },
+  },
+  {
+    src: '/images/home/5.avif',
+    alt: {
+      fr: 'Une parenthèse élégante pour ralentir',
+      en: 'An elegant escape to slow down',
+      nl: 'Een elegante pauze om te vertragen',
+    },
+  },
+  {
+    src: '/images/home/5b.avif',
+    alt: {
+      fr: 'Escapade romantique en Ardenne',
+      en: 'A romantic Ardennes getaway',
+      nl: 'Een romantisch uitje in de Ardennen',
+    },
+  },
+  {
+    src: '/images/home/6.avif',
+    alt: {
+      fr: 'Une ambiance feutrée et raffinée',
+      en: 'A refined, softly lit ambience',
+      nl: 'Een verfijnde, zacht verlichte sfeer',
+    },
+  },
+  {
+    src: '/images/home/6b.avif',
+    alt: {
+      fr: 'Des instants précieux à partager à deux',
+      en: 'Precious moments to share together',
+      nl: 'Kostbare momenten om samen te delen',
+    },
+  },
+] satisfies Array<{ src: string; alt: Record<Locale, string> }>;
+
+const giteGalleryConfig = {
+  bergerie: {
+    heroImage: '/images/la-bergerie/1.avif',
+    gallery: createNumberedGallery('la-bergerie', 45),
+  },
+  brassine: {
+    heroImage: '/images/la-brassine/1.avif',
+    gallery: createNumberedGallery('la-brassine', 31),
+  },
+} as const;
+
 export const giteStats = {
   bergerie: {
     guests: 2,
@@ -55,8 +157,8 @@ export const giteStats = {
     airbnbUrl: siteConfig.airbnb.bergerie,
     googleUrl: siteConfig.googleReviews.bergerie,
     whatsappUrl: siteConfig.whatsapp.bergerie,
-    heroImage: '/images/la-bergerie/1.avif',
-    gallery: createNumberedGallery('la-bergerie', 45),
+    heroImage: giteGalleryConfig.bergerie.heroImage,
+    gallery: giteGalleryConfig.bergerie.gallery,
   },
   brassine: {
     guests: 2,
@@ -68,10 +170,17 @@ export const giteStats = {
     airbnbUrl: siteConfig.airbnb.brassine,
     googleUrl: siteConfig.googleReviews.brassine,
     whatsappUrl: siteConfig.whatsapp.brassine,
-    heroImage: '/images/la-brassine/1.avif',
-    gallery: createNumberedGallery('la-brassine', 31),
+    heroImage: giteGalleryConfig.brassine.heroImage,
+    gallery: giteGalleryConfig.brassine.gallery,
   },
 } as const;
+
+export function getHomeGalleryImages(locale: Locale) {
+  return homeGalleryFrames.map((image) => ({
+    src: image.src,
+    alt: image.alt[locale],
+  }));
+}
 
 export const featureIcons = {
   bed: BedDouble,
