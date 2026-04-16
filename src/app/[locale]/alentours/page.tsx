@@ -2,26 +2,13 @@ import type { Metadata } from 'next';
 import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
-import { aroundSectionImages } from '@/data/site';
+import { getSiteImages, resolveAroundImage } from '@/lib/content-store';
 import { getDictionary, type SiteDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
 
 type AroundSection = SiteDictionary['around']['sections'][number];
 type AroundItem = AroundSection['items'][number];
-
-function getAroundImage(sectionKey: string, itemName: string) {
-  const name = itemName.toLowerCase();
-
-  if (sectionKey === 'cycling') return '/images/around/velo.jpg';
-  if (name.includes('mirwart')) return '/images/around/mirwart.jpg';
-  if (name.includes('redu')) return '/images/around/redu.jpg';
-  if (name.includes('livre')) return '/images/around/redu1.jpeg';
-  if (name.includes('lesse') || name.includes('kayak')) return '/images/around/lesse1.jpg';
-  if (name.includes('forêt') || name.includes('foret') || name.includes('saint-hubert')) return '/images/around/foret1.jpg';
-
-  return aroundSectionImages[sectionKey as keyof typeof aroundSectionImages] ?? '/images/around/default.jpg';
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: Locale }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -39,12 +26,13 @@ export default async function AroundPage({ params }: { params: Promise<{ locale:
   const { locale } = await params;
   const dict = await getDictionary(locale);
   const around = dict.around;
+  const images = await getSiteImages();
 
   return (
     <>
       <section className="relative overflow-hidden bg-taupe-900 py-20 text-cream-50">
         <div className="absolute inset-0">
-          <ImageFallback src="/images/around/mirwart.jpg" alt={around.hero.title} fill priority sizes="100vw" />
+          <ImageFallback src={images.around.heroImage} alt={around.hero.title} fill priority sizes="100vw" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(45,34,29,0.25),rgba(45,34,29,0.82))]" />
         </div>
         <div className="section-shell relative z-10">
@@ -70,7 +58,7 @@ export default async function AroundPage({ params }: { params: Promise<{ locale:
                     <article key={item.name} className="overflow-hidden rounded-[1.5rem] border border-taupe-100 bg-white">
                       <div className="relative aspect-[16/10]">
                         <ImageFallback
-                          src={getAroundImage(section.key, item.name)}
+                          src={resolveAroundImage(images, section.key, item.name)}
                           alt={item.name}
                           fill
                           sizes="(max-width: 1024px) 100vw, 50vw"

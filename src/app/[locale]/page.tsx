@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { HomePage } from '@/components/sections/home-page';
 import { getDictionary } from '@/lib/dictionaries';
+import { getSiteImages } from '@/lib/content-store';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
 
@@ -28,6 +29,7 @@ export default async function HomeRoute({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const images = await getSiteImages();
 
-  return <HomePage locale={locale} dict={dict} />;
+  return <HomePage locale={locale} dict={dict} images={images} />;
 }

@@ -26,6 +26,10 @@ type ContactFormProps = {
       undecided: string;
     };
   };
+  ui: {
+    intro: string;
+    reassurance: string;
+  };
 };
 
 type ApiResult = {
@@ -35,7 +39,7 @@ type ApiResult = {
   destinationEmail?: string;
 };
 
-export function ContactForm({ labels }: ContactFormProps) {
+export function ContactForm({ labels, ui }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [feedback, setFeedback] = useState('');
   const [showFallback, setShowFallback] = useState(false);
@@ -150,7 +154,7 @@ export function ContactForm({ labels }: ContactFormProps) {
       }}
     >
       <div className="md:col-span-2">
-        <p className="text-sm leading-7 text-taupe-500">Quelques informations suffisent pour revenir vers vous rapidement, en direct ou via Airbnb si vous le préférez.</p>
+        <p className="text-sm leading-7 text-taupe-500">{ui.intro}</p>
       </div>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.firstName}</span>
@@ -189,7 +193,7 @@ export function ContactForm({ labels }: ContactFormProps) {
         <input tabIndex={-1} autoComplete="off" name="company" />
       </label>
       <div className="rounded-[1.35rem] border border-rose-200/40 bg-rose-100/72 p-4 text-sm leading-7 text-taupe-600">
-        Réponse rapide, ton chaleureux et possibilité de réserver en direct ou de basculer sur Airbnb selon votre préférence.
+        {ui.reassurance}
       </div>
       <label className="grid gap-2 text-sm text-taupe-700 md:col-span-2">
         <span className="font-medium tracking-[0.01em]">{labels.message}</span>

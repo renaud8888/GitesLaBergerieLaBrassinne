@@ -5,17 +5,27 @@ import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
 import { StackedGallery } from '@/components/common/stacked-gallery';
-import { featureIcons, getHomeGalleryImages, giteStats, siteConfig } from '@/data/site';
+import { featureIcons, giteStats, siteConfig } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
 import type { Locale } from '@/lib/i18n';
+import type { defaultImageContent } from '@/lib/content-store';
 
-export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionary }) {
+export function HomePage({
+  locale,
+  dict,
+  images,
+}: {
+  locale: Locale;
+  dict: SiteDictionary;
+  images: typeof defaultImageContent;
+}) {
   const home = dict.home;
+  const homeUi = dict.ui.home;
   const gites = [
     {
       key: 'bergerie',
       href: `/${locale}/gites/la-bergerie`,
-      image: giteStats.bergerie.heroImage,
+      image: images.gites.bergerie.heroImage,
       airbnb: giteStats.bergerie.airbnbUrl,
       rating: giteStats.bergerie.reviews,
       google: giteStats.bergerie.googleUrl,
@@ -24,7 +34,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
     {
       key: 'brassine',
       href: `/${locale}/gites/la-brassine`,
-      image: giteStats.brassine.heroImage,
+      image: images.gites.brassine.heroImage,
       airbnb: giteStats.brassine.airbnbUrl,
       rating: giteStats.brassine.reviews,
       google: giteStats.brassine.googleUrl,
@@ -32,30 +42,30 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
     },
   ];
   const totalReviews = giteStats.bergerie.reviews + giteStats.brassine.reviews;
-  const homeGalleryImages = getHomeGalleryImages(locale);
+  const homeGalleryImages = home.gallery.images;
   const compactFacts = [
-    { icon: UserRound, label: '2 personnes' },
-    { icon: Trees, label: '1 chambre' },
-    { icon: BedDouble, label: '1 lit' },
-    { icon: Bath, label: '1 salle de bain' },
+    { icon: UserRound, label: homeUi.compactFacts.guests },
+    { icon: Trees, label: homeUi.compactFacts.bedroom },
+    { icon: BedDouble, label: homeUi.compactFacts.bed },
+    { icon: Bath, label: homeUi.compactFacts.bathroom },
   ];
 
   return (
     <>
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0">
-          <ImageFallback src="/images/home/1.avif" alt={home.hero.imageAlt} fill priority sizes="100vw" />
+          <ImageFallback src={images.home.heroImage} alt={home.hero.imageAlt} fill priority sizes="100vw" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,37,30,0.28),rgba(53,37,30,0.82))]" />
         </div>
         <div className="section-shell relative z-10 py-20 md:py-28 lg:py-32">
           <div className="max-w-3xl">
             <div className="mb-8 inline-flex items-center gap-4 rounded-full border border-white/30 bg-[rgba(255,250,245,0.18)] px-4 py-3 text-cream-50 shadow-[0_22px_44px_rgba(37,25,20,0.16)] backdrop-blur-md">
               <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/35 bg-white/95 shadow-[0_8px_18px_rgba(37,25,20,0.12)]">
-                <ImageFallback src="/images/branding/logo.png" alt="Logo La Bergerie & La Brassine" fill sizes="44px" />
+                <ImageFallback src={images.branding.logo} alt={`Logo ${dict.ui.brand.name}`} fill sizes="44px" />
               </div>
               <div>
-                <p className="font-display text-xl text-cream-50">La Bergerie & La Brassine</p>
-                <p className="text-[11px] uppercase tracking-[0.28em] text-cream-100/90">Gîtes de charme à Libin</p>
+                <p className="font-display text-xl text-cream-50">{dict.ui.brand.name}</p>
+                <p className="text-[11px] uppercase tracking-[0.28em] text-cream-100/90">{dict.ui.brand.tagline}</p>
               </div>
             </div>
             <p className="text-xs uppercase tracking-[0.35em] text-cream-100">{home.hero.eyebrow}</p>
@@ -73,24 +83,24 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
               <div className="rounded-[1.5rem] border border-white/22 bg-[linear-gradient(135deg,rgba(244,216,210,0.32),rgba(255,250,245,0.18))] p-4 text-cream-50 shadow-[0_18px_40px_rgba(37,25,20,0.14)]">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.28em] text-cream-100/82">Preuve sociale</p>
-                    <p className="mt-2 font-display text-3xl leading-none md:text-4xl">5/5 Airbnb</p>
+                    <p className="text-xs uppercase tracking-[0.28em] text-cream-100/82">{homeUi.heroCard.socialProofLabel}</p>
+                    <p className="mt-2 font-display text-3xl leading-none md:text-4xl">{homeUi.heroCard.socialProofValue}</p>
                   </div>
                   <span className="inline-flex rounded-full bg-white/18 p-2 text-cream-50">
                     <Star size={16} fill="currentColor" />
                   </span>
                 </div>
-                <p className="mt-3 text-base text-cream-100">{totalReviews} avis cumulés</p>
+                <p className="mt-3 text-base text-cream-100">{totalReviews} {homeUi.heroCard.socialProofReviews}</p>
               </div>
               <div className="rounded-[1.5rem] border border-white/18 bg-white/10 p-4 text-cream-50">
-                <p className="text-xs uppercase tracking-[0.26em] text-cream-100/76">Lieu</p>
-                <p className="mt-2 font-display text-2xl">Libin</p>
-                <p className="mt-1 text-sm text-cream-100/88">Ardennes belges</p>
+                <p className="text-xs uppercase tracking-[0.26em] text-cream-100/76">{homeUi.heroCard.locationLabel}</p>
+                <p className="mt-2 font-display text-2xl">{homeUi.heroCard.locationValue}</p>
+                <p className="mt-1 text-sm text-cream-100/88">{homeUi.heroCard.locationText}</p>
               </div>
               <div className="rounded-[1.5rem] border border-white/18 bg-white/10 p-4 text-cream-50">
-                <p className="text-xs uppercase tracking-[0.26em] text-cream-100/76">Séjour</p>
-                <p className="mt-2 font-display text-2xl">À deux</p>
-                <p className="mt-1 text-sm text-cream-100/88">Escapade romantique</p>
+                <p className="text-xs uppercase tracking-[0.26em] text-cream-100/76">{homeUi.heroCard.stayLabel}</p>
+                <p className="mt-2 font-display text-2xl">{homeUi.heroCard.stayValue}</p>
+                <p className="mt-1 text-sm text-cream-100/88">{homeUi.heroCard.stayText}</p>
               </div>
             </div>
           </div>
@@ -235,7 +245,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
             </article>
             <article className="surface-card overflow-hidden p-0">
               <div className="relative aspect-[4/3]">
-                <ImageFallback src="/images/home/5b.avif" alt="Escapade romantique en Ardenne" fill sizes="(max-width: 1024px) 100vw, 30vw" />
+                <ImageFallback src={images.home.sideImage} alt={home.gallery.sideTitle} fill sizes="(max-width: 1024px) 100vw, 30vw" />
               </div>
               <div className="p-6">
                 <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-wood">
@@ -271,10 +281,10 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
                   </p>
                   <div className="mt-5 flex flex-wrap gap-3">
                     <ButtonLink href={isBergerie ? siteConfig.googleReviews.bergerie : siteConfig.googleReviews.brassine} variant="secondary" external icon={<GoogleIcon className="h-4 w-4" />}>
-                      Google
+                      {homeUi.reviews.googleLabel}
                     </ButtonLink>
                     <ButtonLink href={isBergerie ? siteConfig.airbnb.bergerie : siteConfig.airbnb.brassine} variant="secondary" external icon={<Star size={14} fill="currentColor" />}>
-                      Airbnb
+                      {homeUi.reviews.airbnbLabel}
                     </ButtonLink>
                   </div>
                 </article>
@@ -301,7 +311,7 @@ export function HomePage({ locale, dict }: { locale: Locale; dict: SiteDictionar
                   {home.finalCta.whatsapp}
                 </ButtonLink>
                 <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="flex-1 justify-center">
-                  Airbnb
+                  {homeUi.finalCta.airbnbLabel}
                 </ButtonLink>
               </div>
             </div>

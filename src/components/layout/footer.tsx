@@ -9,6 +9,8 @@ export function Footer({
   locale,
   nav,
   footer,
+  brand,
+  ui,
 }: {
   locale: Locale;
   nav: {
@@ -27,6 +29,15 @@ export function Footer({
     reserveText: string;
     copyright: string;
   };
+  brand: {
+    name: string;
+  };
+  ui: {
+    eyebrow: string;
+    whatsappLabel: string;
+    googleReviewsLabel: string;
+    airbnbLabel: string;
+  };
 }) {
   return (
     <footer className="mt-24 overflow-hidden bg-[linear-gradient(180deg,#4c3b33,#2b211d)] text-cream-100">
@@ -34,8 +45,8 @@ export function Footer({
         <div className="absolute right-[-8rem] top-[-5rem] h-64 w-64 rounded-full bg-rose-200/12 blur-3xl" />
         <div className="grid gap-6 lg:grid-cols-[1.2fr_0.85fr_0.95fr]">
           <div className="relative">
-            <p className="eyebrow-chip border-white/12 bg-white/8 text-cream-100">Maison d’hôtes romantique</p>
-            <p className="mt-5 font-display text-4xl text-cream-50 md:text-[3.6rem]">La Bergerie & La Brassine</p>
+            <p className="eyebrow-chip border-white/12 bg-white/8 text-cream-100">{ui.eyebrow}</p>
+            <p className="mt-5 font-display text-4xl text-cream-50 md:text-[3.6rem]">{brand.name}</p>
             <p className="mt-4 max-w-md text-sm leading-7 text-cream-100/78">{footer.tagline}</p>
             <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm text-cream-100/82">
               <Link href={`/${locale}/contact`} className="inline-flex items-center gap-2 transition hover:text-cream-50">
@@ -44,7 +55,7 @@ export function Footer({
               </Link>
               <a href={siteConfig.whatsapp.default} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-cream-50">
                 <MessageCircle size={15} />
-                WhatsApp
+                {ui.whatsappLabel}
               </a>
             </div>
           </div>
@@ -67,7 +78,7 @@ export function Footer({
               <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
                 <a href={siteConfig.whatsapp.default} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 transition hover:text-cream-50">
                   <MessageCircle size={16} />
-                  WhatsApp
+                  {ui.whatsappLabel}
                 </a>
                 <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-3 transition hover:text-cream-50">
                   <Mail size={16} />
@@ -90,11 +101,11 @@ export function Footer({
               <div className="mt-5 grid gap-3 text-sm text-cream-100/82">
                 <a href={siteConfig.googleReviews.bergerie} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 transition hover:bg-white/12">
                   <GoogleIcon className="h-4 w-4" />
-                  Avis Google
+                  {ui.googleReviewsLabel}
                 </a>
                 <a href={siteConfig.airbnb.bergerie} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 transition hover:bg-white/12">
                   <Star size={15} fill="currentColor" />
-                  Airbnb
+                  {ui.airbnbLabel}
                 </a>
               </div>
             </div>

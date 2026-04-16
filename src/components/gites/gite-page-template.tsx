@@ -8,23 +8,27 @@ import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
 import { giteStats } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
+import type { defaultImageContent } from '@/lib/content-store';
 import type { Locale } from '@/lib/i18n';
 
 export function GitePageTemplate({
   locale,
   dict,
   slug,
+  images,
 }: {
   locale: Locale;
   dict: SiteDictionary;
   slug: 'bergerie' | 'brassine';
+  images: typeof defaultImageContent;
 }) {
   const gite = dict.gites[slug];
   const stats = giteStats[slug];
+  const ui = dict.ui.gites;
   const otherSlug = slug === 'bergerie' ? 'brassine' : 'bergerie';
   const otherHref = `/${locale}/gites/${otherSlug === 'bergerie' ? 'la-bergerie' : 'la-brassine'}`;
   const common = dict.gites.common;
-  const images = stats.gallery.map((src, index) => ({ src, alt: `${gite.hero.title} ${index + 1}` }));
+  const galleryImages = images.gites[slug].gallery.map((src, index) => ({ src, alt: `${gite.hero.title} ${index + 1}` }));
 
   const quickFacts = [
     { icon: BedDouble, text: `${stats.guests} ${common.persons}` },
@@ -42,7 +46,7 @@ export function GitePageTemplate({
     <>
       <section className="relative isolate overflow-hidden bg-taupe-900">
         <div className="absolute inset-0">
-          <ImageFallback src={stats.heroImage} alt={gite.hero.title} fill priority sizes="100vw" />
+          <ImageFallback src={images.gites[slug].heroImage} alt={gite.hero.title} fill priority sizes="100vw" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(37,25,20,0.24),rgba(37,25,20,0.84))]" />
         </div>
         <div className="section-shell-wide relative z-10 py-20 md:py-28">
@@ -52,7 +56,7 @@ export function GitePageTemplate({
             <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100 md:text-xl">{gite.hero.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.38)]">
-                Réserver
+                {ui.common.reserveLabel}
               </ButtonLink>
               <ButtonLink href={stats.whatsappUrl} variant="secondary" external className="border-white/18 bg-white/14 text-white" icon={<WhatsAppIcon className="h-4 w-4" />}>
                 {common.bookWhatsapp}
@@ -75,7 +79,7 @@ export function GitePageTemplate({
               </div>
               <div className="grid gap-3 sm:grid-cols-[auto_auto] xl:min-w-[360px]">
                 <div className="rounded-[1.35rem] border border-white/14 bg-[linear-gradient(135deg,rgba(244,216,210,0.32),rgba(255,250,245,0.12))] px-4 py-3 text-cream-50">
-                  <p className="text-[11px] uppercase tracking-[0.24em] text-cream-100/78">Avis voyageurs</p>
+                  <p className="text-[11px] uppercase tracking-[0.24em] text-cream-100/78">{ui.common.travelerReviewsLabel}</p>
                   <p className="mt-2 inline-flex items-center gap-2 font-display text-3xl">
                     <Star size={16} fill="currentColor" className="text-cream-50" />
                     5/5 Airbnb
@@ -84,7 +88,7 @@ export function GitePageTemplate({
                 </div>
                 <a href={stats.googleUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-[1.35rem] border border-white/14 bg-white/10 px-4 py-3 text-sm text-cream-50 transition hover:bg-white/16">
                   <GoogleIcon className="h-4 w-4" />
-                  Voir les avis Google
+                  {ui.common.googleReviewsLabel}
                 </a>
               </div>
             </div>
@@ -96,7 +100,7 @@ export function GitePageTemplate({
         <div className="section-shell-wide">
           <SectionHeading eyebrow={common.galleryEyebrow} title={common.galleryTitle} description={gite.galleryIntro} />
           <div className="mt-8">
-            <Gallery images={images} previewCount={9} />
+            <Gallery images={galleryImages} previewCount={9} />
           </div>
         </div>
       </section>
@@ -104,16 +108,16 @@ export function GitePageTemplate({
       <section className="section-space pt-0">
         <div className="section-shell-wide grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
           <div className={`surface-card-strong p-6 md:p-8 ${toneCardClass}`}>
-            <p className="text-xs uppercase tracking-[0.24em] text-wood">Premières impressions</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-wood">{ui.common.firstImpressionsEyebrow}</p>
             <p className="mt-3 font-display text-4xl text-taupe-900">
-              {slug === 'bergerie' ? 'Plus d’espace, plus de lumière, toujours la même douceur.' : 'Plus intime, plus enveloppante, pensée comme un cocon.'}
+              {ui[slug].firstImpressionsTitle}
             </p>
             <div className="editorial-divider mt-6" />
             <p className="mt-6 text-base leading-8 text-taupe-600">{gite.outdoor.text}</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`}>Réserver</ButtonLink>
+              <ButtonLink href={`/${locale}/contact`}>{ui.common.reserveLabel}</ButtonLink>
               <ButtonLink href={stats.airbnbUrl} variant="secondary" external>
-                Airbnb
+                {ui.common.airbnbLabel}
               </ButtonLink>
             </div>
           </div>
@@ -131,7 +135,7 @@ export function GitePageTemplate({
 
       <section className="section-space pt-0">
         <div className="section-shell-wide">
-          <SectionHeading eyebrow={common.highlights} title={common.highlights} description={slug === 'bergerie' ? 'Une adresse pensée pour les couples qui aiment l’espace, la lumière et les détails soignés.' : 'Un cocon plus compact, plus intime, très agréable pour ralentir et se retrouver à deux.'} />
+          <SectionHeading eyebrow={common.highlights} title={common.highlights} description={ui[slug].highlightsDescription} />
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {gite.highlights.map((item: string) => (
               <article key={item} className="surface-card-strong p-5">
@@ -194,10 +198,10 @@ export function GitePageTemplate({
               <p className="mt-4 font-display text-2xl text-taupe-900">{gite.reviewHighlight.author}</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <ButtonLink href={stats.googleUrl} variant="secondary" external icon={<GoogleIcon className="h-4 w-4" />}>
-                  Google
+                  {ui.common.googleLabel}
                 </ButtonLink>
                 <ButtonLink href={stats.airbnbUrl} variant="secondary" external icon={<Star size={14} fill="currentColor" />}>
-                  Airbnb
+                  {ui.common.airbnbLabel}
                 </ButtonLink>
               </div>
             </div>
@@ -208,10 +212,10 @@ export function GitePageTemplate({
             <p className="mt-4 text-base leading-8 text-taupe-600">{gite.outdoor.text}</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900">
-                Réserver
+                {ui.common.reserveLabel}
               </ButtonLink>
               <ButtonLink href={stats.whatsappUrl} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />}>
-                WhatsApp
+                {ui.common.whatsappLabel}
               </ButtonLink>
             </div>
           </div>
@@ -236,12 +240,12 @@ export function GitePageTemplate({
               </ButtonLink>
             </div>
             <div className="surface-card-strong p-6 md:p-8">
-              <p className="font-display text-3xl text-taupe-900">Réserver simplement</p>
-              <p className="mt-3 text-base leading-8 text-taupe-500">Un contact direct quand vous le souhaitez, avec les liens Airbnb visibles pour rassurer sans surcharger le parcours.</p>
+              <p className="font-display text-3xl text-taupe-900">{ui.common.bookingCardTitle}</p>
+              <p className="mt-3 text-base leading-8 text-taupe-500">{ui.common.bookingCardText}</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <ButtonLink href={`/${locale}/contact`}>Réserver</ButtonLink>
+                <ButtonLink href={`/${locale}/contact`}>{ui.common.reserveLabel}</ButtonLink>
                 <ButtonLink href={stats.airbnbUrl} variant="secondary" external>
-                  Airbnb
+                  {ui.common.airbnbLabel}
                 </ButtonLink>
               </div>
             </div>

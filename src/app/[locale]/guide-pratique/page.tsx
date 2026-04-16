@@ -6,6 +6,7 @@ import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { GuidePanels } from '@/components/common/guide-panels';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { siteConfig } from '@/data/site';
+import { getSiteImages } from '@/lib/content-store';
 import { getDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
@@ -26,12 +27,13 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   const dict = await getDictionary(locale);
   const guide = dict.guide;
+  const images = await getSiteImages();
 
   return (
     <>
       <section className="relative overflow-hidden bg-taupe-900 py-20 text-cream-50">
         <div className="absolute inset-0">
-          <ImageFallback src="/images/home/6.avif" alt={guide.hero.title} fill priority sizes="100vw" />
+          <ImageFallback src={images.guide.heroImage} alt={guide.hero.title} fill priority sizes="100vw" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(45,34,29,0.35),rgba(45,34,29,0.85))]" />
         </div>
         <div className="section-shell relative z-10">
@@ -43,7 +45,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               WhatsApp
             </ButtonLink>
             <ButtonLink href={`/${locale}/contact`} variant="secondary" className="border-white/16 bg-white/10 text-white">
-              Besoin d’aide ?
+              {dict.ui.guide.heroSecondaryCta}
             </ButtonLink>
           </div>
         </div>
@@ -52,8 +54,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
       <section className="section-space">
         <div className="section-shell-wide">
           <GuidePanels
-            overviewTitle="Une page pensée pour être lue vite"
-            overviewText="Arrivée, départ, chauffage, télévision, tri, parking et aide sur place : l’essentiel est regroupé ici pour trouver l’information utile sans faire défiler de longs blocs."
+            overviewTitle={dict.ui.guide.overviewTitle}
+            overviewText={dict.ui.guide.overviewText}
             quickFacts={guide.quickFacts}
             sections={guide.sections}
             faq={guide.faq}
@@ -67,11 +69,11 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
         <div className="section-shell-wide">
           <div className="surface-card-strong flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between md:p-8">
             <div>
-              <p className="font-display text-4xl text-taupe-900">Besoin d’un coup de main avant votre arrivée ?</p>
-              <p className="mt-3 max-w-2xl text-base leading-8 text-taupe-500">Une question pratique, un doute sur les horaires ou une demande spéciale ? WhatsApp reste le canal le plus simple.</p>
+              <p className="font-display text-4xl text-taupe-900">{dict.ui.guide.supportTitle}</p>
+              <p className="mt-3 max-w-2xl text-base leading-8 text-taupe-500">{dict.ui.guide.supportText}</p>
             </div>
             <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
-              WhatsApp
+              {dict.ui.guide.supportButton}
             </ButtonLink>
           </div>
         </div>
@@ -85,7 +87,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <p className="mt-3 max-w-2xl text-base leading-8 text-taupe-500">{guide.faqDescription}</p>
             </div>
             <ButtonLink href={`/${locale}/contact`} variant="secondary" icon={<MessageCircle size={16} />}>
-              Besoin d’aide ?
+              {dict.ui.guide.faqCta}
             </ButtonLink>
           </div>
         </div>

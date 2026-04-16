@@ -11,6 +11,11 @@ import { cn } from '@/lib/utils';
 
 type HeaderProps = {
   locale: Locale;
+  brand: {
+    name: string;
+    tagline: string;
+  };
+  menuAriaLabel: string;
   nav: {
     home: string;
     bergerie: string;
@@ -31,7 +36,7 @@ const navItems = [
   { key: 'contact', path: '/contact' },
 ] as const;
 
-export function Header({ locale, nav }: HeaderProps) {
+export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -67,10 +72,10 @@ export function Header({ locale, nav }: HeaderProps) {
       <div className="section-shell flex items-center justify-between py-4">
         <Link href={`/${locale}`} className={cn('min-w-0 rounded-[1.45rem] border px-4 py-3 transition-all', brandCardClass)}>
           <p className={cn('font-display text-2xl leading-none md:text-3xl', immersive && !scrolled ? 'text-taupe-900 md:text-cream-50' : 'text-taupe-900')}>
-            La Bergerie & La Brassine
+            {brand.name}
           </p>
           <p className={cn('mt-1 truncate text-[11px] uppercase tracking-[0.28em]', immersive && !scrolled ? 'text-taupe-500 md:text-cream-100/75' : 'text-taupe-500')}>
-            Gîtes de charme à Libin
+            {brand.tagline}
           </p>
         </Link>
 
@@ -127,7 +132,7 @@ export function Header({ locale, nav }: HeaderProps) {
             'rounded-full border p-3 shadow-[0_8px_24px_rgba(89,63,49,0.08)] xl:hidden',
             immersive && !scrolled ? 'border-white/60 bg-[rgba(255,250,245,0.94)] text-taupe-900' : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900',
           )}
-          aria-label="Open menu"
+          aria-label={menuAriaLabel}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
@@ -138,8 +143,8 @@ export function Header({ locale, nav }: HeaderProps) {
         <div className={cn('absolute right-0 top-0 flex h-full w-[82vw] max-w-sm flex-col border-l border-white/55 bg-[linear-gradient(180deg,rgba(255,250,245,0.98),rgba(244,232,224,0.98))] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
           <div className="flex items-start justify-between gap-4">
             <div>
-              <p className="font-display text-4xl leading-none">La Bergerie & La Brassine</p>
-              <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">Gîtes de charme à Libin</p>
+              <p className="font-display text-4xl leading-none">{brand.name}</p>
+              <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">{brand.tagline}</p>
             </div>
             <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-taupe-200 bg-white p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50">
               <X size={18} />

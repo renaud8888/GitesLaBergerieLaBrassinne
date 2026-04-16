@@ -7,6 +7,7 @@ import { ContactForm } from '@/components/common/contact-form';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
 import { siteConfig } from '@/data/site';
+import { getSiteImages } from '@/lib/content-store';
 import { getDictionary, type SiteDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
@@ -29,12 +30,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const { locale } = await params;
   const dict = await getDictionary(locale);
   const contact = dict.contact;
+  const images = await getSiteImages();
 
   return (
     <>
       <section className="relative overflow-hidden bg-taupe-900 py-20 text-cream-50">
         <div className="absolute inset-0">
-          <ImageFallback src="/images/home/6b.avif" alt={contact.hero.title} fill priority sizes="100vw" />
+          <ImageFallback src={images.contact.heroImage} alt={contact.hero.title} fill priority sizes="100vw" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(45,34,29,0.3),rgba(45,34,29,0.86))]" />
         </div>
         <div className="section-shell relative z-10">
@@ -43,10 +45,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100/84">{contact.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
-              WhatsApp
+              {dict.ui.contact.heroWhatsappLabel}
             </ButtonLink>
             <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="border-white/16 bg-white/10 text-white">
-              Airbnb
+              {dict.ui.contact.heroAirbnbLabel}
             </ButtonLink>
           </div>
         </div>
@@ -63,10 +65,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 </ButtonLink>
                 <div className="grid gap-3 md:grid-cols-2">
                   <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external>
-                    Airbnb · La Bergerie
+                    {dict.ui.contact.directAirbnbBergerie}
                   </ButtonLink>
                   <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external>
-                    Airbnb · La Brassine
+                    {dict.ui.contact.directAirbnbBrassine}
                   </ButtonLink>
                 </div>
                 <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center rounded-[1.15rem] border border-taupe-100 bg-white/78 px-4 py-3 text-sm text-taupe-700 transition hover:bg-white">
@@ -90,13 +92,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
               <article className="surface-card-strong p-5">
                 <Clock3 size={18} className="text-wood" />
-                <p className="mt-3 font-display text-2xl text-taupe-900">Réponse rapide</p>
-                <p className="mt-2 text-sm leading-7 text-taupe-500">Le canal le plus direct pour une disponibilité ou une question est WhatsApp.</p>
+                <p className="mt-3 font-display text-2xl text-taupe-900">{dict.ui.contact.quickResponseTitle}</p>
+                <p className="mt-2 text-sm leading-7 text-taupe-500">{dict.ui.contact.quickResponseText}</p>
               </article>
               <article className="surface-card-strong p-5">
                 <ShieldCheck size={18} className="text-wood" />
-                <p className="mt-3 font-display text-2xl text-taupe-900">Réservation claire</p>
-                <p className="mt-2 text-sm leading-7 text-taupe-500">Réservation directe ou Airbnb selon votre préférence, sans parcours compliqué.</p>
+                <p className="mt-3 font-display text-2xl text-taupe-900">{dict.ui.contact.clearBookingTitle}</p>
+                <p className="mt-2 text-sm leading-7 text-taupe-500">{dict.ui.contact.clearBookingText}</p>
               </article>
               <article className="surface-card-strong p-5">
                 <MapPin size={18} className="text-wood" />
@@ -115,19 +117,19 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div>
             <SectionHeading eyebrow={contact.form.eyebrow} title={contact.form.title} description={contact.form.text} />
             <div className="mt-6">
-              <ContactForm labels={contact.form.labels} />
+              <ContactForm labels={contact.form.labels} ui={dict.ui.contactForm} />
             </div>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="rounded-[1.5rem] border border-taupe-100 bg-white/78 p-5">
-                <p className="font-display text-2xl text-taupe-900">Réponse rapide</p>
-                <p className="mt-3 text-sm leading-7 text-taupe-500">Vous pouvez réserver en direct, poser une question simple ou, si vous préférez, poursuivre via Airbnb ensuite.</p>
+                <p className="font-display text-2xl text-taupe-900">{dict.ui.contact.responseCardTitle}</p>
+                <p className="mt-3 text-sm leading-7 text-taupe-500">{dict.ui.contact.responseCardText}</p>
               </div>
               <div className="rounded-[1.5rem] border border-taupe-100 bg-white/78 p-5">
                 <p className="inline-flex items-center gap-2 font-display text-2xl text-taupe-900">
                   <Mail size={16} />
-                  Adresse de réception
+                  {dict.ui.contact.inboxTitle}
                 </p>
-                <p className="mt-3 text-sm leading-7 text-taupe-500">Les demandes sont prévues pour être reçues sur {siteConfig.email}. Si le service email de la mise en ligne n’est pas configuré, le formulaire vous le signale clairement.</p>
+                <p className="mt-3 text-sm leading-7 text-taupe-500">{dict.ui.contact.inboxText.replace('{email}', siteConfig.email)}</p>
               </div>
             </div>
           </div>

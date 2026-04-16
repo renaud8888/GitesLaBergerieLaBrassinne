@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { GitePageTemplate } from '@/components/gites/gite-page-template';
+import { getSiteImages } from '@/lib/content-store';
 import { getDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
@@ -28,6 +29,7 @@ export default async function BergeriePage({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const images = await getSiteImages();
 
-  return <GitePageTemplate locale={locale} dict={dict} slug="bergerie" />;
+  return <GitePageTemplate locale={locale} dict={dict} slug="bergerie" images={images} />;
 }
