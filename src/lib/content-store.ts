@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 import { unstable_noStore as noStore } from 'next/cache';
+import { get as getBlob, put as putBlob } from '@vercel/blob';
 
 import en from '@/content/locales/en/common.json';
 import fr from '@/content/locales/fr/common.json';
@@ -13,6 +14,7 @@ import { aroundSectionImages, giteStats } from '@/data/site';
 import type { Locale } from '@/lib/i18n';
 
 const CONTENT_OVERRIDES_PATH = path.join(process.cwd(), 'data', 'content-overrides.json');
+const CONTENT_OVERRIDES_BLOB_PATH = 'site-content/content-overrides.json';
 const localeDefaults = { fr, en, nl } as const;
 
 export const defaultImageContent = {
@@ -74,6 +76,14 @@ type PersistedOverrides = {
 };
 
 type PathSegment = string | number;
+
+function isVercelBlobConfigured() {
+  return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+}
+
+function isRunningOnVercel() {
+  return process.env.VERCEL === '1';
+}
 
 function deepClone<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T;
@@ -357,6 +367,25 @@ async function ensureOverridesFile() {
 }
 
 async function readOverrides(): Promise<PersistedOverrides> {
+  if (isVercelBlobConfigured()) {
+    const blobResult = await getBlob(CONTENT_OVERRIDES_BLOB_PATH, {
+      access: 'private',
+    });
+
+    if (!blobResult) {
+      return { texts: {}, images: {} };
+    }
+
+    const response = new Response(blobResult.stream);
+    const file = await response.text();
+
+    try {
+      return JSON.parse(file) as PersistedOverrides;
+    } catch {
+      return { texts: {}, images: {} };
+    }
+  }
+
   await ensureOverridesFile();
   const file = await fs.readFile(CONTENT_OVERRIDES_PATH, 'utf8');
 
@@ -368,8 +397,34 @@ async function readOverrides(): Promise<PersistedOverrides> {
 }
 
 async function writeOverrides(overrides: PersistedOverrides) {
+  if (isVercelBlobConfigured()) {
+    await putBlob(
+      CONTENT_OVERRIDES_BLOB_PATH,
+      JSON.stringify(overrides, null, 2),
+      {
+        access: 'private',
+        addRandomSuffix: false,
+        allowOverwrite: true,
+        contentType: 'application/json',
+      },
+    );
+    return;
+  }
+
   await ensureOverridesFile();
   await fs.writeFile(CONTENT_OVERRIDES_PATH, JSON.stringify(overrides, null, 2), 'utf8');
+}
+
+export function getContentStorageMode() {
+  if (isVercelBlobConfigured()) {
+    return 'vercel-blob' as const;
+  }
+
+  if (isRunningOnVercel()) {
+    return 'missing-vercel-blob' as const;
+  }
+
+  return 'local-file' as const;
 }
 
 function getDefaultRuntimeDictionary(locale: Locale) {
