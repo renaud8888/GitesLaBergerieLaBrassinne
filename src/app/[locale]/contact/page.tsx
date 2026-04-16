@@ -7,7 +7,7 @@ import { ContactForm } from '@/components/common/contact-form';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
 import { siteConfig } from '@/data/site';
-import { getSiteImages } from '@/lib/content-store';
+import { getSiteImages } from '@/lib/content-store'; 
 import { getDictionary, type SiteDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
 import { type Locale } from '@/lib/i18n';
