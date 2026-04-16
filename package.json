@@ -9,6 +9,7 @@
     "lint": "ESLINT_USE_FLAT_CONFIG=false eslint ."
   },
   "dependencies": {
+    "@vercel/blob": "^2.3.3",
     "clsx": "^2.1.1",
     "framer-motion": "^12.9.4",
     "lucide-react": "^0.511.0",
