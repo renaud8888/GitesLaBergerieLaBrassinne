@@ -1,0 +1,506 @@
+{
+  "meta": {
+    "siteTitle": "La Bergerie & La Brassine - Charming cottages in Libin",
+    "siteDescription": "Two romantic cottages in Libin, in the Belgian Ardennes, designed for warm, elegant and authentic escapes for two."
+  },
+  "nav": {
+    "home": "Home",
+    "bergerie": "La Bergerie",
+    "brassine": "La Brassine",
+    "around": "Experiences",
+    "guide": "Practical guide",
+    "contact": "Contact",
+    "reserve": "Book"
+  },
+  "footer": {
+    "tagline": "Two charming cottages set in a lovingly restored Ardennes building in Libin, created for romantic stays, thoughtful touches and easy direct booking.",
+    "quickLinks": "Quick links",
+    "contactTitle": "Contact",
+    "reserveTitle": "Direct booking",
+    "reserveText": "WhatsApp is the easiest way to ask a question, check availability or arrange a romantic extra before arrival.",
+    "copyright": "La Bergerie & La Brassine - Libin, Belgium"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Romantic Ardennes escape",
+      "title": "Two charming cottages made for slowing down and enjoying time together.",
+      "description": "In Libin, La Bergerie and La Brassine welcome couples into a warm, refined and deeply soothing atmosphere. One authentic building, two elegant cocoons, and a region made for switching off.",
+      "primaryCta": "Check availability",
+      "secondaryCta": "Message on WhatsApp",
+      "imageAlt": "View of the cottage property in Libin",
+      "stats": [
+        { "value": "2", "label": "romantic cottages for 2 guests" },
+        { "value": "5.0/5", "label": "Airbnb rating for both stays" },
+        { "value": "Libin", "label": "in the heart of the Belgian Ardennes" }
+      ]
+    },
+    "intro": {
+      "eyebrow": "The spirit of the place",
+      "title": "A thoughtful welcome, almost like home",
+      "paragraphs": [
+        "La Bergerie & La Brassine are two charming cottages tucked away in Libin, in the Ardennes. They were designed inside an authentic old building, with soft materials, quality comforts and details that instantly set the tone.",
+        "Beds are made before you arrive, towels are ready, the kitchen is truly equipped, and the welcome stays personal and genuine throughout the experience.",
+        "The website has been built to help guests picture the stay, book easily and find the practical information they usually ask for before arrival."
+      ],
+      "highlights": [
+        { "title": "Made for couples", "text": "Each cottage welcomes 2 guests in a romantic, cocooning and reassuring atmosphere." },
+        { "title": "A region perfect for weekends", "text": "Walks, restaurants, charming villages and memorable discoveries around Libin, Redu, Mirwart and Saint-Hubert." },
+        { "title": "Simple direct booking", "text": "WhatsApp, email or Airbnb depending on what feels easiest for the traveller." },
+        { "title": "Romantic extras", "text": "Champagne, flowers, romantic decoration, gift vouchers or curated surprise boxes can all fit naturally into the stay." }
+      ]
+    },
+    "gites": {
+      "eyebrow": "The two cottages",
+      "title": "Two moods, the same sense of charm",
+      "description": "La Bergerie stands out for its space and light. La Brassine is smaller, cosier and more intimate. Both share the same attention to detail and warm hospitality.",
+      "discover": "Discover the cottage",
+      "items": {
+        "bergerie": {
+          "name": "La Bergerie",
+          "tagline": "Spacious, romantic, luminous",
+          "capacity": "2 guests",
+          "description": "The larger of the two cottages, ideal for guests who love more room, a soft shabby chic mood and peaceful mornings in the rear garden.",
+          "bullets": [
+            "The most spacious cottage",
+            "Rear garden access",
+            "Elegant and welcoming mood"
+          ]
+        },
+        "brassine": {
+          "name": "La Brassine",
+          "tagline": "Intimate, soft, cocooning",
+          "capacity": "2 guests",
+          "description": "Smaller, cosier and designed for privacy. A single-level retreat with a front garden and a deeply intimate atmosphere.",
+          "bullets": [
+            "The cosiest cottage",
+            "Single-level layout",
+            "Front garden access"
+          ]
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Thoughtfully prepared",
+      "title": "Everything guests need, without the usual friction",
+      "description": "Both the stay and the website are meant to feel fluid, beautiful and reassuring from the first click to check-out.",
+      "items": [
+        { "icon": "bed", "title": "Beds ready on arrival", "text": "Quality linen and an instantly comfortable feeling from the very first minutes." },
+        { "icon": "utensils", "title": "A truly equipped kitchen", "text": "Oven, dishwasher, coffee machine, wine glasses and all the essentials for cooking together." },
+        { "icon": "wifi", "title": "Wi-Fi throughout", "text": "Stable connection in the whole property, with Ethernet available if needed." },
+        { "icon": "tv", "title": "4K TV and streaming", "text": "Perfect for cosy evenings, rainy afternoons or slow moments after a walk." },
+        { "icon": "car", "title": "Easy parking", "text": "7 parking spaces in total and electric charging available on request." },
+        { "icon": "heart", "title": "Warm welcome", "text": "In-person key handover, local advice and a host who stays available if needed." }
+      ]
+    },
+    "romantic": {
+      "eyebrow": "Gift ideas & extras",
+      "title": "Plan a romantic surprise",
+      "description": "For an anniversary, a special weekend or simply a thoughtful gesture, romantic touches can be arranged on request.",
+      "items": [
+        { "title": "Champagne on arrival", "text": "A chilled bottle ready to start the stay beautifully." },
+        { "title": "Fresh flowers", "text": "An even softer welcome with a floral touch." },
+        { "title": "Romantic decoration", "text": "An elegant setup to surprise your partner from the very first moment." },
+        { "title": "Gift voucher", "text": "A lovely present idea for a couple's Ardennes getaway." }
+      ]
+    },
+    "region": {
+      "title": "Our favourite spots nearby",
+      "text": "Restaurants, walks, charming villages and easy recommendations around Libin, all curated to match the spirit of the stay.",
+      "cta": "Explore the area",
+      "guideCta": "Read the practical guide"
+    },
+    "gallery": {
+      "eyebrow": "Gallery",
+      "title": "Browse the atmosphere like a keepsake album",
+      "description": "A more immersive gallery, designed like a collection of pages you want to leaf through before booking.",
+      "sideEyebrow": "Romantic escape",
+      "sideTitle": "Images that already make you want to be there",
+      "sideText": "Soft materials, evening light, decorative details and the gardens together create a stay you can already feel before arriving.",
+      "images": [
+        { "src": "/images/home/2.avif", "alt": "La Bergerie atmosphere" },
+        { "src": "/images/home/2b.avif", "alt": "La Brassine atmosphere" },
+        { "src": "/images/home/3.avif", "alt": "La Bergerie interior detail" },
+        { "src": "/images/home/3b.avif", "alt": "La Brassine interior detail" }
+      ]
+    },
+    "reviews": {
+      "eyebrow": "Guest reviews",
+      "title": "Stays that leave a lasting impression",
+      "description": "A few selected testimonials to reflect the mood of the place, with direct Airbnb and Google links ready to be refined later.",
+      "items": [
+        { "author": "Marie & Thomas", "origin": "Brussels", "gite": "La Bergerie", "text": "A real cocoon. Elegant, peaceful, spotless and hosted with genuine care." },
+        { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "We loved the intimate feel, the softness of the decor and the calm everywhere around us." },
+        { "author": "Sophie & Antoine", "origin": "Liege", "gite": "La Bergerie", "text": "The level of care is rare. Everything feels considered, beautiful and easy." }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Booking",
+      "title": "Ready for a romantic Ardennes getaway?",
+      "text": "Choose the cottage that fits your mood, message the host directly on WhatsApp, or book through Airbnb if you prefer.",
+      "whatsapp": "Discuss your stay on WhatsApp",
+      "contact": "Send a request with the form"
+    }
+  },
+  "gites": {
+    "common": {
+      "bookAirbnb": "Book on Airbnb",
+      "bookWhatsapp": "Book via WhatsApp",
+      "galleryEyebrow": "Immersive gallery",
+      "galleryTitle": "Photos & atmosphere",
+      "practicalSheet": "Quick facts",
+      "capacity": "Capacity",
+      "persons": "guests",
+      "bedroom": "Bedroom",
+      "bed": "Bed",
+      "bathroom": "Bathroom",
+      "reviews": "reviews",
+      "highlights": "Highlights",
+      "stayInfo": "Stay information",
+      "guestLove": "What guests appreciate",
+      "faqEyebrow": "FAQ",
+      "faqTitle": "Frequently asked questions",
+      "otherGite": "Looking for the other mood instead?"
+    },
+    "bergerie": {
+      "meta": {
+        "title": "La Bergerie - Romantic cottage in Libin",
+        "description": "The larger of the two charming cottages in Libin. Romantic, bright, with a rear garden, equipped kitchen and refined shabby chic atmosphere."
+      },
+      "hero": {
+        "eyebrow": "Charming cottage in Libin",
+        "title": "La Bergerie",
+        "description": "A more spacious, luminous and romantic escape in a soft shabby chic setting designed for two."
+      },
+      "story": {
+        "eyebrow": "Overview",
+        "title": "A gentle place filled with light",
+        "lead": "La Bergerie is the larger of the two cottages. Guests love its comfortable proportions, natural light and feeling of space without losing the intimacy of a romantic stay.",
+        "paragraphs": [
+          "Inside this old Ardennes building, the decor blends natural materials, soft tones and refined shabby chic details that give the stay a real sense of personality.",
+          "The living area invites you to slow down, the bedroom feels restful and the kitchen makes it easy to enjoy a dinner for two without compromise.",
+          "At the back, the garden extends the experience with a peaceful outdoor corner for coffee, aperitif or a quiet moment."
+        ]
+      },
+      "galleryIntro": "The gallery is already structured for your final photos later, with a mobile-friendly lightbox and clear file naming.",
+      "highlights": [
+        "The most spacious of the two cottages",
+        "Romantic shabby chic atmosphere",
+        "Rear garden access",
+        "Well-equipped kitchen",
+        "4K QLED TV and streaming",
+        "Beds ready on arrival and quality linen",
+        "Ideal for a peaceful romantic weekend"
+      ],
+      "stayInfo": [
+        { "title": "Arrival & welcome", "text": "Check-in is between 4:00 pm and 11:00 pm, with in-person key handover and a warm personal welcome." },
+        { "title": "Daily comfort", "text": "Towels provided, beds prepared, Wi-Fi, television, full kitchen and an available host if needed." },
+        { "title": "Parking", "text": "Free parking on site, with electric charging available on request." }
+      ],
+      "reviewHighlight": {
+        "author": "Highlighted review",
+        "text": "A stay that combines charm, comfort and a genuine feeling of being well looked after. La Bergerie often appeals to couples who want more space and a peaceful mood."
+      },
+      "outdoor": {
+        "title": "The rear garden",
+        "text": "One of its loveliest advantages. It extends the cottage outdoors with a quiet, green and restful atmosphere."
+      },
+      "faqIntro": "A cottage-specific FAQ to help guests picture the stay and reduce repetitive questions before booking or arrival.",
+      "faq": [
+        { "question": "Is La Bergerie larger than La Brassine?", "answer": "Yes. It is the more spacious cottage, which many couples appreciate when they want a little more room to enjoy the stay." },
+        { "question": "Is the garden easy to access?", "answer": "Yes, La Bergerie opens onto the rear garden, which is one of its strongest assets." },
+        { "question": "Can we cook properly on site?", "answer": "Yes. The kitchen is well equipped with oven, stove, dishwasher, coffee machine and the essentials for cooking together." },
+        { "question": "Is it suitable for a special occasion?", "answer": "Absolutely. It works beautifully for a romantic surprise, anniversary or a carefully prepared couple's weekend." }
+      ]
+    },
+    "brassine": {
+      "meta": {
+        "title": "La Brassine - Cosy romantic cottage in Libin",
+        "description": "A smaller, more intimate and cocooning cottage in Libin, all on one level, with a front garden and a warm atmosphere made for privacy."
+      },
+      "hero": {
+        "eyebrow": "Charming cottage in Libin",
+        "title": "La Brassine",
+        "description": "A deeply cosy retreat, more intimate and more enveloping, ideal for couples looking for softness and privacy."
+      },
+      "story": {
+        "eyebrow": "Overview",
+        "title": "A little nest designed for intimacy",
+        "lead": "La Brassine is smaller than La Bergerie, and that is exactly part of its charm. It feels like a warm retreat, easy to live in and especially pleasant for two.",
+        "paragraphs": [
+          "The cottage is entirely on one level, which makes the stay simple and comfortable. The atmosphere is romantic, soft and cocooning from the very first steps inside.",
+          "Each space has been designed to create immediate well-being: a cosy bedroom, a welcoming living space and everything needed to cook, unwind and enjoy being together.",
+          "The front garden reinforces that feeling of privacy and gives the stay a lovely outdoor extension."
+        ]
+      },
+      "galleryIntro": "The gallery is already prepared for your final visuals and offers a smooth viewing experience on both mobile and desktop.",
+      "highlights": [
+        "The most cocooning of the two cottages",
+        "Intimate and reassuring atmosphere",
+        "Entirely single-level",
+        "Front garden",
+        "Well-equipped kitchen",
+        "4K QLED TV and streaming",
+        "Perfect for surprising your partner"
+      ],
+      "stayInfo": [
+        { "title": "Arrival & welcome", "text": "Check-in is between 4:00 pm and 11:00 pm, with in-person key handover and a caring welcome." },
+        { "title": "Cosy comfort", "text": "Beds made, towels ready, blackout blinds, Wi-Fi and all the essentials for a stay you can fully enjoy indoors as well." },
+        { "title": "Accessibility & outdoors", "text": "The cottage is entirely single-level and enjoys a pleasant front garden." }
+      ],
+      "reviewHighlight": {
+        "author": "Highlighted review",
+        "text": "La Brassine is often chosen for its deeply intimate atmosphere. Guests love the cocooning feeling and the sense of a true couple's hideaway."
+      },
+      "outdoor": {
+        "title": "The front garden",
+        "text": "This outdoor corner reinforces privacy and offers a lovely setting for coffee, aperitif or breakfast outside."
+      },
+      "faqIntro": "A dedicated FAQ to help guests immediately understand the mood and experience of La Brassine.",
+      "faq": [
+        { "question": "Is La Brassine smaller than La Bergerie?", "answer": "Yes, it is more compact, which is exactly what makes it feel especially cosy and intimate." },
+        { "question": "Is the cottage all on one level?", "answer": "Yes, entirely. That is one of its comfort advantages." },
+        { "question": "Does it feel different from La Bergerie?", "answer": "Yes. La Brassine is more enveloping and intimate, with a true cocooning atmosphere for couples." },
+        { "question": "Can we still enjoy the whole stay on site?", "answer": "Absolutely. The kitchen is equipped, the TV allows streaming and everything supports a comfortable slow stay indoors." }
+      ]
+    }
+  },
+  "equipment": {
+    "title": "Amenities",
+    "categories": [
+      { "title": "Comfort & wellbeing", "items": ["Hair dryer", "Hot water", "Hangers", "Bed linen", "Blackout blinds", "Drying rack", "Clothes storage", "Air conditioning", "Heating"] },
+      { "title": "Entertainment", "items": ["Television", "Ethernet connection", "Board games", "Wi-Fi"] },
+      { "title": "Kitchen", "items": ["Kitchen", "Refrigerator", "Microwave", "Cooking basics", "Oil, salt, pepper", "Dishes and cutlery", "Freezer", "Dishwasher", "Stove", "Oven", "Electric kettle", "Coffee machine", "Wine glasses", "Toaster"] },
+      { "title": "Outdoor", "items": ["Garden", "Outdoor furniture", "Outdoor dining area", "Barbecue", "Barbecue utensils", "Sun loungers"] },
+      { "title": "Practical & safety", "items": ["Private entrance", "Free parking", "Smoke alarm", "Fire extinguisher", "EV charging on request"] }
+    ]
+  },
+  "around": {
+    "meta": {
+      "title": "Experiences & surroundings - Libin and the Ardennes",
+      "description": "Restaurants, walks, romantic weekend ideas, charming villages and activities around Libin, Redu, Mirwart and Saint-Hubert."
+    },
+    "hero": {
+      "eyebrow": "To enjoy together",
+      "title": "The Ardennes the way we love to recommend them",
+      "description": "Not just a list of places, but a curated selection that fits the spirit of the stay: beautiful, gentle, local and memorable."
+    },
+    "intro": {
+      "eyebrow": "Our local guide",
+      "title": "Lovely ideas around Libin",
+      "text": "This structure is easy to enrich later with your own addresses. It already includes coherent local recommendations to guide guests before and during the stay."
+    },
+    "sections": [
+      {
+        "key": "restaurants",
+        "eyebrow": "Good food",
+        "title": "Our favourite restaurants",
+        "intro": "Places to recommend for a romantic dinner, a local meal or a refined break.",
+        "items": [
+          { "name": "Le Cor de Chasse", "location": "near Saint-Hubert", "distance": "around 20 min", "description": "A refined option when you want to make the evening feel more special.", "tags": ["gastronomic", "special occasion"] },
+          { "name": "Le Relais de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "The setting, the village and the nature around it make this a lovely outing for two.", "tags": ["nature", "charm"] },
+          { "name": "Le Fournil de Redu", "location": "Redu", "distance": "10 min", "description": "Ideal for lunch, brunch or a sweet break after wandering around the village.", "tags": ["tea room", "gourmet"] },
+          { "name": "A local table in Libin", "location": "Libin", "distance": "5 min", "description": "Placeholder block ready to be replaced with your own real favourite address later.", "tags": ["to customise"] }
+        ]
+      },
+      {
+        "key": "walks",
+        "eyebrow": "Nature",
+        "title": "Our favourite walks",
+        "intro": "Easy-to-recommend walks depending on mood: forest, villages, water, viewpoints.",
+        "items": [
+          { "name": "Mirwart estate", "location": "Mirwart", "distance": "20 min", "description": "A classic Ardennes walk with heritage, forest atmosphere and beautiful scenery.", "tags": ["forest", "beautiful setting"] },
+          { "name": "Around Redu", "location": "Redu", "distance": "10 min", "description": "Ideal for combining a gentle walk with bookshops, galleries and a coffee stop.", "tags": ["village", "romantic"] },
+          { "name": "Saint-Hubert nature side", "location": "Saint-Hubert", "distance": "15 min", "description": "A good option for travellers who want both heritage and woodland surroundings.", "tags": ["heritage", "forest"] },
+          { "name": "Walking near Libin", "location": "Libin", "distance": "on site", "description": "The area is perfect for quiet end-of-day walks or fresh morning air.", "tags": ["simple", "nearby"] }
+        ]
+      },
+      {
+        "key": "romantic",
+        "eyebrow": "Weekend for two",
+        "title": "Romantic weekend ideas",
+        "intro": "A few easy combinations that turn two days into a truly memorable break.",
+        "items": [
+          { "name": "Arrive and slow down", "description": "A drink, a hot shower, a simple dinner in the cottage and a cosy evening indoors.", "tags": ["slow stay", "cosy"] },
+          { "name": "Walk then dinner", "description": "A walk in Mirwart or Redu followed by a beautiful dinner together.", "tags": ["walk", "dinner"] },
+          { "name": "Surprise your partner", "description": "Add champagne, flowers or romantic decoration to make the stay even more memorable.", "tags": ["surprise", "romantic extra"] },
+          { "name": "No heavy schedule", "description": "A few landmarks, very little pressure and plenty of time to simply enjoy being together.", "tags": ["relax", "for two"] }
+        ]
+      },
+      {
+        "key": "activities",
+        "eyebrow": "To share",
+        "title": "Activities for two",
+        "intro": "For guests who like adding a few carefully chosen outings to their stay.",
+        "items": [
+          { "name": "Redu book village", "location": "Redu", "distance": "10 min", "description": "A very pleasant outing among bookshops, workshops and a unique atmosphere.", "tags": ["culture", "strolling"] },
+          { "name": "Euro Space Center", "location": "Transinne", "distance": "10 min", "description": "An original and easy excursion if you want something different.", "tags": ["unusual", "couple"] },
+          { "name": "Cycling rides", "location": "around Libin", "distance": "variable", "description": "Roads and scenery work beautifully for a relaxed or more active ride.", "tags": ["cycling", "nature"] },
+          { "name": "Saint-Hubert heritage", "location": "Saint-Hubert", "distance": "15 min", "description": "A nice option to combine architecture, atmosphere and a terrace stop.", "tags": ["town", "heritage"] }
+        ]
+      },
+      {
+        "key": "rainy",
+        "eyebrow": "Rainy days",
+        "title": "What to do when it rains",
+        "intro": "A great stay does not depend on sunshine. Rain works surprisingly well in the Ardennes.",
+        "items": [
+          { "name": "Cosy day in the cottage", "description": "Streaming, board games, cooking together and the pleasure of staying warm inside.", "tags": ["on site", "softness"] },
+          { "name": "Redu bookshops and galleries", "location": "Redu", "distance": "10 min", "description": "The book village remains charming even under grey skies.", "tags": ["culture", "partly covered"] },
+          { "name": "A long lunch", "description": "Use the rain as the perfect excuse for a slower, more indulgent meal.", "tags": ["food"] },
+          { "name": "Local heritage", "description": "Museums, basilica or village visits depending on the mood of the day.", "tags": ["discovery"] }
+        ]
+      },
+      {
+        "key": "villages",
+        "eyebrow": "To discover",
+        "title": "Villages & heritage",
+        "intro": "Easy local references for guests who want to explore without driving too far.",
+        "items": [
+          { "name": "Libin", "distance": "on site", "description": "An ideal base to explore the region while keeping travel times light.", "tags": ["great base"] },
+          { "name": "Redu", "distance": "10 min", "description": "The famous book village remains one of the area's most charming outings.", "tags": ["books", "charm"] },
+          { "name": "Saint-Hubert", "distance": "15 min", "description": "A town with character, easy to recommend for its heritage and atmosphere.", "tags": ["basilica", "terraces"] },
+          { "name": "Mirwart", "distance": "20 min", "description": "A peaceful and photogenic village, very much in tune with the spirit of the stay.", "tags": ["nature", "heritage"] }
+        ]
+      },
+      {
+        "key": "cycling",
+        "eyebrow": "Moving around",
+        "title": "Bike rides",
+        "intro": "A section already prepared for your own routes or future rental partnerships.",
+        "items": [
+          { "name": "Gentle loop around Libin", "distance": "variable", "description": "For couples who want an easy ride without planning a full sports day.", "tags": ["easy"] },
+          { "name": "Towards Redu and nearby villages", "distance": "25 km", "description": "A lovely route combining countryside, charm and a gourmet stop.", "tags": ["scenic"] },
+          { "name": "More sportive Ardennes version", "distance": "to define", "description": "A ready-made block for more ambitious cycling routes later on.", "tags": ["sportive", "to complete"] }
+        ]
+      }
+    ],
+    "finalCta": {
+      "title": "Need help planning the stay?",
+      "text": "The practical guide answers the most common questions, and the contact page is ready for direct booking requests or romantic extras.",
+      "primary": "Move to booking",
+      "secondary": "Read the practical guide"
+    }
+  },
+  "guide": {
+    "meta": {
+      "title": "Practical guide - Prepare your stay in Libin",
+      "description": "Everything guests need before arrival: check-in, check-out, parking, linen, Wi-Fi, television, heating, waste sorting and departure."
+    },
+    "hero": {
+      "eyebrow": "Prepare your stay",
+      "title": "Useful, simple and reassuring information",
+      "description": "This page is designed to answer recurring questions quickly and make the experience smoother before, during and after the stay."
+    },
+    "quickFacts": [
+      { "title": "Check-in", "text": "Between 4:00 pm and 11:00 pm" },
+      { "title": "Check-out", "text": "Before 10:00 am" },
+      { "title": "Keys", "text": "In-person handover" },
+      { "title": "Parking", "text": "7 spaces in total" }
+    ],
+    "sections": [
+      {
+        "eyebrow": "Before you arrive",
+        "title": "Arrival, welcome and settling in",
+        "text": "Check-in takes place between 4:00 pm and 11:00 pm. Keys are handed over in person in a simple and welcoming way. If you have an approximate arrival time, it is helpful to share it in advance.",
+        "points": [
+          { "title": "Linen provided", "text": "Towels are ready and beds are made before arrival." },
+          { "title": "Host next door", "text": "The host's house is attached, which allows quick help if needed while still respecting your privacy." }
+        ]
+      },
+      {
+        "eyebrow": "On site",
+        "title": "Comfort, kitchen, Wi-Fi and television",
+        "text": "Everything is there so guests can enjoy the cottage without improvising. The kitchen is properly equipped, Wi-Fi is available throughout and the TV supports streaming.",
+        "points": [
+          { "title": "Kitchen", "text": "Oven, stove, microwave, dishwasher, fridge, freezer, coffee machine, kettle, toaster, dishes, wine glasses and cooking essentials." },
+          { "title": "TV & streaming", "text": "Turn on the TV, select the input or app you want, then sign in to your own streaming service if needed. Please remember to sign out before leaving." },
+          { "title": "Wi-Fi", "text": "Wi-Fi covers the whole property. Ethernet is also available." },
+          { "title": "EV charging", "text": "Charging can be arranged on request. It is best to mention it before arrival." }
+        ]
+      },
+      {
+        "eyebrow": "Good to know",
+        "title": "Heating, waste and a few useful reminders",
+        "text": "Heating works with a heat pump. To keep the cottage comfortable and avoid disrupting the system, it is best not to change settings significantly unless really necessary.",
+        "points": [
+          { "title": "Heat pump", "text": "The system is already set for comfortable temperatures. If something feels unusual, it is better to contact the host rather than changing multiple settings." },
+          { "title": "Waste sorting", "text": "Guests are asked to sort waste. Bags can be left in front of the door after letting the host know, and the host takes care of the rest." },
+          { "title": "Small reminder", "text": "Please respect the calm atmosphere, the equipment provided and the warm spirit of the house." }
+        ]
+      },
+      {
+        "eyebrow": "Before leaving",
+        "title": "What to do before check-out",
+        "text": "The idea is not to turn the end of the stay into a chore. A few simple gestures are enough.",
+        "bullets": [
+          "Check that nothing is left behind in the cottage",
+          "Leave the kitchen in a reasonably clean condition",
+          "Sort the waste and leave it ready if needed",
+          "Close windows and switch off anything unnecessary",
+          "Respect the check-out time before 10:00 am"
+        ]
+      }
+    ],
+    "faqEyebrow": "Useful questions",
+    "faqTitle": "Practical FAQ",
+    "faqDescription": "A reassuring FAQ designed to reduce repetitive messages without sounding rigid.",
+    "faq": [
+      { "question": "Can we arrive late?", "answer": "Check-in is planned between 4:00 pm and 11:00 pm. If you expect to arrive towards the end of that window, it is best to let the host know." },
+      { "question": "Is parking easy?", "answer": "Yes. There are 7 parking spaces in total, so arrival is straightforward." },
+      { "question": "Do we need to bring sheets or towels?", "answer": "No. Everything is provided and beds are ready before arrival." },
+      { "question": "Can we adjust the heating ourselves?", "answer": "The heat pump is already set for comfort. If anything feels unusual, it is best to contact the host before changing the settings." },
+      { "question": "How should we handle waste?", "answer": "Guests are asked to sort waste. Bags can be left in front of the door after informing the host, who then handles the rest." },
+      { "question": "Is someone easy to reach if there is a problem?", "answer": "Yes. The host remains available, and the attached house allows quick support if needed." }
+    ]
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact & booking - La Bergerie & La Brassine",
+      "description": "Get in touch easily by WhatsApp, email or form to book La Bergerie or La Brassine in Libin."
+    },
+    "hero": {
+      "eyebrow": "Contact & booking",
+      "title": "Ask about a stay, send a request or book directly",
+      "description": "WhatsApp is highlighted for direct booking and quick exchanges. The contact form is already structured and ready to be connected later."
+    },
+    "direct": {
+      "eyebrow": "Direct booking",
+      "title": "The easiest place to start",
+      "text": "For availability, questions or romantic extras, WhatsApp is the fastest route. Airbnb links stay visible for guests who prefer booking there.",
+      "whatsapp": "Contact on WhatsApp"
+    },
+    "practicalTitle": "Useful information",
+    "practicalCards": [
+      { "title": "Address", "text": "Rue du Cure 19, 6890 Libin, Belgium. Shown here rather than everywhere else on the site." },
+      { "title": "Check-in / check-out", "text": "Arrival between 4:00 pm and 11:00 pm, departure before 10:00 am." },
+      { "title": "Bookings", "text": "Either directly via WhatsApp or through Airbnb depending on the guest's preference." }
+    ],
+    "addressTitle": "Address",
+    "form": {
+      "eyebrow": "Contact form",
+      "title": "Send an enquiry",
+      "text": "The form is front-end only for now, with a clean structure that can later connect to EmailJS, Resend, Formspree or a Next.js API route.",
+      "labels": {
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "dates": "Preferred dates",
+        "gite": "Preferred cottage",
+        "guests": "Number of guests",
+        "message": "Message",
+        "submit": "Send enquiry",
+        "success": "Your request was prepared and sent to {email}.",
+        "sending": "Sending...",
+        "invalid": "Please check the required fields and your email address.",
+        "error": "The email could not be sent. You can contact {email} directly or use WhatsApp.",
+        "notConfigured": "This deployment does not have email delivery configured yet. Requests are not sent automatically for now. You can write to {email} or use WhatsApp.",
+        "options": {
+          "bergerie": "La Bergerie",
+          "brassine": "La Brassine",
+          "undecided": "I am not sure yet"
+        }
+      }
+    }
+  }
+}
