@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bergerie-brassine.com/sitemap.xml
