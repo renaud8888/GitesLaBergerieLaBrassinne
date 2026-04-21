@@ -6,7 +6,7 @@ import { FaqAccordion } from '@/components/common/faq-accordion';
 import { Gallery } from '@/components/common/gallery';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
-import { giteStats } from '@/data/site';
+import { getWhatsappLink, giteStats } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
 import type { defaultImageContent } from '@/lib/content-store';
 import type { Locale } from '@/lib/i18n';
@@ -24,6 +24,7 @@ export function GitePageTemplate({
 }) {
   const gite = dict.gites[slug];
   const stats = giteStats[slug];
+  const whatsappUrl = getWhatsappLink(locale, slug === 'bergerie' ? 'bergerie' : 'brassine');
   const ui = dict.ui.gites;
   const otherSlug = slug === 'bergerie' ? 'brassine' : 'bergerie';
   const otherHref = `/${locale}/gites/${otherSlug === 'bergerie' ? 'la-bergerie' : 'la-brassine'}`;
@@ -58,7 +59,7 @@ export function GitePageTemplate({
               <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.38)]">
                 {ui.common.reserveLabel}
               </ButtonLink>
-              <ButtonLink href={stats.whatsappUrl} variant="secondary" external className="border-white/18 bg-white/14 text-white" icon={<WhatsAppIcon className="h-4 w-4" />}>
+              <ButtonLink href={whatsappUrl} variant="secondary" external className="border-white/18 bg-white/14 text-white" icon={<WhatsAppIcon className="h-4 w-4" />}>
                 {common.bookWhatsapp}
               </ButtonLink>
             </div>
@@ -214,7 +215,7 @@ export function GitePageTemplate({
               <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900">
                 {ui.common.reserveLabel}
               </ButtonLink>
-              <ButtonLink href={stats.whatsappUrl} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+              <ButtonLink href={whatsappUrl} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />}>
                 {ui.common.whatsappLabel}
               </ButtonLink>
             </div>

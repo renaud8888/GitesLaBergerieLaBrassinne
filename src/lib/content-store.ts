@@ -16,6 +16,7 @@ import type { Locale } from '@/lib/i18n';
 const CONTENT_OVERRIDES_PATH = path.join(process.cwd(), 'data', 'content-overrides.json');
 const CONTENT_OVERRIDES_BLOB_PATH = 'site-content/content-overrides.json';
 const localeDefaults = { fr, en, nl } as const;
+const PUBLIC_DIRECTORY = path.join(process.cwd(), 'public');
 
 export const defaultImageContent = {
   branding: {
@@ -115,7 +116,7 @@ function pathToSegments(pathValue: string) {
   return pathValue.split('.').map((segment) => (/^\d+$/.test(segment) ? Number(segment) : segment));
 }
 
-function setValueAtPath(target: Record<string, unknown> | unknown[], segments: PathSegment[], value: string) {
+function setValueAtPath(target: Record<string, unknown> | unknown[], segments: PathSegment[], value: unknown) {
   let current: Record<string, unknown> | unknown[] = target;
 
   for (let index = 0; index < segments.length - 1; index += 1) {
@@ -307,6 +308,50 @@ function buildGroup(key: string, locale?: Locale) {
   return locale ? `${locale.toUpperCase()} · ${pieces.join(' / ')}` : pieces.join(' / ');
 }
 
+async function listPublicFiles(relativeDirectory: string) {
+  const directory = path.join(PUBLIC_DIRECTORY, relativeDirectory);
+
+  try {
+    const entries = await fs.readdir(directory, { withFileTypes: true });
+
+    return entries
+      .filter((entry) => entry.isFile())
+      .map((entry) => entry.name);
+  } catch {
+    return [];
+  }
+}
+
+async function getExistingGalleryImages(folder: 'la-bergerie' | 'la-brassine') {
+  const files = await listPublicFiles(path.join('images', folder));
+
+  return files
+    .map((fileName) => {
+      const match = fileName.match(/^(\d+)\.avif$/i);
+
+      if (!match) {
+        return null;
+      }
+
+      return {
+        order: Number(match[1]),
+        src: `/images/${folder}/${fileName}`,
+      };
+    })
+    .filter((entry): entry is { order: number; src: string } => entry !== null)
+    .sort((left, right) => left.order - right.order)
+    .map((entry) => entry.src);
+}
+
+async function fileExists(publicPath: string) {
+  try {
+    await fs.access(path.join(PUBLIC_DIRECTORY, publicPath.replace(/^\//, '')));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function collectEditableEntries(
   value: JsonValue,
   options: {
@@ -453,6 +498,25 @@ export async function getSiteImages() {
   noStore();
 
   const images = deepClone(defaultImageContent) as Record<string, unknown>;
+  const [bergerieGallery, brassineGallery] = await Promise.all([
+    getExistingGalleryImages('la-bergerie'),
+    getExistingGalleryImages('la-brassine'),
+  ]);
+
+  setValueAtPath(images, ['gites', 'bergerie', 'gallery'], bergerieGallery.length > 0 ? bergerieGallery : defaultImageContent.gites.bergerie.gallery);
+  setValueAtPath(images, ['gites', 'brassine', 'gallery'], brassineGallery.length > 0 ? brassineGallery : defaultImageContent.gites.brassine.gallery);
+
+  const bergerieHero = bergerieGallery[0] ?? defaultImageContent.gites.bergerie.heroImage;
+  const brassineHero = brassineGallery[0] ?? defaultImageContent.gites.brassine.heroImage;
+
+  setValueAtPath(images, ['gites', 'bergerie', 'heroImage'], bergerieHero);
+  setValueAtPath(images, ['gites', 'brassine', 'heroImage'], brassineHero);
+
+  if (!(await fileExists(defaultImageContent.around.specialImages.fallback))) {
+    setValueAtPath(images, ['around', 'specialImages', 'fallback'], defaultImageContent.around.heroImage);
+    setValueAtPath(images, ['around', 'sectionFallbacks', 'rainy'], defaultImageContent.around.heroImage);
+  }
+
   const overrides = await readOverrides();
 
   Object.entries(overrides.images ?? {}).forEach(([key, value]) => {

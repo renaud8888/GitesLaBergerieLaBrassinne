@@ -110,34 +110,34 @@ export const extraLocaleContent = {
     ui: {
       brand: {
         name: 'La Bergerie & La Brassine',
-        tagline: 'Gîtes de charme à Libin',
+        tagline: 'Charming cottages in Libin',
       },
       header: {
         openMenuAria: 'Open menu',
       },
       footer: {
-        eyebrow: 'Maison d’hôtes romantique',
+        eyebrow: 'Romantic guest house',
         whatsappLabel: 'WhatsApp',
         googleReviewsLabel: 'Google reviews',
         airbnbLabel: 'Airbnb',
       },
       home: {
         heroCard: {
-          socialProofLabel: 'Preuve sociale',
+          socialProofLabel: 'Social proof',
           socialProofValue: '5/5 Airbnb',
-          socialProofReviews: 'avis cumulés',
-          locationLabel: 'Lieu',
+          socialProofReviews: 'combined reviews',
+          locationLabel: 'Location',
           locationValue: 'Libin',
-          locationText: 'Ardennes belges',
-          stayLabel: 'Séjour',
-          stayValue: 'À deux',
-          stayText: 'Escapade romantique',
+          locationText: 'Belgian Ardennes',
+          stayLabel: 'Stay',
+          stayValue: 'For two',
+          stayText: 'Romantic escape',
         },
         compactFacts: {
-          guests: '2 personnes',
-          bedroom: '1 chambre',
-          bed: '1 lit',
-          bathroom: '1 salle de bain',
+          guests: '2 guests',
+          bedroom: '1 bedroom',
+          bed: '1 bed',
+          bathroom: '1 bathroom',
         },
         reviews: {
           googleLabel: 'Google',
@@ -149,65 +149,65 @@ export const extraLocaleContent = {
       },
       gites: {
         common: {
-          reserveLabel: 'Réserver',
-          travelerReviewsLabel: 'Avis voyageurs',
-          googleReviewsLabel: 'Voir les avis Google',
-          firstImpressionsEyebrow: 'Premières impressions',
-          bookingCardTitle: 'Réserver simplement',
+          reserveLabel: 'Book',
+          travelerReviewsLabel: 'Guest reviews',
+          googleReviewsLabel: 'View Google reviews',
+          firstImpressionsEyebrow: 'First impressions',
+          bookingCardTitle: 'Book easily',
           bookingCardText:
-            'Un contact direct quand vous le souhaitez, avec les liens Airbnb visibles pour rassurer sans surcharger le parcours.',
+            'Direct contact whenever you want it, with Airbnb links still visible for extra reassurance.',
           airbnbLabel: 'Airbnb',
           googleLabel: 'Google',
           whatsappLabel: 'WhatsApp',
         },
         bergerie: {
-          firstImpressionsTitle: 'Plus d’espace, plus de lumière, toujours la même douceur.',
+          firstImpressionsTitle: 'More space, more light, and the same gentle atmosphere.',
           highlightsDescription:
-            'Une adresse pensée pour les couples qui aiment l’espace, la lumière et les détails soignés.',
+            'A cottage designed for couples who love space, light and carefully chosen details.',
         },
         brassine: {
-          firstImpressionsTitle: 'Plus intime, plus enveloppante, pensée comme un cocon.',
+          firstImpressionsTitle: 'More intimate, more enveloping, designed like a cocoon.',
           highlightsDescription:
-            'Un cocon plus compact, plus intime, très agréable pour ralentir et se retrouver à deux.',
+            'A more compact, intimate cocoon that feels perfect for slowing down and reconnecting together.',
         },
       },
       guide: {
-        heroSecondaryCta: 'Besoin d’aide ?',
-        overviewTitle: 'Une page pensée pour être lue vite',
+        heroSecondaryCta: 'Need help?',
+        overviewTitle: 'A page designed to be read quickly',
         overviewText:
-          'Arrivée, départ, chauffage, télévision, tri, parking et aide sur place : l’essentiel est regroupé ici pour trouver l’information utile sans faire défiler de longs blocs.',
-        supportTitle: 'Besoin d’un coup de main avant votre arrivée ?',
+          'Arrival, departure, heating, television, waste sorting, parking and on-site help: the essentials are grouped here for quick reading.',
+        supportTitle: 'Need a hand before you arrive?',
         supportText:
-          'Une question pratique, un doute sur les horaires ou une demande spéciale ? WhatsApp reste le canal le plus simple.',
+          'A practical question, some doubt about timings or a special request? WhatsApp remains the easiest channel.',
         supportButton: 'WhatsApp',
-        faqCta: 'Besoin d’aide ?',
+        faqCta: 'Need help?',
       },
       contact: {
         heroWhatsappLabel: 'WhatsApp',
         heroAirbnbLabel: 'Airbnb',
         directAirbnbBergerie: 'Airbnb · La Bergerie',
         directAirbnbBrassine: 'Airbnb · La Brassine',
-        quickResponseTitle: 'Réponse rapide',
+        quickResponseTitle: 'Quick reply',
         quickResponseText:
-          'Le canal le plus direct pour une disponibilité ou une question est WhatsApp.',
-        clearBookingTitle: 'Réservation claire',
+          'WhatsApp is the most direct way to ask about availability or send a quick question.',
+        clearBookingTitle: 'Clear booking',
         clearBookingText:
-          'Réservation directe ou Airbnb selon votre préférence, sans parcours compliqué.',
-        responseCardTitle: 'Réponse rapide',
+          'Direct booking or Airbnb depending on your preference, without a complicated process.',
+        responseCardTitle: 'Quick reply',
         responseCardText:
-          'Vous pouvez réserver en direct, poser une question simple ou, si vous préférez, poursuivre via Airbnb ensuite.',
-        inboxTitle: 'Adresse de réception',
+          'You can book directly, ask a simple question or continue via Airbnb afterwards if you prefer.',
+        inboxTitle: 'Inbox',
         inboxText:
-          'Les demandes sont prévues pour être reçues sur {email}. Si le service email de la mise en ligne n’est pas configuré, le formulaire vous le signale clairement.',
+          'Requests are sent to {email}. If email delivery is not configured on this deployment, the form will tell you clearly.',
       },
       contactForm: {
         intro:
-          'Quelques informations suffisent pour revenir vers vous rapidement, en direct ou via Airbnb si vous le préférez.',
+          'A few details are enough for us to get back to you quickly, directly or via Airbnb if you prefer.',
         reassurance:
-          'Réponse rapide, ton chaleureux et possibilité de réserver en direct ou de basculer sur Airbnb selon votre préférence.',
+          'Quick reply, warm tone and the option to book directly or switch to Airbnb depending on your preference.',
       },
       whatsappFab: {
-        ariaLabel: 'Contacter sur WhatsApp',
+        ariaLabel: 'Contact on WhatsApp',
       },
     },
   },
@@ -215,34 +215,34 @@ export const extraLocaleContent = {
     ui: {
       brand: {
         name: 'La Bergerie & La Brassine',
-        tagline: 'Gîtes de charme à Libin',
+        tagline: 'Charmante gîtes in Libin',
       },
       header: {
         openMenuAria: 'Open menu',
       },
       footer: {
-        eyebrow: 'Maison d’hôtes romantique',
+        eyebrow: 'Romantisch gastenverblijf',
         whatsappLabel: 'WhatsApp',
         googleReviewsLabel: 'Google reviews',
         airbnbLabel: 'Airbnb',
       },
       home: {
         heroCard: {
-          socialProofLabel: 'Preuve sociale',
+          socialProofLabel: 'Sociaal bewijs',
           socialProofValue: '5/5 Airbnb',
-          socialProofReviews: 'avis cumulés',
-          locationLabel: 'Lieu',
+          socialProofReviews: 'gecombineerde reviews',
+          locationLabel: 'Locatie',
           locationValue: 'Libin',
-          locationText: 'Ardennes belges',
-          stayLabel: 'Séjour',
-          stayValue: 'À deux',
-          stayText: 'Escapade romantique',
+          locationText: 'Belgische Ardennen',
+          stayLabel: 'Verblijf',
+          stayValue: 'Voor twee',
+          stayText: 'Romantisch uitje',
         },
         compactFacts: {
-          guests: '2 personnes',
-          bedroom: '1 chambre',
-          bed: '1 lit',
-          bathroom: '1 salle de bain',
+          guests: '2 gasten',
+          bedroom: '1 slaapkamer',
+          bed: '1 bed',
+          bathroom: '1 badkamer',
         },
         reviews: {
           googleLabel: 'Google',
@@ -254,65 +254,65 @@ export const extraLocaleContent = {
       },
       gites: {
         common: {
-          reserveLabel: 'Réserver',
-          travelerReviewsLabel: 'Avis voyageurs',
-          googleReviewsLabel: 'Voir les avis Google',
-          firstImpressionsEyebrow: 'Premières impressions',
-          bookingCardTitle: 'Réserver simplement',
+          reserveLabel: 'Boeken',
+          travelerReviewsLabel: 'Gastenreviews',
+          googleReviewsLabel: 'Bekijk Google reviews',
+          firstImpressionsEyebrow: 'Eerste indrukken',
+          bookingCardTitle: 'Eenvoudig boeken',
           bookingCardText:
-            'Un contact direct quand vous le souhaitez, avec les liens Airbnb visibles pour rassurer sans surcharger le parcours.',
+            'Rechtstreeks contact wanneer je dat wilt, met zichtbare Airbnb-links voor extra vertrouwen.',
           airbnbLabel: 'Airbnb',
           googleLabel: 'Google',
           whatsappLabel: 'WhatsApp',
         },
         bergerie: {
-          firstImpressionsTitle: 'Plus d’espace, plus de lumière, toujours la même douceur.',
+          firstImpressionsTitle: 'Meer ruimte, meer licht, en nog altijd dezelfde zachtheid.',
           highlightsDescription:
-            'Une adresse pensée pour les couples qui aiment l’espace, la lumière et les détails soignés.',
+            'Een adres voor koppels die houden van ruimte, licht en verzorgde details.',
         },
         brassine: {
-          firstImpressionsTitle: 'Plus intime, plus enveloppante, pensée comme un cocon.',
+          firstImpressionsTitle: 'Intiemer, meer omhullend, ontworpen als een cocon.',
           highlightsDescription:
-            'Un cocon plus compact, plus intime, très agréable pour ralentir et se retrouver à deux.',
+            'Een compactere, intiemere cocon die ideaal is om te vertragen en met twee te genieten.',
         },
       },
       guide: {
-        heroSecondaryCta: 'Besoin d’aide ?',
-        overviewTitle: 'Une page pensée pour être lue vite',
+        heroSecondaryCta: 'Hulp nodig?',
+        overviewTitle: 'Een pagina om snel te lezen',
         overviewText:
-          'Arrivée, départ, chauffage, télévision, tri, parking et aide sur place : l’essentiel est regroupé ici pour trouver l’information utile sans faire défiler de longs blocs.',
-        supportTitle: 'Besoin d’un coup de main avant votre arrivée ?',
+          'Aankomst, vertrek, verwarming, televisie, afvalsortering, parking en hulp ter plaatse: alles staat hier overzichtelijk samen.',
+        supportTitle: 'Nog een vraag voor aankomst?',
         supportText:
-          'Une question pratique, un doute sur les horaires ou une demande spéciale ? WhatsApp reste le canal le plus simple.',
+          'Een praktische vraag, twijfel over de uren of een speciaal verzoek? WhatsApp blijft het eenvoudigste kanaal.',
         supportButton: 'WhatsApp',
-        faqCta: 'Besoin d’aide ?',
+        faqCta: 'Hulp nodig?',
       },
       contact: {
         heroWhatsappLabel: 'WhatsApp',
         heroAirbnbLabel: 'Airbnb',
         directAirbnbBergerie: 'Airbnb · La Bergerie',
         directAirbnbBrassine: 'Airbnb · La Brassine',
-        quickResponseTitle: 'Réponse rapide',
+        quickResponseTitle: 'Snel antwoord',
         quickResponseText:
-          'Le canal le plus direct pour une disponibilité ou une question est WhatsApp.',
-        clearBookingTitle: 'Réservation claire',
+          'WhatsApp is de meest directe manier voor beschikbaarheid of een korte vraag.',
+        clearBookingTitle: 'Duidelijk boeken',
         clearBookingText:
-          'Réservation directe ou Airbnb selon votre préférence, sans parcours compliqué.',
-        responseCardTitle: 'Réponse rapide',
+          'Rechtstreeks boeken of via Airbnb, afhankelijk van je voorkeur, zonder ingewikkeld traject.',
+        responseCardTitle: 'Snel antwoord',
         responseCardText:
-          'Vous pouvez réserver en direct, poser une question simple ou, si vous préférez, poursuivre via Airbnb ensuite.',
-        inboxTitle: 'Adresse de réception',
+          'Je kunt rechtstreeks boeken, een eenvoudige vraag stellen of later via Airbnb verdergaan als je dat liever hebt.',
+        inboxTitle: 'Ontvangstadres',
         inboxText:
-          'Les demandes sont prévues pour être reçues sur {email}. Si le service email de la mise en ligne n’est pas configuré, le formulaire vous le signale clairement.',
+          'Aanvragen worden ontvangen op {email}. Als e-mailverzending niet is ingesteld op deze live versie, laat het formulier dat duidelijk weten.',
       },
       contactForm: {
         intro:
-          'Quelques informations suffisent pour revenir vers vous rapidement, en direct ou via Airbnb si vous le préférez.',
+          'Met een paar gegevens kunnen we snel antwoorden, rechtstreeks of via Airbnb als je dat liever hebt.',
         reassurance:
-          'Réponse rapide, ton chaleureux et possibilité de réserver en direct ou de basculer sur Airbnb selon votre préférence.',
+          'Snel antwoord, warme toon en de mogelijkheid om rechtstreeks te boeken of via Airbnb verder te gaan volgens je voorkeur.',
       },
       whatsappFab: {
-        ariaLabel: 'Contacter sur WhatsApp',
+        ariaLabel: 'Contact via WhatsApp',
       },
     },
   },

@@ -28,9 +28,21 @@ export const siteConfig = {
       'https://www.google.com/maps/place/Gite+La+Brassinne/@49.9785957,5.2596728,17z/data=!3m1!4b1!4m6!3m5!1s0x47c02b720e0a7291:0x4716f2598b1e71ce!8m2!3d49.9785957!4d5.2596728!16s%2Fg%2F11q4hdygts?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
   },
   whatsapp: {
-    default: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite des informations pour un séjour à Libin.'),
-    bergerie: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite réserver La Bergerie.'),
-    brassine: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite réserver La Brassine.'),
+    fr: {
+      default: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite des informations pour un séjour à Libin.'),
+      bergerie: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite réserver La Bergerie.'),
+      brassine: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite réserver La Brassine.'),
+    },
+    en: {
+      default: formatWhatsappLink('+32496929355', 'Hello, I would like some information about a stay in Libin.'),
+      bergerie: formatWhatsappLink('+32496929355', 'Hello, I would like to book La Bergerie.'),
+      brassine: formatWhatsappLink('+32496929355', 'Hello, I would like to book La Brassine.'),
+    },
+    nl: {
+      default: formatWhatsappLink('+32496929355', 'Hallo, ik zou graag informatie ontvangen over een verblijf in Libin.'),
+      bergerie: formatWhatsappLink('+32496929355', 'Hallo, ik zou graag La Bergerie reserveren.'),
+      brassine: formatWhatsappLink('+32496929355', 'Hallo, ik zou graag La Brassine reserveren.'),
+    },
   },
   checkIn: '16:00 - 23:00',
   checkOut: '10:00',
@@ -156,7 +168,7 @@ export const giteStats = {
     reviews: 53,
     airbnbUrl: siteConfig.airbnb.bergerie,
     googleUrl: siteConfig.googleReviews.bergerie,
-    whatsappUrl: siteConfig.whatsapp.bergerie,
+    whatsappUrl: siteConfig.whatsapp.fr.bergerie,
     heroImage: giteGalleryConfig.bergerie.heroImage,
     gallery: giteGalleryConfig.bergerie.gallery,
   },
@@ -169,7 +181,7 @@ export const giteStats = {
     reviews: 63,
     airbnbUrl: siteConfig.airbnb.brassine,
     googleUrl: siteConfig.googleReviews.brassine,
-    whatsappUrl: siteConfig.whatsapp.brassine,
+    whatsappUrl: siteConfig.whatsapp.fr.brassine,
     heroImage: giteGalleryConfig.brassine.heroImage,
     gallery: giteGalleryConfig.brassine.gallery,
   },
@@ -209,4 +221,8 @@ export const aroundSectionImages = {
 
 export function getBaseUrlForLocale(locale: Locale) {
   return `${siteConfig.url}/${locale}`;
+}
+
+export function getWhatsappLink(locale: Locale, target: 'default' | 'bergerie' | 'brassine' = 'default') {
+  return siteConfig.whatsapp[locale][target];
 }

@@ -5,7 +5,7 @@ import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
 import { StackedGallery } from '@/components/common/stacked-gallery';
-import { featureIcons, giteStats, siteConfig } from '@/data/site';
+import { featureIcons, getWhatsappLink, giteStats, siteConfig } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
 import type { Locale } from '@/lib/i18n';
 import type { defaultImageContent } from '@/lib/content-store';
@@ -75,7 +75,7 @@ export function HomePage({
               <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] px-6 py-4 text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.4)] ring-1 ring-white/35">
                 {home.hero.primaryCta}
               </ButtonLink>
-              <ButtonLink href={siteConfig.whatsapp.default} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />} className="border-white/30 bg-white/14 text-cream-50 backdrop-blur-md">
+              <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />} className="border-white/30 bg-white/14 text-cream-50 backdrop-blur-md">
                 {home.hero.secondaryCta}
               </ButtonLink>
             </div>
@@ -307,7 +307,7 @@ export function HomePage({
                 {home.finalCta.contact}
               </ButtonLink>
               <div className="flex flex-wrap gap-3">
-                <ButtonLink href={siteConfig.whatsapp.default} variant="secondary" external className="flex-1 justify-center" icon={<WhatsAppIcon className="h-4 w-4" />}>
+                <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external className="flex-1 justify-center" icon={<WhatsAppIcon className="h-4 w-4" />}>
                   {home.finalCta.whatsapp}
                 </ButtonLink>
                 <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="flex-1 justify-center">

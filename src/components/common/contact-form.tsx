@@ -2,8 +2,9 @@
 
 import { useRef, useState } from 'react';
 
-import { siteConfig } from '@/data/site';
+import { getWhatsappLink, siteConfig } from '@/data/site';
 import type { ContactRequestPayload } from '@/lib/contact-request';
+import type { Locale } from '@/lib/i18n';
 
 type ContactFormProps = {
   labels: {
@@ -30,16 +31,16 @@ type ContactFormProps = {
     intro: string;
     reassurance: string;
   };
+  locale: Locale;
 };
 
 type ApiResult = {
   success?: boolean;
   message?: string;
   error?: string;
-  destinationEmail?: string;
 };
 
-export function ContactForm({ labels, ui }: ContactFormProps) {
+export function ContactForm({ labels, ui, locale }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [feedback, setFeedback] = useState('');
   const [showFallback, setShowFallback] = useState(false);
@@ -139,7 +140,7 @@ export function ContactForm({ labels, ui }: ContactFormProps) {
             jsonParseFailed,
           });
           setStatus('error');
-          setFeedback(labels.error.replace('{email}', result?.destinationEmail || siteConfig.email));
+          setFeedback(labels.error.replace('{email}', siteConfig.email));
           setShowFallback(true);
           isSubmittingRef.current = false;
           return;
@@ -188,7 +189,7 @@ export function ContactForm({ labels, ui }: ContactFormProps) {
         <span className="font-medium tracking-[0.01em]">{labels.guests}</span>
         <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="guests" type="number" min="1" max="2" defaultValue="2" />
       </label>
-      <label className="hidden" aria-hidden="true">
+      <label className="sr-only" aria-hidden="true">
         <span>Company</span>
         <input tabIndex={-1} autoComplete="off" name="company" />
       </label>
@@ -212,7 +213,7 @@ export function ContactForm({ labels, ui }: ContactFormProps) {
                   {siteConfig.email}
                 </a>
                 {' · '}
-                <a href={siteConfig.whatsapp.default} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+                <a href={getWhatsappLink(locale)} target="_blank" rel="noreferrer" className="underline underline-offset-2">
                   WhatsApp
                 </a>
               </p>

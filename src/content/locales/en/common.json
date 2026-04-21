@@ -119,14 +119,14 @@
       "images": [
         { "src": "/images/home/2.avif", "alt": "La Bergerie atmosphere" },
         { "src": "/images/home/2b.avif", "alt": "La Brassine atmosphere" },
-        { "src": "/images/home/3.avif", "alt": "La Bergerie interior detail" },
-        { "src": "/images/home/3b.avif", "alt": "La Brassine interior detail" }
+        { "src": "/images/home/4.avif", "alt": "A chic and warm atmosphere" },
+        { "src": "/images/home/4b.avif", "alt": "The charm of a romantic stay in the Ardennes" }
       ]
     },
     "reviews": {
       "eyebrow": "Guest reviews",
       "title": "Stays that leave a lasting impression",
-      "description": "A few selected testimonials to reflect the mood of the place, with direct Airbnb and Google links ready to be refined later.",
+      "description": "A few selected testimonials to reflect what guests experience on site, with direct links to Airbnb and Google reviews.",
       "items": [
         { "author": "Marie & Thomas", "origin": "Brussels", "gite": "La Bergerie", "text": "A real cocoon. Elegant, peaceful, spotless and hosted with genuine care." },
         { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "We loved the intimate feel, the softness of the decor and the calm everywhere around us." },
@@ -299,7 +299,7 @@
           { "name": "Le Cor de Chasse", "location": "near Saint-Hubert", "distance": "around 20 min", "description": "A refined option when you want to make the evening feel more special.", "tags": ["gastronomic", "special occasion"] },
           { "name": "Le Relais de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "The setting, the village and the nature around it make this a lovely outing for two.", "tags": ["nature", "charm"] },
           { "name": "Le Fournil de Redu", "location": "Redu", "distance": "10 min", "description": "Ideal for lunch, brunch or a sweet break after wandering around the village.", "tags": ["tea room", "gourmet"] },
-          { "name": "A local table in Libin", "location": "Libin", "distance": "5 min", "description": "Placeholder block ready to be replaced with your own real favourite address later.", "tags": ["to customise"] }
+          { "name": "A local table in Libin", "location": "Libin", "distance": "5 min", "description": "A local place to discover for a simple, relaxed meal.", "tags": ["local"] }
         ]
       },
       {
@@ -366,11 +366,11 @@
         "key": "cycling",
         "eyebrow": "Moving around",
         "title": "Bike rides",
-        "intro": "A section already prepared for your own routes or future rental partnerships.",
+        "intro": "A few lovely rides to discover the area at an easy pace or on a more active outing.",
         "items": [
           { "name": "Gentle loop around Libin", "distance": "variable", "description": "For couples who want an easy ride without planning a full sports day.", "tags": ["easy"] },
           { "name": "Towards Redu and nearby villages", "distance": "25 km", "description": "A lovely route combining countryside, charm and a gourmet stop.", "tags": ["scenic"] },
-          { "name": "More sportive Ardennes version", "distance": "to define", "description": "A ready-made block for more ambitious cycling routes later on.", "tags": ["sportive", "to complete"] }
+          { "name": "More sportive Ardennes version", "distance": "to define", "description": "A more demanding ride for guests who enjoy elevation and longer loops in the Ardennes.", "tags": ["sportive"] }
         ]
       }
     ],
@@ -461,7 +461,7 @@
     "hero": {
       "eyebrow": "Contact & booking",
       "title": "Ask about a stay, send a request or book directly",
-      "description": "WhatsApp is highlighted for direct booking and quick exchanges. The contact form is already structured and ready to be connected later."
+      "description": "WhatsApp remains the easiest way to get a quick reply. The form below can also be used to send a complete enquiry."
     },
     "direct": {
       "eyebrow": "Direct booking",
@@ -479,7 +479,7 @@
     "form": {
       "eyebrow": "Contact form",
       "title": "Send an enquiry",
-      "text": "The form is front-end only for now, with a clean structure that can later connect to EmailJS, Resend, Formspree or a Next.js API route.",
+      "text": "Enquiries are sent directly and handled as quickly as possible.",
       "labels": {
         "firstName": "First name",
         "lastName": "Last name",

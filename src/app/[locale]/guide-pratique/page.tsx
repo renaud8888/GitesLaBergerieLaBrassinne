@@ -5,7 +5,7 @@ import { ButtonLink } from '@/components/common/button-link';
 import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { GuidePanels } from '@/components/common/guide-panels';
 import { ImageFallback } from '@/components/common/image-fallback';
-import { siteConfig } from '@/data/site';
+import { getWhatsappLink } from '@/data/site';
 import { getSiteImages } from '@/lib/content-store';
 import { getDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
@@ -28,6 +28,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
   const dict = await getDictionary(locale);
   const guide = dict.guide;
   const images = await getSiteImages();
+  const whatsappUrl = getWhatsappLink(locale);
 
   return (
     <>
@@ -41,7 +42,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           <h1 className="mt-4 max-w-3xl font-display text-5xl md:text-7xl">{guide.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100/84">{guide.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+            <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
               WhatsApp
             </ButtonLink>
             <ButtonLink href={`/${locale}/contact`} variant="secondary" className="border-white/16 bg-white/10 text-white">
@@ -72,7 +73,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
               <p className="font-display text-4xl text-taupe-900">{dict.ui.guide.supportTitle}</p>
               <p className="mt-3 max-w-2xl text-base leading-8 text-taupe-500">{dict.ui.guide.supportText}</p>
             </div>
-            <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+            <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
               {dict.ui.guide.supportButton}
             </ButtonLink>
           </div>

@@ -119,8 +119,8 @@
       "images": [
         { "src": "/images/home/2.avif", "alt": "Sfeer van La Bergerie" },
         { "src": "/images/home/2b.avif", "alt": "Sfeer van La Brassine" },
-        { "src": "/images/home/3.avif", "alt": "Interieurdetail La Bergerie" },
-        { "src": "/images/home/3b.avif", "alt": "Interieurdetail La Brassine" }
+        { "src": "/images/home/4.avif", "alt": "Een chique en warme sfeer" },
+        { "src": "/images/home/4b.avif", "alt": "De charme van een romantisch verblijf in de Ardennen" }
       ]
     },
     "reviews": {
@@ -181,7 +181,7 @@
           "Achteraan verlengt de tuin de ervaring met een rustige groene plek voor koffie, aperitief of gewoon stilte."
         ]
       },
-      "galleryIntro": "De galerij is al voorbereid voor je definitieve foto's, met een mobile-first lightbox en duidelijke bestandsnamen.",
+      "galleryIntro": "Ontdek La Bergerie in beeld: licht, materialen en sfeer.",
       "highlights": [
         "De ruimste van de twee gites",
         "Romantische shabby chic sfeer",
@@ -232,7 +232,7 @@
           "De tuin vooraan versterkt dat gevoel van privacy en geeft het verblijf een mooie buitenverlenging."
         ]
       },
-      "galleryIntro": "De galerij is al klaar voor je definitieve beelden en geeft een vlotte ervaring op mobiel en desktop.",
+      "galleryIntro": "Ontdek La Brassine in beeld: zachtheid, intimiteit en charme.",
       "highlights": [
         "De meest cocooning van de twee gites",
         "Intieme en geruststellende sfeer",
@@ -287,7 +287,7 @@
     "intro": {
       "eyebrow": "Onze lokale gids",
       "title": "Mooie ideeën rond Libin",
-      "text": "Deze structuur is makkelijk later aan te vullen met je eigen favoriete adressen. Ze bevat nu al logische lokale suggesties om gasten te begeleiden."
+      "text": "Beproefde adressen, eenvoudige ideeën en betrouwbare tips om volop van het verblijf te genieten."
     },
     "sections": [
       {
@@ -299,7 +299,7 @@
           { "name": "Le Cor de Chasse", "location": "nabij Saint-Hubert", "distance": "ongeveer 20 min", "description": "Een verfijnde keuze wanneer je van de avond echt iets bijzonders wilt maken.", "tags": ["gastronomisch", "speciale gelegenheid"] },
           { "name": "Le Relais de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "De ligging, het dorp en de natuur rondom maken dit tot een mooie uitstap met twee.", "tags": ["natuur", "charme"] },
           { "name": "Le Fournil de Redu", "location": "Redu", "distance": "10 min", "description": "Ideaal voor lunch, brunch of een zoete pauze na een wandeling in het dorp.", "tags": ["tea room", "lekker"] },
-          { "name": "Een lokaal adres in Libin", "location": "Libin", "distance": "5 min", "description": "Voorbeeldblok dat later makkelijk vervangen kan worden door je echte favoriete adres.", "tags": ["aanpasbaar"] }
+          { "name": "Een lokaal adres in Libin", "location": "Libin", "distance": "5 min", "description": "Een lokaal adres om te ontdekken voor een eenvoudige en gezellige maaltijd.", "tags": ["lokaal"] }
         ]
       },
       {
@@ -366,11 +366,11 @@
         "key": "cycling",
         "eyebrow": "Onderweg",
         "title": "Fietstochten",
-        "intro": "Een rubriek die al klaarstaat voor je eigen routes of latere verhuurpartners.",
+        "intro": "Mooie fietslussen om de streek op een rustige of sportievere manier te ontdekken.",
         "items": [
           { "name": "Zachte lus rond Libin", "distance": "variabel", "description": "Voor koppels die rustig willen fietsen zonder een sportieve dag te plannen.", "tags": ["makkelijk"] },
           { "name": "Naar Redu en omliggende dorpen", "distance": "25 km", "description": "Een mooie rit die platteland, charme en een lekkere tussenstop combineert.", "tags": ["panorama"] },
-          { "name": "Sportievere Ardennenversie", "distance": "te bepalen", "description": "Klaar blok om later ambitieuzere routes toe te voegen.", "tags": ["sportief", "aan te vullen"] }
+          { "name": "Sportievere Ardennenversie", "distance": "te bepalen", "description": "Een meer uitdagende route voor wie graag klimmetjes en langere ritten combineert.", "tags": ["sportief"] }
         ]
       }
     ],
@@ -461,7 +461,7 @@
     "hero": {
       "eyebrow": "Contact & reserveren",
       "title": "Vraag naar een verblijf, stuur een bericht of reserveer rechtstreeks",
-      "description": "WhatsApp staat centraal voor snelle en directe reservaties. Het formulier is al proper opgebouwd en klaar om later gekoppeld te worden."
+      "description": "WhatsApp blijft de eenvoudigste manier voor een snel antwoord. Via het formulier hieronder kun je ook een volledige aanvraag versturen."
     },
     "direct": {
       "eyebrow": "Rechtstreeks boeken",
@@ -479,7 +479,7 @@
     "form": {
       "eyebrow": "Contactformulier",
       "title": "Stuur een aanvraag",
-      "text": "Het formulier is voorlopig enkel front-end, met een nette structuur die later gekoppeld kan worden aan EmailJS, Resend, Formspree of een Next.js API-route.",
+      "text": "Aanvragen worden rechtstreeks verzonden en zo snel mogelijk behandeld.",
       "labels": {
         "firstName": "Voornaam",
         "lastName": "Naam",

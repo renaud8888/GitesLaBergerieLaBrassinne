@@ -8,14 +8,14 @@ export async function POST(request: Request) {
   const successMessage = 'Votre demande a bien ete envoyee. Nous vous repondrons rapidement.';
 
   if (payload.company) {
-    return NextResponse.json({ success: true, message: successMessage, destinationEmail });
+    return NextResponse.json({ success: true, message: successMessage });
   }
 
   const validation = validateContactRequest(payload);
 
   if (!validation.valid) {
     return NextResponse.json(
-      { success: false, error: validation.error, message: 'Merci de verifier les champs obligatoires et votre adresse email.', destinationEmail },
+      { success: false, error: validation.error, message: 'Merci de verifier les champs obligatoires et votre adresse email.' },
       { status: 400 },
     );
   }
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
   if (!resendApiKey) {
     return NextResponse.json(
-      { success: false, error: 'not_configured', message: 'Une erreur est survenue lors de l’envoi.', destinationEmail },
+      { success: false, error: 'not_configured', message: 'Une erreur est survenue lors de l’envoi.' },
       { status: 503 },
     );
   }
@@ -67,12 +67,11 @@ export async function POST(request: Request) {
         success: false,
         error: 'send_failed',
         message: 'Une erreur est survenue lors de l’envoi.',
-        destinationEmail,
         details: resendError,
       },
       { status: 502 },
     );
   }
 
-  return NextResponse.json({ success: true, message: successMessage, destinationEmail });
+  return NextResponse.json({ success: true, message: successMessage });
 }

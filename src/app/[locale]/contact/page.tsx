@@ -6,7 +6,7 @@ import { ButtonLink } from '@/components/common/button-link';
 import { ContactForm } from '@/components/common/contact-form';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
-import { siteConfig } from '@/data/site';
+import { getWhatsappLink, siteConfig } from '@/data/site';
 import { getSiteImages } from '@/lib/content-store';
 import { getDictionary, type SiteDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
@@ -31,6 +31,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const dict = await getDictionary(locale);
   const contact = dict.contact;
   const images = await getSiteImages();
+  const whatsappUrl = getWhatsappLink(locale);
 
   return (
     <>
@@ -44,7 +45,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <h1 className="mt-4 max-w-3xl font-display text-5xl md:text-7xl">{contact.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100/84">{contact.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+            <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
               {dict.ui.contact.heroWhatsappLabel}
             </ButtonLink>
             <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="border-white/16 bg-white/10 text-white">
@@ -60,7 +61,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <article className="surface-card-strong p-6 md:p-8">
               <SectionHeading eyebrow={contact.direct.eyebrow} title={contact.direct.title} description={contact.direct.text} />
               <div className="mt-6 grid gap-3">
-                <ButtonLink href={siteConfig.whatsapp.default} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+                <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
                   {contact.direct.whatsapp}
                 </ButtonLink>
                 <div className="grid gap-3 md:grid-cols-2">
@@ -117,7 +118,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div>
             <SectionHeading eyebrow={contact.form.eyebrow} title={contact.form.title} description={contact.form.text} />
             <div className="mt-6">
-              <ContactForm labels={contact.form.labels} ui={dict.ui.contactForm} />
+              <ContactForm labels={contact.form.labels} ui={dict.ui.contactForm} locale={locale} />
             </div>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
               <div className="rounded-[1.5rem] border border-taupe-100 bg-white/78 p-5">

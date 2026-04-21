@@ -4,7 +4,7 @@ import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import { MobileActionBar } from '@/components/layout/mobile-action-bar';
 import { WhatsappFab } from '@/components/layout/whatsapp-fab';
-import { siteConfig } from '@/data/site';
+import { getWhatsappLink } from '@/data/site';
 import { getDictionary } from '@/lib/dictionaries';
 import { isLocale, locales, type Locale } from '@/lib/i18n';
 
@@ -49,7 +49,7 @@ export default async function LocaleLayout({
       <main>{children}</main>
       <Footer locale={locale as Locale} nav={dict.nav} footer={dict.footer} brand={dict.ui.brand} ui={dict.ui.footer} />
       <MobileActionBar locale={locale as Locale} reserveLabel={dict.nav.reserve} />
-      <WhatsappFab href={siteConfig.whatsapp.default} ariaLabel={dict.ui.whatsappFab.ariaLabel} />
+      <WhatsappFab href={getWhatsappLink(locale as Locale)} ariaLabel={dict.ui.whatsappFab.ariaLabel} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     </>
   );
