@@ -30,6 +30,12 @@ export function GitePageTemplate({
   const otherHref = `/${locale}/gites/${otherSlug === 'bergerie' ? 'la-bergerie' : 'la-brassine'}`;
   const common = dict.gites.common;
   const galleryImages = images.gites[slug].gallery.map((src, index) => ({ src, alt: `${gite.hero.title} ${index + 1}` }));
+  const equipmentCategories = dict.equipment.categories;
+  const comfortCategory = equipmentCategories[0];
+  const cuisineCategory = equipmentCategories[1];
+  const entertainmentCategory = equipmentCategories[2];
+  const outdoorCategory = equipmentCategories[3];
+  const practicalCategory = equipmentCategories[4];
 
   const quickFacts = [
     { icon: BedDouble, text: `${stats.guests} ${common.persons}` },
@@ -142,7 +148,7 @@ export function GitePageTemplate({
             <article className="surface-card-strong overflow-hidden p-0">
               <div className="relative aspect-[4/3]">
                 <ImageFallback
-                  src={images.gites[slug].gallery[1] ?? images.gites[slug].heroImage}
+                  src={images.gites[slug].gallery[5] ?? images.gites[slug].heroImage}
                   alt={ui[slug].firstImpressionsTitle}
                   fill
                   sizes="(max-width: 1280px) 100vw, 40vw"
@@ -158,51 +164,25 @@ export function GitePageTemplate({
           <div className="surface-card-strong p-6 md:p-8">
             <p className="font-display text-3xl text-taupe-900">{dict.equipment.title}</p>
             <div className="mt-6 grid gap-4 lg:grid-cols-[0.78fr_1.22fr]">
-              <div className="grid gap-4">
-                {dict.equipment.categories.slice(0, 1).concat(dict.equipment.categories.slice(3, 4)).map((category) => (
-                  <div key={category.title} className="rounded-[1.4rem] border border-white/70 bg-white/84 p-4">
-                    <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
-                    <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
-                      {category.items.map((item: string) => (
-                        <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
-                          <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-              <div className="grid gap-4">
-                {dict.equipment.categories.slice(1, 2).map((category) => (
-                  <div key={category.title} className="rounded-[1.4rem] border border-white/70 bg-white/84 p-4">
-                    <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
-                    <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
-                      {category.items.map((item: string) => (
-                        <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
-                          <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-                <div className="grid gap-4 md:grid-cols-2">
-                  {dict.equipment.categories.slice(2).filter((_, index) => index !== 1).map((category) => (
-                    <div key={category.title} className="rounded-[1.4rem] border border-white/70 bg-white/84 p-4">
-                      <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
-                      <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
-                        {category.items.map((item: string) => (
-                          <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
-                            <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+              {[comfortCategory, cuisineCategory, outdoorCategory, entertainmentCategory, practicalCategory].map((category, index) => (
+                <div
+                  key={category.title}
+                  className={[
+                    'rounded-[1.4rem] border border-white/70 bg-white/84 p-4',
+                    index === 1 ? 'lg:row-span-2' : '',
+                  ].join(' ')}
+                >
+                  <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
+                  <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
+                    {category.items.map((item: string) => (
+                      <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
+                        <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
 
