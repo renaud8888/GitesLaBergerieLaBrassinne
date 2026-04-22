@@ -275,9 +275,9 @@
   "equipment": {
     "title": "Équipements",
     "categories": [
-      { "title": "Confort & bien-être", "items": ["Sèche-cheveux", "Eau chaude", "Cintres", "Linge de lit", "Stores occultants", "Étendoir à linge", "Rangements", "Climatisation", "Chauffage"] },
-      { "title": "Divertissement", "items": ["Télévision", "Connexion ethernet", "Jeux de société", "Wi-Fi"] },
-      { "title": "Cuisine", "items": ["Cuisine", "Réfrigérateur", "Micro-ondes", "Équipements de cuisine de base", "Huile, sel, poivre", "Vaisselle et couverts", "Congelateur", "Lave-vaisselle", "Cuisinière", "Four", "Bouilloire électrique", "Machine a cafe", "Verres a vin", "Grille-pain"] },
+      { "title": "Confort & bien-être", "items": ["Sèche-cheveux", "Linge de lit en lin", "Stores occultants", "Chauffage / climatisation"] },
+      { "title": "Cuisine", "items": ["Réfrigérateur", "Micro-ondes", "Équipements de cuisine de base", "Huile, sel, poivre", "Vaisselle et couverts", "Lave-vaisselle", "Cuisinière", "Four", "Bouilloire électrique", "Machine a cafe", "Verres a vin", "Grille-pain"] },
+      { "title": "Divertissement", "items": ["Télévision 4K", "Connexion ethernet", "Jeux de société", "Wi-Fi"] },
       { "title": "Exterieur", "items": ["Jardin", "Mobilier extérieur", "Espace repas extérieur", "Barbecue", "Ustensiles de barbecue", "Chaises longues"] },
       { "title": "Pratique & sécurité", "items": ["Entrée privée", "Parking gratuit", "Détecteur de fumée", "Extincteur", "Borne de recharge electrique sur demande"] }
     ]

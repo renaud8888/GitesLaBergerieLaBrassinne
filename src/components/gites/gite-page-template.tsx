@@ -86,10 +86,22 @@ export function GitePageTemplate({
                     5/5 Airbnb
                   </p>
                   <p className="mt-1 text-sm text-cream-100/86">{stats.reviews} {common.reviews}</p>
+                  <div className="mt-2 flex items-center gap-1 text-[#f4cd62]">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star key={index} size={13} fill="currentColor" />
+                    ))}
+                  </div>
                 </div>
-                <a href={stats.googleUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-[1.35rem] border border-white/14 bg-white/10 px-4 py-3 text-sm text-cream-50 transition hover:bg-white/16">
-                  <GoogleIcon className="h-4 w-4" />
-                  {ui.common.googleReviewsLabel}
+                <a href={stats.googleUrl} target="_blank" rel="noreferrer" className="rounded-[1.35rem] border border-white/14 bg-white/10 px-4 py-3 text-sm text-cream-50 transition hover:bg-white/16">
+                  <div className="flex items-center gap-2 text-cream-50">
+                    <GoogleIcon className="h-4 w-4" />
+                    <span className="text-cream-50/94">{ui.common.googleReviewsLabel}</span>
+                  </div>
+                  <div className="mt-3 flex items-center gap-1 text-[#f4cd62]">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star key={index} size={13} fill="currentColor" />
+                    ))}
+                  </div>
                 </a>
               </div>
             </div>
@@ -101,20 +113,20 @@ export function GitePageTemplate({
         <div className="section-shell-wide">
           <SectionHeading eyebrow={common.galleryEyebrow} title={common.galleryTitle} description={gite.galleryIntro} />
           <div className="mt-8">
-            <Gallery images={galleryImages} previewCount={9} />
+            <Gallery images={galleryImages} previewCount={8} />
           </div>
         </div>
       </section>
 
       <section className="section-space pt-0">
-        <div className="section-shell-wide grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
-          <div className={`surface-card-strong p-6 md:p-8 ${toneCardClass}`}>
-            <p className="text-xs uppercase tracking-[0.24em] text-wood">{ui.common.firstImpressionsEyebrow}</p>
-            <p className="mt-3 font-display text-4xl text-taupe-900">
-              {ui[slug].firstImpressionsTitle}
-            </p>
-            <div className="editorial-divider mt-6" />
-            <p className="mt-6 text-base leading-8 text-taupe-600">{gite.outdoor.text}</p>
+        <div className="section-shell-wide grid gap-6 xl:grid-cols-[1.02fr_0.98fr] xl:items-start">
+          <div className="surface-card-strong p-6 md:p-8">
+            <SectionHeading eyebrow={gite.story.eyebrow} title={gite.story.title} description={gite.story.lead} />
+            <div className="prose-copy mt-6 text-base text-taupe-500">
+              {gite.story.paragraphs.map((paragraph: string) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <ButtonLink href={`/${locale}/contact`}>{ui.common.reserveLabel}</ButtonLink>
               <ButtonLink href={stats.airbnbUrl} variant="secondary" external>
@@ -123,29 +135,33 @@ export function GitePageTemplate({
             </div>
           </div>
 
-          <div className="surface-card-strong p-6 md:p-8">
-            <SectionHeading eyebrow={gite.story.eyebrow} title={gite.story.title} description={gite.story.lead} />
-            <div className="prose-copy mt-6 text-base text-taupe-500">
-              {gite.story.paragraphs.map((paragraph: string) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          <div className="grid gap-4">
+            <article className="surface-card-strong overflow-hidden p-0">
+              <div className="relative aspect-[4/3]">
+                <ImageFallback
+                  src={images.gites[slug].gallery[1] ?? images.gites[slug].heroImage}
+                  alt={ui[slug].firstImpressionsTitle}
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 40vw"
+                />
+              </div>
+            </article>
 
-      <section className="section-space pt-0">
-        <div className="section-shell-wide">
-          <SectionHeading eyebrow={common.highlights} title={common.highlights} description={ui[slug].highlightsDescription} />
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {gite.highlights.map((item: string) => (
-              <article key={item} className="surface-card-strong p-5">
-                <div className="inline-flex rounded-full bg-rose-100 p-2.5 text-taupe-700">
-                  <Check size={16} />
-                </div>
-                <p className="mt-4 text-base leading-7 text-taupe-700">{item}</p>
-              </article>
-            ))}
+            <article className={`surface-card-strong p-6 md:p-8 ${toneCardClass}`}>
+              <p className="text-xs uppercase tracking-[0.24em] text-wood">{common.highlights}</p>
+              <p className="mt-3 font-display text-4xl text-taupe-900">{ui[slug].firstImpressionsTitle}</p>
+              <p className="mt-4 text-base leading-8 text-taupe-600">{ui[slug].highlightsDescription}</p>
+              <ul className="mt-6 grid gap-3 text-sm leading-7 text-taupe-700">
+                {gite.highlights.map((item: string) => (
+                  <li key={item} className="inline-flex items-start gap-3 rounded-[1.2rem] border border-white/70 bg-white/72 px-4 py-3">
+                    <span className="inline-flex rounded-full bg-rose-100 p-2 text-taupe-700">
+                      <Check size={14} />
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -181,36 +197,35 @@ export function GitePageTemplate({
                 </article>
               ))}
             </div>
+            <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/70 bg-white/80">
+              <div className="relative aspect-[16/7]">
+                <ImageFallback
+                  src={images.gites[slug].gallery[3] ?? images.gites[slug].heroImage}
+                  alt={gite.outdoor.title}
+                  fill
+                  sizes="(max-width: 1280px) 100vw, 40vw"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section-space">
-        <div className="section-shell-wide grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
-          <div className="surface-card-strong p-6 md:p-8">
-            <p className="font-display text-3xl text-taupe-900">{common.guestLove}</p>
-            <div className="mt-5 rounded-[1.5rem] border border-white/70 bg-white/80 p-5">
-              <div className="flex items-center gap-1 text-wood">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <Star key={index} size={16} fill="currentColor" />
-                ))}
-              </div>
-              <p className="mt-4 text-base leading-8 text-taupe-500">{gite.reviewHighlight.text}</p>
-              <p className="mt-4 font-display text-2xl text-taupe-900">{gite.reviewHighlight.author}</p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <ButtonLink href={stats.googleUrl} variant="secondary" external icon={<GoogleIcon className="h-4 w-4" />}>
-                  {ui.common.googleLabel}
-                </ButtonLink>
-                <ButtonLink href={stats.airbnbUrl} variant="secondary" external icon={<Star size={14} fill="currentColor" />}>
-                  {ui.common.airbnbLabel}
-                </ButtonLink>
-              </div>
-            </div>
-          </div>
-
+        <div className="section-shell-wide">
           <div className={`surface-card-strong p-6 md:p-8 ${toneCardClass}`}>
             <p className="font-display text-3xl text-taupe-900">{gite.outdoor.title}</p>
             <p className="mt-4 text-base leading-8 text-taupe-600">{gite.outdoor.text}</p>
+            <div className="mt-6 overflow-hidden rounded-[1.6rem] border border-white/70 bg-white/70">
+              <div className="relative aspect-[16/7]">
+                <ImageFallback
+                  src={images.gites[slug].gallery[3] ?? images.gites[slug].heroImage}
+                  alt={gite.outdoor.title}
+                  fill
+                  sizes="100vw"
+                />
+              </div>
+            </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900">
                 {ui.common.reserveLabel}
