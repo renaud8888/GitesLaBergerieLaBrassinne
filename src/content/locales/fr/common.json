@@ -208,7 +208,7 @@
         "text": "Un séjour qui allie charme, confort et vraie sensation d'être bien reçu. La Bergerie plait souvent aux couples qui veulent plus d'espace et une atmosphère très apaisante."
       },
       "outdoor": {
-        "title": "Le jardin a l'arrière",
+        "title": "Le jardin à l'arrière",
         "text": "C'est l'un de ses grands atouts. Cet espace prolonge le gîte vers l'extérieur avec une sensation de tranquillité très agréable."
       },
       "faqIntro": "Une FAQ spécifique pour aider à se projeter et limiter les questions répétitives avant réservation ou avant l'arrivée.",
@@ -267,7 +267,7 @@
         { "question": "La Brassine est-elle plus petite que La Bergerie ?", "answer": "Oui, elle est plus compacte, mais c'est justement ce qui renforce son côté cocooning et intime." },
         { "question": "Le logement est-il de plain-pied ?", "answer": "Oui, entièrement. C'est un vrai point de confort pour de nombreux voyageurs." },
         { "question": "L'ambiance est-elle différente de La Bergerie ?", "answer": "Oui. La Brassine est plus enveloppante, plus intime, avec un esprit très cocon pour les couples qui cherchent une parenthèse douce." },
-        { "question": "Peut-on tout de même cuisiner et profiter du séjour sur place ?", "answer": "Oui, bien sur. La cuisine est équipée, la television permet le streaming et tout est pensé pour un week-end très confortable a deux." }
+        { "question": "Peut-on tout de même cuisiner et profiter du séjour sur place ?", "answer": "Oui, bien sûr. La cuisine est équipée, la télévision permet le streaming et tout est pensé pour un week-end très confortable à deux." }
       ]
     }
   },
@@ -275,7 +275,7 @@
     "title": "Équipements",
     "categories": [
       { "title": "Confort & bien-être", "items": ["Sèche-cheveux", "Linge de lit en lin", "Stores occultants", "Chauffage / climatisation"] },
-      { "title": "Cuisine", "items": ["Réfrigérateur", "Micro-ondes", "Équipements de cuisine de base", "Huile, sel, poivre", "Vaisselle et couverts", "Lave-vaisselle", "Cuisinière", "Four", "Bouilloire électrique", "Machine a cafe", "Verres a vin", "Grille-pain"] },
+      { "title": "Cuisine", "items": ["Réfrigérateur", "Micro-ondes", "Équipements de cuisine de base", "Huile, sel, poivre", "Vaisselle et couverts", "Lave-vaisselle", "Cuisinière", "Four", "Bouilloire électrique", "Machine à café", "Verres à vin", "Grille-pain"] },
       { "title": "Divertissement", "items": ["Télévision 4K", "Connexion ethernet", "Jeux de société", "Wi-Fi"] },
       { "title": "Exterieur", "items": ["Jardin", "Mobilier extérieur", "Espace repas extérieur", "Barbecue", "Ustensiles de barbecue", "Chaises longues"] },
       { "title": "Pratique & sécurité", "items": ["Entrée privée", "Parking gratuit", "Détecteur de fumée", "Extincteur", "Borne de recharge electrique sur demande"] }
@@ -303,10 +303,10 @@
         "title": "Nos restaurants favoris",
         "intro": "Des adresses pour un diner romantique, un repas local ou une pause gourmande bien choisie.",
         "items": [
-          { "name": "Le Cor de Chasse", "location": "Wierde / proche Saint-Hubert", "distance": "environ 20 min", "description": "Une belle table pour une sortie plus gastronomique, quand on veut marquer le coup avec élégance.", "tags": ["gastronomique", "occasion spéciale"] },
-          { "name": "Le Relais de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "Le cadre, la nature tout autour et le charme du village en font une belle idée de repas a deux.", "tags": ["nature", "charme"] },
-          { "name": "Le Fournil de Redu", "location": "Redu", "distance": "10 min", "description": "Parfait pour une pause déjeuner, un brunch ou une douceur apres la promenade dans le village du livre.", "tags": ["tea room", "gourmand"] },
-          { "name": "Une bonne table a Libin", "location": "Libin", "distance": "5 min", "description": "Une adresse locale à découvrir pour un repas sans chichi.", "tags": ["local"] }
+          { "name": "Le Cor de Chasse", "image": "/images/around/restaurants_cor-de-chasse.jpg", "location": "Wierde / proche Saint-Hubert", "distance": "environ 20 min", "description": "Une belle table pour une sortie plus gastronomique, quand on veut marquer le coup avec élégance.", "tags": ["gastronomique", "occasion spéciale"] },
+          { "name": "Le Relais de Mirwart", "image": "/images/around/restaurants_relais-de-mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "Le cadre, la nature tout autour et le charme du village en font une belle idée de repas à deux.", "tags": ["nature", "charme"] },
+          { "name": "Le Fournil de Redu", "image": "/images/around/restaurants_fournil-de-redu.jpg", "location": "Redu", "distance": "10 min", "description": "Parfait pour une pause déjeuner, un brunch ou une douceur apres la promenade dans le village du livre.", "tags": ["tea room", "gourmand"] },
+          { "name": "Une bonne table a Libin", "image": "/images/around/restaurants_table-libin.jpg", "location": "Libin", "distance": "5 min", "description": "Une adresse locale à découvrir pour un repas sans chichi.", "tags": ["local"] }
         ]
       },
       {
@@ -315,34 +315,34 @@
         "title": "Nos idées de promenades",
         "intro": "Des balades faciles a recommander selon l'envie du moment: foret, village, eau, panoramas.",
         "items": [
-          { "name": "Le domaine de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "Un grand classique pour marcher dans un cadre très ardennais, entre patrimoine et nature.", "tags": ["foret", "beau cadre"] },
-          { "name": "Les chemins autour de Redu", "location": "Redu", "distance": "10 min", "description": "Ideal pour combiner balade douce, librairies, galeries et pause gourmande.", "tags": ["village", "romantique"] },
-          { "name": "Saint-Hubert côté nature", "location": "Saint-Hubert", "distance": "15 min", "description": "Une option parfaite pour les voyageurs qui veulent alterner patrimoine et immersion en foret.", "tags": ["patrimoine", "foret"] },
-          { "name": "Promenade libre autour de Libin", "location": "Libin", "distance": "sur place", "description": "Le secteur se prête très bien aux marches tranquilles en fin de journée ou au petit matin.", "tags": ["simple", "sur place"] }
+          { "name": "Le domaine de Mirwart", "image": "/images/around/walks_mirwart-estate.jpg", "location": "Mirwart", "distance": "20 min", "description": "Un grand classique pour marcher dans un cadre très ardennais, entre patrimoine et nature.", "tags": ["foret", "beau cadre"] },
+          { "name": "Les chemins autour de Redu", "image": "/images/around/walks_redu-paths.jpg", "location": "Redu", "distance": "10 min", "description": "Ideal pour combiner balade douce, librairies, galeries et pause gourmande.", "tags": ["village", "romantique"] },
+          { "name": "Saint-Hubert côté nature", "image": "/images/around/walks_saint-hubert-nature.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Une option parfaite pour les voyageurs qui veulent alterner patrimoine et immersion en foret.", "tags": ["patrimoine", "foret"] },
+          { "name": "Promenade libre autour de Libin", "image": "/images/around/walks_libin-walk.jpg", "location": "Libin", "distance": "sur place", "description": "Le secteur se prête très bien aux marches tranquilles en fin de journée ou au petit matin.", "tags": ["simple", "sur place"] }
         ]
       },
       {
         "key": "romantic",
-        "eyebrow": "Week-end a deux",
+        "eyebrow": "Week-end à deux",
         "title": "Idées de week-end romantique",
         "intro": "Quelques combinaisons simples et très efficaces pour faire de deux jours une vraie parenthèse.",
         "items": [
-          { "name": "Arriver, s'installer, ne rien presser", "description": "Un verre, une douche chaude, un diner simple au gite et une soiree cocooning avec streaming.", "tags": ["slow stay", "cocooning"] },
-          { "name": "Marcher puis bien diner", "description": "Une balade a Mirwart ou Redu, puis une belle table pour prolonger le moment.", "tags": ["balade", "diner"] },
-          { "name": "Surprendre son ou sa partenaire", "description": "Ajouter champagne, fleurs ou decoration romantique pour donner au séjour une dimension encore plus mémorable.", "tags": ["surprise", "option romantique"] },
-          { "name": "Un week-end sans programme lourd", "description": "Quelques repères, peu de contraintes, et beaucoup de temps pour être simplement bien ensemble.", "tags": ["détente", "a deux"] }
+          { "name": "Arriver, s'installer, ne rien presser", "image": "/images/around/romantic_arrive-and-slow-down.jpg", "description": "Un verre, une douche chaude, un diner simple au gite et une soiree cocooning avec streaming.", "tags": ["slow stay", "cocooning"] },
+          { "name": "Marcher puis bien diner", "image": "/images/around/romantic_walk-and-dinner.jpg", "description": "Une balade a Mirwart ou Redu, puis une belle table pour prolonger le moment.", "tags": ["balade", "diner"] },
+          { "name": "Surprendre son ou sa partenaire", "image": "/images/around/romantic_surprise-your-partner.jpg", "description": "Ajouter champagne, fleurs ou decoration romantique pour donner au séjour une dimension encore plus mémorable.", "tags": ["surprise", "option romantique"] },
+          { "name": "Un week-end sans programme lourd", "image": "/images/around/romantic_no-heavy-schedule.jpg", "description": "Quelques repères, peu de contraintes, et beaucoup de temps pour être simplement bien ensemble.", "tags": ["détente", "a deux"] }
         ]
       },
       {
         "key": "activities",
         "eyebrow": "A partager",
-        "title": "Activités a deux",
+        "title": "Activités à deux",
         "intro": "Pour ceux qui aiment ponctuer leur séjour de petites sorties bien choisies.",
         "items": [
-          { "name": "Le village du livre de Redu", "location": "Redu", "distance": "10 min", "description": "Une promenade très agréable entre bouquineries, ateliers et ambiance unique.", "tags": ["culture", "flaner"] },
-          { "name": "Euro Space Center", "location": "Transinne", "distance": "10 min", "description": "Une sortie originale et facile d'accès pour varier les plaisirs.", "tags": ["insolite", "couple"] },
-          { "name": "Balades a velo", "location": "autour de Libin", "distance": "variable", "description": "Routes et paysages se prêtent bien a une sortie tranquille ou plus sportive.", "tags": ["velo", "nature"] },
-          { "name": "Patrimoine de Saint-Hubert", "location": "Saint-Hubert", "distance": "15 min", "description": "Une jolie idée pour combiner architecture, atmosphère et pause en terrasse.", "tags": ["ville", "patrimoine"] }
+          { "name": "Le village du livre de Redu", "image": "/images/around/activities_redu-book-village.jpg", "location": "Redu", "distance": "10 min", "description": "Une promenade très agréable entre bouquineries, ateliers et ambiance unique.", "tags": ["culture", "flaner"] },
+          { "name": "Euro Space Center", "image": "/images/around/activities_euro-space-center.jpg", "location": "Transinne", "distance": "10 min", "description": "Une sortie originale et facile d'accès pour varier les plaisirs.", "tags": ["insolite", "couple"] },
+          { "name": "Balades a velo", "image": "/images/around/activities_cycling-rides.jpg", "location": "autour de Libin", "distance": "variable", "description": "Routes et paysages se prêtent bien a une sortie tranquille ou plus sportive.", "tags": ["velo", "nature"] },
+          { "name": "Patrimoine de Saint-Hubert", "image": "/images/around/activities_saint-hubert-heritage.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Une jolie idée pour combiner architecture, atmosphère et pause en terrasse.", "tags": ["ville", "patrimoine"] }
         ]
       },
       {
@@ -351,10 +351,10 @@
         "title": "Activités en cas de pluie",
         "intro": "Parce qu'un séjour réussi ne dépend pas du soleil. La pluie peut très bien aller avec les Ardennes.",
         "items": [
-          { "name": "Journée cocooning au gite", "description": "Streaming, jeux de societe, cuisine a deux et plaisir de rester au chaud sans culpabiliser.", "tags": ["sur place", "douceur"] },
-          { "name": "Librairies et galeries de Redu", "location": "Redu", "distance": "10 min", "description": "Le village du livre garde tout son charme sous un ciel gris.", "tags": ["culture", "couvert partiel"] },
-          { "name": "Une belle table en milieu de journée", "description": "Profiter de la pluie pour s'offrir un déjeuner plus long et plus tranquille.", "tags": ["gourmand"] },
-          { "name": "Patrimoine local", "description": "Musees, basilique ou visite de village selon vos envies du moment.", "tags": ["découverte"] }
+          { "name": "Journée cocooning au gîte", "image": "/images/around/rainy_cosy-day-in-cottage.jpg", "description": "Streaming, jeux de société, cuisine à deux et plaisir de rester au chaud sans culpabiliser.", "tags": ["sur place", "douceur"] },
+          { "name": "Librairies et galeries de Redu", "image": "/images/around/rainy_redu-bookshops.jpg", "location": "Redu", "distance": "10 min", "description": "Le village du livre garde tout son charme sous un ciel gris.", "tags": ["culture", "couvert partiel"] },
+          { "name": "Une belle table en milieu de journée", "image": "/images/around/rainy_long-lunch.jpg", "description": "Profiter de la pluie pour s'offrir un déjeuner plus long et plus tranquille.", "tags": ["gourmand"] },
+          { "name": "Patrimoine local", "image": "/images/around/rainy_local-heritage.jpg", "description": "Musees, basilique ou visite de village selon vos envies du moment.", "tags": ["découverte"] }
         ]
       },
       {
@@ -363,10 +363,10 @@
         "title": "Villages & patrimoine",
         "intro": "Des repères faciles a citer aux voyageurs qui veulent explorer sans aller trop loin.",
         "items": [
-          { "name": "Libin", "distance": "sur place", "description": "Point de départ ideal pour rayonner dans la region sans faire trop de route.", "tags": ["base ideale"] },
-          { "name": "Redu", "distance": "10 min", "description": "Le village du livre reste une sortie incontournable, pleine de charme et d'identité.", "tags": ["livres", "charme"] },
-          { "name": "Saint-Hubert", "distance": "15 min", "description": "Une ville de caractère, facile a recommander pour son patrimoine et son atmosphère.", "tags": ["basilique", "terrasses"] },
-          { "name": "Mirwart", "distance": "20 min", "description": "Un village a la fois paisible et spectaculaire, très photogénique, très coherent avec l'esprit du séjour.", "tags": ["nature", "patrimoine"] }
+          { "name": "Libin", "image": "/images/around/villages_libin.jpg", "distance": "sur place", "description": "Point de départ ideal pour rayonner dans la region sans faire trop de route.", "tags": ["base ideale"] },
+          { "name": "Redu", "image": "/images/around/villages_redu.jpg", "distance": "10 min", "description": "Le village du livre reste une sortie incontournable, pleine de charme et d'identité.", "tags": ["livres", "charme"] },
+          { "name": "Saint-Hubert", "image": "/images/around/villages_saint-hubert.jpg", "distance": "15 min", "description": "Une ville de caractère, facile a recommander pour son patrimoine et son atmosphère.", "tags": ["basilique", "terrasses"] },
+          { "name": "Mirwart", "image": "/images/around/villages_mirwart.jpg", "distance": "20 min", "description": "Un village a la fois paisible et spectaculaire, très photogénique, très coherent avec l'esprit du séjour.", "tags": ["nature", "patrimoine"] }
         ]
       },
       {
@@ -375,23 +375,23 @@
         "title": "Balades a velo",
         "intro": "Une rubrique déjà prête pour intégrer ensuite tes plus beaux parcours ou partenariats location.",
         "items": [
-          { "name": "Boucle douce autour de Libin", "distance": "variable", "description": "Pour les couples qui veulent sortir a velo sans se lancer dans une grosse journée.", "tags": ["facile"] },
-          { "name": "Vers Redu et les villages voisins", "distance": "25 km", "description": "Un itinéraire ideal pour combiner campagne, charme et pause gourmande.", "tags": ["panorama"] },
-          { "name": "Version sportive en Ardenne", "distance": "a définir", "description": "Un parcours plus soutenu pour les amateurs de reliefs et de belles sorties en Ardenne.", "tags": ["sportif"] }
+          { "name": "Boucle douce autour de Libin", "image": "/images/around/cycling_libin-loop.jpg", "distance": "variable", "description": "Pour les couples qui veulent sortir a velo sans se lancer dans une grosse journée.", "tags": ["facile"] },
+          { "name": "Vers Redu et les villages voisins", "image": "/images/around/cycling_redu-route.jpg", "distance": "25 km", "description": "Un itinéraire ideal pour combiner campagne, charme et pause gourmande.", "tags": ["panorama"] },
+          { "name": "Version sportive en Ardenne", "image": "/images/around/cycling_sportive-ardennes.jpg", "distance": "a définir", "description": "Un parcours plus soutenu pour les amateurs de reliefs et de belles sorties en Ardenne.", "tags": ["sportif"] }
         ]
       }
     ],
     "finalCta": {
       "title": "Besoin d'aide pour organiser votre séjour ?",
-      "text": "Le guide pratique répond aux questions les plus courantes et la page contact permet de préparer une reservation directe ou une surprise romantique.",
-      "primary": "Passer a la reservation",
+      "text": "Le guide pratique répond aux questions les plus courantes et la page contact permet de préparer une réservation directe ou une surprise romantique.",
+      "primary": "Passer à la réservation",
       "secondary": "Lire le guide pratique"
     }
   },
   "guide": {
     "meta": {
-      "title": "Guide pratique - Préparer votre séjour a Libin",
-      "description": "Toutes les informations utiles avant l'arrivée: check-in, check-out, parking, linge, Wi-Fi, television, chauffage, tri des déchets et départ."
+      "title": "Guide pratique - Préparer votre séjour à Libin",
+      "description": "Toutes les informations utiles avant l'arrivée : check-in, check-out, parking, linge, Wi-Fi, télévision, chauffage, tri des déchets et départ."
     },
     "hero": {
       "eyebrow": "Préparer votre séjour",
@@ -408,41 +408,41 @@
       {
         "eyebrow": "Avant votre venue",
         "title": "Arrivée, accueil et installation",
-        "text": "L'arrivée se fait entre 16:00 et 23:00. Les clés sont remises en main propre, dans un esprit simple et chaleureux. Si vous avez une heure approximative d'arrivée, il est utile de la communiquer a l'avance.",
+        "text": "L'arrivée se fait entre 16:00 et 23:00. Les clés sont remises en main propre, dans un esprit simple et chaleureux. Si vous avez une heure approximative d'arrivée, il est utile de la communiquer à l'avance.",
         "points": [
           { "title": "Linge fourni", "text": "Les serviettes sont prévues et les lits sont faits avant votre arrivée." },
-          { "title": "Maison attenante", "text": "La maison de l'hote est attenante, ce qui permet une aide rapide en cas de besoin tout en laissant votre séjour tranquille." }
+          { "title": "Maison attenante", "text": "La maison de l'hôte est attenante, ce qui permet une aide rapide en cas de besoin tout en laissant votre séjour tranquille." }
         ]
       },
       {
         "eyebrow": "Sur place",
-        "title": "Confort, cuisine, Wi-Fi et television",
-        "text": "Tout est prévu pour que vous puissiez profiter du gite sans devoir improviser. La cuisine est bien équipée, le Wi-Fi est disponible dans tout le logement et la television permet le streaming.",
+        "title": "Confort, cuisine, Wi-Fi et télévision",
+        "text": "Tout est prévu pour que vous puissiez profiter du gîte sans devoir improviser. La cuisine est bien équipée, le Wi-Fi est disponible dans tout le logement et la télévision permet le streaming.",
         "points": [
-          { "title": "Cuisine", "text": "Four, cuisiniere, micro-ondes, lave-vaisselle, refrigerateur, congelateur, machine a cafe, bouilloire, grille-pain, vaisselle, verres a vin et essentiels de cuisine." },
-          { "title": "TV & streaming", "text": "Allumez la television, choisissez l'entree ou l'application déjà accessible, puis connectez-vous a votre service si besoin. Pensez simplement a vous deconnecter avant le départ." },
+          { "title": "Cuisine", "text": "Four, cuisinière, micro-ondes, lave-vaisselle, réfrigérateur, congélateur, machine à café, bouilloire, grille-pain, vaisselle, verres à vin et essentiels de cuisine." },
+          { "title": "TV & streaming", "text": "Allumez la télévision, choisissez l'entrée ou l'application déjà accessible, puis connectez-vous à votre service si besoin. Pensez simplement à vous déconnecter avant le départ." },
           { "title": "Wi-Fi", "text": "Le Wi-Fi couvre tout le logement. Une connexion Ethernet est également disponible." },
-          { "title": "Recharge electrique", "text": "Une borne de recharge peut être proposee sur demande. Mieux vaut prévenir avant l'arrivée." }
+          { "title": "Recharge électrique", "text": "Une borne de recharge peut être proposée sur demande. Mieux vaut prévenir avant l'arrivée." }
         ]
       },
       {
-        "eyebrow": "A savoir",
+        "eyebrow": "À savoir",
         "title": "Chauffage, déchets et petites consignes utiles",
-        "text": "Le chauffage fonctionne via une pompe a chaleur. Pour garder le logement agréable et eviter les dérégulations, il vaut mieux ne pas modifier fortement les reglages sans nécessité.",
+        "text": "Le chauffage fonctionne via une pompe à chaleur. Pour garder le logement agréable et éviter les dérégulations, il vaut mieux ne pas modifier fortement les réglages sans nécessité.",
         "points": [
-          { "title": "Pompe a chaleur", "text": "Le systeme est réglé pour offrir une temperature confortable. Si quelque chose vous semble inhabituel, mieux vaut prévenir l'hote plutot que de changer plusieurs reglages." },
-          { "title": "Tri des déchets", "text": "Le tri est demande. Les sacs peuvent être laisses devant la porte en le signalant, puis l'hote se charge du reste." },
-          { "title": "Petit rappel", "text": "Merci de respecter le calme des lieux, le materiel mis a disposition et l'esprit chaleureux de la maison." }
+          { "title": "Pompe à chaleur", "text": "Le système est réglé pour offrir une température confortable. Si quelque chose vous semble inhabituel, mieux vaut prévenir l'hôte plutôt que de changer plusieurs réglages." },
+          { "title": "Tri des déchets", "text": "Le tri est demandé. Les sacs peuvent être laissés devant la porte en le signalant, puis l'hôte se charge du reste." },
+          { "title": "Petit rappel", "text": "Merci de respecter le calme des lieux, le matériel mis à disposition et l'esprit chaleureux de la maison." }
         ]
       },
       {
         "eyebrow": "Avant de partir",
         "title": "Que faire avant le départ",
-        "text": "L'idée n'est pas de transformer la fin du séjour en corvee. Quelques gestes simples suffisent pour rendre le départ fluide.",
+        "text": "L'idée n'est pas de transformer la fin du séjour en corvée. Quelques gestes simples suffisent pour rendre le départ fluide.",
         "bullets": [
-          "Verifier de ne rien oublier dans le logement",
+          "Vérifier de ne rien oublier dans le logement",
           "Laisser la cuisine dans un état raisonnablement propre",
-          "Rassembler les déchets tries et les signaler si necessaire",
+          "Rassembler les déchets triés et les signaler si nécessaire",
           "Fermer les fenêtres et couper les appareils non utiles",
           "Respecter l'heure de départ avant 10:00"
         ]
@@ -450,30 +450,30 @@
     ],
     "faqEyebrow": "Questions utiles",
     "faqTitle": "FAQ pratique",
-    "faqDescription": "Une FAQ pensée pour reduire les messages repetitifs sans donner une impression rigide ou froide.",
+    "faqDescription": "Une FAQ pensée pour réduire les messages répétitifs sans donner une impression rigide ou froide.",
     "faq": [
       { "question": "Peut-on arriver tard ?", "answer": "L'arrivée est prévue entre 16:00 et 23:00. Si vous pensez arriver en fin de plage, mieux vaut prévenir." },
       { "question": "Le parking est-il simple ?", "answer": "Oui. Il y a 7 places de parking au total, ce qui rend l'arrivée très facile." },
-      { "question": "Doit-on apporter le linge de lit ou les serviettes ?", "answer": "Non, tout est fourni. Les lits sont faits a l'arrivée et les serviettes sont déjà prévues." },
-      { "question": "Peut-on regler le chauffage soi-meme ?", "answer": "Le chauffage par pompe a chaleur est déjà réglé pour être confortable. En cas de souci, le mieux est de contacter l'hote avant de modifier les reglages." },
-      { "question": "Comment gerer les déchets ?", "answer": "Le tri est demande. Vous pouvez laisser les sacs devant la porte en le signalant, puis l'hote s'occupe du reste." },
-      { "question": "Y a-t-il quelqu'un a joindre facilement en cas de souci ?", "answer": "Oui. L'hote est disponible en cas de besoin, et la maison attenante permet une aide rapide si necessaire." }
+      { "question": "Doit-on apporter le linge de lit ou les serviettes ?", "answer": "Non, tout est fourni. Les lits sont faits à l'arrivée et les serviettes sont déjà prévues." },
+      { "question": "Peut-on régler le chauffage soi-même ?", "answer": "Le chauffage par pompe à chaleur est déjà réglé pour être confortable. En cas de souci, le mieux est de contacter l'hôte avant de modifier les réglages." },
+      { "question": "Comment gérer les déchets ?", "answer": "Le tri est demandé. Vous pouvez laisser les sacs devant la porte en le signalant, puis l'hôte s'occupe du reste." },
+      { "question": "Y a-t-il quelqu'un à joindre facilement en cas de souci ?", "answer": "Oui. L'hôte est disponible en cas de besoin, et la maison attenante permet une aide rapide si nécessaire." }
     ]
   },
   "contact": {
     "meta": {
-      "title": "Contact & reservation - La Bergerie & La Brassine",
-      "description": "Contactez facilement l'hote via WhatsApp, email ou formulaire pour reserver La Bergerie ou La Brassine a Libin."
+      "title": "Contact & réservation - La Bergerie & La Brassine",
+      "description": "Contactez facilement l'hôte via WhatsApp, email ou formulaire pour réserver La Bergerie ou La Brassine à Libin."
     },
     "hero": {
-      "eyebrow": "Contact & reservation",
+      "eyebrow": "Contact & réservation",
       "title": "Parler d'un séjour, poser une question, réserver simplement",
       "description": "WhatsApp reste le moyen le plus simple pour une réponse rapide. Le formulaire ci-dessous permet aussi d'envoyer une demande complète."
     },
     "direct": {
       "eyebrow": "Réservation directe",
       "title": "Le moyen le plus simple pour commencer",
-      "text": "Pour verifier une disponibilite, demander un conseil ou préparer une surprise romantique, WhatsApp est mis en avant. Les liens Airbnb restent également visibles pour rassurer et laisser le choix.",
+      "text": "Pour vérifier une disponibilité, demander un conseil ou préparer une surprise romantique, WhatsApp est mis en avant. Les liens Airbnb restent également visibles pour rassurer et laisser le choix.",
       "whatsapp": "Contacter sur WhatsApp"
     },
     "practicalTitle": "Informations utiles",

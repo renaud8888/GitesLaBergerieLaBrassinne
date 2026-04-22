@@ -304,10 +304,10 @@
         "title": "Onze favoriete restaurants",
         "intro": "Adressen om aan te raden voor een romantisch diner, een lokale maaltijd of een verfijnde pauze.",
         "items": [
-          { "name": "Le Cor de Chasse", "location": "nabij Saint-Hubert", "distance": "ongeveer 20 min", "description": "Een verfijnde keuze wanneer je van de avond echt iets bijzonders wilt maken.", "tags": ["gastronomisch", "speciale gelegenheid"] },
-          { "name": "Le Relais de Mirwart", "location": "Mirwart", "distance": "20 min", "description": "De ligging, het dorp en de natuur rondom maken dit tot een mooie uitstap met twee.", "tags": ["natuur", "charme"] },
-          { "name": "Le Fournil de Redu", "location": "Redu", "distance": "10 min", "description": "Ideaal voor lunch, brunch of een zoete pauze na een wandeling in het dorp.", "tags": ["tea room", "lekker"] },
-          { "name": "Een lokaal adres in Libin", "location": "Libin", "distance": "5 min", "description": "Een lokaal adres om te ontdekken voor een eenvoudige en gezellige maaltijd.", "tags": ["lokaal"] }
+          { "name": "Le Cor de Chasse", "image": "/images/around/restaurants_cor-de-chasse.jpg", "location": "nabij Saint-Hubert", "distance": "ongeveer 20 min", "description": "Een verfijnde keuze wanneer je van de avond echt iets bijzonders wilt maken.", "tags": ["gastronomisch", "speciale gelegenheid"] },
+          { "name": "Le Relais de Mirwart", "image": "/images/around/restaurants_relais-de-mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "De ligging, het dorp en de natuur rondom maken dit tot een mooie uitstap met twee.", "tags": ["natuur", "charme"] },
+          { "name": "Le Fournil de Redu", "image": "/images/around/restaurants_fournil-de-redu.jpg", "location": "Redu", "distance": "10 min", "description": "Ideaal voor lunch, brunch of een zoete pauze na een wandeling in het dorp.", "tags": ["tea room", "lekker"] },
+          { "name": "Een lokaal adres in Libin", "image": "/images/around/restaurants_table-libin.jpg", "location": "Libin", "distance": "5 min", "description": "Een lokaal adres om te ontdekken voor een eenvoudige en gezellige maaltijd.", "tags": ["lokaal"] }
         ]
       },
       {
@@ -316,10 +316,10 @@
         "title": "Onze favoriete wandelingen",
         "intro": "Makkelijk aan te raden wandelingen volgens de stemming: bos, dorp, water en uitzicht.",
         "items": [
-          { "name": "Domein van Mirwart", "location": "Mirwart", "distance": "20 min", "description": "Een Ardense klassieker met erfgoed, bosgevoel en mooie landschappen.", "tags": ["bos", "mooie omgeving"] },
-          { "name": "Rond Redu", "location": "Redu", "distance": "10 min", "description": "Perfect om een zachte wandeling te combineren met boekwinkels, galerijen en koffie.", "tags": ["dorp", "romantisch"] },
-          { "name": "Saint-Hubert en natuur", "location": "Saint-Hubert", "distance": "15 min", "description": "Een goede keuze voor reizigers die erfgoed en bos willen combineren.", "tags": ["erfgoed", "bos"] },
-          { "name": "Wandelen bij Libin", "location": "Libin", "distance": "ter plaatse", "description": "De omgeving is ideaal voor rustige avondwandelingen of frisse ochtenden.", "tags": ["eenvoudig", "dichtbij"] }
+          { "name": "Domein van Mirwart", "image": "/images/around/walks_mirwart-estate.jpg", "location": "Mirwart", "distance": "20 min", "description": "Een Ardense klassieker met erfgoed, bosgevoel en mooie landschappen.", "tags": ["bos", "mooie omgeving"] },
+          { "name": "Rond Redu", "image": "/images/around/walks_redu-paths.jpg", "location": "Redu", "distance": "10 min", "description": "Perfect om een zachte wandeling te combineren met boekwinkels, galerijen en koffie.", "tags": ["dorp", "romantisch"] },
+          { "name": "Saint-Hubert en natuur", "image": "/images/around/walks_saint-hubert-nature.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Een goede keuze voor reizigers die erfgoed en bos willen combineren.", "tags": ["erfgoed", "bos"] },
+          { "name": "Wandelen bij Libin", "image": "/images/around/walks_libin-walk.jpg", "location": "Libin", "distance": "ter plaatse", "description": "De omgeving is ideaal voor rustige avondwandelingen of frisse ochtenden.", "tags": ["eenvoudig", "dichtbij"] }
         ]
       },
       {
@@ -328,10 +328,10 @@
         "title": "Ideeën voor een romantisch weekend",
         "intro": "Een paar eenvoudige combinaties die van twee dagen een echte herinnering maken.",
         "items": [
-          { "name": "Aankomen en vertragen", "description": "Een drankje, een warme douche, een eenvoudig diner in de gite en een cocooning avond binnen.", "tags": ["slow stay", "gezellig"] },
-          { "name": "Wandelen en daarna dineren", "description": "Een wandeling in Mirwart of Redu en daarna een mooie tafel voor twee.", "tags": ["wandeling", "diner"] },
-          { "name": "Verras je partner", "description": "Voeg champagne, bloemen of romantische decoratie toe om het verblijf nog memorabeler te maken.", "tags": ["verrassing", "romantische extra"] },
-          { "name": "Geen zwaar programma", "description": "Enkele fijne ideeën, weinig druk en veel tijd om gewoon samen te zijn.", "tags": ["ontspanning", "met twee"] }
+          { "name": "Aankomen en vertragen", "image": "/images/around/romantic_arrive-and-slow-down.jpg", "description": "Een drankje, een warme douche, een eenvoudig diner in de gite en een cocooning avond binnen.", "tags": ["slow stay", "gezellig"] },
+          { "name": "Wandelen en daarna dineren", "image": "/images/around/romantic_walk-and-dinner.jpg", "description": "Een wandeling in Mirwart of Redu en daarna een mooie tafel voor twee.", "tags": ["wandeling", "diner"] },
+          { "name": "Verras je partner", "image": "/images/around/romantic_surprise-your-partner.jpg", "description": "Voeg champagne, bloemen of romantische decoratie toe om het verblijf nog memorabeler te maken.", "tags": ["verrassing", "romantische extra"] },
+          { "name": "Geen zwaar programma", "image": "/images/around/romantic_no-heavy-schedule.jpg", "description": "Enkele fijne ideeën, weinig druk en veel tijd om gewoon samen te zijn.", "tags": ["ontspanning", "met twee"] }
         ]
       },
       {
@@ -340,10 +340,10 @@
         "title": "Activiteiten voor twee",
         "intro": "Voor gasten die hun verblijf graag aanvullen met een paar goed gekozen uitstappen.",
         "items": [
-          { "name": "Boekendorp Redu", "location": "Redu", "distance": "10 min", "description": "Een heel aangename uitstap langs boekwinkels, ateliers en een unieke sfeer.", "tags": ["cultuur", "flaneren"] },
-          { "name": "Euro Space Center", "location": "Transinne", "distance": "10 min", "description": "Een originele en makkelijke uitstap als je eens iets anders wilt.", "tags": ["origineel", "koppel"] },
-          { "name": "Fietstochten", "location": "rond Libin", "distance": "variabel", "description": "Wegen en landschappen lenen zich perfect voor een rustige of actievere rit.", "tags": ["fiets", "natuur"] },
-          { "name": "Erfgoed van Saint-Hubert", "location": "Saint-Hubert", "distance": "15 min", "description": "Een mooie keuze om architectuur, sfeer en een terrasje te combineren.", "tags": ["stad", "erfgoed"] }
+          { "name": "Boekendorp Redu", "image": "/images/around/activities_redu-book-village.jpg", "location": "Redu", "distance": "10 min", "description": "Een heel aangename uitstap langs boekwinkels, ateliers en een unieke sfeer.", "tags": ["cultuur", "flaneren"] },
+          { "name": "Euro Space Center", "image": "/images/around/activities_euro-space-center.jpg", "location": "Transinne", "distance": "10 min", "description": "Een originele en makkelijke uitstap als je eens iets anders wilt.", "tags": ["origineel", "koppel"] },
+          { "name": "Fietstochten", "image": "/images/around/activities_cycling-rides.jpg", "location": "rond Libin", "distance": "variabel", "description": "Wegen en landschappen lenen zich perfect voor een rustige of actievere rit.", "tags": ["fiets", "natuur"] },
+          { "name": "Erfgoed van Saint-Hubert", "image": "/images/around/activities_saint-hubert-heritage.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Een mooie keuze om architectuur, sfeer en een terrasje te combineren.", "tags": ["stad", "erfgoed"] }
         ]
       },
       {
@@ -352,10 +352,10 @@
         "title": "Wat te doen als het regent",
         "intro": "Een geslaagd verblijf hangt niet af van zon. Regen past verrassend goed bij de Ardennen.",
         "items": [
-          { "name": "Knusse dag in de gite", "description": "Streaming, bordspellen, samen koken en het plezier van binnen warm te blijven.", "tags": ["ter plaatse", "zachtheid"] },
-          { "name": "Boekwinkels en galerijen in Redu", "location": "Redu", "distance": "10 min", "description": "Het boekendorp blijft charmant, ook onder een grijze hemel.", "tags": ["cultuur", "gedeeltelijk overdekt"] },
-          { "name": "Lange lunch", "description": "Gebruik de regen als excuus voor een trage en gezellige maaltijd.", "tags": ["lekker eten"] },
-          { "name": "Lokaal erfgoed", "description": "Musea, basiliek of dorpsbezoeken afhankelijk van de stemming van de dag.", "tags": ["ontdekking"] }
+          { "name": "Knusse dag in de gite", "image": "/images/around/rainy_cosy-day-in-cottage.jpg", "description": "Streaming, bordspellen, samen koken en het plezier van binnen warm te blijven.", "tags": ["ter plaatse", "zachtheid"] },
+          { "name": "Boekwinkels en galerijen in Redu", "image": "/images/around/rainy_redu-bookshops.jpg", "location": "Redu", "distance": "10 min", "description": "Het boekendorp blijft charmant, ook onder een grijze hemel.", "tags": ["cultuur", "gedeeltelijk overdekt"] },
+          { "name": "Lange lunch", "image": "/images/around/rainy_long-lunch.jpg", "description": "Gebruik de regen als excuus voor een trage en gezellige maaltijd.", "tags": ["lekker eten"] },
+          { "name": "Lokaal erfgoed", "image": "/images/around/rainy_local-heritage.jpg", "description": "Musea, basiliek of dorpsbezoeken afhankelijk van de stemming van de dag.", "tags": ["ontdekking"] }
         ]
       },
       {
@@ -364,10 +364,10 @@
         "title": "Dorpen & erfgoed",
         "intro": "Makkelijke lokale referenties voor gasten die willen ontdekken zonder ver te rijden.",
         "items": [
-          { "name": "Libin", "distance": "ter plaatse", "description": "Een ideale basis om de streek te verkennen zonder lange verplaatsingen.", "tags": ["goede basis"] },
-          { "name": "Redu", "distance": "10 min", "description": "Het bekende boekendorp blijft een van de charmantste uitstappen in de streek.", "tags": ["boeken", "charme"] },
-          { "name": "Saint-Hubert", "distance": "15 min", "description": "Een stad met karakter, makkelijk aan te raden voor erfgoed en sfeer.", "tags": ["basiliek", "terrassen"] },
-          { "name": "Mirwart", "distance": "20 min", "description": "Een rustig en fotogeniek dorp dat perfect past bij de sfeer van het verblijf.", "tags": ["natuur", "erfgoed"] }
+          { "name": "Libin", "image": "/images/around/villages_libin.jpg", "distance": "ter plaatse", "description": "Een ideale basis om de streek te verkennen zonder lange verplaatsingen.", "tags": ["goede basis"] },
+          { "name": "Redu", "image": "/images/around/villages_redu.jpg", "distance": "10 min", "description": "Het bekende boekendorp blijft een van de charmantste uitstappen in de streek.", "tags": ["boeken", "charme"] },
+          { "name": "Saint-Hubert", "image": "/images/around/villages_saint-hubert.jpg", "distance": "15 min", "description": "Een stad met karakter, makkelijk aan te raden voor erfgoed en sfeer.", "tags": ["basiliek", "terrassen"] },
+          { "name": "Mirwart", "image": "/images/around/villages_mirwart.jpg", "distance": "20 min", "description": "Een rustig en fotogeniek dorp dat perfect past bij de sfeer van het verblijf.", "tags": ["natuur", "erfgoed"] }
         ]
       },
       {
@@ -376,9 +376,9 @@
         "title": "Fietstochten",
         "intro": "Mooie fietslussen om de streek op een rustige of sportievere manier te ontdekken.",
         "items": [
-          { "name": "Zachte lus rond Libin", "distance": "variabel", "description": "Voor koppels die rustig willen fietsen zonder een sportieve dag te plannen.", "tags": ["makkelijk"] },
-          { "name": "Naar Redu en omliggende dorpen", "distance": "25 km", "description": "Een mooie rit die platteland, charme en een lekkere tussenstop combineert.", "tags": ["panorama"] },
-          { "name": "Sportievere Ardennenversie", "distance": "te bepalen", "description": "Een meer uitdagende route voor wie graag klimmetjes en langere ritten combineert.", "tags": ["sportief"] }
+          { "name": "Zachte lus rond Libin", "image": "/images/around/cycling_libin-loop.jpg", "distance": "variabel", "description": "Voor koppels die rustig willen fietsen zonder een sportieve dag te plannen.", "tags": ["makkelijk"] },
+          { "name": "Naar Redu en omliggende dorpen", "image": "/images/around/cycling_redu-route.jpg", "distance": "25 km", "description": "Een mooie rit die platteland, charme en een lekkere tussenstop combineert.", "tags": ["panorama"] },
+          { "name": "Sportievere Ardennenversie", "image": "/images/around/cycling_sportive-ardennes.jpg", "distance": "te bepalen", "description": "Een meer uitdagende route voor wie graag klimmetjes en langere ritten combineert.", "tags": ["sportief"] }
         ]
       }
     ],

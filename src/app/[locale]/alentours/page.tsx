@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ChevronDown } from 'lucide-react';
 import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
@@ -47,50 +48,57 @@ export default async function AroundPage({ params }: { params: Promise<{ locale:
           <SectionHeading eyebrow={around.intro.eyebrow} title={around.intro.title} description={around.intro.text} />
           <div className="mt-10 grid gap-8">
             {around.sections.map((section: AroundSection) => (
-              <section key={section.key} className="surface-card p-6 md:p-8">
-                <div className="max-w-2xl">
-                  <p className="text-xs uppercase tracking-[0.35em] text-wood">{section.eyebrow}</p>
-                  <h2 className="mt-3 font-display text-4xl text-taupe-900">{section.title}</h2>
-                  <p className="mt-4 text-base leading-8 text-taupe-500">{section.intro}</p>
-                </div>
-                <div className="mt-8 grid gap-4 lg:grid-cols-2">
-                  {section.items.map((item: AroundItem) => (
-                    <article key={item.name} className="overflow-hidden rounded-[1.5rem] border border-taupe-100 bg-white">
-                      <div className="relative aspect-[16/10]">
-                        <ImageFallback
-                          src={resolveAroundImage(images, section.key, item.name)}
-                          alt={item.name}
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                        />
-                      </div>
-                      <div className="p-5">
-                        <div>
-                          <p className="font-display text-3xl text-taupe-900">{item.name}</p>
-                          <p className="mt-1 text-sm uppercase tracking-[0.18em] text-wood">
-                            {[
-                              'location' in item ? item.location : undefined,
-                              'distance' in item ? item.distance : undefined,
-                            ]
-                              .filter(Boolean)
-                              .join(' - ')}
-                          </p>
+              <details key={section.key} className="surface-card group overflow-hidden" open={section.key === around.sections[0]?.key}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-6 md:p-8">
+                  <div className="max-w-2xl">
+                    <p className="text-xs uppercase tracking-[0.35em] text-wood">{section.eyebrow}</p>
+                    <h2 className="mt-3 font-display text-4xl text-taupe-900">{section.title}</h2>
+                  </div>
+                  <span className="inline-flex rounded-full border border-taupe-100 bg-white/80 p-3 text-taupe-700 transition group-open:rotate-180">
+                    <ChevronDown size={18} />
+                  </span>
+                </summary>
+                <div className="px-6 pb-6 md:px-8 md:pb-8">
+                  <p className="max-w-2xl text-base leading-8 text-taupe-500">{section.intro}</p>
+                  <div className="mt-8 grid gap-4 lg:grid-cols-2">
+                    {section.items.map((item: AroundItem) => (
+                      <article key={item.name} className="overflow-hidden rounded-[1.5rem] border border-taupe-100 bg-white">
+                        <div className="relative aspect-[16/10]">
+                          <ImageFallback
+                            src={item.image ?? resolveAroundImage(images, section.key, item.name)}
+                            alt={item.name}
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                          />
                         </div>
-                        <p className="mt-4 text-sm leading-7 text-taupe-500">{item.description}</p>
-                        {item.tags?.length ? (
-                          <div className="mt-4 flex flex-wrap gap-2">
-                            {item.tags.map((tag: string) => (
-                              <span key={tag} className="rounded-full bg-cream-100 px-3 py-1 text-xs uppercase tracking-[0.15em] text-taupe-500">
-                                {tag}
-                              </span>
-                            ))}
+                        <div className="p-5">
+                          <div>
+                            <p className="font-display text-3xl text-taupe-900">{item.name}</p>
+                            <p className="mt-1 text-sm uppercase tracking-[0.18em] text-wood">
+                              {[
+                                'location' in item ? item.location : undefined,
+                                'distance' in item ? item.distance : undefined,
+                              ]
+                                .filter(Boolean)
+                                .join(' - ')}
+                            </p>
                           </div>
-                        ) : null}
-                      </div>
-                    </article>
-                  ))}
+                          <p className="mt-4 text-sm leading-7 text-taupe-500">{item.description}</p>
+                          {item.tags?.length ? (
+                            <div className="mt-4 flex flex-wrap gap-2">
+                              {item.tags.map((tag: string) => (
+                                <span key={tag} className="rounded-full bg-cream-100 px-3 py-1 text-xs uppercase tracking-[0.15em] text-taupe-500">
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          ) : null}
+                        </div>
+                      </article>
+                    ))}
+                  </div>
                 </div>
-              </section>
+              </details>
             ))}
           </div>
         </div>
