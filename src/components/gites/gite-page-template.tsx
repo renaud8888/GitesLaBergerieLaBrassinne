@@ -48,6 +48,10 @@ export function GitePageTemplate({
     slug === 'bergerie'
       ? 'bg-[linear-gradient(180deg,rgba(255,250,245,0.98),rgba(239,226,212,0.72))]'
       : 'bg-[linear-gradient(180deg,rgba(255,250,245,0.98),rgba(243,223,220,0.74))]';
+  const summaryItems =
+    slug === 'bergerie'
+      ? ['Le plus spacieux des deux', 'Jardin à l’arrière', 'Ambiance douce et romantique']
+      : ['Plain-pied', 'Jardin à l’avant', 'Cocon intime pour deux'];
 
   return (
     <>
@@ -153,6 +157,17 @@ export function GitePageTemplate({
                   fill
                   sizes="(max-width: 1280px) 100vw, 40vw"
                 />
+              </div>
+            </article>
+            <article className={`surface-card-strong p-5 md:p-6 ${toneCardClass}`}>
+              <p className="text-xs uppercase tracking-[0.24em] text-wood">En bref</p>
+              <div className="mt-4 grid gap-3">
+                {summaryItems.map((item) => (
+                  <div key={item} className="inline-flex items-center gap-3 rounded-[1rem] border border-white/70 bg-white/72 px-4 py-3 text-sm text-taupe-700">
+                    <span className="h-2.5 w-2.5 rounded-full bg-rose-300" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </article>
           </div>
