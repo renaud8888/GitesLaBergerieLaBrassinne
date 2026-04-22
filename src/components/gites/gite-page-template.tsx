@@ -1,4 +1,4 @@
-import { BedDouble, Check, ShowerHead, Sparkles, Star, Trees } from 'lucide-react';
+import { BedDouble, ShowerHead, Sparkles, Star, Trees } from 'lucide-react';
 
 import { GoogleIcon, WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
@@ -102,6 +102,9 @@ export function GitePageTemplate({
                       <Star key={index} size={13} fill="currentColor" />
                     ))}
                   </div>
+                  <p className="mt-3 max-w-[18rem] text-xs leading-5 text-cream-100/82">
+                    L&apos;un des gîtes les mieux notés de la région.
+                  </p>
                 </a>
               </div>
             </div>
@@ -146,22 +149,6 @@ export function GitePageTemplate({
                 />
               </div>
             </article>
-
-            <article className={`surface-card-strong p-6 md:p-8 ${toneCardClass}`}>
-              <p className="text-xs uppercase tracking-[0.24em] text-wood">{common.highlights}</p>
-              <p className="mt-3 font-display text-4xl text-taupe-900">{ui[slug].firstImpressionsTitle}</p>
-              <p className="mt-4 text-base leading-8 text-taupe-600">{ui[slug].highlightsDescription}</p>
-              <ul className="mt-6 grid gap-3 text-sm leading-7 text-taupe-700">
-                {gite.highlights.map((item: string) => (
-                  <li key={item} className="inline-flex items-start gap-3 rounded-[1.2rem] border border-white/70 bg-white/72 px-4 py-3">
-                    <span className="inline-flex rounded-full bg-rose-100 p-2 text-taupe-700">
-                      <Check size={14} />
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
           </div>
         </div>
       </section>
@@ -170,20 +157,52 @@ export function GitePageTemplate({
         <div className="section-shell-wide grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
           <div className="surface-card-strong p-6 md:p-8">
             <p className="font-display text-3xl text-taupe-900">{dict.equipment.title}</p>
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              {dict.equipment.categories.map((category) => (
-                <div key={category.title} className="rounded-[1.4rem] border border-white/70 bg-white/84 p-4">
-                  <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
-                  <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
-                    {category.items.map((item: string) => (
-                      <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
-                        <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+            <div className="mt-6 grid gap-4 lg:grid-cols-[0.78fr_1.22fr]">
+              <div className="grid gap-4">
+                {dict.equipment.categories.slice(0, 1).concat(dict.equipment.categories.slice(3, 4)).map((category) => (
+                  <div key={category.title} className="rounded-[1.4rem] border border-white/70 bg-white/84 p-4">
+                    <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
+                    <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
+                      {category.items.map((item: string) => (
+                        <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
+                          <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div className="grid gap-4">
+                {dict.equipment.categories.slice(1, 2).map((category) => (
+                  <div key={category.title} className="rounded-[1.4rem] border border-white/70 bg-white/84 p-4">
+                    <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
+                    <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
+                      {category.items.map((item: string) => (
+                        <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
+                          <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+                <div className="grid gap-4 md:grid-cols-2">
+                  {dict.equipment.categories.slice(2).filter((_, index) => index !== 1).map((category) => (
+                    <div key={category.title} className="rounded-[1.4rem] border border-white/70 bg-white/84 p-4">
+                      <p className="font-display text-[1.75rem] leading-none text-taupe-900">{category.title}</p>
+                      <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-500">
+                        {category.items.map((item: string) => (
+                          <li key={item} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
+                            <span className="mt-[0.5rem] h-1.5 w-1.5 rounded-full bg-rose-300" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
 
@@ -207,32 +226,16 @@ export function GitePageTemplate({
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space">
-        <div className="section-shell-wide">
-          <div className={`surface-card-strong p-6 md:p-8 ${toneCardClass}`}>
-            <p className="font-display text-3xl text-taupe-900">{gite.outdoor.title}</p>
-            <p className="mt-4 text-base leading-8 text-taupe-600">{gite.outdoor.text}</p>
-            <div className="mt-6 overflow-hidden rounded-[1.6rem] border border-white/70 bg-white/70">
-              <div className="relative aspect-[16/7]">
-                <ImageFallback
-                  src={images.gites[slug].gallery[3] ?? images.gites[slug].heroImage}
-                  alt={gite.outdoor.title}
-                  fill
-                  sizes="100vw"
-                />
-              </div>
-            </div>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900">
-                {ui.common.reserveLabel}
-              </ButtonLink>
-              <ButtonLink href={whatsappUrl} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />}>
-                {ui.common.whatsappLabel}
-              </ButtonLink>
+            <div className="mt-6 rounded-[1.5rem] border border-white/70 bg-white/84 p-5">
+              <p className="text-xs uppercase tracking-[0.24em] text-wood">{common.highlights}</p>
+              <ul className="mt-4 grid gap-2 text-sm leading-6 text-taupe-700">
+                {gite.highlights.map((item: string) => (
+                  <li key={item} className="inline-flex items-start gap-3 rounded-[1rem] bg-cream-50/70 px-3 py-2.5">
+                    <span className="mt-1 h-2 w-2 rounded-full bg-rose-300" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
