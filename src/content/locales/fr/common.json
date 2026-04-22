@@ -57,9 +57,9 @@
       "items": {
         "bergerie": {
           "name": "La Bergerie",
-          "tagline": "Spacieuse, romantique, lumineuse",
+          "tagline": "Spacieux & romantique",
           "capacity": "2 personnes",
-          "description": "Le plus grand des deux gîtes, idéal pour ceux qui aiment l'espace, la douceur d'un décor shabby chic et les matinées calmes dans le jardin à l'arrière.",
+          "description": "Le plus grand des deux gîtes, idéal pour ceux qui aiment la douceur d'un décor shabby chic et les matinées calmes dans le jardin à l'arrière.",
           "bullets": [
             "Le plus spacieux des deux gîtes",
             "Jardin à l'arrière",
@@ -73,7 +73,7 @@
           "description": "Plus petit, plus enveloppant, pensé pour l'intimité. Un cocon de plain-pied avec jardin à l'avant et une vraie sensation de retraite à deux.",
           "bullets": [
             "Le plus cocooning des deux",
-            "Plain-pied",
+            "Pour une intimité inégalée",
             "Jardin à l'avant"
           ]
         }
@@ -98,7 +98,7 @@
       "description": "Pour un anniversaire, une demande spéciale ou simplement l'envie de faire plaisir, certaines attentions peuvent être préparées sur demande.",
       "items": [
         { "title": "Box champagne", "text": "Une bouteille fraîche, des chocolats, des produits locaux et plein de surprises pour ouvrir le week-end avec élégance." },
-        { "title": "Demandez votre box", "text": "Faites une demande via le formulaire ou par WhatsApp, nous vous communiquerons les infos pratiques et la préparerons avec soin pour votre arrivée." },
+        { "title": "Réservez une box", "text": "Faites une demande et nous vous communiquerons les infos pratiques et la préparerons avec soin pour votre arrivée." },
         { "title": "Décoration romantique", "text": "Une ambiance soignée pour surprendre son ou sa partenaire dès l'ouverture de la porte." },
         { "title": "Bon cadeau", "text": "Une belle idée à offrir pour une escapade à deux en Ardenne." }
       ]

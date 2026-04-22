@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import { ButtonLink } from '@/components/common/button-link';
 import { localeLabels, locales, stripLocaleFromPath, type Locale } from '@/lib/i18n';
@@ -40,6 +41,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const normalized = stripLocaleFromPath(pathname);
   const immersive = normalized === '/' || normalized.startsWith('/gites') || normalized === '/guide-pratique' || normalized === '/contact';
 
@@ -58,6 +60,10 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
       document.body.style.overflow = '';
     };
   }, [open]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const shellClass = immersive && !scrolled
     ? 'border-white/60 bg-[rgba(255,250,245,0.94)] shadow-[0_12px_34px_rgba(89,63,49,0.08)] md:border-white/14 md:bg-[linear-gradient(180deg,rgba(45,34,29,0.56),rgba(45,34,29,0.14))] md:shadow-none'
@@ -138,60 +144,65 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
         </button>
       </div>
 
-      <div className={cn('fixed inset-0 z-[70] transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
-        <div className="absolute inset-0 bg-taupe-900/40 backdrop-blur-[2px]" onClick={() => setOpen(false)} />
-        <div
-          className={cn(
-            'absolute right-0 top-0 isolate flex h-full w-[82vw] max-w-sm flex-col overflow-hidden border-l border-[#ead8cb] bg-[#f6eee6] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform',
-            open ? 'translate-x-0' : 'translate-x-full',
-          )}
-        >
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#fbf6f1_0%,#f3e4d8_100%)]" />
-          <div className="flex items-start justify-between gap-4">
-            <div className="relative z-10">
-              <p className="font-display text-4xl leading-none">{brand.name}</p>
-              <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">{brand.tagline}</p>
-            </div>
-            <button type="button" onClick={() => setOpen(false)} className="relative z-10 rounded-full border border-taupe-200 bg-[#fffaf5] p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50">
-              <X size={18} />
-            </button>
-          </div>
-
-          <div className="relative z-10 mt-8 grid gap-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={`/${locale}${item.path}`}
+      {mounted
+        ? createPortal(
+            <div className={cn('fixed inset-0 z-[70] transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
+              <div className="absolute inset-0 bg-taupe-900/40 backdrop-blur-[2px]" onClick={() => setOpen(false)} />
+              <div
                 className={cn(
-                  'rounded-[1.35rem] border px-5 py-4 text-base font-medium shadow-[0_12px_24px_rgba(89,63,49,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(89,63,49,0.1)]',
-                  (item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path))
-                    ? 'border-rose-200 bg-[linear-gradient(135deg,#f2dfd7,#efe2d4)] text-taupe-900'
-                    : 'border-white/70 bg-white/96 text-taupe-900'
+                  'absolute right-0 top-0 isolate flex h-dvh min-h-screen w-[82vw] max-w-sm flex-col overflow-hidden border-l border-[#ead8cb] bg-[#f6eee6] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform',
+                  open ? 'translate-x-0' : 'translate-x-full',
                 )}
-                onClick={() => setOpen(false)}
               >
-                {nav[item.key]}
-              </Link>
-            ))}
-          </div>
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#fbf6f1_0%,#f3e4d8_100%)]" />
+                <div className="flex items-start justify-between gap-4">
+                  <div className="relative z-10">
+                    <p className="font-display text-4xl leading-none">{brand.name}</p>
+                    <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">{brand.tagline}</p>
+                  </div>
+                  <button type="button" onClick={() => setOpen(false)} className="relative z-10 rounded-full border border-taupe-200 bg-[#fffaf5] p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50">
+                    <X size={18} />
+                  </button>
+                </div>
 
-          <div className="relative z-10 mt-8 flex gap-2">
-            {locales.map((entry) => (
-              <Link
-                key={entry}
-                href={`/${entry}${normalized === '/' ? '' : normalized}`}
-                className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em] transition', locale === entry ? 'bg-[#efe2d4] text-taupe-900' : 'border border-taupe-200 bg-white text-taupe-700 hover:bg-cream-50')}
-              >
-                {localeLabels[entry]}
-              </Link>
-            ))}
-          </div>
+                <div className="relative z-10 mt-8 grid gap-3">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.key}
+                      href={`/${locale}${item.path}`}
+                      className={cn(
+                        'rounded-[1.35rem] border px-5 py-4 text-base font-medium shadow-[0_12px_24px_rgba(89,63,49,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(89,63,49,0.1)]',
+                        (item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path))
+                          ? 'border-rose-200 bg-[linear-gradient(135deg,#f2dfd7,#efe2d4)] text-taupe-900'
+                          : 'border-white/70 bg-white/96 text-taupe-900',
+                      )}
+                      onClick={() => setOpen(false)}
+                    >
+                      {nav[item.key]}
+                    </Link>
+                  ))}
+                </div>
 
-          <ButtonLink href={`/${locale}/contact`} className="relative z-10 mt-auto w-full justify-center bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_40px_rgba(240,201,198,0.34)]">
-            {nav.reserve}
-          </ButtonLink>
-        </div>
-      </div>
+                <div className="relative z-10 mt-8 flex gap-2">
+                  {locales.map((entry) => (
+                    <Link
+                      key={entry}
+                      href={`/${entry}${normalized === '/' ? '' : normalized}`}
+                      className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em] transition', locale === entry ? 'bg-[#efe2d4] text-taupe-900' : 'border border-taupe-200 bg-white text-taupe-700 hover:bg-cream-50')}
+                    >
+                      {localeLabels[entry]}
+                    </Link>
+                  ))}
+                </div>
+
+                <ButtonLink href={`/${locale}/contact`} className="relative z-10 mt-auto w-full justify-center bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_40px_rgba(240,201,198,0.34)]">
+                  {nav.reserve}
+                </ButtonLink>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </header>
   );
 }

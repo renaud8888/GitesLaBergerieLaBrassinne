@@ -82,23 +82,17 @@ export function HomePage({
   const romanticActions =
     locale === 'fr'
       ? {
-          form: 'Via le formulaire',
-          whatsapp: 'Via WhatsApp',
           giftVoucher: 'Demander un bon cadeau',
-          champagne: 'Demander la box champagne',
+          orderBox: 'Commander la box',
         }
       : locale === 'nl'
         ? {
-            form: 'Via het formulier',
-            whatsapp: 'Via WhatsApp',
             giftVoucher: 'Vraag een cadeaubon aan',
-            champagne: 'Vraag de champagnebox aan',
+            orderBox: 'Bestel de box',
           }
         : {
-            form: 'Via the form',
-            whatsapp: 'Via WhatsApp',
             giftVoucher: 'Request a gift voucher',
-            champagne: 'Request the champagne box',
+            orderBox: 'Order the box',
           };
 
   return (
@@ -293,23 +287,10 @@ export function HomePage({
                   <div key={item.title} className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4">
                     <p className="font-display text-[2rem] leading-none">{item.title}</p>
                     <p className="mt-3 text-sm leading-7 text-cream-100/78">{item.text}</p>
-                    {index === 0 ? (
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <ButtonLink href={`/${locale}/contact`} variant="secondary" className="border-white/18 bg-white/92 px-4 py-2 text-xs text-taupe-900">
-                          {romanticActions.form}
-                        </ButtonLink>
-                        <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external className="border-white/18 bg-white/12 px-4 py-2 text-xs text-cream-50">
-                          {romanticActions.whatsapp}
-                        </ButtonLink>
-                      </div>
-                    ) : null}
                     {index === 1 ? (
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        <ButtonLink href={`/${locale}/contact`} variant="secondary" className="border-white/18 bg-white/92 px-4 py-2 text-xs text-taupe-900">
-                          {romanticActions.form}
-                        </ButtonLink>
-                        <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external className="border-white/18 bg-white/12 px-4 py-2 text-xs text-cream-50">
-                          {romanticActions.whatsapp}
+                      <div className="mt-4">
+                        <ButtonLink href={`/${locale}/contact`} className="px-4 py-2 text-xs">
+                          {romanticActions.orderBox}
                         </ButtonLink>
                       </div>
                     ) : null}
