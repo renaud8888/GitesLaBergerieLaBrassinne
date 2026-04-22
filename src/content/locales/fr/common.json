@@ -23,7 +23,7 @@
   "home": {
     "hero": {
       "eyebrow": "Escapade romantique en Ardenne",
-      "title": "Deux gîtes de charme pour ralentir, se retrouver et savourer l'instant.",
+      "title": "Deux gîtes de charme pour se retrouver et savourer l'instant.",
       "description": "À Libin, La Bergerie et La Brassine accueillent les voyageurs dans une ambiance chic, douce et chaleureuse. Une ancienne bâtisse pleine d'âme, deux cocons pensés pour les séjours à deux, et une région qui invite à la déconnexion.",
       "primaryCta": "Réserver",
       "secondaryCta": "WhatsApp",
@@ -70,7 +70,7 @@
           "name": "La Brassine",
           "tagline": "Intime, douce, cocooning",
           "capacity": "2 personnes",
-          "description": "Plus petite, plus enveloppante, pensée pour l'intimité. Un cocon de plain-pied avec jardin à l'avant et une vraie sensation de retraite à deux.",
+          "description": "Plus petit, plus enveloppant, pensé pour l'intimité. Un cocon de plain-pied avec jardin à l'avant et une vraie sensation de retraite à deux.",
           "bullets": [
             "Le plus cocooning des deux",
             "Plain-pied",
@@ -97,8 +97,8 @@
       "title": "Préparer une surprise romantique",
       "description": "Pour un anniversaire, une demande spéciale ou simplement l'envie de faire plaisir, certaines attentions peuvent être préparées sur demande.",
       "items": [
-        { "title": "Champagne à l'arrivée", "text": "Une bouteille fraîche pour ouvrir le week-end avec élégance." },
-        { "title": "Bouquet de fleurs", "text": "Un accueil encore plus doux avec une touche florale pleine de charme." },
+        { "title": "Box champagne", "text": "Une bouteille fraîche, des chocolats, des produits locaux et plein de surprises pour ouvrir le week-end avec élégance." },
+        { "title": "Demandez votre box", "text": "Faites une demande via le formulaire ou par WhatsApp, nous vous communiquerons les infos pratiques et la préparerons avec soin pour votre arrivée." },
         { "title": "Décoration romantique", "text": "Une ambiance soignée pour surprendre son ou sa partenaire dès l'ouverture de la porte." },
         { "title": "Bon cadeau", "text": "Une belle idée à offrir pour une escapade à deux en Ardenne." }
       ]
@@ -120,7 +120,15 @@
         { "src": "/images/home/2.avif", "alt": "La Bergerie, la lumière et les matières" },
         { "src": "/images/home/2b.avif", "alt": "La Brassine, plus intime et enveloppante" },
         { "src": "/images/home/4.avif", "alt": "Une atmosphère chic et chaleureuse" },
-        { "src": "/images/home/4b.avif", "alt": "Le charme d'un séjour à deux" }
+        { "src": "/images/home/4b.avif", "alt": "Le charme d'un séjour à deux" },
+        { "src": "/images/home/1.avif", "alt": "Une arrivée pleine de charme à Libin" },
+        { "src": "/images/home/1b.avif", "alt": "Une escapade romantique dans une atmosphère douce" },
+        { "src": "/images/home/3.avif", "alt": "Des détails soignés pour un séjour à deux" },
+        { "src": "/images/home/3b.avif", "alt": "Une ambiance cocooning et raffinée" },
+        { "src": "/images/home/5.avif", "alt": "La douceur d'un intérieur pensé pour ralentir" },
+        { "src": "/images/home/5b.avif", "alt": "Des images qui invitent déjà à se projeter" },
+        { "src": "/images/home/6.avif", "alt": "Un séjour élégant au coeur des Ardennes" },
+        { "src": "/images/home/6b.avif", "alt": "Une parenthèse chaleureuse à vivre à deux" }
       ]
     },
     "reviews": {

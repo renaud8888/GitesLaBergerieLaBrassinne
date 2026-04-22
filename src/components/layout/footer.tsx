@@ -1,10 +1,8 @@
- 'use client';
+'use client';
 
 import Link from 'next/link';
-import { Mail, MapPin, MessageCircle, Star } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import { Mail, MapPin, MessageCircle } from 'lucide-react';
 
-import { GoogleIcon } from '@/components/common/brand-icons';
 import { getWhatsappLink, siteConfig } from '@/data/site';
 import type { Locale } from '@/lib/i18n';
 
@@ -38,14 +36,8 @@ export function Footer({
   ui: {
     eyebrow: string;
     whatsappLabel: string;
-    googleReviewsLabel: string;
-    airbnbLabel: string;
   };
 }) {
-  const pathname = usePathname();
-  const isBrassinePage = pathname.includes('/gites/la-brassine');
-  const googleReviewsUrl = isBrassinePage ? siteConfig.googleReviews.brassine : siteConfig.googleReviews.bergerie;
-  const airbnbUrl = isBrassinePage ? siteConfig.airbnb.brassine : siteConfig.airbnb.bergerie;
   const whatsappUrl = getWhatsappLink(locale);
 
   return (
@@ -107,14 +99,10 @@ export function Footer({
             <div className="rounded-[1.6rem] border border-white/10 bg-white/8 p-6">
               <p className="font-display text-2xl text-cream-50">{footer.reserveTitle}</p>
               <p className="mt-2 text-sm leading-7 text-cream-100/75">{footer.reserveText}</p>
-              <div className="mt-5 grid gap-3 text-sm text-cream-100/82">
-                <a href={googleReviewsUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 transition hover:bg-white/12">
-                  <GoogleIcon className="h-4 w-4" />
-                  {ui.googleReviewsLabel}
-                </a>
-                <a href={airbnbUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/8 px-4 py-3 transition hover:bg-white/12">
-                  <Star size={15} fill="currentColor" />
-                  {ui.airbnbLabel}
+              <div className="mt-5">
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/12 px-4 py-3 text-sm text-cream-100/82 transition hover:bg-white/18 hover:text-cream-50">
+                  <MessageCircle size={16} />
+                  {ui.whatsappLabel}
                 </a>
               </div>
             </div>

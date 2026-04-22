@@ -79,7 +79,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
           </p>
         </Link>
 
-        <nav className="hidden items-center gap-2 xl:flex">
+        <nav className="hidden flex-nowrap items-center gap-1.5 xl:flex">
           {navItems.map((item) => {
             const href = `/${locale}${item.path}`;
             const active = item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path);
@@ -89,7 +89,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
                 key={item.key}
                 href={href}
                 className={cn(
-                  'rounded-full border px-4 py-2.5 text-sm shadow-[0_8px_24px_rgba(89,63,49,0.08)] transition',
+                  'whitespace-nowrap rounded-full border px-3.5 py-2.5 text-sm shadow-[0_8px_24px_rgba(89,63,49,0.08)] transition',
                   active
                     ? 'border-rose-200 bg-[rgba(239,226,212,0.96)] text-taupe-900 shadow-[0_10px_24px_rgba(89,63,49,0.1)]'
                     : immersive && !scrolled
@@ -140,18 +140,24 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
 
       <div className={cn('fixed inset-0 z-[70] transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
         <div className="absolute inset-0 bg-taupe-900/40 backdrop-blur-[2px]" onClick={() => setOpen(false)} />
-        <div className={cn('absolute right-0 top-0 flex h-full w-[82vw] max-w-sm flex-col border-l border-white/55 bg-[linear-gradient(180deg,rgba(255,250,245,0.98),rgba(244,232,224,0.98))] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform', open ? 'translate-x-0' : 'translate-x-full')}>
+        <div
+          className={cn(
+            'absolute right-0 top-0 isolate flex h-full w-[82vw] max-w-sm flex-col overflow-hidden border-l border-[#ead8cb] bg-[#f6eee6] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform',
+            open ? 'translate-x-0' : 'translate-x-full',
+          )}
+        >
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#fbf6f1_0%,#f3e4d8_100%)]" />
           <div className="flex items-start justify-between gap-4">
-            <div>
+            <div className="relative z-10">
               <p className="font-display text-4xl leading-none">{brand.name}</p>
               <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">{brand.tagline}</p>
             </div>
-            <button type="button" onClick={() => setOpen(false)} className="rounded-full border border-taupe-200 bg-white p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50">
+            <button type="button" onClick={() => setOpen(false)} className="relative z-10 rounded-full border border-taupe-200 bg-[#fffaf5] p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50">
               <X size={18} />
             </button>
           </div>
 
-          <div className="mt-8 grid gap-3">
+          <div className="relative z-10 mt-8 grid gap-3">
             {navItems.map((item) => (
               <Link
                 key={item.key}
@@ -169,7 +175,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
             ))}
           </div>
 
-          <div className="mt-8 flex gap-2">
+          <div className="relative z-10 mt-8 flex gap-2">
             {locales.map((entry) => (
               <Link
                 key={entry}
@@ -181,7 +187,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
             ))}
           </div>
 
-          <ButtonLink href={`/${locale}/contact`} className="mt-auto w-full justify-center bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_40px_rgba(240,201,198,0.34)]">
+          <ButtonLink href={`/${locale}/contact`} className="relative z-10 mt-auto w-full justify-center bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_40px_rgba(240,201,198,0.34)]">
             {nav.reserve}
           </ButtonLink>
         </div>

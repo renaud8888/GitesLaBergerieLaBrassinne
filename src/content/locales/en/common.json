@@ -23,7 +23,7 @@
   "home": {
     "hero": {
       "eyebrow": "Romantic Ardennes escape",
-      "title": "Two charming cottages made for slowing down and enjoying time together.",
+      "title": "Two charming cottages made for being together and enjoying the moment.",
       "description": "In Libin, La Bergerie and La Brassine welcome couples into a warm, refined and deeply soothing atmosphere. One authentic building, two elegant cocoons, and a region made for switching off.",
       "primaryCta": "Check availability",
       "secondaryCta": "Message on WhatsApp",
@@ -97,8 +97,8 @@
       "title": "Plan a romantic surprise",
       "description": "For an anniversary, a special weekend or simply a thoughtful gesture, romantic touches can be arranged on request.",
       "items": [
-        { "title": "Champagne on arrival", "text": "A chilled bottle ready to start the stay beautifully." },
-        { "title": "Fresh flowers", "text": "An even softer welcome with a floral touch." },
+        { "title": "Champagne box", "text": "A chilled bottle, chocolates, local products and plenty of surprises to open the weekend beautifully." },
+        { "title": "Request your box", "text": "Send your request through the form or on WhatsApp and we will share the practical details and prepare it with care for your arrival." },
         { "title": "Romantic decoration", "text": "An elegant setup to surprise your partner from the very first moment." },
         { "title": "Gift voucher", "text": "A lovely present idea for a couple's Ardennes getaway." }
       ]
@@ -120,7 +120,15 @@
         { "src": "/images/home/2.avif", "alt": "La Bergerie atmosphere" },
         { "src": "/images/home/2b.avif", "alt": "La Brassine atmosphere" },
         { "src": "/images/home/4.avif", "alt": "A chic and warm atmosphere" },
-        { "src": "/images/home/4b.avif", "alt": "The charm of a romantic stay in the Ardennes" }
+        { "src": "/images/home/4b.avif", "alt": "The charm of a romantic stay in the Ardennes" },
+        { "src": "/images/home/1.avif", "alt": "A charming arrival in Libin" },
+        { "src": "/images/home/1b.avif", "alt": "A romantic escape in a soft atmosphere" },
+        { "src": "/images/home/3.avif", "alt": "Thoughtful details for a stay for two" },
+        { "src": "/images/home/3b.avif", "alt": "A cocooning and refined mood" },
+        { "src": "/images/home/5.avif", "alt": "The softness of an interior designed for slowing down" },
+        { "src": "/images/home/5b.avif", "alt": "Images that already invite you to picture the stay" },
+        { "src": "/images/home/6.avif", "alt": "An elegant stay in the heart of the Ardennes" },
+        { "src": "/images/home/6b.avif", "alt": "A warm escape to enjoy together" }
       ]
     },
     "reviews": {

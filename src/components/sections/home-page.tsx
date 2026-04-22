@@ -1,4 +1,5 @@
-import { Bath, BedDouble, Quote, Sparkles, Star, Trees, UserRound } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Bath, BedDouble, Quote, Star, Trees, UserRound } from 'lucide-react';
 
 import { GoogleIcon, WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
@@ -25,7 +26,7 @@ export function HomePage({
     {
       key: 'bergerie',
       href: `/${locale}/gites/la-bergerie`,
-      image: images.gites.bergerie.heroImage,
+      image: '/images/home/2.avif',
       airbnb: giteStats.bergerie.airbnbUrl,
       rating: giteStats.bergerie.reviews,
       google: giteStats.bergerie.googleUrl,
@@ -34,7 +35,7 @@ export function HomePage({
     {
       key: 'brassine',
       href: `/${locale}/gites/la-brassine`,
-      image: images.gites.brassine.heroImage,
+      image: '/images/home/1b.avif',
       airbnb: giteStats.brassine.airbnbUrl,
       rating: giteStats.brassine.reviews,
       google: giteStats.brassine.googleUrl,
@@ -43,12 +44,62 @@ export function HomePage({
   ];
   const totalReviews = giteStats.bergerie.reviews + giteStats.brassine.reviews;
   const homeGalleryImages = home.gallery.images;
+  const introTextHighlights = home.intro.highlights.filter((_, index) => index !== 0 && index !== 3);
+  const introPhotoHighlights = [
+    {
+      key: 'stay-photo',
+      title: home.intro.highlights[0]?.title,
+      href: `/${locale}/gites/la-bergerie`,
+      image: '/images/home/3.avif',
+      alt: home.intro.highlights[0]?.title,
+      cta:
+        locale === 'fr'
+          ? 'Découvrir les gîtes'
+          : locale === 'nl'
+            ? 'Ontdek de gites'
+            : 'Discover the cottages',
+    },
+    {
+      key: 'extras-photo',
+      title: home.intro.highlights[3]?.title,
+      href: `/${locale}/contact`,
+      image: '/images/home/6b.avif',
+      alt: home.intro.highlights[3]?.title,
+      cta:
+        locale === 'fr'
+          ? 'Préparer une attention'
+          : locale === 'nl'
+            ? 'Bereid een attentie voor'
+            : 'Plan a thoughtful extra',
+    },
+  ];
   const compactFacts = [
     { icon: UserRound, label: homeUi.compactFacts.guests },
     { icon: Trees, label: homeUi.compactFacts.bedroom },
     { icon: BedDouble, label: homeUi.compactFacts.bed },
     { icon: Bath, label: homeUi.compactFacts.bathroom },
   ];
+  const romanticActions =
+    locale === 'fr'
+      ? {
+          form: 'Via le formulaire',
+          whatsapp: 'Via WhatsApp',
+          giftVoucher: 'Demander un bon cadeau',
+          champagne: 'Demander la box champagne',
+        }
+      : locale === 'nl'
+        ? {
+            form: 'Via het formulier',
+            whatsapp: 'Via WhatsApp',
+            giftVoucher: 'Vraag een cadeaubon aan',
+            champagne: 'Vraag de champagnebox aan',
+          }
+        : {
+            form: 'Via the form',
+            whatsapp: 'Via WhatsApp',
+            giftVoucher: 'Request a gift voucher',
+            champagne: 'Request the champagne box',
+          };
 
   return (
     <>
@@ -122,7 +173,7 @@ export function HomePage({
                       <p className="font-display text-4xl text-taupe-900">{gite.name}</p>
                       <p className="mt-1 text-sm uppercase tracking-[0.24em] text-wood">{gite.tagline}</p>
                     </div>
-                    <div className="rounded-full bg-rose-100 px-4 py-2 text-xs uppercase tracking-[0.2em] text-taupe-700">{gite.capacity}</div>
+                    <div className="whitespace-nowrap rounded-full bg-rose-100 px-4 py-2 text-xs uppercase tracking-[0.2em] text-taupe-700">{gite.capacity}</div>
                   </div>
                   <div className="mt-5 flex flex-wrap gap-3 text-sm text-taupe-700">
                     {compactFacts.map((fact) => {
@@ -184,11 +235,26 @@ export function HomePage({
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {home.intro.highlights.map((item) => (
+            {introTextHighlights.map((item) => (
               <article key={item.title} className="surface-card p-6">
                 <p className="font-display text-3xl text-taupe-900">{item.title}</p>
                 <p className="mt-3 text-sm leading-7 text-taupe-500">{item.text}</p>
               </article>
+            ))}
+            {introPhotoHighlights.map((item) => (
+              <Link key={item.key} href={item.href} className="group surface-card relative isolate overflow-hidden">
+                <div className="relative aspect-[1.08/1]">
+                  <ImageFallback src={item.image} alt={item.alt} fill sizes="(max-width: 768px) 100vw, 33vw" />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(55,42,36,0.08),rgba(55,42,36,0.78))]" />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 z-10 p-5 text-cream-50">
+                  <p className="font-display text-3xl leading-none">{item.title}</p>
+                  <p className="mt-3 inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-cream-100/88">
+                    {item.cta}
+                    <ArrowRight size={14} className="transition-transform duration-200 group-hover:translate-x-1" />
+                  </p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -201,12 +267,14 @@ export function HomePage({
             {home.features.items.map((item) => {
               const Icon = featureIcons[item.icon as keyof typeof featureIcons];
               return (
-                <article key={item.title} className="surface-card p-6">
-                  <div className="inline-flex rounded-full bg-rose-100 p-3 text-taupe-700">
-                    <Icon size={20} />
+                <article key={item.title} className="surface-card p-5">
+                  <div className="flex items-center gap-3">
+                    <div className="inline-flex rounded-full bg-rose-100 p-3 text-taupe-700">
+                      <Icon size={20} />
+                    </div>
+                    <p className="font-display text-[1.8rem] leading-none text-taupe-900">{item.title}</p>
                   </div>
-                  <p className="mt-4 font-display text-3xl text-taupe-900">{item.title}</p>
-                  <p className="mt-3 text-sm leading-7 text-taupe-500">{item.text}</p>
+                  <p className="mt-4 text-sm leading-7 text-taupe-500">{item.text}</p>
                 </article>
               );
             })}
@@ -216,15 +284,42 @@ export function HomePage({
 
       <section className="section-space">
         <div className="section-shell grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="relative overflow-hidden rounded-[2rem] bg-taupe-900 px-6 py-8 text-cream-50 md:px-8">
+          <div className="relative overflow-hidden rounded-[2rem] bg-taupe-900 px-5 py-6 text-cream-50 md:px-6 md:py-7">
             <div className="grain absolute inset-0" />
             <div className="relative z-10">
               <SectionHeading eyebrow={home.romantic.eyebrow} title={home.romantic.title} description={home.romantic.description} light />
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-                {home.romantic.items.map((item) => (
-                  <div key={item.title} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                    <p className="font-display text-3xl">{item.title}</p>
+              <div className="mt-6 grid gap-3 md:grid-cols-2">
+                {home.romantic.items.map((item, index) => (
+                  <div key={item.title} className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4">
+                    <p className="font-display text-[2rem] leading-none">{item.title}</p>
                     <p className="mt-3 text-sm leading-7 text-cream-100/78">{item.text}</p>
+                    {index === 0 ? (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <ButtonLink href={`/${locale}/contact`} variant="secondary" className="border-white/18 bg-white/92 px-4 py-2 text-xs text-taupe-900">
+                          {romanticActions.form}
+                        </ButtonLink>
+                        <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external className="border-white/18 bg-white/12 px-4 py-2 text-xs text-cream-50">
+                          {romanticActions.whatsapp}
+                        </ButtonLink>
+                      </div>
+                    ) : null}
+                    {index === 1 ? (
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <ButtonLink href={`/${locale}/contact`} variant="secondary" className="border-white/18 bg-white/92 px-4 py-2 text-xs text-taupe-900">
+                          {romanticActions.form}
+                        </ButtonLink>
+                        <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external className="border-white/18 bg-white/12 px-4 py-2 text-xs text-cream-50">
+                          {romanticActions.whatsapp}
+                        </ButtonLink>
+                      </div>
+                    ) : null}
+                    {index === 3 ? (
+                      <div className="mt-4">
+                        <ButtonLink href={`/${locale}/contact`} className="px-4 py-2 text-xs">
+                          {romanticActions.giftVoucher}
+                        </ButtonLink>
+                      </div>
+                    ) : null}
                   </div>
                 ))}
               </div>
@@ -246,14 +341,6 @@ export function HomePage({
             <article className="surface-card overflow-hidden p-0">
               <div className="relative aspect-[4/3]">
                 <ImageFallback src={images.home.sideImage} alt={home.gallery.sideTitle} fill sizes="(max-width: 1024px) 100vw, 30vw" />
-              </div>
-              <div className="p-6">
-                <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-wood">
-                  <Sparkles size={14} />
-                  {home.gallery.sideEyebrow}
-                </p>
-                <p className="mt-3 font-display text-4xl text-taupe-900">{home.gallery.sideTitle}</p>
-                <p className="mt-3 text-base leading-8 text-taupe-500">{home.gallery.sideText}</p>
               </div>
             </article>
           </div>
@@ -290,31 +377,6 @@ export function HomePage({
                 </article>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-space">
-        <div className="section-shell">
-          <div className="surface-card grid gap-6 overflow-hidden bg-[linear-gradient(135deg,rgba(243,223,220,0.85),rgba(255,250,245,0.92))] p-6 md:grid-cols-[1.1fr_0.9fr] md:p-8">
-            <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-wood">{home.finalCta.eyebrow}</p>
-              <h2 className="mt-3 font-display text-4xl text-taupe-900 md:text-5xl">{home.finalCta.title}</h2>
-              <p className="mt-4 max-w-2xl text-base leading-8 text-taupe-500">{home.finalCta.text}</p>
-            </div>
-            <div className="grid gap-3">
-              <ButtonLink href={`/${locale}/contact`} className="w-full justify-between">
-                {home.finalCta.contact}
-              </ButtonLink>
-              <div className="flex flex-wrap gap-3">
-                <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external className="flex-1 justify-center" icon={<WhatsAppIcon className="h-4 w-4" />}>
-                  {home.finalCta.whatsapp}
-                </ButtonLink>
-                <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="flex-1 justify-center">
-                  {homeUi.finalCta.airbnbLabel}
-                </ButtonLink>
-              </div>
-            </div>
           </div>
         </div>
       </section>
