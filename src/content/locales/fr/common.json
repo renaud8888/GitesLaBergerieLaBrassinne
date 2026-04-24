@@ -301,83 +301,72 @@
         "key": "restaurants",
         "eyebrow": "Bonnes tables",
         "title": "Nos restaurants favoris",
-        "intro": "Des adresses pour un diner romantique, un repas local ou une pause gourmande bien choisie.",
+        "intro": "Quatre adresses très différentes, mais toutes faciles à recommander pour bien manger pendant le séjour.",
         "items": [
-          { "name": "Le Cor de Chasse", "image": "/images/around/restaurants_cor-de-chasse.jpg", "location": "Wierde / proche Saint-Hubert", "distance": "environ 20 min", "description": "Une belle table pour une sortie plus gastronomique, quand on veut marquer le coup avec élégance.", "tags": ["gastronomique", "occasion spéciale"] },
-          { "name": "Le Relais de Mirwart", "image": "/images/around/restaurants_relais-de-mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "Le cadre, la nature tout autour et le charme du village en font une belle idée de repas à deux.", "tags": ["nature", "charme"] },
-          { "name": "Le Fournil de Redu", "image": "/images/around/restaurants_fournil-de-redu.jpg", "location": "Redu", "distance": "10 min", "description": "Parfait pour une pause déjeuner, un brunch ou une douceur apres la promenade dans le village du livre.", "tags": ["tea room", "gourmand"] },
-          { "name": "Une bonne table a Libin", "image": "/images/around/restaurants_table-libin.jpg", "location": "Libin", "distance": "5 min", "description": "Une adresse locale à découvrir pour un repas sans chichi.", "tags": ["local"] }
+          { "name": "Le Tchesté", "image": "/images/around/tcheste.jpg", "location": "Neufchâteau", "distance": "environ 20 min", "description": "Une adresse conviviale qui fonctionne très bien pour un repas généreux dans une ambiance détendue, avec burgers, grillades et esprit brasserie.", "tags": ["convivial", "grillades"] },
+          { "name": "Au Brichpot'es", "image": "/images/around/brichpotes.jpg", "location": "Mirwart", "distance": "20 min", "description": "Une belle option à Mirwart pour prolonger une balade par une table chaleureuse, avec un esprit ardennais et un cadre de village plein de charme.", "tags": ["ardennais", "charme"] },
+          { "name": "Les Frangins", "image": "/images/around/frangins.jpg", "location": "Libin", "distance": "5 min", "description": "Très pratique si vous voulez rester tout près du gîte, avec une cuisine de brasserie bien faite, des grillades et une adresse simple à conseiller.", "tags": ["libin", "brasserie"] },
+          { "name": "Le Cor de Chasse", "image": "/images/around/cor.jpg", "location": "proche Saint-Hubert", "distance": "environ 20 min", "description": "Une adresse plus élégante quand on veut marquer le coup avec une vraie belle table dans la région.", "tags": ["gastronomique", "occasion spéciale"] }
         ]
       },
       {
         "key": "walks",
         "eyebrow": "Nature",
         "title": "Nos idées de promenades",
-        "intro": "Des balades faciles a recommander selon l'envie du moment: foret, village, eau, panoramas.",
+        "intro": "Quatre idées très faciles à conseiller selon l'humeur du jour : rester près du gîte, marcher en forêt ou combiner balade et village de caractère.",
         "items": [
-          { "name": "Le domaine de Mirwart", "image": "/images/around/walks_mirwart-estate.jpg", "location": "Mirwart", "distance": "20 min", "description": "Un grand classique pour marcher dans un cadre très ardennais, entre patrimoine et nature.", "tags": ["foret", "beau cadre"] },
-          { "name": "Les chemins autour de Redu", "image": "/images/around/walks_redu-paths.jpg", "location": "Redu", "distance": "10 min", "description": "Ideal pour combiner balade douce, librairies, galeries et pause gourmande.", "tags": ["village", "romantique"] },
-          { "name": "Saint-Hubert côté nature", "image": "/images/around/walks_saint-hubert-nature.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Une option parfaite pour les voyageurs qui veulent alterner patrimoine et immersion en foret.", "tags": ["patrimoine", "foret"] },
-          { "name": "Promenade libre autour de Libin", "image": "/images/around/walks_libin-walk.jpg", "location": "Libin", "distance": "sur place", "description": "Le secteur se prête très bien aux marches tranquilles en fin de journée ou au petit matin.", "tags": ["simple", "sur place"] }
-        ]
-      },
-      {
-        "key": "romantic",
-        "eyebrow": "Week-end à deux",
-        "title": "Idées de week-end romantique",
-        "intro": "Quelques combinaisons simples et très efficaces pour faire de deux jours une vraie parenthèse.",
-        "items": [
-          { "name": "Arriver, s'installer, ne rien presser", "image": "/images/around/romantic_arrive-and-slow-down.jpg", "description": "Un verre, une douche chaude, un diner simple au gite et une soiree cocooning avec streaming.", "tags": ["slow stay", "cocooning"] },
-          { "name": "Marcher puis bien diner", "image": "/images/around/romantic_walk-and-dinner.jpg", "description": "Une balade a Mirwart ou Redu, puis une belle table pour prolonger le moment.", "tags": ["balade", "diner"] },
-          { "name": "Surprendre son ou sa partenaire", "image": "/images/around/romantic_surprise-your-partner.jpg", "description": "Ajouter champagne, fleurs ou decoration romantique pour donner au séjour une dimension encore plus mémorable.", "tags": ["surprise", "option romantique"] },
-          { "name": "Un week-end sans programme lourd", "image": "/images/around/romantic_no-heavy-schedule.jpg", "description": "Quelques repères, peu de contraintes, et beaucoup de temps pour être simplement bien ensemble.", "tags": ["détente", "a deux"] }
+          { "name": "Libin", "image": "/images/around/p_libin.jpg", "location": "Libin", "distance": "sur place", "description": "Idéal pour une marche simple sans prendre la voiture, quand on veut juste sortir un moment et profiter du calme autour du gîte.", "tags": ["proche", "facile"] },
+          { "name": "Mirwart", "image": "/images/around/p_mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "Un classique de la région pour ceux qui aiment l'ambiance forestière, le charme du village et les très beaux décors ardennais.", "tags": ["forêt", "village"] },
+          { "name": "Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Parfait pour combiner une petite promenade, quelques librairies, des galeries et une pause gourmande dans le village du livre.", "tags": ["livres", "balade douce"] },
+          { "name": "Saint-Hubert", "image": "/images/around/p_sainthubert.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Une belle idée pour alterner balade, patrimoine et ambiance plus urbaine, tout en restant dans l'esprit nature des Ardennes.", "tags": ["patrimoine", "nature"] }
         ]
       },
       {
         "key": "activities",
-        "eyebrow": "A partager",
-        "title": "Activités à deux",
-        "intro": "Pour ceux qui aiment ponctuer leur séjour de petites sorties bien choisies.",
+        "eyebrow": "Quand il fait beau",
+        "title": "Activités en cas de beau temps",
+        "intro": "Des idées faciles pour profiter de la région dehors, entre eau, nature, sensations et village de caractère.",
         "items": [
-          { "name": "Le village du livre de Redu", "image": "/images/around/activities_redu-book-village.jpg", "location": "Redu", "distance": "10 min", "description": "Une promenade très agréable entre bouquineries, ateliers et ambiance unique.", "tags": ["culture", "flaner"] },
-          { "name": "Euro Space Center", "image": "/images/around/activities_euro-space-center.jpg", "location": "Transinne", "distance": "10 min", "description": "Une sortie originale et facile d'accès pour varier les plaisirs.", "tags": ["insolite", "couple"] },
-          { "name": "Balades a velo", "image": "/images/around/activities_cycling-rides.jpg", "location": "autour de Libin", "distance": "variable", "description": "Routes et paysages se prêtent bien a une sortie tranquille ou plus sportive.", "tags": ["velo", "nature"] },
-          { "name": "Patrimoine de Saint-Hubert", "image": "/images/around/activities_saint-hubert-heritage.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Une jolie idée pour combiner architecture, atmosphère et pause en terrasse.", "tags": ["ville", "patrimoine"] }
+          { "name": "Kayak sur la Lesse", "image": "/images/around/kayak.webp", "location": "vallée de la Lesse", "distance": "selon le départ", "description": "Une activité idéale quand il fait beau, pour profiter de l'eau et des paysages ardennais dans une ambiance plus ludique.", "tags": ["eau", "nature"] },
+          { "name": "Paintball", "image": "/images/around/paintball.webp", "location": "dans la région", "distance": "à vérifier selon le site", "description": "Une idée plus dynamique pour ceux qui ont envie d'une sortie amusante et un peu plus sportive pendant le séjour.", "tags": ["ludique", "sportif"] },
+          { "name": "Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Une sortie très agréable quand il fait beau, pour flâner entre librairies, terrasses, petites boutiques et ambiance de village.", "tags": ["village", "flânerie"] },
+          { "name": "Balade en forêt autour de Libin", "image": "/images/around/foret1.jpg", "location": "Libin et alentours", "distance": "sur place ou à quelques minutes", "description": "Parfait quand le temps est beau et qu'on a simplement envie de marcher en forêt, respirer et profiter du calme des Ardennes autour du gîte.", "tags": ["forêt", "grand air"] }
         ]
       },
       {
         "key": "rainy",
         "eyebrow": "Quand il pleut",
         "title": "Activités en cas de pluie",
-        "intro": "Parce qu'un séjour réussi ne dépend pas du soleil. La pluie peut très bien aller avec les Ardennes.",
+        "intro": "Quand le temps se couvre, il reste plusieurs bonnes idées pour sortir un peu tout en gardant un vrai moment de plaisir.",
         "items": [
-          { "name": "Journée cocooning au gîte", "image": "/images/around/rainy_cosy-day-in-cottage.jpg", "description": "Streaming, jeux de société, cuisine à deux et plaisir de rester au chaud sans culpabiliser.", "tags": ["sur place", "douceur"] },
-          { "name": "Librairies et galeries de Redu", "image": "/images/around/rainy_redu-bookshops.jpg", "location": "Redu", "distance": "10 min", "description": "Le village du livre garde tout son charme sous un ciel gris.", "tags": ["culture", "couvert partiel"] },
-          { "name": "Une belle table en milieu de journée", "image": "/images/around/rainy_long-lunch.jpg", "description": "Profiter de la pluie pour s'offrir un déjeuner plus long et plus tranquille.", "tags": ["gourmand"] },
-          { "name": "Patrimoine local", "image": "/images/around/rainy_local-heritage.jpg", "description": "Musees, basilique ou visite de village selon vos envies du moment.", "tags": ["découverte"] }
+          { "name": "Dégustation à la Brasserie de la Lesse", "image": "/images/around/biere.png", "location": "région de Dinant / Rochefort selon la visite choisie", "distance": "sortie à prévoir", "description": "Une belle idée pour découvrir des bières locales dans une ambiance artisanale et conviviale.", "tags": ["local", "dégustation"] },
+          { "name": "Bowling à Libramont", "image": "/images/around/bowling.png", "location": "Libramont", "distance": "environ 25 min", "description": "Le Fun Galaxy est une option simple et efficace quand on veut une sortie facile, ludique et abritée.", "tags": ["indoor", "ludique"] },
+          { "name": "Euro Space Center", "image": "/images/around/euro.jpg", "location": "Transinne", "distance": "10 min", "description": "Une sortie originale, facile d'accès et parfaite pour varier des promenades quand la météo n'aide pas.", "tags": ["insolite", "couvert"] },
+          { "name": "Spa Bulles d'O", "image": "/images/around/spa.png", "location": "Bertrix", "distance": "environ 25 min", "description": "Pour une parenthèse plus bien-être, Bulles d'O à Bertrix permet de réserver un moment plus relaxant avec soins et espace spa.", "tags": ["bien-être", "détente"] }
         ]
       },
       {
         "key": "villages",
-        "eyebrow": "A decouvrir",
+        "eyebrow": "À découvrir",
         "title": "Villages & patrimoine",
-        "intro": "Des repères faciles a citer aux voyageurs qui veulent explorer sans aller trop loin.",
+        "intro": "Quatre sorties de caractère pour découvrir des villages et du patrimoine un peu plus marquants autour de Libin.",
         "items": [
-          { "name": "Libin", "image": "/images/around/villages_libin.jpg", "distance": "sur place", "description": "Point de départ ideal pour rayonner dans la region sans faire trop de route.", "tags": ["base ideale"] },
-          { "name": "Redu", "image": "/images/around/villages_redu.jpg", "distance": "10 min", "description": "Le village du livre reste une sortie incontournable, pleine de charme et d'identité.", "tags": ["livres", "charme"] },
-          { "name": "Saint-Hubert", "image": "/images/around/villages_saint-hubert.jpg", "distance": "15 min", "description": "Une ville de caractère, facile a recommander pour son patrimoine et son atmosphère.", "tags": ["basilique", "terrasses"] },
-          { "name": "Mirwart", "image": "/images/around/villages_mirwart.jpg", "distance": "20 min", "description": "Un village a la fois paisible et spectaculaire, très photogénique, très coherent avec l'esprit du séjour.", "tags": ["nature", "patrimoine"] }
+          { "name": "Bouillon", "image": "/images/around/v_bouillon.jpg", "distance": "sortie à prévoir", "description": "Une belle idée de journée pour ceux qui aiment les lieux très marqués par l'histoire, avec un vrai décor de carte postale.", "tags": ["patrimoine", "journée"] },
+          { "name": "Chassepierre", "image": "/images/around/v_chasse.jpg", "distance": "sortie à prévoir", "description": "Un village plein de charme, souvent cité parmi les plus beaux de Wallonie, parfait pour flâner tranquillement.", "tags": ["charme", "village"] },
+          { "name": "Mirwart", "image": "/images/around/v_mirwart.jpg", "distance": "20 min", "description": "Toujours une très bonne idée pour son atmosphère, son cadre naturel et son côté très photogénique.", "tags": ["nature", "patrimoine"] },
+          { "name": "Redu", "image": "/images/around/v_redu.jpg", "distance": "10 min", "description": "Le village du livre reste une sortie incontournable pour mêler promenade, librairies et ambiance singulière.", "tags": ["livres", "identité"] }
         ]
       },
       {
         "key": "cycling",
         "eyebrow": "En mouvement",
-        "title": "Balades a velo",
-        "intro": "Une rubrique déjà prête pour intégrer ensuite tes plus beaux parcours ou partenariats location.",
+        "title": "Balades à vélo",
+        "intro": "Quatre idées de sorties vélo selon l'envie du moment : boucle douce, RAVeL plus tranquille ou parcours avec davantage de relief.",
         "items": [
-          { "name": "Boucle douce autour de Libin", "image": "/images/around/cycling_libin-loop.jpg", "distance": "variable", "description": "Pour les couples qui veulent sortir a velo sans se lancer dans une grosse journée.", "tags": ["facile"] },
-          { "name": "Vers Redu et les villages voisins", "image": "/images/around/cycling_redu-route.jpg", "distance": "25 km", "description": "Un itinéraire ideal pour combiner campagne, charme et pause gourmande.", "tags": ["panorama"] },
-          { "name": "Version sportive en Ardenne", "image": "/images/around/cycling_sportive-ardennes.jpg", "distance": "a définir", "description": "Un parcours plus soutenu pour les amateurs de reliefs et de belles sorties en Ardenne.", "tags": ["sportif"] }
+          { "name": "Boucle de Saint-Hubert", "image": "/images/around/velo_bouclesainthubert.jpg", "distance": "selon la boucle choisie", "description": "Une belle sortie vélo dans un cadre forestier, agréable pour pédaler sans chercher un itinéraire trop extrême.", "tags": ["boucle", "forêt"] },
+          { "name": "La Roche", "image": "/images/around/velo_laroche.jpg", "distance": "sortie plus longue", "description": "À réserver à ceux qui aiment davantage de dénivelé et un profil plus sportif.", "tags": ["dénivelé", "sportif"] },
+          { "name": "Le long de la Lesse", "image": "/images/around/velo_lesse.png", "distance": "variable", "description": "Une option plus nature, très agréable pour rouler dans un décor apaisant au fil de l'eau.", "tags": ["nature", "eau"] },
+          { "name": "Le RAVeL Libin-Redu", "image": "/images/around/velo_libinredu.jpg", "distance": "variable", "description": "Idéal pour une balade plus douce et accessible, parfaite pour profiter du trajet sans trop de difficulté.", "tags": ["ravel", "facile"] }
         ]
       }
     ],
