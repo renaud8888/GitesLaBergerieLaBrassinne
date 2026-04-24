@@ -329,7 +329,7 @@
         "items": [
           { "name": "Kayak sur la Lesse", "image": "/images/around/kayak.webp", "location": "vallée de la Lesse", "distance": "selon le départ", "description": "Une activité idéale quand il fait beau, pour profiter de l'eau et des paysages ardennais dans une ambiance plus ludique.", "tags": ["eau", "nature"] },
           { "name": "Paintball", "image": "/images/around/paintball.webp", "location": "dans la région", "distance": "à vérifier selon le site", "description": "Une idée plus dynamique pour ceux qui ont envie d'une sortie amusante et un peu plus sportive pendant le séjour.", "tags": ["ludique", "sportif"] },
-          { "name": "Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Une sortie très agréable quand il fait beau, pour flâner entre librairies, terrasses, petites boutiques et ambiance de village.", "tags": ["village", "flânerie"] },
+          { "name": "Se baigner dans la Lesse", "image": "/images/around/lesse.png", "location": "vallée de la Lesse", "distance": "selon l'endroit choisi", "description": "Une très belle option quand il fait chaud, pour profiter de l'eau dans un cadre naturel particulièrement agréable en été.", "tags": ["baignade", "nature"] },
           { "name": "Balade en forêt autour de Libin", "image": "/images/around/foret1.jpg", "location": "Libin et alentours", "distance": "sur place ou à quelques minutes", "description": "Parfait quand le temps est beau et qu'on a simplement envie de marcher en forêt, respirer et profiter du calme des Ardennes autour du gîte.", "tags": ["forêt", "grand air"] }
         ]
       },
