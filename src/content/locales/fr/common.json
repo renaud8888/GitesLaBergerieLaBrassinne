@@ -303,10 +303,10 @@
         "title": "Nos restaurants favoris",
         "intro": "Quatre adresses très différentes, mais toutes faciles à recommander pour bien manger pendant le séjour.",
         "items": [
-          { "name": "Le Tchesté", "image": "/images/around/tcheste.jpg", "location": "Neufchâteau", "distance": "environ 20 min", "description": "Une adresse conviviale qui fonctionne très bien pour un repas généreux dans une ambiance détendue, avec burgers, grillades et esprit brasserie.", "tags": ["convivial", "grillades"] },
-          { "name": "Au Brichpot'es", "image": "/images/around/brichpotes.jpg", "location": "Mirwart", "distance": "20 min", "description": "Une belle option à Mirwart pour prolonger une balade par une table chaleureuse, avec un esprit ardennais et un cadre de village plein de charme.", "tags": ["ardennais", "charme"] },
-          { "name": "Les Frangins", "image": "/images/around/frangins.jpg", "location": "Libin", "distance": "5 min", "description": "Très pratique si vous voulez rester tout près du gîte, avec une cuisine de brasserie bien faite, des grillades et une adresse simple à conseiller.", "tags": ["libin", "brasserie"] },
-          { "name": "Le Cor de Chasse", "image": "/images/around/cor.jpg", "location": "proche Saint-Hubert", "distance": "environ 20 min", "description": "Une adresse plus élégante quand on veut marquer le coup avec une vraie belle table dans la région.", "tags": ["gastronomique", "occasion spéciale"] }
+          { "name": "Le Tchesté", "image": "/images/around/tcheste.jpg", "location": "Neufchâteau", "distance": "environ 20 min", "description": "Une adresse conviviale qui fonctionne très bien pour un repas généreux dans une ambiance détendue, avec burgers, grillades et esprit brasserie.", "tags": ["convivial", "burgers"] },
+          { "name": "Au Brichpot'es", "image": "/images/around/brichpotes.jpg", "location": "Mirwart", "distance": "20 min", "description": "Une belle option à Mirwart pour prolonger une balade par une table chaleureuse, avec un esprit ardennais et un cadre de village plein de charme.", "tags": ["ardennais", "bouchon"] },
+          { "name": "Les Frangins", "image": "/images/around/frangins.jpg", "location": "Libin", "distance": "5 min", "description": "Très pratique si vous voulez rester tout près du gîte, avec une cuisine de brasserie bien faite, des grillades et une adresse simple à conseiller.", "tags": ["libin", "grillade"] },
+          { "name": "Le Cor de Chasse", "image": "/images/around/cor.jpg", "location": "proche Saint-Hubert", "distance": "environ 20 min", "description": "Une adresse plus élégante quand on veut marquer le coup avec une vraie belle table dans la région.", "tags": ["classe", "occasion spéciale"] }
         ]
       },
       {
@@ -315,10 +315,10 @@
         "title": "Nos idées de promenades",
         "intro": "Quatre idées très faciles à conseiller selon l'humeur du jour : rester près du gîte, marcher en forêt ou combiner balade et village de caractère.",
         "items": [
-          { "name": "Libin", "image": "/images/around/p_libin.jpg", "location": "Libin", "distance": "sur place", "description": "Idéal pour une marche simple sans prendre la voiture, quand on veut juste sortir un moment et profiter du calme autour du gîte.", "tags": ["proche", "facile"] },
-          { "name": "Mirwart", "image": "/images/around/p_mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "Un classique de la région pour ceux qui aiment l'ambiance forestière, le charme du village et les très beaux décors ardennais.", "tags": ["forêt", "village"] },
+          { "name": "Promenade du bourgmestre", "image": "/images/around/p_libin.jpg", "location": "Libin", "distance": "sur place", "description": "Idéal pour une marche simple sans prendre la voiture, quand on veut juste sortir un moment et profiter du calme autour du gîte.", "tags": ["proche", "facile"] },
+          { "name": "Domaine de Mirwart", "image": "/images/around/p_mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "Un classique de la région pour ceux qui aiment l'ambiance forestière, le charme du village et les très beaux décors ardennais.", "tags": ["château", "village"] },
           { "name": "Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Parfait pour combiner une petite promenade, quelques librairies, des galeries et une pause gourmande dans le village du livre.", "tags": ["livres", "balade douce"] },
-          { "name": "Saint-Hubert", "image": "/images/around/p_sainthubert.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Une belle idée pour alterner balade, patrimoine et ambiance plus urbaine, tout en restant dans l'esprit nature des Ardennes.", "tags": ["patrimoine", "nature"] }
+          { "name": "Bois de Saint-Hubert", "image": "/images/around/p_sainthubert.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Une belle idée pour alterner balade, patrimoine et ambiance plus urbaine, tout en restant dans l'esprit nature des Ardennes.", "tags": ["patrimoine", "nature"] }
         ]
       },
       {
