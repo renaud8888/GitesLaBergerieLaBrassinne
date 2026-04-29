@@ -134,7 +134,7 @@
     "reviews": {
       "eyebrow": "Gastenreviews",
       "title": "Verblijven die echt bijblijven",
-      "description": "Een paar zorgvuldig gekozen getuigenissen die de sfeer van de plek weerspiegelen, met later makkelijk aanpasbare links naar Airbnb en Google.",
+      "description": "",
       "items": [
         { "author": "Marie & Thomas", "origin": "Brussel", "gite": "La Bergerie", "text": "Een echte cocon. Elegant, rustgevend, heel proper en met oprechte zorg ontvangen." },
         { "author": "Camille & Julien", "origin": "Namen", "gite": "La Brassine", "text": "We hielden van de intieme sfeer, de zachtheid van het decor en de rust rondom ons." },

@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { ArrowRight, Bath, BedDouble, Quote, Star, Trees, UserRound } from 'lucide-react';
 
-import { GoogleIcon, WhatsAppIcon } from '@/components/common/brand-icons';
+import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
 import { StackedGallery } from '@/components/common/stacked-gallery';
-import { featureIcons, getWhatsappLink, giteStats, siteConfig } from '@/data/site';
+import { featureIcons, getWhatsappLink, giteStats } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
 import type { Locale } from '@/lib/i18n';
 import type { defaultImageContent } from '@/lib/content-store';
@@ -330,34 +330,23 @@ export function HomePage({
 
       <section className="section-space bg-white/35">
         <div className="section-shell">
-          <SectionHeading eyebrow={home.reviews.eyebrow} title={home.reviews.title} description={home.reviews.description} align="center" />
+          <SectionHeading eyebrow={home.reviews.eyebrow} title={home.reviews.title} align="center" />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
-            {home.reviews.items.map((review) => {
-              const isBergerie = review.gite === 'La Bergerie';
-              return (
-                <article key={review.author} className="surface-card p-6">
-                  <Quote size={24} className="text-rose-300" />
-                  <p className="mt-5 text-base leading-8 text-taupe-500">{review.text}</p>
-                  <div className="mt-5 flex items-center gap-1 text-wood">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <Star key={index} size={14} fill="currentColor" />
-                    ))}
-                  </div>
-                  <p className="mt-5 font-display text-2xl text-taupe-900">{review.author}</p>
-                  <p className="text-sm uppercase tracking-[0.2em] text-taupe-500">
-                    {review.origin} - {review.gite}
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-3">
-                    <ButtonLink href={isBergerie ? siteConfig.googleReviews.bergerie : siteConfig.googleReviews.brassine} variant="secondary" external icon={<GoogleIcon className="h-4 w-4" />}>
-                      {homeUi.reviews.googleLabel}
-                    </ButtonLink>
-                    <ButtonLink href={isBergerie ? siteConfig.airbnb.bergerie : siteConfig.airbnb.brassine} variant="secondary" external icon={<Star size={14} fill="currentColor" />}>
-                      {homeUi.reviews.airbnbLabel}
-                    </ButtonLink>
-                  </div>
-                </article>
-              );
-            })}
+            {home.reviews.items.map((review) => (
+              <article key={review.author} className="surface-card p-6">
+                <Quote size={24} className="text-rose-300" />
+                <p className="mt-5 text-base leading-8 text-taupe-500">{review.text}</p>
+                <div className="mt-5 flex items-center gap-1 text-wood">
+                  {Array.from({ length: 5 }).map((_, index) => (
+                    <Star key={index} size={14} fill="currentColor" />
+                  ))}
+                </div>
+                <p className="mt-5 font-display text-2xl text-taupe-900">{review.author}</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-taupe-500">
+                  {review.origin} - {review.gite}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

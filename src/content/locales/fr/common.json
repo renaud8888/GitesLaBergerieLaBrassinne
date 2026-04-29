@@ -134,7 +134,7 @@
     "reviews": {
       "eyebrow": "Avis voyageurs",
       "title": "Des séjours qui laissent une belle impression",
-      "description": "Quelques témoignages sélectionnés pour refléter l'expérience vécue sur place, avec des liens directs vers Airbnb et Google.",
+      "description": "",
       "items": [
         { "author": "Marie & Thomas", "origin": "Bruxelles", "gite": "La Bergerie", "text": "Un vrai cocon. Tout était élégant, apaisant, très propre, et l'accueil était absolument charmant." },
         { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "On a adoré le côté intime, la douceur de la décoration et le calme des lieux. Parfait pour se retrouver à deux." },

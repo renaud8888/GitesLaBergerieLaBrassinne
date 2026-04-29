@@ -134,7 +134,7 @@
     "reviews": {
       "eyebrow": "Guest reviews",
       "title": "Stays that leave a lasting impression",
-      "description": "A few selected testimonials to reflect what guests experience on site, with direct links to Airbnb and Google reviews.",
+      "description": "",
       "items": [
         { "author": "Marie & Thomas", "origin": "Brussels", "gite": "La Bergerie", "text": "A real cocoon. Elegant, peaceful, spotless and hosted with genuine care." },
         { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "We loved the intimate feel, the softness of the decor and the calm everywhere around us." },
