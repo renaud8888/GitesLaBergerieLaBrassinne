@@ -20,6 +20,10 @@ type GuidePanelsProps = {
   faq: Array<{ question: string; answer: string }>;
   faqTitle: string;
   faqEyebrow: string;
+  labels: {
+    overviewNavTitle: string;
+    overviewEyebrow: string;
+  };
 };
 
 function slugify(value: string) {
@@ -31,14 +35,14 @@ function slugify(value: string) {
     .replace(/(^-|-$)/g, '');
 }
 
-export function GuidePanels({ overviewTitle, overviewText, quickFacts, sections, faq, faqTitle, faqEyebrow }: GuidePanelsProps) {
+export function GuidePanels({ overviewTitle, overviewText, quickFacts, sections, faq, faqTitle, faqEyebrow, labels }: GuidePanelsProps) {
   const items = useMemo(
     () => [
-      { id: 'overview', title: 'En un coup d’œil', eyebrow: 'Essentiel' },
+      { id: 'overview', title: labels.overviewNavTitle, eyebrow: labels.overviewEyebrow },
       ...sections.map((section) => ({ id: slugify(section.title), title: section.title, eyebrow: section.eyebrow })),
       { id: 'faq', title: faqTitle, eyebrow: faqEyebrow },
     ],
-    [faqEyebrow, faqTitle, sections],
+    [faqEyebrow, faqTitle, labels.overviewEyebrow, labels.overviewNavTitle, sections],
   );
 
   const [openId, setOpenId] = useState('overview');
@@ -81,7 +85,7 @@ export function GuidePanels({ overviewTitle, overviewText, quickFacts, sections,
             className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left md:px-8"
           >
             <div>
-              <p className="text-xs uppercase tracking-[0.24em] text-wood">Essentiel</p>
+              <p className="text-xs uppercase tracking-[0.24em] text-wood">{labels.overviewEyebrow}</p>
               <p className="mt-2 font-display text-3xl text-taupe-900 md:text-4xl">{overviewTitle}</p>
             </div>
             <span className="rounded-full border border-taupe-100 bg-white p-2 shadow-[0_10px_24px_rgba(89,63,49,0.08)]">

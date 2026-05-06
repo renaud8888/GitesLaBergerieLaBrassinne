@@ -32,6 +32,7 @@ export default async function LocaleLayout({
     '@type': 'LodgingBusiness',
     name: 'La Bergerie & La Brassine',
     description: dict.meta.siteDescription,
+    url: 'https://bergerie-brassine.com',
     telephone: '+32496929355',
     email: 'claranicolay@gmail.com',
     address: {
@@ -41,6 +42,10 @@ export default async function LocaleLayout({
       postalCode: '6890',
       addressCountry: 'BE',
     },
+    sameAs: [
+      'https://fr.airbnb.be/rooms/1136881974542842654',
+      'https://fr.airbnb.be/rooms/1194217860682227704',
+    ],
   };
 
   return (
@@ -48,7 +53,7 @@ export default async function LocaleLayout({
       <Header locale={locale as Locale} nav={dict.nav} brand={dict.ui.brand} menuAriaLabel={dict.ui.header.openMenuAria} />
       <main>{children}</main>
       <Footer locale={locale as Locale} nav={dict.nav} footer={dict.footer} brand={dict.ui.brand} ui={dict.ui.footer} />
-      <MobileActionBar locale={locale as Locale} reserveLabel={dict.nav.reserve} />
+      <MobileActionBar locale={locale as Locale} reserveLabel={dict.nav.reserve} whatsappLabel={dict.ui.footer.whatsappLabel} />
       <WhatsappFab href={getWhatsappLink(locale as Locale)} ariaLabel={dict.ui.whatsappFab.ariaLabel} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     </>

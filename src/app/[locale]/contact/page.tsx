@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Clock3, Mail, MapPin, ShieldCheck } from 'lucide-react';
+import { Clock3, ExternalLink, Home, Mail, MapPin, ShieldCheck } from 'lucide-react';
 
 import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
@@ -48,8 +48,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
               {dict.ui.contact.heroWhatsappLabel}
             </ButtonLink>
-            <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="border-white/16 bg-white/10 text-white">
-              {dict.ui.contact.heroAirbnbLabel}
+            <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="border-white/16 bg-white/10 text-white" icon={<Home className="h-4 w-4" />}>
+              {dict.ui.contact.directAirbnbBergerie}
+            </ButtonLink>
+            <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external className="border-white/16 bg-white/10 text-white" icon={<ExternalLink className="h-4 w-4" />}>
+              {dict.ui.contact.directAirbnbBrassine}
             </ButtonLink>
           </div>
         </div>
@@ -58,23 +61,39 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <section className="section-space">
         <div className="section-shell-wide grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="grid gap-4">
-            <article className="surface-card-strong p-6 md:p-8">
-              <SectionHeading eyebrow={contact.direct.eyebrow} title={contact.direct.title} description={contact.direct.text} />
-              <div className="mt-6 grid gap-3">
-                <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
-                  {contact.direct.whatsapp}
-                </ButtonLink>
+            <article className="surface-card-strong overflow-hidden p-0">
+              <div className="border-b border-white/70 bg-[linear-gradient(135deg,rgba(255,250,245,0.98),rgba(239,226,212,0.86))] p-6 md:p-8">
+                <SectionHeading eyebrow={contact.direct.eyebrow} title={contact.direct.title} description={contact.direct.text} />
+              </div>
+              <div className="grid gap-4 p-6 md:p-8">
+                <div className="rounded-[1.35rem] border border-rose-200/60 bg-white/86 p-4">
+                  <p className="text-xs uppercase tracking-[0.22em] text-wood">1. WhatsApp</p>
+                  <p className="mt-2 text-sm leading-6 text-taupe-500">{dict.ui.contact.quickResponseText}</p>
+                  <ButtonLink href={whatsappUrl} variant="whatsapp" external className="mt-4 w-full justify-center md:w-fit" icon={<WhatsAppIcon className="h-4 w-4" />}>
+                    {contact.direct.whatsapp}
+                  </ButtonLink>
+                </div>
                 <div className="grid gap-3 md:grid-cols-2">
-                  <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external>
+                  <a href="#contact-form" className="button-secondary justify-center">
+                    <Mail className="h-4 w-4" />
+                    <span>{dict.ui.contact.formButtonLabel}</span>
+                  </a>
+                  <a href={`mailto:${siteConfig.email}`} className="button-secondary justify-center">
+                    <Mail className="h-4 w-4" />
+                    <span>{dict.ui.contact.emailButtonLabel}</span>
+                  </a>
+                </div>
+                <p className="text-xs leading-5 text-taupe-400">
+                  {dict.ui.contact.emailAddressLabel}: {siteConfig.email}
+                </p>
+                <div className="grid gap-3 md:grid-cols-2">
+                  <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external icon={<Home className="h-4 w-4" />}>
                     {dict.ui.contact.directAirbnbBergerie}
                   </ButtonLink>
-                  <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external>
+                  <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external icon={<ExternalLink className="h-4 w-4" />}>
                     {dict.ui.contact.directAirbnbBrassine}
                   </ButtonLink>
                 </div>
-                <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center rounded-[1.15rem] border border-taupe-100 bg-white/78 px-4 py-3 text-sm text-taupe-700 transition hover:bg-white">
-                  {siteConfig.email}
-                </a>
               </div>
             </article>
 
@@ -109,13 +128,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <br />
                   {siteConfig.address.postalCode} {siteConfig.address.city}
                   <br />
-                  Belgique
+                  {dict.ui.contact.countryLabel}
                 </p>
               </article>
             </div>
           </div>
 
-          <div>
+          <div id="contact-form">
             <SectionHeading eyebrow={contact.form.eyebrow} title={contact.form.title} description={contact.form.text} />
             <div className="mt-6">
               <ContactForm labels={contact.form.labels} ui={dict.ui.contactForm} locale={locale} />

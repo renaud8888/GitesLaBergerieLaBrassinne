@@ -67,6 +67,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 5.25rem;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;

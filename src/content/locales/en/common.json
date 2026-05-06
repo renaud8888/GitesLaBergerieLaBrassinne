@@ -23,8 +23,8 @@
   "home": {
     "hero": {
       "eyebrow": "Romantic Ardennes escape",
-      "title": "Two charming cottages made for being together and enjoying the moment.",
-      "description": "In Libin, La Bergerie and La Brassine welcome couples into a warm, refined and deeply soothing atmosphere. One authentic building, two elegant cocoons, and a region made for switching off.",
+      "title": "La Bergerie & La Brassine, two romantic cottages in Libin.",
+      "description": "Two charming stays in the Belgian Ardennes, designed for couples: La Bergerie, more spacious and luminous, and La Brassine, more intimate and cocooning.",
       "primaryCta": "Check availability",
       "secondaryCta": "Message on WhatsApp",
       "imageAlt": "View of the cottage property in Libin",
@@ -40,12 +40,12 @@
       "paragraphs": [
         "La Bergerie & La Brassine are two charming cottages tucked away in Libin, in the Ardennes. They were designed inside an authentic old building, with soft materials, quality comforts and details that instantly set the tone.",
         "Beds are made before you arrive, towels are ready, the kitchen is truly equipped, and the welcome stays personal and genuine throughout the experience.",
-        "The website has been built to help guests picture the stay, book easily and find the practical information they usually ask for before arrival."
+        "Before arrival, guests can easily compare both cottages, find the useful practical details and choose the simplest way to book."
       ],
       "highlights": [
         { "title": "Made for couples", "text": "Each cottage welcomes 2 guests in a romantic, cocooning and reassuring atmosphere." },
         { "title": "A region perfect for weekends", "text": "Walks, restaurants, charming villages and memorable discoveries around Libin, Redu, Mirwart and Saint-Hubert." },
-        { "title": "Simple direct booking", "text": "WhatsApp, email or Airbnb depending on what feels easiest for the traveller." },
+        { "title": "Simple direct booking", "text": "WhatsApp, e-mail, form or Airbnb depending on what feels easiest for the traveller." },
         { "title": "Romantic extras", "text": "Champagne, flowers, romantic decoration, gift vouchers or curated surprise boxes can all fit naturally into the stay." }
       ]
     },
@@ -82,7 +82,7 @@
     "features": {
       "eyebrow": "Thoughtfully prepared",
       "title": "Everything guests need, without the usual friction",
-      "description": "Both the stay and the website are meant to feel fluid, beautiful and reassuring from the first click to check-out.",
+      "description": "Everything is prepared to make arrival smooth, the stay comfortable and each exchange simple through to check-out.",
       "items": [
         { "icon": "bed", "title": "Beds ready on arrival", "text": "Quality linen and an instantly comfortable feeling from the very first minutes." },
         { "icon": "utensils", "title": "A truly equipped kitchen", "text": "Oven, dishwasher, coffee machine, wine glasses and all the essentials for cooking together." },
@@ -95,12 +95,12 @@
     "romantic": {
       "eyebrow": "Gift ideas & extras",
       "title": "Plan a romantic surprise",
-      "description": "For an anniversary, a special weekend or simply a thoughtful gesture, romantic touches can be arranged on request.",
+      "description": "Champagne, a box, romantic decoration or a gift voucher can be discussed on request, depending on your wishes and what can be prepared.",
       "items": [
-        { "title": "Champagne box", "text": "A chilled bottle, chocolates, local products and plenty of surprises to open the weekend beautifully." },
-        { "title": "Request your box", "text": "Send your request through the form or on WhatsApp and we will share the practical details and prepare it with care for your arrival." },
-        { "title": "Romantic decoration", "text": "An elegant setup to surprise your partner from the very first moment." },
-        { "title": "Gift voucher", "text": "A lovely present idea for a couple's Ardennes getaway." }
+        { "title": "Champagne box", "text": "A thoughtful extra to request before arrival for a more festive start to the stay." },
+        { "title": "Box on request", "text": "Share what you have in mind and we will let you know what can be prepared for your stay." },
+        { "title": "Romantic decoration", "text": "A softer atmosphere can be arranged on request for a special occasion." },
+        { "title": "Gift voucher", "text": "An idea for offering an Ardennes getaway for two, prepared together around the preferred format." }
       ]
     },
     "region": {
@@ -133,12 +133,12 @@
     },
     "reviews": {
       "eyebrow": "Guest reviews",
-      "title": "Stays that leave a lasting impression",
+      "title": "What guests appreciate",
       "description": "",
       "items": [
-        { "author": "Marie & Thomas", "origin": "Brussels", "gite": "La Bergerie", "text": "A real cocoon. Elegant, peaceful, spotless and hosted with genuine care." },
-        { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "We loved the intimate feel, the softness of the decor and the calm everywhere around us." },
-        { "author": "Sophie & Antoine", "origin": "Liege", "gite": "La Bergerie", "text": "The level of care is rare. Everything feels considered, beautiful and easy." }
+        { "author": "Thoughtful welcome", "origin": "", "gite": "Both cottages", "text": "Simple contact, a prepared arrival and someone available if a question comes up during the stay." },
+        { "author": "Romantic atmosphere", "origin": "", "gite": "La Bergerie & La Brassine", "text": "Soft materials, warm decoration and a setting made for slowing down together." },
+        { "author": "Practical comfort", "origin": "", "gite": "Stay in Libin", "text": "Beds made, towels ready, equipped kitchen, on-site parking and useful information before arrival." }
       ]
     },
     "finalCta": {
@@ -189,7 +189,7 @@
           "At the back, the garden extends the experience with a peaceful outdoor corner for coffee, aperitif or a quiet moment."
         ]
       },
-      "galleryIntro": "The gallery is already structured for your final photos later, with a mobile-friendly lightbox and clear file naming.",
+      "galleryIntro": "Discover La Bergerie in pictures: light, soft textures and a romantic atmosphere.",
       "highlights": [
         "The most spacious of the two cottages",
         "Romantic shabby chic atmosphere",
@@ -240,7 +240,7 @@
           "The front garden reinforces that feeling of privacy and gives the stay a lovely outdoor extension."
         ]
       },
-      "galleryIntro": "The gallery is already prepared for your final visuals and offers a smooth viewing experience on both mobile and desktop.",
+      "galleryIntro": "Discover La Brassine in pictures: softness, privacy and charm.",
       "highlights": [
         "The most cocooning of the two cottages",
         "Intimate and reassuring atmosphere",
@@ -276,8 +276,8 @@
     "title": "Amenities",
     "categories": [
       { "title": "Comfort & wellbeing", "items": ["Hair dryer", "Hot water", "Hangers", "Bed linen", "Blackout blinds", "Drying rack", "Clothes storage", "Air conditioning", "Heating"] },
-      { "title": "Entertainment", "items": ["Television", "Ethernet connection", "Board games", "Wi-Fi"] },
       { "title": "Kitchen", "items": ["Kitchen", "Refrigerator", "Microwave", "Cooking basics", "Oil, salt, pepper", "Dishes and cutlery", "Freezer", "Dishwasher", "Stove", "Oven", "Electric kettle", "Coffee machine", "Wine glasses", "Toaster"] },
+      { "title": "Entertainment", "items": ["Television", "Ethernet connection", "Board games", "Wi-Fi"] },
       { "title": "Outdoor", "items": ["Garden", "Outdoor furniture", "Outdoor dining area", "Barbecue", "Barbecue utensils", "Sun loungers"] },
       { "title": "Practical & safety", "items": ["Private entrance", "Free parking", "Smoke alarm", "Fire extinguisher", "EV charging on request"] }
     ]
@@ -304,10 +304,10 @@
         "title": "Our favourite restaurants",
         "intro": "Places to recommend for a romantic dinner, a local meal or a refined break.",
         "items": [
-          { "name": "Le Cor de Chasse", "image": "/images/around/restaurants_cor-de-chasse.jpg", "location": "near Saint-Hubert", "distance": "around 20 min", "description": "A refined option when you want to make the evening feel more special.", "tags": ["gastronomic", "special occasion"] },
-          { "name": "Le Relais de Mirwart", "image": "/images/around/restaurants_relais-de-mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "The setting, the village and the nature around it make this a lovely outing for two.", "tags": ["nature", "charm"] },
-          { "name": "Le Fournil de Redu", "image": "/images/around/restaurants_fournil-de-redu.jpg", "location": "Redu", "distance": "10 min", "description": "Ideal for lunch, brunch or a sweet break after wandering around the village.", "tags": ["tea room", "gourmet"] },
-          { "name": "A local table in Libin", "image": "/images/around/restaurants_table-libin.jpg", "location": "Libin", "distance": "5 min", "description": "A local place to discover for a simple, relaxed meal.", "tags": ["local"] }
+          { "name": "Le Cor de Chasse", "image": "/images/around/cor.jpg", "location": "near Saint-Hubert", "distance": "around 20 min", "description": "A refined option when you want to make the evening feel more special.", "tags": ["gastronomic", "special occasion"] },
+          { "name": "Le Relais de Mirwart", "image": "/images/around/brichpotes.jpg", "location": "Mirwart", "distance": "20 min", "description": "The setting, the village and the nature around it make this a lovely outing for two.", "tags": ["nature", "charm"] },
+          { "name": "Le Fournil de Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Ideal for lunch, brunch or a sweet break after wandering around the village.", "tags": ["tea room", "gourmet"] },
+          { "name": "A local table in Libin", "image": "/images/around/frangins.jpg", "location": "Libin", "distance": "5 min", "description": "A local place to discover for a simple, relaxed meal.", "tags": ["local"] }
         ]
       },
       {
@@ -316,10 +316,10 @@
         "title": "Our favourite walks",
         "intro": "Easy-to-recommend walks depending on mood: forest, villages, water, viewpoints.",
         "items": [
-          { "name": "Mirwart estate", "image": "/images/around/walks_mirwart-estate.jpg", "location": "Mirwart", "distance": "20 min", "description": "A classic Ardennes walk with heritage, forest atmosphere and beautiful scenery.", "tags": ["forest", "beautiful setting"] },
-          { "name": "Around Redu", "image": "/images/around/walks_redu-paths.jpg", "location": "Redu", "distance": "10 min", "description": "Ideal for combining a gentle walk with bookshops, galleries and a coffee stop.", "tags": ["village", "romantic"] },
-          { "name": "Saint-Hubert nature side", "image": "/images/around/walks_saint-hubert-nature.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "A good option for travellers who want both heritage and woodland surroundings.", "tags": ["heritage", "forest"] },
-          { "name": "Walking near Libin", "image": "/images/around/walks_libin-walk.jpg", "location": "Libin", "distance": "on site", "description": "The area is perfect for quiet end-of-day walks or fresh morning air.", "tags": ["simple", "nearby"] }
+          { "name": "Mirwart estate", "image": "/images/around/p_mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "A classic Ardennes walk with heritage, forest atmosphere and beautiful scenery.", "tags": ["forest", "beautiful setting"] },
+          { "name": "Around Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Ideal for combining a gentle walk with bookshops, galleries and a coffee stop.", "tags": ["village", "romantic"] },
+          { "name": "Saint-Hubert nature side", "image": "/images/around/p_sainthubert.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "A good option for travellers who want both heritage and woodland surroundings.", "tags": ["heritage", "forest"] },
+          { "name": "Walking near Libin", "image": "/images/around/p_libin.jpg", "location": "Libin", "distance": "on site", "description": "The area is perfect for quiet end-of-day walks or fresh morning air.", "tags": ["simple", "nearby"] }
         ]
       },
       {
@@ -328,10 +328,10 @@
         "title": "Romantic weekend ideas",
         "intro": "A few easy combinations that turn two days into a truly memorable break.",
         "items": [
-          { "name": "Arrive and slow down", "image": "/images/around/romantic_arrive-and-slow-down.jpg", "description": "A drink, a hot shower, a simple dinner in the cottage and a cosy evening indoors.", "tags": ["slow stay", "cosy"] },
-          { "name": "Walk then dinner", "image": "/images/around/romantic_walk-and-dinner.jpg", "description": "A walk in Mirwart or Redu followed by a beautiful dinner together.", "tags": ["walk", "dinner"] },
-          { "name": "Surprise your partner", "image": "/images/around/romantic_surprise-your-partner.jpg", "description": "Add champagne, flowers or romantic decoration to make the stay even more memorable.", "tags": ["surprise", "romantic extra"] },
-          { "name": "No heavy schedule", "image": "/images/around/romantic_no-heavy-schedule.jpg", "description": "A few landmarks, very little pressure and plenty of time to simply enjoy being together.", "tags": ["relax", "for two"] }
+          { "name": "Arrive and slow down", "image": "/images/home/5b.avif", "description": "A drink, a hot shower, a simple dinner in the cottage and a cosy evening indoors.", "tags": ["slow stay", "cosy"] },
+          { "name": "Walk then dinner", "image": "/images/around/p_mirwart.jpg", "description": "A walk in Mirwart or Redu followed by a beautiful dinner together.", "tags": ["walk", "dinner"] },
+          { "name": "Surprise your partner", "image": "/images/home/6b.avif", "description": "Add champagne, flowers or romantic decoration to make the stay even more memorable.", "tags": ["surprise", "romantic extra"] },
+          { "name": "No heavy schedule", "image": "/images/home/4b.avif", "description": "A few landmarks, very little pressure and plenty of time to simply enjoy being together.", "tags": ["relax", "for two"] }
         ]
       },
       {
@@ -340,10 +340,10 @@
         "title": "Activities for two",
         "intro": "For guests who like adding a few carefully chosen outings to their stay.",
         "items": [
-          { "name": "Redu book village", "image": "/images/around/activities_redu-book-village.jpg", "location": "Redu", "distance": "10 min", "description": "A very pleasant outing among bookshops, workshops and a unique atmosphere.", "tags": ["culture", "strolling"] },
-          { "name": "Euro Space Center", "image": "/images/around/activities_euro-space-center.jpg", "location": "Transinne", "distance": "10 min", "description": "An original and easy excursion if you want something different.", "tags": ["unusual", "couple"] },
-          { "name": "Cycling rides", "image": "/images/around/activities_cycling-rides.jpg", "location": "around Libin", "distance": "variable", "description": "Roads and scenery work beautifully for a relaxed or more active ride.", "tags": ["cycling", "nature"] },
-          { "name": "Saint-Hubert heritage", "image": "/images/around/activities_saint-hubert-heritage.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "A nice option to combine architecture, atmosphere and a terrace stop.", "tags": ["town", "heritage"] }
+          { "name": "Redu book village", "image": "/images/around/v_redu.jpg", "location": "Redu", "distance": "10 min", "description": "A very pleasant outing among bookshops, workshops and a unique atmosphere.", "tags": ["culture", "strolling"] },
+          { "name": "Euro Space Center", "image": "/images/around/euro.jpg", "location": "Transinne", "distance": "10 min", "description": "An original and easy excursion if you want something different.", "tags": ["unusual", "couple"] },
+          { "name": "Cycling rides", "image": "/images/around/velo.jpg", "location": "around Libin", "distance": "variable", "description": "Roads and scenery work beautifully for a relaxed or more active ride.", "tags": ["cycling", "nature"] },
+          { "name": "Saint-Hubert heritage", "image": "/images/around/p_sainthubert.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "A nice option to combine architecture, atmosphere and a terrace stop.", "tags": ["town", "heritage"] }
         ]
       },
       {
@@ -352,10 +352,10 @@
         "title": "What to do when it rains",
         "intro": "A great stay does not depend on sunshine. Rain works surprisingly well in the Ardennes.",
         "items": [
-          { "name": "Cosy day in the cottage", "image": "/images/around/rainy_cosy-day-in-cottage.jpg", "description": "Streaming, board games, cooking together and the pleasure of staying warm inside.", "tags": ["on site", "softness"] },
-          { "name": "Redu bookshops and galleries", "image": "/images/around/rainy_redu-bookshops.jpg", "location": "Redu", "distance": "10 min", "description": "The book village remains charming even under grey skies.", "tags": ["culture", "partly covered"] },
-          { "name": "A long lunch", "image": "/images/around/rainy_long-lunch.jpg", "description": "Use the rain as the perfect excuse for a slower, more indulgent meal.", "tags": ["food"] },
-          { "name": "Local heritage", "image": "/images/around/rainy_local-heritage.jpg", "description": "Museums, basilica or village visits depending on the mood of the day.", "tags": ["discovery"] }
+          { "name": "Cosy day in the cottage", "image": "/images/home/5b.avif", "description": "Streaming, board games, cooking together and the pleasure of staying warm inside.", "tags": ["on site", "softness"] },
+          { "name": "Redu bookshops and galleries", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "The book village remains charming even under grey skies.", "tags": ["culture", "partly covered"] },
+          { "name": "A long lunch", "image": "/images/around/cor.jpg", "description": "Use the rain as the perfect excuse for a slower, more indulgent meal.", "tags": ["food"] },
+          { "name": "Local heritage", "image": "/images/around/v_bouillon.jpg", "description": "Museums, basilica or village visits depending on the mood of the day.", "tags": ["discovery"] }
         ]
       },
       {
@@ -364,10 +364,10 @@
         "title": "Villages & heritage",
         "intro": "Easy local references for guests who want to explore without driving too far.",
         "items": [
-          { "name": "Libin", "image": "/images/around/villages_libin.jpg", "distance": "on site", "description": "An ideal base to explore the region while keeping travel times light.", "tags": ["great base"] },
-          { "name": "Redu", "image": "/images/around/villages_redu.jpg", "distance": "10 min", "description": "The famous book village remains one of the area's most charming outings.", "tags": ["books", "charm"] },
-          { "name": "Saint-Hubert", "image": "/images/around/villages_saint-hubert.jpg", "distance": "15 min", "description": "A town with character, easy to recommend for its heritage and atmosphere.", "tags": ["basilica", "terraces"] },
-          { "name": "Mirwart", "image": "/images/around/villages_mirwart.jpg", "distance": "20 min", "description": "A peaceful and photogenic village, very much in tune with the spirit of the stay.", "tags": ["nature", "heritage"] }
+          { "name": "Libin", "image": "/images/around/p_libin.jpg", "distance": "on site", "description": "An ideal base to explore the region while keeping travel times light.", "tags": ["great base"] },
+          { "name": "Redu", "image": "/images/around/v_redu.jpg", "distance": "10 min", "description": "The famous book village remains one of the area's most charming outings.", "tags": ["books", "charm"] },
+          { "name": "Saint-Hubert", "image": "/images/around/p_sainthubert.jpg", "distance": "15 min", "description": "A town with character, easy to recommend for its heritage and atmosphere.", "tags": ["basilica", "terraces"] },
+          { "name": "Mirwart", "image": "/images/around/v_mirwart.jpg", "distance": "20 min", "description": "A peaceful and photogenic village, very much in tune with the spirit of the stay.", "tags": ["nature", "heritage"] }
         ]
       },
       {
@@ -376,9 +376,9 @@
         "title": "Bike rides",
         "intro": "A few lovely rides to discover the area at an easy pace or on a more active outing.",
         "items": [
-          { "name": "Gentle loop around Libin", "image": "/images/around/cycling_libin-loop.jpg", "distance": "variable", "description": "For couples who want an easy ride without planning a full sports day.", "tags": ["easy"] },
-          { "name": "Towards Redu and nearby villages", "image": "/images/around/cycling_redu-route.jpg", "distance": "25 km", "description": "A lovely route combining countryside, charm and a gourmet stop.", "tags": ["scenic"] },
-          { "name": "More sportive Ardennes version", "image": "/images/around/cycling_sportive-ardennes.jpg", "distance": "to define", "description": "A more demanding ride for guests who enjoy elevation and longer loops in the Ardennes.", "tags": ["sportive"] }
+          { "name": "Gentle loop around Libin", "image": "/images/around/velo_libinredu.jpg", "distance": "variable", "description": "For couples who want an easy ride without planning a full sports day.", "tags": ["easy"] },
+          { "name": "Towards Redu and nearby villages", "image": "/images/around/velo_lesse.png", "distance": "25 km", "description": "A lovely route combining countryside, charm and a gourmet stop.", "tags": ["scenic"] },
+          { "name": "More sportive Ardennes version", "image": "/images/around/velo_laroche.jpg", "distance": "to define", "description": "A more demanding ride for guests who enjoy elevation and longer loops in the Ardennes.", "tags": ["sportive"] }
         ]
       }
     ],
@@ -397,7 +397,7 @@
     "hero": {
       "eyebrow": "Prepare your stay",
       "title": "Useful, simple and reassuring information",
-      "description": "This page is designed to answer recurring questions quickly and make the experience smoother before, during and after the stay."
+      "description": "Find the useful details to arrive calmly, enjoy the cottage and prepare check-out without stress."
     },
     "quickFacts": [
       { "title": "Check-in", "text": "Between 4:00 pm and 11:00 pm" },
@@ -464,45 +464,52 @@
   "contact": {
     "meta": {
       "title": "Contact & booking - La Bergerie & La Brassine",
-      "description": "Get in touch easily by WhatsApp, email or form to book La Bergerie or La Brassine in Libin."
+      "description": "Get in touch easily by WhatsApp, e-mail or form to book La Bergerie or La Brassine in Libin."
     },
     "hero": {
       "eyebrow": "Contact & booking",
       "title": "Ask about a stay, send a request or book directly",
-      "description": "WhatsApp remains the easiest way to get a quick reply. The form below can also be used to send a complete enquiry."
+      "description": "WhatsApp is the most direct way to get a quick reply. The form below lets you send a complete enquiry."
     },
     "direct": {
       "eyebrow": "Direct booking",
       "title": "The easiest place to start",
-      "text": "For availability, questions or romantic extras, WhatsApp is the fastest route. Airbnb links stay visible for guests who prefer booking there.",
+      "text": "For availability, questions or romantic extras, WhatsApp is the fastest route. You can also send a complete enquiry with the form, write by e-mail or book on Airbnb.",
       "whatsapp": "Contact on WhatsApp"
     },
     "practicalTitle": "Useful information",
     "practicalCards": [
-      { "title": "Address", "text": "Rue du Cure 19, 6890 Libin, Belgium. Shown here rather than everywhere else on the site." },
+      { "title": "Address", "text": "Rue du Curé 19, 6890 Libin, Belgium." },
       { "title": "Check-in / check-out", "text": "Arrival between 4:00 pm and 11:00 pm, departure before 10:00 am." },
-      { "title": "Bookings", "text": "Either directly via WhatsApp or through Airbnb depending on the guest's preference." }
+      { "title": "Bookings", "text": "Directly via WhatsApp, by e-mail, through the form or on Airbnb depending on your preference." }
     ],
     "addressTitle": "Address",
     "form": {
       "eyebrow": "Contact form",
       "title": "Send an enquiry",
-      "text": "Enquiries are sent directly and handled as quickly as possible.",
+      "text": "Share your dates, preferred cottage and message: we will reply with the useful details.",
       "labels": {
         "firstName": "First name",
         "lastName": "Last name",
-        "email": "Email",
+        "email": "E-mail address",
         "phone": "Phone",
         "dates": "Preferred dates",
         "gite": "Preferred cottage",
-        "guests": "Number of guests",
+        "guests": "Number of guests (maximum 2)",
         "message": "Message",
         "submit": "Send enquiry",
-        "success": "Your request was prepared and sent to {email}.",
+        "success": "Your request has been sent. We will reply as soon as possible.",
         "sending": "Sending...",
         "invalid": "Please check the required fields and your email address.",
-        "error": "The email could not be sent. You can contact {email} directly or use WhatsApp.",
-        "notConfigured": "This deployment does not have email delivery configured yet. Requests are not sent automatically for now. You can write to {email} or use WhatsApp.",
+        "error": "Something went wrong while sending your message. You can contact us by e-mail or use WhatsApp.",
+        "placeholders": {
+          "firstName": "Your first name",
+          "lastName": "Your last name",
+          "email": "you@example.com",
+          "phone": "+32 …",
+          "dates": "E.g. 12 to 14 September",
+          "message": "Your request, your dates, a special occasion…"
+        },
         "options": {
           "bergerie": "La Bergerie",
           "brassine": "La Brassine",

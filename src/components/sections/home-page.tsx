@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Bath, BedDouble, Quote, Star, Trees, UserRound } from 'lucide-react';
+import { ArrowRight, Bath, BedDouble, Gift, Sparkles, Star, Trees, UserRound } from 'lucide-react';
 
 import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
@@ -52,12 +52,7 @@ export function HomePage({
       href: `/${locale}/gites/la-bergerie`,
       image: '/images/home/3.avif',
       alt: home.intro.highlights[0]?.title,
-      cta:
-        locale === 'fr'
-          ? 'Découvrir les gîtes'
-          : locale === 'nl'
-            ? 'Ontdek de gites'
-            : 'Discover the cottages',
+      cta: homeUi.introPhotoCtas.cottages,
     },
     {
       key: 'extras-photo',
@@ -65,12 +60,7 @@ export function HomePage({
       href: `/${locale}/contact`,
       image: '/images/home/6b.avif',
       alt: home.intro.highlights[3]?.title,
-      cta:
-        locale === 'fr'
-          ? 'Préparer une attention'
-          : locale === 'nl'
-            ? 'Bereid een attentie voor'
-            : 'Plan a thoughtful extra',
+      cta: homeUi.introPhotoCtas.extras,
     },
   ];
   const compactFacts = [
@@ -79,21 +69,7 @@ export function HomePage({
     { icon: BedDouble, label: homeUi.compactFacts.bed },
     { icon: Bath, label: homeUi.compactFacts.bathroom },
   ];
-  const romanticActions =
-    locale === 'fr'
-      ? {
-          giftVoucher: 'Demander un bon cadeau',
-          orderBox: 'Commander la box',
-        }
-      : locale === 'nl'
-        ? {
-            giftVoucher: 'Vraag een cadeaubon aan',
-            orderBox: 'Bestel de box',
-          }
-        : {
-            giftVoucher: 'Request a gift voucher',
-            orderBox: 'Order the box',
-          };
+  const romanticActions = homeUi.romanticActions;
 
   return (
     <>
@@ -197,7 +173,7 @@ export function HomePage({
                     <div className="flex flex-wrap gap-3">
                       <ButtonLink href={gite.href}>{home.gites.discover}</ButtonLink>
                       <ButtonLink href={gite.airbnb} variant="secondary" external>
-                        Airbnb
+                        {dict.ui.gites.common.airbnbLabel}
                       </ButtonLink>
                     </div>
                   </div>
@@ -287,16 +263,23 @@ export function HomePage({
                   <div key={item.title} className="rounded-[1.4rem] border border-white/10 bg-white/5 p-4">
                     <p className="font-display text-[2rem] leading-none">{item.title}</p>
                     <p className="mt-3 text-sm leading-7 text-cream-100/78">{item.text}</p>
+                    {index === 0 ? (
+                      <div className="mt-4">
+                        <ButtonLink href={`/${locale}/contact`} className="px-4 py-2 text-xs" icon={<Sparkles size={14} />}>
+                          {romanticActions.attention}
+                        </ButtonLink>
+                      </div>
+                    ) : null}
                     {index === 1 ? (
                       <div className="mt-4">
-                        <ButtonLink href={`/${locale}/contact`} className="px-4 py-2 text-xs">
+                        <ButtonLink href={`/${locale}/contact`} className="px-4 py-2 text-xs" icon={<Gift size={14} />}>
                           {romanticActions.orderBox}
                         </ButtonLink>
                       </div>
                     ) : null}
                     {index === 3 ? (
                       <div className="mt-4">
-                        <ButtonLink href={`/${locale}/contact`} className="px-4 py-2 text-xs">
+                        <ButtonLink href={`/${locale}/contact`} className="px-4 py-2 text-xs" icon={<Gift size={14} />}>
                           {romanticActions.giftVoucher}
                         </ButtonLink>
                       </div>
@@ -334,17 +317,14 @@ export function HomePage({
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {home.reviews.items.map((review) => (
               <article key={review.author} className="surface-card p-6">
-                <Quote size={24} className="text-rose-300" />
+                <Sparkles size={24} className="text-rose-300" />
                 <p className="mt-5 text-base leading-8 text-taupe-500">{review.text}</p>
-                <div className="mt-5 flex items-center gap-1 text-wood">
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star key={index} size={14} fill="currentColor" />
-                  ))}
-                </div>
                 <p className="mt-5 font-display text-2xl text-taupe-900">{review.author}</p>
-                <p className="text-sm uppercase tracking-[0.2em] text-taupe-500">
-                  {review.origin} - {review.gite}
-                </p>
+                {review.origin || review.gite ? (
+                  <p className="text-sm uppercase tracking-[0.2em] text-taupe-500">
+                    {[review.origin, review.gite].filter(Boolean).join(' - ')}
+                  </p>
+                ) : null}
               </article>
             ))}
           </div>

@@ -29,7 +29,7 @@ export function GitePageTemplate({
   const otherSlug = slug === 'bergerie' ? 'brassine' : 'bergerie';
   const otherHref = `/${locale}/gites/${otherSlug === 'bergerie' ? 'la-bergerie' : 'la-brassine'}`;
   const common = dict.gites.common;
-  const galleryImages = images.gites[slug].gallery.map((src, index) => ({ src, alt: `${gite.hero.title} ${index + 1}` }));
+  const galleryImages = images.gites[slug].gallery.map((src, index) => ({ src, alt: `${ui[slug].galleryAltPrefix} ${index + 1}` }));
   const equipmentCategories = dict.equipment.categories;
   const comfortCategory = equipmentCategories[0];
   const cuisineCategory = equipmentCategories[1];
@@ -48,10 +48,7 @@ export function GitePageTemplate({
     slug === 'bergerie'
       ? 'bg-[linear-gradient(180deg,rgba(255,250,245,0.98),rgba(239,226,212,0.72))]'
       : 'bg-[linear-gradient(180deg,rgba(255,250,245,0.98),rgba(243,223,220,0.74))]';
-  const summaryItems =
-    slug === 'bergerie'
-      ? ['Le plus spacieux des deux', 'Jardin à l’arrière', 'Ambiance douce et romantique']
-      : ['Plain-pied', 'Jardin à l’avant', 'Cocon intime pour deux'];
+  const summaryItems = ui[slug].summaryItems;
 
   return (
     <>
@@ -112,9 +109,7 @@ export function GitePageTemplate({
                       <Star key={index} size={13} fill="currentColor" />
                     ))}
                   </div>
-                  <p className="mt-3 max-w-[18rem] text-xs leading-5 text-cream-100/82">
-                    L&apos;un des gîtes les mieux notés de la région.
-                  </p>
+                  <p className="mt-3 max-w-[18rem] text-xs leading-5 text-cream-100/82">{ui.common.googleCardText}</p>
                 </a>
               </div>
             </div>
@@ -143,7 +138,7 @@ export function GitePageTemplate({
             <div className="mt-6 flex flex-wrap gap-3">
               <ButtonLink href={`/${locale}/contact`}>{ui.common.reserveLabel}</ButtonLink>
               <ButtonLink href={stats.airbnbUrl} variant="secondary" external>
-                {ui.common.airbnbLabel}
+                {ui[slug].airbnbLabel}
               </ButtonLink>
             </div>
           </div>
@@ -160,7 +155,7 @@ export function GitePageTemplate({
               </div>
             </article>
             <article className={`surface-card-strong p-5 md:p-6 ${toneCardClass}`}>
-              <p className="text-xs uppercase tracking-[0.24em] text-wood">En bref</p>
+              <p className="text-xs uppercase tracking-[0.24em] text-wood">{ui.common.summaryEyebrow}</p>
               <div className="mt-4 grid gap-3">
                 {summaryItems.map((item) => (
                   <div key={item} className="inline-flex items-center gap-3 rounded-[1rem] border border-white/70 bg-white/72 px-4 py-3 text-sm text-taupe-700">
@@ -259,7 +254,7 @@ export function GitePageTemplate({
               <div className="mt-6 flex flex-wrap gap-3">
                 <ButtonLink href={`/${locale}/contact`}>{ui.common.reserveLabel}</ButtonLink>
                 <ButtonLink href={stats.airbnbUrl} variant="secondary" external>
-                  {ui.common.airbnbLabel}
+                  {ui[slug].airbnbLabel}
                 </ButtonLink>
               </div>
             </div>

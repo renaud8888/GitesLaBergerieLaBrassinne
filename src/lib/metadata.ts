@@ -38,7 +38,7 @@ export function createPageMetadata({
       type: 'website',
       images: [
         {
-          url: image ?? `${siteConfig.url}/images/branding/og-image.svg`,
+          url: image ?? `${siteConfig.url}/images/branding/og-image.png`,
           width: 1200,
           height: 630,
           alt: title,
@@ -49,7 +49,7 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [image ?? `${siteConfig.url}/images/branding/og-image.svg`],
+      images: [image ?? `${siteConfig.url}/images/branding/og-image.png`],
     },
   };
 }

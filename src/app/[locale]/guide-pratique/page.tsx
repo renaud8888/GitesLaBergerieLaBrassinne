@@ -43,7 +43,7 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100/84">{guide.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
-              WhatsApp
+              {dict.ui.guide.whatsappLabel}
             </ButtonLink>
             <ButtonLink href={`/${locale}/contact`} variant="secondary" className="border-white/16 bg-white/10 text-white">
               {dict.ui.guide.heroSecondaryCta}
@@ -62,6 +62,10 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
             faq={guide.faq}
             faqTitle={guide.faqTitle}
             faqEyebrow={guide.faqEyebrow}
+            labels={{
+              overviewNavTitle: dict.ui.guide.overviewNavTitle,
+              overviewEyebrow: dict.ui.guide.overviewEyebrow,
+            }}
           />
         </div>
       </section>

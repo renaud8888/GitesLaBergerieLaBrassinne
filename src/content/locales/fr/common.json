@@ -23,8 +23,8 @@
   "home": {
     "hero": {
       "eyebrow": "Escapade romantique en Ardenne",
-      "title": "Deux gîtes de charme pour se retrouver et savourer l'instant.",
-      "description": "À Libin, La Bergerie et La Brassine accueillent les voyageurs dans une ambiance chic, douce et chaleureuse. Une ancienne bâtisse pleine d'âme, deux cocons pensés pour les séjours à deux, et une région qui invite à la déconnexion.",
+      "title": "La Bergerie & La Brassine, deux gîtes romantiques à Libin.",
+      "description": "Deux adresses de charme dans les Ardennes belges, pensées pour les séjours à deux: La Bergerie, plus spacieuse et lumineuse, et La Brassine, plus intime et cocooning.",
       "primaryCta": "Réserver",
       "secondaryCta": "WhatsApp",
       "imageAlt": "Vue du domaine des gîtes à Libin",
@@ -40,12 +40,12 @@
       "paragraphs": [
         "La Bergerie & La Brassine sont deux gîtes de charme nichés à Libin, dans les Ardennes. Ils ont été aménagés avec douceur dans une ancienne bâtisse authentique, en mêlant matières naturelles, confort soigné et petits détails qui changent tout.",
         "Ici, les lits sont faits avant votre arrivée, les serviettes sont prêtes, la cuisine est vraiment équipée, et l'accueil se fait simplement, humainement, avec cette envie sincère que vous passiez un très beau séjour.",
-        "Le site a été pensé pour vous aider à vous projeter, réserver facilement et trouver rapidement toutes les informations pratiques utiles avant votre venue."
+        "Avant votre venue, vous retrouvez facilement les informations pratiques, les ambiances de chaque gîte et les moyens les plus simples pour réserver."
       ],
       "highlights": [
         { "title": "Une adresse pour les séjours à deux", "text": "Chaque gîte accueille 2 personnes dans une atmosphère romantique, cocooning et rassurante." },
         { "title": "Une région parfaite pour un week-end", "text": "Balades, bonnes tables, villages de caractère et jolies découvertes autour de Libin, Redu, Mirwart et Saint-Hubert." },
-        { "title": "Réservation directe simple", "text": "WhatsApp, email ou Airbnb selon votre préférence, sans moteur complexe ni parcours inutile." },
+        { "title": "Réservation directe simple", "text": "WhatsApp, e-mail, formulaire ou Airbnb selon votre préférence, avec un échange clair et humain." },
         { "title": "Des attentions à personnaliser", "text": "Champagne, fleurs, décoration romantique, bon cadeau ou box surprise pour préparer une vraie parenthèse à deux." }
       ]
     },
@@ -70,7 +70,7 @@
           "name": "La Brassine",
           "tagline": "Intime, douce, cocooning",
           "capacity": "2 personnes",
-          "description": "Plus petit, plus enveloppant, pensé pour l'intimité. Un cocon de plain-pied avec jardin à l'avant et une vraie sensation de retraite à deux.",
+          "description": "Plus intime, plus enveloppant, pensé comme une parenthèse très douce. Un cocon de plain-pied avec jardin à l'avant et une vraie sensation de retraite à deux.",
           "bullets": [
             "Le plus cocooning des deux",
             "Pour une intimité inégalée",
@@ -82,7 +82,7 @@
     "features": {
       "eyebrow": "Bien pensé",
       "title": "Tout ce qu'il faut pour profiter sans se poser mille questions",
-      "description": "Le site et le séjour ont été imaginés pour rendre les choses fluides, belles et simples du premier clic jusqu'au départ.",
+      "description": "Tout est prévu pour rendre votre arrivée fluide, votre séjour confortable et vos échanges simples jusqu'au départ.",
       "items": [
         { "icon": "bed", "title": "Lits faits à l'arrivée", "text": "Draps en lin de qualité, chambre prête et sensation de confort dès les premières minutes." },
         { "icon": "utensils", "title": "Cuisine vraiment équipée", "text": "Four, lave-vaisselle, machine à café, verres à vin et tout le nécessaire pour cuisiner à deux." },
@@ -95,12 +95,12 @@
     "romantic": {
       "eyebrow": "Bons cadeaux & options",
       "title": "Préparer une surprise romantique",
-      "description": "Pour un anniversaire, une demande spéciale ou simplement l'envie de faire plaisir, certaines attentions peuvent être préparées sur demande.",
+      "description": "Champagne, box, décoration romantique ou bon cadeau peuvent être envisagés sur demande, selon vos envies et les possibilités du moment.",
       "items": [
-        { "title": "Box champagne", "text": "Une bouteille fraîche, des chocolats, des produits locaux et plein de surprises pour ouvrir le week-end avec élégance." },
-        { "title": "Réservez une box", "text": "Faites une demande et nous vous communiquerons les infos pratiques et la préparerons avec soin pour votre arrivée." },
-        { "title": "Décoration romantique", "text": "Une ambiance soignée pour surprendre son ou sa partenaire dès l'ouverture de la porte." },
-        { "title": "Bon cadeau", "text": "Une belle idée à offrir pour une escapade à deux en Ardenne." }
+        { "title": "Box champagne", "text": "Une attention à demander avant l'arrivée pour ouvrir le séjour avec une touche plus festive." },
+        { "title": "Box sur demande", "text": "Décrivez votre envie et nous vous préciserons ce qui peut être préparé pour votre séjour." },
+        { "title": "Décoration romantique", "text": "Une ambiance plus douce peut être imaginée sur demande pour une occasion particulière." },
+        { "title": "Bon cadeau", "text": "Une idée à offrir pour une escapade à deux en Ardenne, à préparer ensemble selon la formule souhaitée." }
       ]
     },
     "region": {
@@ -127,18 +127,18 @@
         { "src": "/images/home/3b.avif", "alt": "Une ambiance cocooning et raffinée" },
         { "src": "/images/home/5.avif", "alt": "La douceur d'un intérieur pensé pour ralentir" },
         { "src": "/images/home/5b.avif", "alt": "Des images qui invitent déjà à se projeter" },
-        { "src": "/images/home/6.avif", "alt": "Un séjour élégant au coeur des Ardennes" },
+        { "src": "/images/home/6.avif", "alt": "Un séjour élégant au cœur des Ardennes" },
         { "src": "/images/home/6b.avif", "alt": "Une parenthèse chaleureuse à vivre à deux" }
       ]
     },
     "reviews": {
       "eyebrow": "Avis voyageurs",
-      "title": "Des séjours qui laissent une belle impression",
+      "title": "Ce que les voyageurs apprécient",
       "description": "",
       "items": [
-        { "author": "Marie & Thomas", "origin": "Bruxelles", "gite": "La Bergerie", "text": "Un vrai cocon. Tout était élégant, apaisant, très propre, et l'accueil était absolument charmant." },
-        { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "On a adoré le côté intime, la douceur de la décoration et le calme des lieux. Parfait pour se retrouver à deux." },
-        { "author": "Sophie & Antoine", "origin": "Liège", "gite": "La Bergerie", "text": "Le niveau de soin est rare. On sent qu'ici tout a été pensé pour que le séjour soit simple, beau et confortable." }
+        { "author": "Accueil soigné", "origin": "", "gite": "Les deux gîtes", "text": "Un contact simple, une arrivée préparée et une présence disponible si une question se pose pendant le séjour." },
+        { "author": "Ambiance romantique", "origin": "", "gite": "La Bergerie & La Brassine", "text": "Des matières douces, une décoration chaleureuse et une atmosphère pensée pour ralentir à deux." },
+        { "author": "Confort pratique", "origin": "", "gite": "Séjour à Libin", "text": "Lits faits, linge prévu, cuisine équipée, parking sur place et informations utiles avant l'arrivée." }
       ]
     },
     "finalCta": {
@@ -277,8 +277,8 @@
       { "title": "Confort & bien-être", "items": ["Sèche-cheveux", "Linge de lit en lin", "Stores occultants", "Chauffage / climatisation"] },
       { "title": "Cuisine", "items": ["Réfrigérateur", "Micro-ondes", "Équipements de cuisine de base", "Huile, sel, poivre", "Vaisselle et couverts", "Lave-vaisselle", "Cuisinière", "Four", "Bouilloire électrique", "Machine à café", "Verres à vin", "Grille-pain"] },
       { "title": "Divertissement", "items": ["Télévision 4K", "Connexion ethernet", "Jeux de société", "Wi-Fi"] },
-      { "title": "Exterieur", "items": ["Jardin", "Mobilier extérieur", "Espace repas extérieur", "Barbecue", "Ustensiles de barbecue", "Chaises longues"] },
-      { "title": "Pratique & sécurité", "items": ["Entrée privée", "Parking gratuit", "Détecteur de fumée", "Extincteur", "Borne de recharge electrique sur demande"] }
+      { "title": "Extérieur", "items": ["Jardin", "Mobilier extérieur", "Espace repas extérieur", "Barbecue", "Ustensiles de barbecue", "Chaises longues"] },
+      { "title": "Pratique & sécurité", "items": ["Entrée privée", "Parking gratuit", "Détecteur de fumée", "Extincteur", "Borne de recharge électrique sur demande"] }
     ]
   },
   "around": {
@@ -289,12 +289,12 @@
     "hero": {
       "eyebrow": "À vivre à deux",
       "title": "Les Ardennes comme on aime les recommander",
-      "description": "Pas une simple liste d'adresses, mais une sélection de lieux et d'idées qui correspondent vraiment a l'esprit du séjour: beau, simple, gourmand, nature et chaleureux."
+      "description": "Une sélection de lieux et d'idées qui correspond vraiment à l'esprit du séjour: beau, simple, gourmand, nature et chaleureux."
     },
     "intro": {
       "eyebrow": "Nos repères",
       "title": "De belles idées autour de Libin",
-      "text": "Des lieux testés et appréciés, des idées simples et des adresses fiables pour profiter au mieux de votre séjour."
+      "text": "Une sélection d'idées, de balades et d'adresses faciles à recommander pour profiter au mieux de votre séjour."
     },
     "sections": [
       {
@@ -385,7 +385,7 @@
     "hero": {
       "eyebrow": "Préparer votre séjour",
       "title": "Des informations utiles, simples et rassurantes",
-      "description": "Cette page sert à répondre rapidement aux questions récurrentes et à rendre l'expérience fluide avant, pendant et après le séjour."
+      "description": "Retrouvez les informations utiles pour arriver sereinement, profiter du gîte et préparer votre départ sans stress."
     },
     "quickFacts": [
       { "title": "Arrivée", "text": "Entre 16:00 et 23:00" },
@@ -439,7 +439,7 @@
     ],
     "faqEyebrow": "Questions utiles",
     "faqTitle": "FAQ pratique",
-    "faqDescription": "Une FAQ pensée pour réduire les messages répétitifs sans donner une impression rigide ou froide.",
+    "faqDescription": "Les réponses aux questions pratiques les plus courantes avant et pendant votre séjour.",
     "faq": [
       { "question": "Peut-on arriver tard ?", "answer": "L'arrivée est prévue entre 16:00 et 23:00. Si vous pensez arriver en fin de plage, mieux vaut prévenir." },
       { "question": "Le parking est-il simple ?", "answer": "Oui. Il y a 7 places de parking au total, ce qui rend l'arrivée très facile." },
@@ -452,44 +452,52 @@
   "contact": {
     "meta": {
       "title": "Contact & réservation - La Bergerie & La Brassine",
-      "description": "Contactez facilement l'hôte via WhatsApp, email ou formulaire pour réserver La Bergerie ou La Brassine à Libin."
+      "description": "Contactez facilement l'hôte via WhatsApp, e-mail ou formulaire pour réserver La Bergerie ou La Brassine à Libin."
     },
     "hero": {
       "eyebrow": "Contact & réservation",
-      "title": "Parler d'un séjour, poser une question, réserver simplement",
+      "title": "Réserver, poser une question ou préparer une attention",
       "description": "WhatsApp reste le moyen le plus simple pour une réponse rapide. Le formulaire ci-dessous permet aussi d'envoyer une demande complète."
     },
     "direct": {
       "eyebrow": "Réservation directe",
       "title": "Le moyen le plus simple pour commencer",
-      "text": "Pour vérifier une disponibilité, demander un conseil ou préparer une surprise romantique, WhatsApp est mis en avant. Les liens Airbnb restent également visibles pour rassurer et laisser le choix.",
+      "text": "Pour vérifier une disponibilité, poser une question ou préparer une surprise romantique, WhatsApp est le plus direct. Vous pouvez aussi envoyer une demande complète via le formulaire, écrire par e-mail ou réserver sur Airbnb.",
       "whatsapp": "Contacter sur WhatsApp"
     },
     "practicalTitle": "Informations utiles",
     "practicalCards": [
-      { "title": "Adresse", "text": "Rue du Cure 19, 6890 Libin, Belgique. Affichee ici pour les voyageurs qui ont vraiment besoin de la retrouver facilement." },
-      { "title": "Check-in / check-out", "text": "Arrivée entre 16:00 et 23:00, départ avant 10:00." },
-      { "title": "Réservations", "text": "Directement via WhatsApp ou via les liens Airbnb de chaque gite selon la preference du voyageur." }
+      { "title": "Adresse", "text": "Rue du Curé 19, 6890 Libin, Belgique." },
+      { "title": "Check-in / check-out", "text": "Arrivée entre 16 h et 23 h, départ avant 10 h." },
+      { "title": "Réservations", "text": "En direct via WhatsApp, par e-mail, via le formulaire ou sur Airbnb selon votre préférence." }
     ],
     "addressTitle": "Adresse",
     "form": {
       "eyebrow": "Formulaire de prise de contact",
       "title": "Envoyer une demande",
-      "text": "Les demandes sont envoyées directement et traitées dans les meilleurs délais.",
+      "text": "Indiquez vos dates, le gîte souhaité et votre message. Nous reviendrons vers vous dès que possible avec les informations utiles.",
       "labels": {
-        "firstName": "Prenom",
+        "firstName": "Prénom",
         "lastName": "Nom",
-        "email": "Email",
-        "phone": "Telephone",
-        "dates": "Dates souhaitees",
-        "gite": "Gite souhaite",
-        "guests": "Nombre de voyageurs",
+        "email": "Adresse e-mail",
+        "phone": "Téléphone",
+        "dates": "Dates souhaitées",
+        "gite": "Gîte souhaité",
+        "guests": "Nombre de voyageurs (maximum 2)",
         "message": "Message",
         "submit": "Envoyer la demande",
-        "success": "Votre demande a bien ete envoyee. Nous vous repondrons rapidement.",
+        "success": "Votre demande a bien été envoyée. Nous vous répondrons rapidement.",
         "sending": "Envoi en cours...",
-        "invalid": "Merci de verifier les champs obligatoires et votre adresse email.",
-        "error": "Une erreur est survenue lors de l'envoi. Vous pouvez contacter directement {email} ou utiliser WhatsApp.",
+        "invalid": "Merci de vérifier les champs obligatoires et votre adresse e-mail.",
+        "error": "Une erreur est survenue lors de l'envoi. Vous pouvez nous contacter par e-mail ou utiliser WhatsApp.",
+        "placeholders": {
+          "firstName": "Votre prénom",
+          "lastName": "Votre nom",
+          "email": "vous@example.com",
+          "phone": "+32 …",
+          "dates": "Ex. du 12 au 14 septembre",
+          "message": "Votre demande, vos dates, une occasion spéciale…"
+        },
         "options": {
           "bergerie": "La Bergerie",
           "brassine": "La Brassine",

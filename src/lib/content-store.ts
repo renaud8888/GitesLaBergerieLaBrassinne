@@ -22,7 +22,7 @@ export const defaultImageContent = {
   branding: {
     logo: '/images/branding/logo.png',
     favicon: '/images/branding/favicon.ico',
-    ogImage: '/images/branding/og-image.svg',
+    ogImage: '/images/branding/og-image.png',
   },
   home: {
     heroImage: '/images/home/1.avif',
@@ -39,13 +39,13 @@ export const defaultImageContent = {
     },
   },
   around: {
-    heroImage: '/images/around/mirwart.jpg',
+    heroImage: '/images/around/mirwart1.jpg',
     specialImages: {
       cycling: '/images/around/velo.jpg',
-      mirwart: '/images/around/mirwart.jpg',
-      redu: '/images/around/redu.jpg',
-      books: '/images/around/redu1.jpeg',
-      lesse: '/images/around/lesse1.jpg',
+      mirwart: '/images/around/mirwart1.jpg',
+      redu: '/images/around/v_redu.jpg',
+      books: '/images/around/p_redu.jpg',
+      lesse: '/images/around/lesse.png',
       forest: '/images/around/foret1.jpg',
       fallback: '/images/around/default.jpg',
     },

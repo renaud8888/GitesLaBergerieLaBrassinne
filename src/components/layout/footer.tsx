@@ -36,6 +36,7 @@ export function Footer({
   ui: {
     eyebrow: string;
     whatsappLabel: string;
+    countryLabel: string;
   };
 }) {
   const whatsappUrl = getWhatsappLink(locale);
@@ -91,6 +92,8 @@ export function Footer({
                     {siteConfig.address.street}
                     <br />
                     {siteConfig.address.postalCode} {siteConfig.address.city}
+                    <br />
+                    {ui.countryLabel}
                   </span>
                 </p>
               </div>

@@ -5,7 +5,7 @@ import { getContactDestinationEmail, parseContactRequest, validateContactRequest
 export async function POST(request: Request) {
   const payload = parseContactRequest(await request.json());
   const destinationEmail = getContactDestinationEmail();
-  const successMessage = 'Votre demande a bien ete envoyee. Nous vous repondrons rapidement.';
+  const successMessage = 'Votre demande a bien été envoyée. Nous vous répondrons rapidement.';
 
   if (payload.company) {
     return NextResponse.json({ success: true, message: successMessage });
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
   if (!validation.valid) {
     return NextResponse.json(
-      { success: false, error: validation.error, message: 'Merci de verifier les champs obligatoires et votre adresse email.' },
+      { success: false, error: validation.error, message: 'Merci de vérifier les champs obligatoires et votre adresse e-mail.' },
       { status: 400 },
     );
   }
@@ -30,14 +30,14 @@ export async function POST(request: Request) {
     );
   }
 
-  const subject = `[Demande de reservation] ${payload.firstName} ${payload.lastName}`.trim();
+  const subject = `[Demande de réservation] ${payload.firstName} ${payload.lastName}`.trim();
   const text = [
-    `Prenom: ${payload.firstName || '-'}`,
+    `Prénom: ${payload.firstName || '-'}`,
     `Nom: ${payload.lastName || '-'}`,
-    `Email: ${payload.email || '-'}`,
-    `Telephone: ${payload.phone || '-'}`,
-    `Dates: ${payload.dates || '-'}`,
-    `Gite: ${payload.gite || '-'}`,
+    `Adresse e-mail: ${payload.email || '-'}`,
+    `Téléphone: ${payload.phone || '-'}`,
+    `Dates souhaitées: ${payload.dates || '-'}`,
+    `Gîte souhaité: ${payload.gite || '-'}`,
     `Voyageurs: ${payload.guests || '-'}`,
     '',
     'Message:',

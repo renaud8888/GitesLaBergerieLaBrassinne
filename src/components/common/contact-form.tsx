@@ -1,8 +1,10 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { Mail } from 'lucide-react';
 
 import { getWhatsappLink, siteConfig } from '@/data/site';
+import { WhatsAppIcon } from '@/components/common/brand-icons';
 import type { ContactRequestPayload } from '@/lib/contact-request';
 import type { Locale } from '@/lib/i18n';
 
@@ -21,6 +23,14 @@ type ContactFormProps = {
     sending: string;
     invalid: string;
     error: string;
+    placeholders: {
+      firstName: string;
+      lastName: string;
+      email: string;
+      phone: string;
+      dates: string;
+      message: string;
+    };
     options: {
       bergerie: string;
       brassine: string;
@@ -53,7 +63,6 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
         event.preventDefault();
 
         if (isSubmittingRef.current) {
-          console.warn('[contact-form] duplicate submit prevented');
           return;
         }
 
@@ -88,31 +97,18 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
 
           let result: ApiResult | null = null;
           let rawBody = '';
-          let jsonParseFailed = false;
 
           try {
             rawBody = await response.text();
             result = rawBody ? JSON.parse(rawBody) as ApiResult : null;
           } catch {
-            jsonParseFailed = true;
             result = null;
           }
 
           const apiMarkedError = result?.success === false;
           const requestSucceeded = response.ok && !apiMarkedError;
 
-          console.info('[contact-form] submit result', {
-            status: response.status,
-            ok: response.ok,
-            redirected: response.redirected,
-            url: response.url,
-            rawBody,
-            json: result,
-            jsonParseFailed,
-          });
-
           if (requestSucceeded) {
-            console.info('[contact-form] success branch');
             setStatus('success');
             setFeedback(result?.message || labels.success);
             setShowFallback(false);
@@ -122,7 +118,6 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
           }
 
           if (response.status === 400 && (result?.error === 'missing_required_fields' || result?.error === 'invalid_email')) {
-            console.info('[contact-form] validation error branch');
             setStatus('error');
             setFeedback(result?.message || labels.invalid);
             setShowFallback(false);
@@ -130,22 +125,12 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
             return;
           }
 
-          console.error('[contact-form] error branch', {
-            status: response.status,
-            ok: response.ok,
-            redirected: response.redirected,
-            url: response.url,
-            rawBody,
-            json: result,
-            jsonParseFailed,
-          });
           setStatus('error');
           setFeedback(labels.error.replace('{email}', siteConfig.email));
           setShowFallback(true);
           isSubmittingRef.current = false;
           return;
-        } catch (error) {
-          console.error('[contact-form] network error branch', error);
+        } catch {
           setStatus('error');
           setFeedback(labels.error.replace('{email}', siteConfig.email));
           setShowFallback(true);
@@ -158,24 +143,24 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
         <p className="text-sm leading-7 text-taupe-500">{ui.intro}</p>
       </div>
       <label className="grid gap-2 text-sm text-taupe-700">
-        <span className="font-medium tracking-[0.01em]">{labels.firstName}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" required />
+        <span className="font-medium tracking-[0.01em]">{labels.firstName} *</span>
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" placeholder={labels.placeholders.firstName} required />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.lastName}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="lastName" />
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="lastName" placeholder={labels.placeholders.lastName} />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
-        <span className="font-medium tracking-[0.01em]">{labels.email}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" required />
+        <span className="font-medium tracking-[0.01em]">{labels.email} *</span>
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" placeholder={labels.placeholders.email} required />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.phone}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="phone" />
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="phone" type="tel" placeholder={labels.placeholders.phone} />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.dates}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="dates" placeholder="Ex. 12 au 14 septembre" />
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="dates" placeholder={labels.placeholders.dates} />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.gite}</span>
@@ -197,8 +182,8 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
         {ui.reassurance}
       </div>
       <label className="grid gap-2 text-sm text-taupe-700 md:col-span-2">
-        <span className="font-medium tracking-[0.01em]">{labels.message}</span>
-        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" required />
+        <span className="font-medium tracking-[0.01em]">{labels.message} *</span>
+        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" placeholder={labels.placeholders.message} required />
       </label>
       <div className="md:col-span-2 flex flex-col gap-3">
         <button type="submit" className="button-primary w-full md:w-fit" disabled={status === 'loading'}>
@@ -208,15 +193,16 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
           <div className={`text-sm ${status === 'success' ? 'text-sage' : 'text-taupe-700'}`} aria-live="polite">
             <p>{feedback}</p>
             {showFallback ? (
-              <p className="mt-2">
-                <a href={`mailto:${siteConfig.email}`} className="underline underline-offset-2">
-                  {siteConfig.email}
+              <div className="mt-3 flex flex-wrap gap-2">
+                <a href={`mailto:${siteConfig.email}`} className="button-secondary px-4 py-2.5 text-xs">
+                  <Mail className="h-4 w-4" />
+                  <span>E-mail</span>
                 </a>
-                {' · '}
-                <a href={getWhatsappLink(locale)} target="_blank" rel="noreferrer" className="underline underline-offset-2">
-                  WhatsApp
+                <a href={getWhatsappLink(locale)} target="_blank" rel="noreferrer" className="button-whatsapp px-4 py-2.5 text-xs">
+                  <WhatsAppIcon className="h-4 w-4" />
+                  <span>WhatsApp</span>
                 </a>
-              </p>
+              </div>
             ) : null}
           </div>
         ) : null}
