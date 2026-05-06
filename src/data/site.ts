@@ -8,7 +8,7 @@ export const siteConfig = {
   shortName: 'La Bergerie & La Brassine',
   url: 'https://bergerie-brassine.com',
   phone: '+32496929355',
-  email: 'claranicolay@gmail.com',
+  email: 'contact@bergerie-brassine.com',
   address: {
     street: 'Rue du Curé 19',
     postalCode: '6890',

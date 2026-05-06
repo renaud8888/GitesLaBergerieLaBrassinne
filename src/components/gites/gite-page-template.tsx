@@ -36,6 +36,7 @@ export function GitePageTemplate({
   const entertainmentCategory = equipmentCategories[2];
   const outdoorCategory = equipmentCategories[3];
   const practicalCategory = equipmentCategories[4];
+  const airbnbScore = locale === 'en' ? '5.0/5' : '5,0/5';
 
   const quickFacts = [
     { icon: BedDouble, text: `${stats.guests} ${common.persons}` },
@@ -90,7 +91,7 @@ export function GitePageTemplate({
                   <p className="text-[11px] uppercase tracking-[0.24em] text-cream-100/78">{ui.common.travelerReviewsLabel}</p>
                   <p className="mt-2 inline-flex items-center gap-2 font-display text-3xl">
                     <Star size={16} fill="currentColor" className="text-cream-50" />
-                    5/5 Airbnb
+                    {airbnbScore} Airbnb
                   </p>
                   <p className="mt-1 text-sm text-cream-100/86">{stats.reviews} {common.reviews}</p>
                   <div className="mt-2 flex items-center gap-1 text-[#f4cd62]">

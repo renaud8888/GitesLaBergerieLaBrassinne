@@ -44,25 +44,14 @@ export function Footer({
   return (
     <footer className="mt-24 overflow-hidden bg-[linear-gradient(180deg,#4c3b33,#2b211d)] text-cream-100">
       <div className="section-shell relative py-12 md:py-16">
-        <div className="absolute right-[-8rem] top-[-5rem] h-64 w-64 rounded-full bg-rose-200/12 blur-3xl" />
-        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.85fr_0.95fr]">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-[1.15fr_0.85fr_1fr]">
           <div className="relative">
             <p className="eyebrow-chip border-white/12 bg-white/8 text-cream-100">{ui.eyebrow}</p>
-            <p className="mt-5 font-display text-4xl text-cream-50 md:text-[3.6rem]">{brand.name}</p>
+            <p className="mt-5 font-display text-4xl text-cream-50">{brand.name}</p>
             <p className="mt-4 max-w-md text-sm leading-7 text-cream-100/78">{footer.tagline}</p>
-            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm text-cream-100/82">
-              <Link href={`/${locale}/contact`} className="inline-flex items-center gap-2 transition hover:text-cream-50">
-                <MessageCircle size={15} />
-                {nav.contact}
-              </Link>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-cream-50">
-                <MessageCircle size={15} />
-                {ui.whatsappLabel}
-              </a>
-            </div>
           </div>
 
-          <div className="rounded-[1.6rem] border border-white/10 bg-white/6 p-6">
+          <div>
             <p className="font-display text-2xl text-cream-50">{footer.quickLinks}</p>
             <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
               <Link href={`/${locale}`} className="transition hover:text-cream-50">{nav.home}</Link>
@@ -74,42 +63,34 @@ export function Footer({
             </div>
           </div>
 
-          <div className="grid gap-4">
-            <div className="rounded-[1.6rem] border border-white/10 bg-white/6 p-6">
-              <p className="font-display text-2xl text-cream-50">{footer.contactTitle}</p>
-              <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
-                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 transition hover:text-cream-50">
-                  <MessageCircle size={16} />
-                  {ui.whatsappLabel}
-                </a>
-                <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-3 transition hover:text-cream-50">
-                  <Mail size={16} />
-                  {siteConfig.email}
-                </a>
-                <p className="inline-flex items-start gap-3">
-                  <MapPin size={16} className="mt-1" />
-                  <span>
-                    {siteConfig.address.street}
-                    <br />
-                    {siteConfig.address.postalCode} {siteConfig.address.city}
-                    <br />
-                    {ui.countryLabel}
-                  </span>
-                </p>
-              </div>
-            </div>
-
-            <div className="rounded-[1.6rem] border border-white/10 bg-white/8 p-6">
-              <p className="font-display text-2xl text-cream-50">{footer.reserveTitle}</p>
-              <p className="mt-2 text-sm leading-7 text-cream-100/75">{footer.reserveText}</p>
-              <div className="mt-5">
-                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-full border border-white/12 bg-white/12 px-4 py-3 text-sm text-cream-100/82 transition hover:bg-white/18 hover:text-cream-50">
-                  <MessageCircle size={16} />
-                  {ui.whatsappLabel}
-                </a>
-              </div>
+          <div>
+            <p className="font-display text-2xl text-cream-50">{footer.contactTitle}</p>
+            <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 transition hover:text-cream-50">
+                <MessageCircle size={16} />
+                <span>{ui.whatsappLabel} · {siteConfig.phone}</span>
+              </a>
+              <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-3 transition hover:text-cream-50">
+                <Mail size={16} />
+                {siteConfig.email}
+              </a>
+              <p className="inline-flex items-start gap-3">
+                <MapPin size={16} className="mt-1" />
+                <span>
+                  {siteConfig.address.street}
+                  <br />
+                  {siteConfig.address.postalCode} {siteConfig.address.city}
+                  <br />
+                  {ui.countryLabel}
+                </span>
+              </p>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="button-whatsapp mt-2 w-fit px-4 py-2.5 text-xs">
+                <MessageCircle size={16} />
+                {ui.whatsappLabel}
+              </a>
             </div>
           </div>
+
         </div>
       </div>
       <div className="border-t border-white/10 py-4">

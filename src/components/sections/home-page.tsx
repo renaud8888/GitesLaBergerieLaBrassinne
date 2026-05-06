@@ -70,6 +70,7 @@ export function HomePage({
     { icon: Bath, label: homeUi.compactFacts.bathroom },
   ];
   const romanticActions = homeUi.romanticActions;
+  const airbnbScore = locale === 'en' ? '5.0/5' : '5,0/5';
 
   return (
     <>
@@ -168,7 +169,7 @@ export function HomePage({
                   <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
                     <div>
                       <p className="text-sm text-taupe-500">Airbnb</p>
-                      <p className="font-display text-2xl text-taupe-900">5,0/5 · {gite.rating} avis</p>
+                      <p className="font-display text-2xl text-taupe-900">{airbnbScore} · {gite.rating} {dict.gites.common.reviews}</p>
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <ButtonLink href={gite.href}>{home.gites.discover}</ButtonLink>

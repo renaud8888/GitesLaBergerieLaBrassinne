@@ -3,6 +3,12 @@ import type { Metadata } from 'next';
 import { siteConfig } from '@/data/site';
 import type { Locale } from '@/lib/i18n';
 
+const ogLocales: Record<Locale, string> = {
+  fr: 'fr_BE',
+  en: 'en_GB',
+  nl: 'nl_BE',
+};
+
 export function createPageMetadata({
   locale,
   title,
@@ -27,6 +33,7 @@ export function createPageMetadata({
         fr: `${siteConfig.url}/fr${path ? `/${path}` : ''}`,
         en: `${siteConfig.url}/en${path ? `/${path}` : ''}`,
         nl: `${siteConfig.url}/nl${path ? `/${path}` : ''}`,
+        'x-default': `${siteConfig.url}/fr${path ? `/${path}` : ''}`,
       },
     },
     openGraph: {
@@ -34,7 +41,7 @@ export function createPageMetadata({
       description,
       url,
       siteName: siteConfig.name,
-      locale,
+      locale: ogLocales[locale],
       type: 'website',
       images: [
         {

@@ -17,6 +17,7 @@ type ContactFormProps = {
     dates: string;
     gite: string;
     guests: string;
+    guestsHelp: string;
     message: string;
     submit: string;
     success: string;
@@ -37,10 +38,6 @@ type ContactFormProps = {
       undecided: string;
     };
   };
-  ui: {
-    intro: string;
-    reassurance: string;
-  };
   locale: Locale;
 };
 
@@ -50,7 +47,7 @@ type ApiResult = {
   error?: string;
 };
 
-export function ContactForm({ labels, ui, locale }: ContactFormProps) {
+export function ContactForm({ labels, locale }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [feedback, setFeedback] = useState('');
   const [showFallback, setShowFallback] = useState(false);
@@ -139,12 +136,9 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
         }
       }}
     >
-      <div className="md:col-span-2">
-        <p className="text-sm leading-7 text-taupe-500">{ui.intro}</p>
-      </div>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.firstName} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" placeholder={labels.placeholders.firstName} required />
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" placeholder={labels.placeholders.firstName} required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.lastName}</span>
@@ -152,7 +146,7 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.email} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" placeholder={labels.placeholders.email} required />
+        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" placeholder={labels.placeholders.email} required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.phone}</span>
@@ -173,17 +167,20 @@ export function ContactForm({ labels, ui, locale }: ContactFormProps) {
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.guests}</span>
         <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="guests" type="number" min="1" max="2" defaultValue="2" />
+        <span className="text-xs text-taupe-500">{labels.guestsHelp}</span>
       </label>
-      <label className="sr-only" aria-hidden="true">
-        <span>Company</span>
-        <input tabIndex={-1} autoComplete="off" name="company" />
-      </label>
-      <div className="rounded-[1.35rem] border border-rose-200/40 bg-rose-100/72 p-4 text-sm leading-7 text-taupe-600">
-        {ui.reassurance}
+      <div
+        aria-hidden="true"
+        style={{ position: 'absolute', left: '-10000px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden' }}
+      >
+        <label>
+          <span>Company</span>
+          <input tabIndex={-1} autoComplete="off" name="company" aria-hidden="true" />
+        </label>
       </div>
       <label className="grid gap-2 text-sm text-taupe-700 md:col-span-2">
         <span className="font-medium tracking-[0.01em]">{labels.message} *</span>
-        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" placeholder={labels.placeholders.message} required />
+        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" placeholder={labels.placeholders.message} required aria-required="true" />
       </label>
       <div className="md:col-span-2 flex flex-col gap-3">
         <button type="submit" className="button-primary w-full md:w-fit" disabled={status === 'loading'}>

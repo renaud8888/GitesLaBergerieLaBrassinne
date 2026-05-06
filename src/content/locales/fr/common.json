@@ -304,7 +304,7 @@
         "intro": "Quatre adresses très différentes, mais toutes faciles à recommander pour bien manger pendant le séjour.",
         "items": [
           { "name": "Le Tchesté", "image": "/images/around/tcheste.jpg", "location": "Neufchâteau", "distance": "environ 20 min", "description": "Une adresse conviviale qui fonctionne très bien pour un repas généreux dans une ambiance détendue, avec burgers, grillades et esprit brasserie.", "tags": ["convivial", "burgers"] },
-          { "name": "Au Brichpot'es", "image": "/images/around/brichpotes.jpg", "location": "Mirwart", "distance": "20 min", "description": "Une belle option à Mirwart pour prolonger une balade par une table chaleureuse, avec un esprit ardennais et un cadre de village plein de charme.", "tags": ["ardennais", "bouchon"] },
+          { "name": "Au Brichpot'es", "image": "/images/around/brichpotes.jpg", "location": "Mirwart", "distance": "20 min", "description": "Une belle option à Mirwart pour prolonger une balade par une table chaleureuse, avec un esprit ardennais et un cadre de village plein de charme.", "tags": ["ardennais", "terroir"] },
           { "name": "Les Frangins", "image": "/images/around/frangins.jpg", "location": "Libin", "distance": "5 min", "description": "Très pratique si vous voulez rester tout près du gîte, avec une cuisine de brasserie bien faite, des grillades et une adresse simple à conseiller.", "tags": ["libin", "grillade"] },
           { "name": "Le Cor de Chasse", "image": "/images/around/cor.jpg", "location": "proche Saint-Hubert", "distance": "environ 20 min", "description": "Une adresse plus élégante quand on veut marquer le coup avec une vraie belle table dans la région.", "tags": ["classe", "occasion spéciale"] }
         ]
@@ -483,7 +483,8 @@
         "phone": "Téléphone",
         "dates": "Dates souhaitées",
         "gite": "Gîte souhaité",
-        "guests": "Nombre de voyageurs (maximum 2)",
+        "guests": "Nombre de voyageurs",
+        "guestsHelp": "Maximum 2 personnes",
         "message": "Message",
         "submit": "Envoyer la demande",
         "success": "Votre demande a bien été envoyée. Nous vous répondrons rapidement.",
