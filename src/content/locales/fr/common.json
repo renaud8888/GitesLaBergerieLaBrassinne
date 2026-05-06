@@ -136,9 +136,9 @@
       "title": "Ce que les voyageurs apprécient",
       "description": "",
       "items": [
-        { "author": "Accueil soigné", "origin": "", "gite": "Les deux gîtes", "text": "Un contact simple, une arrivée préparée et une présence disponible si une question se pose pendant le séjour." },
-        { "author": "Ambiance romantique", "origin": "", "gite": "La Bergerie & La Brassine", "text": "Des matières douces, une décoration chaleureuse et une atmosphère pensée pour ralentir à deux." },
-        { "author": "Confort pratique", "origin": "", "gite": "Séjour à Libin", "text": "Lits faits, linge prévu, cuisine équipée, parking sur place et informations utiles avant l'arrivée." }
+        { "author": "Marie & Thomas", "origin": "Bruxelles", "gite": "La Bergerie", "text": "Un séjour plein de charme, très doux, avec une maison prête à notre arrivée et cette impression d'être attendus avec soin." },
+        { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "Une vraie parenthèse à deux. L'ambiance est intime, chaleureuse, et tout est simple dès les premiers échanges." },
+        { "author": "Sophie & Antoine", "origin": "Liège", "gite": "Séjour à Libin", "text": "Nous avons adoré le calme, la décoration et les petites attentions. C'est exactement le genre d'adresse que l'on garde pour revenir." }
       ]
     },
     "finalCta": {

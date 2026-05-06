@@ -63,34 +63,17 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <div className="section-shell-wide grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="grid gap-4">
             <article className="surface-card-strong overflow-hidden p-0">
-              <div className="border-b border-white/70 bg-[linear-gradient(135deg,rgba(255,250,245,0.98),rgba(239,226,212,0.86))] p-6 md:p-8">
-                <SectionHeading eyebrow={contact.direct.eyebrow} title={contact.direct.title} description={contact.direct.text} />
-              </div>
-              <div className="grid gap-4 p-6 md:p-8">
+              <div className="grid gap-3 p-6 md:p-8">
                 <div className="rounded-[1.35rem] border border-rose-200/60 bg-white/86 p-4">
-                  <p className="text-xs uppercase tracking-[0.22em] text-wood">1. WhatsApp</p>
-                  <p className="mt-2 text-sm leading-6 text-taupe-500">{dict.ui.contact.quickResponseText}</p>
-                  <ButtonLink href={whatsappUrl} variant="whatsapp" external className="mt-4 w-full justify-center md:w-fit" icon={<WhatsAppIcon className="h-4 w-4" />}>
+                  <ButtonLink href={whatsappUrl} variant="whatsapp" external className="w-full justify-center" icon={<WhatsAppIcon className="h-4 w-4" />}>
                     {contact.direct.whatsapp}
                   </ButtonLink>
                 </div>
-                <div className="grid gap-3 md:grid-cols-2">
+                <div className="grid gap-3">
                   <a href="#contact-form" className="button-secondary justify-center">
                     <Mail className="h-4 w-4" />
                     <span>{dict.ui.contact.formButtonLabel}</span>
                   </a>
-                  <a href={`mailto:${siteConfig.email}`} className="button-secondary justify-center">
-                    <Mail className="h-4 w-4" />
-                    <span>{dict.ui.contact.emailButtonLabel}</span>
-                  </a>
-                </div>
-                <div className="grid gap-3 md:grid-cols-2">
-                  <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external icon={<Home className="h-4 w-4" />}>
-                    {dict.ui.contact.directAirbnbBergerie}
-                  </ButtonLink>
-                  <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external icon={<ExternalLink className="h-4 w-4" />}>
-                    {dict.ui.contact.directAirbnbBrassine}
-                  </ButtonLink>
                 </div>
               </div>
             </article>
@@ -131,15 +114,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <SectionHeading eyebrow={contact.form.eyebrow} title={contact.form.title} description={contact.form.text} />
             <div className="mt-6">
               <ContactForm labels={contact.form.labels} locale={locale} />
-            </div>
-            <div className="mt-4 grid gap-4">
-              <div className="rounded-[1.5rem] border border-taupe-100 bg-white/78 p-5">
-                <p className="inline-flex items-center gap-2 font-display text-2xl text-taupe-900">
-                  <Mail size={16} />
-                  {dict.ui.contact.inboxTitle}
-                </p>
-                <p className="mt-3 text-sm leading-7 text-taupe-500">{dict.ui.contact.inboxText.replace('{email}', siteConfig.email)}</p>
-              </div>
             </div>
           </div>
         </div>

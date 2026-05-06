@@ -44,14 +44,14 @@ export function HomePage({
   ];
   const totalReviews = giteStats.bergerie.reviews + giteStats.brassine.reviews;
   const homeGalleryImages = home.gallery.images;
-  const introTextHighlights = home.intro.highlights.filter((_, index) => index !== 0 && index !== 3);
+  const introTextHighlights = home.intro.highlights.filter((_, index) => index === 1);
   const introPhotoHighlights = [
     {
       key: 'stay-photo',
-      title: home.intro.highlights[0]?.title,
-      href: `/${locale}/gites/la-bergerie`,
+      title: home.gites.title,
+      href: '#gites',
       image: '/images/home/3.avif',
-      alt: home.intro.highlights[0]?.title,
+      alt: home.gites.title,
       cta: homeUi.introPhotoCtas.cottages,
     },
     {
@@ -129,7 +129,7 @@ export function HomePage({
         </div>
       </section>
 
-      <section className="section-space">
+      <section id="gites" className="section-space scroll-mt-28">
         <div className="section-shell">
           <SectionHeading eyebrow={home.gites.eyebrow} title={home.gites.title} description={home.gites.description} align="center" />
           <div className="mt-10 grid gap-6 lg:grid-cols-2">

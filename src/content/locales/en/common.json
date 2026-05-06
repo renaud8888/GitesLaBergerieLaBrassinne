@@ -136,9 +136,9 @@
       "title": "What guests appreciate",
       "description": "",
       "items": [
-        { "author": "Thoughtful welcome", "origin": "", "gite": "Both cottages", "text": "Simple contact, a prepared arrival and someone available if a question comes up during the stay." },
-        { "author": "Romantic atmosphere", "origin": "", "gite": "La Bergerie & La Brassine", "text": "Soft materials, warm decoration and a setting made for slowing down together." },
-        { "author": "Practical comfort", "origin": "", "gite": "Stay in Libin", "text": "Beds made, towels ready, equipped kitchen, on-site parking and useful information before arrival." }
+        { "author": "Marie & Thomas", "origin": "Brussels", "gite": "La Bergerie", "text": "A stay full of charm and softness, with everything ready when we arrived and the lovely feeling of being expected with care." },
+        { "author": "Camille & Julien", "origin": "Namur", "gite": "La Brassine", "text": "A real pause for two. The atmosphere is intimate and warm, and everything feels simple from the first messages." },
+        { "author": "Sophie & Antoine", "origin": "Liège", "gite": "Stay in Libin", "text": "We loved the calm, the decoration and the thoughtful touches. Exactly the kind of address you keep in mind for a return trip." }
       ]
     },
     "finalCta": {

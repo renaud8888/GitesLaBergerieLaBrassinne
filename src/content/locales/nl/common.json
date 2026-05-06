@@ -136,9 +136,9 @@
       "title": "Wat gasten waarderen",
       "description": "",
       "items": [
-        { "author": "Verzorgd onthaal", "origin": "", "gîte": "Beide gîtes", "text": "Eenvoudig contact, een voorbereide aankomst en iemand bereikbaar als er tijdens het verblijf een vraag is." },
-        { "author": "Romantische sfeer", "origin": "", "gîte": "La Bergerie & La Brassine", "text": "Zachte materialen, warme decoratie en een sfeer die uitnodigt om samen te vertragen." },
-        { "author": "Praktisch comfort", "origin": "", "gîte": "Verblijf in Libin", "text": "Opgemaakte bedden, handdoeken klaar, uitgeruste keuken, parking ter plaatse en nuttige info voor aankomst." }
+        { "author": "Marie & Thomas", "origin": "Brussel", "gite": "La Bergerie", "text": "Een verblijf vol charme en zachtheid, met alles klaar bij aankomst en het fijne gevoel dat er echt aan ons gedacht was." },
+        { "author": "Camille & Julien", "origin": "Namen", "gite": "La Brassine", "text": "Een echte pauze met twee. De sfeer is intiem en warm, en alles voelt eenvoudig vanaf de eerste berichten." },
+        { "author": "Sophie & Antoine", "origin": "Luik", "gite": "Verblijf in Libin", "text": "We hielden van de rust, de inrichting en de kleine attenties. Precies zo'n adres dat je onthoudt om terug te komen." }
       ]
     },
     "finalCta": {
