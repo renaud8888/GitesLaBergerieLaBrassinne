@@ -47,12 +47,20 @@ export function HomePage({
   const introTextHighlights = home.intro.highlights.filter((_, index) => index === 1);
   const introPhotoHighlights = [
     {
-      key: 'stay-photo',
-      title: home.gites.title,
-      href: '#gites',
-      image: '/images/home/3.avif',
-      alt: home.gites.title,
-      cta: homeUi.introPhotoCtas.cottages,
+      key: 'bergerie-photo',
+      title: home.gites.items.bergerie.name,
+      href: `/${locale}/gites/la-bergerie`,
+      image: '/images/home/2.avif',
+      alt: home.gites.items.bergerie.name,
+      cta: home.gites.discover,
+    },
+    {
+      key: 'brassine-photo',
+      title: home.gites.items.brassine.name,
+      href: `/${locale}/gites/la-brassine`,
+      image: '/images/home/1b.avif',
+      alt: home.gites.items.brassine.name,
+      cta: home.gites.discover,
     },
     {
       key: 'extras-photo',
