@@ -20,6 +20,7 @@ export function Footer({
     brassine: string;
     around: string;
     guide: string;
+    reviews: string;
     contact: string;
   };
   footer: {
@@ -59,6 +60,7 @@ export function Footer({
               <Link href={`/${locale}/gites/la-brassine`} className="transition hover:text-cream-50">{nav.brassine}</Link>
               <Link href={`/${locale}/alentours`} className="transition hover:text-cream-50">{nav.around}</Link>
               <Link href={`/${locale}/guide-pratique`} className="transition hover:text-cream-50">{nav.guide}</Link>
+              <Link href={`/${locale}/avis`} className="transition hover:text-cream-50">{nav.reviews}</Link>
               <Link href={`/${locale}/contact`} className="transition hover:text-cream-50">{nav.contact}</Link>
             </div>
           </div>

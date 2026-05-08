@@ -9,8 +9,34 @@
     "brassine": "La Brassine",
     "around": "Expériences",
     "guide": "Guide pratique",
+    "reviews": "Avis",
     "contact": "Contact",
     "reserve": "Réserver"
+  },
+  "reviewsPage": {
+    "meta": {
+      "title": "Laisser un avis Google - La Bergerie & La Brassine",
+      "description": "Choisissez le gîte concerné pour laisser facilement un avis Google après votre séjour à La Bergerie ou La Brassine."
+    },
+    "hero": {
+      "eyebrow": "Avis Google",
+      "title": "Un petit mot après le séjour",
+      "description": "Choisissez le gîte concerné, puis laissez votre avis directement sur Google."
+    },
+    "cards": {
+      "bergerie": {
+        "name": "La Bergerie",
+        "tagline": "Le gîte spacieux et romantique",
+        "text": "Pour les voyageurs qui ont séjourné à La Bergerie."
+      },
+      "brassine": {
+        "name": "La Brassine",
+        "tagline": "Le gîte intime et cocooning",
+        "text": "Pour les voyageurs qui ont séjourné à La Brassine."
+      }
+    },
+    "buttonLabel": "Laisser un avis Google",
+    "footerNote": "Merci pour votre retour, il aide beaucoup les prochains voyageurs à choisir leur séjour."
   },
   "footer": {
     "tagline": "Deux gîtes de charme installés dans une ancienne bâtisse à Libin, pensés pour les séjours à deux, les attentions délicates et les réservations directes en toute simplicité.",

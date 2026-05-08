@@ -23,6 +23,7 @@ type HeaderProps = {
     brassine: string;
     around: string;
     guide: string;
+    reviews: string;
     contact: string;
     reserve: string;
   };
@@ -34,6 +35,7 @@ const navItems = [
   { key: 'brassine', path: '/gites/la-brassine' },
   { key: 'around', path: '/alentours' },
   { key: 'guide', path: '/guide-pratique' },
+  { key: 'reviews', path: '/avis' },
   { key: 'contact', path: '/contact' },
 ] as const;
 
@@ -43,7 +45,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const normalized = stripLocaleFromPath(pathname);
-  const immersive = normalized === '/' || normalized.startsWith('/gites') || normalized === '/guide-pratique' || normalized === '/contact';
+  const immersive = normalized === '/' || normalized.startsWith('/gites') || normalized === '/guide-pratique' || normalized === '/avis' || normalized === '/contact';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);

@@ -27,6 +27,10 @@ export const siteConfig = {
     brassine:
       'https://www.google.com/maps/place/Gite+La+Brassinne/@49.9785957,5.2596728,17z/data=!3m1!4b1!4m6!3m5!1s0x47c02b720e0a7291:0x4716f2598b1e71ce!8m2!3d49.9785957!4d5.2596728!16s%2Fg%2F11q4hdygts?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
   },
+  googleReviewRequests: {
+    bergerie: 'https://g.page/r/CTm6wjToGNkeEAE/review',
+    brassine: 'https://g.page/r/Cc5xHotZ8hZHEBM/review',
+  },
   whatsapp: {
     fr: {
       default: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite des informations pour un séjour à Libin.'),

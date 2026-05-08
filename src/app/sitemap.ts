@@ -4,9 +4,9 @@ import { siteConfig } from '@/data/site';
 import { locales } from '@/lib/i18n';
 
 const pathsByLocale = {
-  fr: ['', '/gites/la-bergerie', '/gites/la-brassine', '/alentours', '/guide-pratique', '/contact'],
-  en: ['', '/gites/la-bergerie', '/gites/la-brassine', '/alentours', '/guide-pratique', '/contact'],
-  nl: ['', '/gites/la-bergerie', '/gites/la-brassine', '/alentours', '/guide-pratique', '/contact'],
+  fr: ['', '/gites/la-bergerie', '/gites/la-brassine', '/alentours', '/guide-pratique', '/avis', '/contact'],
+  en: ['', '/gites/la-bergerie', '/gites/la-brassine', '/alentours', '/guide-pratique', '/avis', '/contact'],
+  nl: ['', '/gites/la-bergerie', '/gites/la-brassine', '/alentours', '/guide-pratique', '/avis', '/contact'],
 } as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {

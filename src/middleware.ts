@@ -28,6 +28,11 @@ const localizedShortRoutes: Record<string, Record<Locale, string>> = {
     en: '/en/guide-pratique',
     nl: '/nl/guide-pratique',
   },
+  '/avis': {
+    fr: '/fr/avis',
+    en: '/en/avis',
+    nl: '/nl/avis',
+  },
 };
 
 function getPreferredLocale(request: NextRequest): Locale {
@@ -54,5 +59,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/contact', '/la-bergerie', '/la-brassine', '/experiences', '/guide-pratique', '/gites/:path*'],
+  matcher: ['/contact', '/la-bergerie', '/la-brassine', '/experiences', '/guide-pratique', '/avis', '/gites/:path*'],
 };

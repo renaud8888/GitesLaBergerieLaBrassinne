@@ -9,8 +9,34 @@
     "brassine": "La Brassine",
     "around": "Experiences",
     "guide": "Practical guide",
+    "reviews": "Reviews",
     "contact": "Contact",
     "reserve": "Book"
+  },
+  "reviewsPage": {
+    "meta": {
+      "title": "Leave a Google review - La Bergerie & La Brassine",
+      "description": "Choose the cottage you stayed in and leave a Google review for La Bergerie or La Brassine."
+    },
+    "hero": {
+      "eyebrow": "Google reviews",
+      "title": "A kind word after your stay",
+      "description": "Choose the cottage you stayed in, then leave your review directly on Google."
+    },
+    "cards": {
+      "bergerie": {
+        "name": "La Bergerie",
+        "tagline": "The spacious romantic cottage",
+        "text": "For guests who stayed at La Bergerie."
+      },
+      "brassine": {
+        "name": "La Brassine",
+        "tagline": "The intimate cocooning cottage",
+        "text": "For guests who stayed at La Brassine."
+      }
+    },
+    "buttonLabel": "Leave a Google review",
+    "footerNote": "Thank you for sharing your experience. It helps future guests choose their stay."
   },
   "footer": {
     "tagline": "Two charming cottages set in a lovingly restored Ardennes building in Libin, created for romantic stays, thoughtful touches and easy direct booking.",

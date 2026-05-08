@@ -9,8 +9,34 @@
     "brassine": "La Brassine",
     "around": "Belevenissen",
     "guide": "Praktische gids",
+    "reviews": "Reviews",
     "contact": "Contact",
     "reserve": "Boeken"
+  },
+  "reviewsPage": {
+    "meta": {
+      "title": "Een Google-review achterlaten - La Bergerie & La Brassine",
+      "description": "Kies de gîte waar je verbleef en laat makkelijk een Google-review achter voor La Bergerie of La Brassine."
+    },
+    "hero": {
+      "eyebrow": "Google reviews",
+      "title": "Een woordje na je verblijf",
+      "description": "Kies de juiste gîte en laat je review rechtstreeks achter op Google."
+    },
+    "cards": {
+      "bergerie": {
+        "name": "La Bergerie",
+        "tagline": "De ruime romantische gîte",
+        "text": "Voor gasten die in La Bergerie verbleven."
+      },
+      "brassine": {
+        "name": "La Brassine",
+        "tagline": "De intieme cocooning gîte",
+        "text": "Voor gasten die in La Brassine verbleven."
+      }
+    },
+    "buttonLabel": "Google-review achterlaten",
+    "footerNote": "Bedankt om je ervaring te delen. Dat helpt toekomstige gasten bij hun keuze."
   },
   "footer": {
     "tagline": "Twee charmante gîtes in een authentiek gebouw in Libin, gemaakt voor romantische verblijven, mooie attenties en eenvoudige rechtstreekse reservaties.",
