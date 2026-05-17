@@ -13,7 +13,7 @@ export const extraLocaleContent = {
       footer: {
         eyebrow: 'Maison d’hôtes romantique',
         whatsappLabel: 'WhatsApp',
-        googleReviewsLabel: 'Avis Google',
+        googleReviewsLabel: 'Voir sur Google',
         airbnbLabel: 'Airbnb',
         countryLabel: 'Belgique',
       },
@@ -56,7 +56,7 @@ export const extraLocaleContent = {
         common: {
           reserveLabel: 'Réserver',
           travelerReviewsLabel: 'Avis voyageurs',
-          googleReviewsLabel: 'Voir les avis Google',
+          googleReviewsLabel: 'Voir sur Google',
           firstImpressionsEyebrow: 'Premières impressions',
           bookingCardTitle: 'Réserver simplement',
           bookingCardText:
@@ -65,7 +65,7 @@ export const extraLocaleContent = {
           googleLabel: 'Google',
           whatsappLabel: 'WhatsApp',
           summaryEyebrow: 'En bref',
-          googleCardText: 'Consulter les avis et l’itinéraire sur Google.',
+          googleCardText: 'Consulter la fiche Google et les informations pratiques.',
         },
         bergerie: {
           firstImpressionsTitle: 'Plus d’espace, plus de lumière, toujours la même douceur.',
@@ -119,12 +119,16 @@ export const extraLocaleContent = {
         inboxTitle: 'Écrire autrement',
         inboxText:
           'Vous pouvez nous écrire via le formulaire, WhatsApp ou e-mail. Si vous préférez réserver via Airbnb, les deux annonces restent accessibles.',
+        bookingPageTitle: 'Vous souhaitez réserver un séjour ?',
+        bookingPageText:
+          'Pour une demande de réservation, utilisez notre page dédiée afin de nous transmettre vos dates, le gîte souhaité et vos préférences.',
+        bookingPageButton: 'Accéder à la page Réservation',
       },
       contactForm: {
         intro:
-          'Indiquez vos dates, le gîte souhaité et votre message: nous vous répondrons avec les informations utiles.',
+          'Pour une question générale, une information pratique ou une attention particulière, laissez-nous simplement votre message.',
         reassurance:
-          'Nous revenons vers vous dès que possible pour confirmer les disponibilités, répondre à vos questions ou préparer une attention particulière.',
+          'Vos informations servent uniquement à répondre à votre demande.',
       },
       whatsappFab: {
         ariaLabel: 'Contacter sur WhatsApp',
@@ -143,7 +147,7 @@ export const extraLocaleContent = {
       footer: {
         eyebrow: 'Romantic guest house',
         whatsappLabel: 'WhatsApp',
-        googleReviewsLabel: 'Google reviews',
+        googleReviewsLabel: 'See on Google',
         airbnbLabel: 'Airbnb',
         countryLabel: 'Belgium',
       },
@@ -186,7 +190,7 @@ export const extraLocaleContent = {
         common: {
           reserveLabel: 'Book',
           travelerReviewsLabel: 'Guest reviews',
-          googleReviewsLabel: 'View Google reviews',
+          googleReviewsLabel: 'See on Google',
           firstImpressionsEyebrow: 'First impressions',
           bookingCardTitle: 'Book easily',
           bookingCardText:
@@ -195,7 +199,7 @@ export const extraLocaleContent = {
           googleLabel: 'Google',
           whatsappLabel: 'WhatsApp',
           summaryEyebrow: 'In brief',
-          googleCardText: 'View reviews and directions on Google.',
+          googleCardText: 'View the Google listing and practical details.',
         },
         bergerie: {
           firstImpressionsTitle: 'More space, more light, and the same gentle atmosphere.',
@@ -249,12 +253,16 @@ export const extraLocaleContent = {
         inboxTitle: 'Another way to write',
         inboxText:
           'You can contact us through the form, WhatsApp or e-mail. If you prefer Airbnb, both listings remain available.',
+        bookingPageTitle: 'Would you like to book?',
+        bookingPageText:
+          'For a booking request, please use our dedicated page so you can share your dates, preferred cottage and preferences.',
+        bookingPageButton: 'Go to the Booking page',
       },
       contactForm: {
         intro:
-          'Share your dates, preferred cottage and message: we will reply with the useful details.',
+          'For a general question, a practical detail or a special touch, simply leave us your message.',
         reassurance:
-          'We will get back to you as soon as possible to confirm availability, answer your questions or prepare a special touch.',
+          'Your information is only used to answer your request.',
       },
       whatsappFab: {
         ariaLabel: 'Contact on WhatsApp',
@@ -273,7 +281,7 @@ export const extraLocaleContent = {
       footer: {
         eyebrow: 'Romantisch gastenverblijf',
         whatsappLabel: 'WhatsApp',
-        googleReviewsLabel: 'Google reviews',
+        googleReviewsLabel: 'Bekijk op Google',
         airbnbLabel: 'Airbnb',
         countryLabel: 'België',
       },
@@ -316,7 +324,7 @@ export const extraLocaleContent = {
         common: {
           reserveLabel: 'Boeken',
           travelerReviewsLabel: 'Gastenreviews',
-          googleReviewsLabel: 'Bekijk Google reviews',
+          googleReviewsLabel: 'Bekijk op Google',
           firstImpressionsEyebrow: 'Eerste indrukken',
           bookingCardTitle: 'Eenvoudig boeken',
           bookingCardText:
@@ -325,7 +333,7 @@ export const extraLocaleContent = {
           googleLabel: 'Google',
           whatsappLabel: 'WhatsApp',
           summaryEyebrow: 'Kort samengevat',
-          googleCardText: 'Bekijk reviews en route op Google.',
+          googleCardText: 'Bekijk de Google-vermelding en praktische info.',
         },
         bergerie: {
           firstImpressionsTitle: 'Meer ruimte, meer licht, en nog altijd dezelfde zachtheid.',
@@ -379,12 +387,16 @@ export const extraLocaleContent = {
         inboxTitle: 'Nog een manier om te schrijven',
         inboxText:
           'Je kunt ons bereiken via het formulier, WhatsApp of e-mail. Wie liever via Airbnb reserveert, vindt beide advertenties terug.',
+        bookingPageTitle: 'Wil je reserveren?',
+        bookingPageText:
+          'Gebruik voor een reserveringsaanvraag onze aparte pagina om uw data, gewenste gîte en voorkeuren door te geven.',
+        bookingPageButton: 'Naar de reserveringspagina',
       },
       contactForm: {
         intro:
-          'Vermeld je data, de gewenste gîte en je bericht: we antwoorden met de nuttige informatie.',
+          'Voor een algemene vraag, praktische info of een bijzondere attentie kunt u ons gewoon uw bericht sturen.',
         reassurance:
-          'We komen zo snel mogelijk bij je terug om beschikbaarheid te bevestigen, vragen te beantwoorden of een bijzondere attentie voor te bereiden.',
+          'Uw gegevens worden alleen gebruikt om op uw aanvraag te antwoorden.',
       },
       whatsappFab: {
         ariaLabel: 'Contact via WhatsApp',

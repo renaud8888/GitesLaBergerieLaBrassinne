@@ -3,36 +3,53 @@
 import { useRef, useState } from 'react';
 import { Mail } from 'lucide-react';
 
-import { getWhatsappLink, siteConfig } from '@/data/site';
 import { WhatsAppIcon } from '@/components/common/brand-icons';
+import { getBookingWhatsappLink } from '@/data/booking';
+import { siteConfig } from '@/data/site';
 import type { ContactRequestPayload } from '@/lib/contact-request';
 import type { Locale } from '@/lib/i18n';
 
-type ContactFormProps = {
-  labels: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-    subject: string;
-    message: string;
-    consent: string;
-    submit: string;
-    success: string;
-    sending: string;
-    invalid: string;
-    error: string;
-    responsePreference: string;
-    privacy: string;
-    placeholders: {
-      firstName: string;
-      lastName: string;
-      email: string;
-      phone: string;
-      subject: string;
-      message: string;
-    };
-  };
+type BookingFormLabels = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  arrivalDate: string;
+  departureDate: string;
+  gite: string;
+  guests: string;
+  contactPreference: string;
+  occasion: string;
+  message: string;
+  consent: string;
+  submit: string;
+  sending: string;
+  success: string;
+  invalid: string;
+  error: string;
+  reassurance: string;
+  privacy: string;
+  fastAnswer: string;
+};
+
+type BookingFormOptions = {
+  bergerie: string;
+  brassine: string;
+  undecided: string;
+  whatsapp: string;
+  email: string;
+  phone: string;
+  romantic: string;
+  birthday: string;
+  surprise: string;
+  rest: string;
+  other: string;
+  none: string;
+};
+
+type BookingFormProps = {
+  labels: BookingFormLabels;
+  options: BookingFormOptions;
   locale: Locale;
 };
 
@@ -42,7 +59,9 @@ type ApiResult = {
   error?: string;
 };
 
-export function ContactForm({ labels, locale }: ContactFormProps) {
+const inputClass = 'rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white';
+
+export function BookingForm({ labels, options, locale }: BookingFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [feedback, setFeedback] = useState('');
   const [showFallback, setShowFallback] = useState(false);
@@ -61,17 +80,23 @@ export function ContactForm({ labels, locale }: ContactFormProps) {
         const form = event.currentTarget;
         const formData = new FormData(form);
         const payload = Object.fromEntries(formData.entries()) as Record<string, string>;
+        const arrivalDate = payload.arrivalDate ?? '';
+        const departureDate = payload.departureDate ?? '';
         const requestPayload: ContactRequestPayload = {
           firstName: payload.firstName ?? '',
           lastName: payload.lastName ?? '',
           email: payload.email ?? '',
           phone: payload.phone ?? '',
-          dates: '',
-          gite: '',
-          guests: '',
-          message: [payload.subject ? `Sujet: ${payload.subject}` : '', payload.message ?? ''].filter(Boolean).join('\n\n'),
+          dates: [arrivalDate, departureDate].filter(Boolean).join(' - '),
+          arrivalDate,
+          departureDate,
+          gite: payload.gite ?? 'undecided',
+          guests: payload.guests ?? '2',
+          contactPreference: payload.contactPreference ?? '',
+          occasion: payload.occasion ?? '',
+          message: payload.message ?? '',
           consent: payload.consent === 'accepted',
-          requestType: 'contact',
+          requestType: 'booking',
           company: payload.company ?? '',
         };
 
@@ -90,17 +115,15 @@ export function ContactForm({ labels, locale }: ContactFormProps) {
           });
 
           let result: ApiResult | null = null;
-          let rawBody = '';
+          const rawBody = await response.text();
 
           try {
-            rawBody = await response.text();
             result = rawBody ? JSON.parse(rawBody) as ApiResult : null;
           } catch {
             result = null;
           }
 
-          const apiMarkedError = result?.success === false;
-          const requestSucceeded = response.ok && !apiMarkedError;
+          const requestSucceeded = response.ok && result?.success !== false;
 
           if (requestSucceeded) {
             setStatus('success');
@@ -123,35 +146,68 @@ export function ContactForm({ labels, locale }: ContactFormProps) {
           setFeedback(labels.error.replace('{email}', siteConfig.email));
           setShowFallback(true);
           isSubmittingRef.current = false;
-          return;
         } catch {
           setStatus('error');
           setFeedback(labels.error.replace('{email}', siteConfig.email));
           setShowFallback(true);
           isSubmittingRef.current = false;
-          return;
         }
       }}
     >
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.firstName} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" placeholder={labels.placeholders.firstName} required aria-required="true" />
+        <input className={inputClass} name="firstName" autoComplete="given-name" required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.lastName} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="lastName" placeholder={labels.placeholders.lastName} required aria-required="true" />
+        <input className={inputClass} name="lastName" autoComplete="family-name" required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.email} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" placeholder={labels.placeholders.email} required aria-required="true" />
+        <input className={inputClass} name="email" type="email" autoComplete="email" required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.phone}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="phone" type="tel" placeholder={labels.placeholders.phone} />
+        <input className={inputClass} name="phone" type="tel" autoComplete="tel" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
-        <span className="font-medium tracking-[0.01em]">{labels.subject} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="subject" placeholder={labels.placeholders.subject} required aria-required="true" />
+        <span className="font-medium tracking-[0.01em]">{labels.gite}</span>
+        <select className={inputClass} name="gite" defaultValue="undecided">
+          <option value="bergerie">{options.bergerie}</option>
+          <option value="brassine">{options.brassine}</option>
+          <option value="undecided">{options.undecided}</option>
+        </select>
+      </label>
+      <label className="grid gap-2 text-sm text-taupe-700">
+        <span className="font-medium tracking-[0.01em]">{labels.guests}</span>
+        <input className={inputClass} name="guests" type="number" min="1" max="2" defaultValue="2" />
+      </label>
+      <label className="grid gap-2 text-sm text-taupe-700">
+        <span className="font-medium tracking-[0.01em]">{labels.arrivalDate}</span>
+        <input className={inputClass} name="arrivalDate" type="date" />
+      </label>
+      <label className="grid gap-2 text-sm text-taupe-700">
+        <span className="font-medium tracking-[0.01em]">{labels.departureDate}</span>
+        <input className={inputClass} name="departureDate" type="date" />
+      </label>
+      <label className="grid gap-2 text-sm text-taupe-700">
+        <span className="font-medium tracking-[0.01em]">{labels.contactPreference}</span>
+        <select className={inputClass} name="contactPreference" defaultValue="whatsapp">
+          <option value="whatsapp">{options.whatsapp}</option>
+          <option value="email">{options.email}</option>
+          <option value="phone">{options.phone}</option>
+        </select>
+      </label>
+      <label className="grid gap-2 text-sm text-taupe-700">
+        <span className="font-medium tracking-[0.01em]">{labels.occasion}</span>
+        <select className={inputClass} name="occasion" defaultValue="none">
+          <option value="romantic">{options.romantic}</option>
+          <option value="birthday">{options.birthday}</option>
+          <option value="surprise">{options.surprise}</option>
+          <option value="rest">{options.rest}</option>
+          <option value="other">{options.other}</option>
+          <option value="none">{options.none}</option>
+        </select>
       </label>
       <div
         aria-hidden="true"
@@ -163,16 +219,17 @@ export function ContactForm({ labels, locale }: ContactFormProps) {
         </label>
       </div>
       <label className="grid gap-2 text-sm text-taupe-700 md:col-span-2">
-        <span className="font-medium tracking-[0.01em]">{labels.message} *</span>
-        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" placeholder={labels.placeholders.message} required aria-required="true" />
+        <span className="font-medium tracking-[0.01em]">{labels.message}</span>
+        <textarea className="min-h-36 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" />
       </label>
       <label className="flex items-start gap-3 rounded-[1.25rem] border border-taupe-100 bg-white/78 p-4 text-sm leading-6 text-taupe-700 md:col-span-2">
         <input className="mt-1 h-4 w-4 rounded border-taupe-300 accent-taupe-900" type="checkbox" name="consent" value="accepted" required aria-required="true" />
         <span>{labels.consent} *</span>
       </label>
-      <div className="md:col-span-2 flex flex-col gap-3">
+      <div className="flex flex-col gap-3 md:col-span-2">
         <div className="rounded-[1.25rem] border border-rose-200/60 bg-rose-50/60 p-4 text-sm leading-7 text-taupe-700">
-          <p>{labels.responsePreference}</p>
+          <p>{labels.reassurance}</p>
+          <p className="mt-2">{labels.fastAnswer}</p>
           <p className="mt-2 text-xs uppercase tracking-[0.18em] text-taupe-500">{labels.privacy}</p>
         </div>
         <button type="submit" className="button-primary w-full md:w-fit" disabled={status === 'loading'}>
@@ -187,7 +244,7 @@ export function ContactForm({ labels, locale }: ContactFormProps) {
                   <Mail className="h-4 w-4" />
                   <span>E-mail</span>
                 </a>
-                <a href={getWhatsappLink(locale)} target="_blank" rel="noopener noreferrer" className="button-whatsapp px-4 py-2.5 text-xs">
+                <a href={getBookingWhatsappLink(locale)} target="_blank" rel="noopener noreferrer" className="button-whatsapp px-4 py-2.5 text-xs">
                   <WhatsAppIcon className="h-4 w-4" />
                   <span>WhatsApp</span>
                 </a>

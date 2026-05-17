@@ -6,10 +6,12 @@ import { FaqAccordion } from '@/components/common/faq-accordion';
 import { Gallery } from '@/components/common/gallery';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { SectionHeading } from '@/components/common/section-heading';
+import { TrustSection } from '@/components/common/trust-section';
+import { formatAirbnbRating, formatAirbnbReviewCount, reviewLabels } from '@/data/review-sources';
 import { getWhatsappLink, giteStats } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
 import type { defaultImageContent } from '@/lib/content-store';
-import type { Locale } from '@/lib/i18n';
+import { getBookingPath, type Locale } from '@/lib/i18n';
 
 export function GitePageTemplate({
   locale,
@@ -36,7 +38,6 @@ export function GitePageTemplate({
   const entertainmentCategory = equipmentCategories[2];
   const outdoorCategory = equipmentCategories[3];
   const practicalCategory = equipmentCategories[4];
-  const airbnbScore = locale === 'en' ? '5.0/5' : '5,0/5';
 
   const quickFacts = [
     { icon: BedDouble, text: `${stats.guests} ${common.persons}` },
@@ -64,7 +65,7 @@ export function GitePageTemplate({
             <h1 className="mt-5 font-display text-6xl text-cream-50 md:text-[5.5rem]">{gite.hero.title}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100 md:text-xl">{gite.hero.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.38)]">
+              <ButtonLink href={getBookingPath(locale)} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.38)]">
                 {ui.common.reserveLabel}
               </ButtonLink>
               <ButtonLink href={whatsappUrl} variant="secondary" external className="border-white/18 bg-white/14 text-white" icon={<WhatsAppIcon className="h-4 w-4" />}>
@@ -91,24 +92,19 @@ export function GitePageTemplate({
                   <p className="text-[11px] uppercase tracking-[0.24em] text-cream-100/78">{ui.common.travelerReviewsLabel}</p>
                   <p className="mt-2 inline-flex items-center gap-2 font-display text-3xl">
                     <Star size={16} fill="currentColor" className="text-cream-50" />
-                    {airbnbScore} Airbnb
+                    {formatAirbnbRating(locale, slug)}
                   </p>
-                  <p className="mt-1 text-sm text-cream-100/86">{stats.reviews} {common.reviews}</p>
+                  <p className="mt-1 text-sm text-cream-100/86">{formatAirbnbReviewCount(locale, slug)}</p>
                   <div className="mt-2 flex items-center gap-1 text-[#f4cd62]">
                     {Array.from({ length: 5 }).map((_, index) => (
-                      <Star key={index} size={13} fill="currentColor" />
+                      <Star key={index} size={13} fill="currentColor" aria-hidden="true" />
                     ))}
                   </div>
                 </div>
-                <a href={stats.googleUrl} target="_blank" rel="noreferrer" className="rounded-[1.35rem] border border-white/14 bg-white/10 px-4 py-3 text-sm text-cream-50 transition hover:bg-white/16">
+                <a href={stats.googleUrl} target="_blank" rel="noopener noreferrer" className="rounded-[1.35rem] border border-white/14 bg-white/10 px-4 py-3 text-sm text-cream-50 transition hover:bg-white/16">
                   <div className="flex items-center gap-2 text-cream-50">
                     <GoogleIcon className="h-4 w-4" />
-                    <span className="text-cream-50/94">{ui.common.googleReviewsLabel}</span>
-                  </div>
-                  <div className="mt-3 flex items-center gap-1 text-[#f4cd62]">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <Star key={index} size={13} fill="currentColor" />
-                    ))}
+                    <span className="text-cream-50/94">{reviewLabels[locale].googleCta}</span>
                   </div>
                   <p className="mt-3 max-w-[18rem] text-xs leading-5 text-cream-100/82">{ui.common.googleCardText}</p>
                 </a>
@@ -117,6 +113,8 @@ export function GitePageTemplate({
           </div>
         </div>
       </section>
+
+      <TrustSection locale={locale} variant="compact" gite={slug} />
 
       <section className="section-space pt-0">
         <div className="section-shell-wide">
@@ -137,7 +135,7 @@ export function GitePageTemplate({
               ))}
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`}>{ui.common.reserveLabel}</ButtonLink>
+              <ButtonLink href={getBookingPath(locale)}>{ui.common.reserveLabel}</ButtonLink>
               <ButtonLink href={stats.airbnbUrl} variant="secondary" external>
                 {ui[slug].airbnbLabel}
               </ButtonLink>
@@ -253,7 +251,7 @@ export function GitePageTemplate({
               <p className="font-display text-3xl text-taupe-900">{ui.common.bookingCardTitle}</p>
               <p className="mt-3 text-base leading-8 text-taupe-500">{ui.common.bookingCardText}</p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <ButtonLink href={`/${locale}/contact`}>{ui.common.reserveLabel}</ButtonLink>
+                <ButtonLink href={getBookingPath(locale)}>{ui.common.reserveLabel}</ButtonLink>
                 <ButtonLink href={stats.airbnbUrl} variant="secondary" external>
                   {ui[slug].airbnbLabel}
                 </ButtonLink>

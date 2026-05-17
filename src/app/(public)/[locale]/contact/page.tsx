@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ExternalLink, Home, Mail, MapPin, ShieldCheck } from 'lucide-react';
+import { CalendarCheck, Mail, MapPin, ShieldCheck } from 'lucide-react';
 
 import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
@@ -10,7 +10,7 @@ import { getWhatsappLink, siteConfig } from '@/data/site';
 import { getSiteImages } from '@/lib/content-store';
 import { getDictionary, type SiteDictionary } from '@/lib/dictionaries';
 import { createPageMetadata } from '@/lib/metadata';
-import { type Locale } from '@/lib/i18n';
+import { getBookingPath, type Locale } from '@/lib/i18n';
 
 type PracticalCard = SiteDictionary['contact']['practicalCards'][number];
 
@@ -46,14 +46,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <h1 className="mt-4 max-w-3xl font-display text-5xl md:text-7xl">{contact.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100/84">{contact.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href={whatsappUrl} variant="whatsapp" external icon={<WhatsAppIcon className="h-4 w-4" />}>
+            <ButtonLink href={getBookingPath(locale)} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.38)]" icon={<CalendarCheck className="h-4 w-4" />}>
+              {dict.nav.reserve}
+            </ButtonLink>
+            <ButtonLink href={whatsappUrl} variant="secondary" external className="border-white/16 bg-white/10 text-white" icon={<WhatsAppIcon className="h-4 w-4" />}>
               {dict.ui.contact.heroWhatsappLabel}
-            </ButtonLink>
-            <ButtonLink href={siteConfig.airbnb.bergerie} variant="secondary" external className="border-white/16 bg-white/10 text-white" icon={<Home className="h-4 w-4" />}>
-              {dict.ui.contact.directAirbnbBergerie}
-            </ButtonLink>
-            <ButtonLink href={siteConfig.airbnb.brassine} variant="secondary" external className="border-white/16 bg-white/10 text-white" icon={<ExternalLink className="h-4 w-4" />}>
-              {dict.ui.contact.directAirbnbBrassine}
             </ButtonLink>
           </div>
         </div>
@@ -64,6 +61,13 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div className="grid gap-4">
             <article className="surface-card-strong overflow-hidden p-0">
               <div className="grid gap-3 p-6 md:p-8">
+                <div className="rounded-[1.35rem] border border-rose-200/60 bg-white/86 p-4">
+                  <p className="font-display text-3xl text-taupe-900">{dict.ui.contact.bookingPageTitle}</p>
+                  <p className="mt-3 text-sm leading-7 text-taupe-500">{dict.ui.contact.bookingPageText}</p>
+                  <ButtonLink href={getBookingPath(locale)} className="mt-5 w-full justify-center" icon={<CalendarCheck className="h-4 w-4" />}>
+                    {dict.ui.contact.bookingPageButton}
+                  </ButtonLink>
+                </div>
                 <div className="rounded-[1.35rem] border border-rose-200/60 bg-white/86 p-4">
                   <ButtonLink href={whatsappUrl} variant="whatsapp" external className="w-full justify-center" icon={<WhatsAppIcon className="h-4 w-4" />}>
                     {contact.direct.whatsapp}

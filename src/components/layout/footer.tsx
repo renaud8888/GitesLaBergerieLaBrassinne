@@ -68,7 +68,7 @@ export function Footer({
           <div>
             <p className="font-display text-2xl text-cream-50">{footer.contactTitle}</p>
             <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 transition hover:text-cream-50">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 transition hover:text-cream-50">
                 <MessageCircle size={16} />
                 <span>{ui.whatsappLabel} · {siteConfig.phone}</span>
               </a>
@@ -86,7 +86,7 @@ export function Footer({
                   {ui.countryLabel}
                 </span>
               </p>
-              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="button-whatsapp mt-2 w-fit px-4 py-2.5 text-xs">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="button-whatsapp mt-2 w-fit px-4 py-2.5 text-xs">
                 <MessageCircle size={16} />
                 {ui.whatsappLabel}
               </a>

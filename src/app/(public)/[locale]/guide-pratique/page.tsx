@@ -5,6 +5,7 @@ import { ButtonLink } from '@/components/common/button-link';
 import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { GuidePanels } from '@/components/common/guide-panels';
 import { ImageFallback } from '@/components/common/image-fallback';
+import { InternationalTravelInfo } from '@/components/common/international-travel-info';
 import { getWhatsappLink } from '@/data/site';
 import { getSiteImages } from '@/lib/content-store';
 import { getDictionary } from '@/lib/dictionaries';
@@ -52,6 +53,8 @@ export default async function GuidePage({ params }: { params: Promise<{ locale: 
           </div>
         </div>
       </section>
+
+      <InternationalTravelInfo locale={locale} />
 
       <section className="section-space">
         <div className="section-shell-wide">

@@ -50,11 +50,6 @@ export default async function LocaleLayout({
     telephone: '+32496929355',
     email: 'contact@bergerie-brassine.com',
     priceRange: '€€',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '116',
-    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Rue du Curé 19',

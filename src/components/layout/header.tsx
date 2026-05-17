@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 import { ButtonLink } from '@/components/common/button-link';
-import { localeLabels, locales, stripLocaleFromPath, type Locale } from '@/lib/i18n';
+import { bookingPaths, getBookingPath, localeLabels, locales, stripLocaleFromPath, type Locale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
 type HeaderProps = {
@@ -36,8 +36,17 @@ const navItems = [
   { key: 'around', path: '/alentours' },
   { key: 'guide', path: '/guide-pratique' },
   { key: 'reviews', path: '/avis' },
+  { key: 'reserve', path: 'booking' },
   { key: 'contact', path: '/contact' },
 ] as const;
+
+function getLocalizedNormalizedPath(normalized: string, targetLocale: Locale) {
+  if (Object.values(bookingPaths).includes(normalized)) {
+    return bookingPaths[targetLocale];
+  }
+
+  return normalized;
+}
 
 export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
   const pathname = usePathname();
@@ -45,7 +54,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const normalized = stripLocaleFromPath(pathname);
-  const immersive = normalized === '/' || normalized.startsWith('/gites') || normalized === '/guide-pratique' || normalized === '/avis' || normalized === '/contact';
+  const immersive = normalized === '/' || normalized.startsWith('/gites') || normalized === '/guide-pratique' || normalized === '/avis' || normalized === '/contact' || Object.values(bookingPaths).includes(normalized);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -89,8 +98,10 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
 
         <nav className="hidden flex-nowrap items-center gap-1.5 xl:flex">
           {navItems.map((item) => {
-            const href = `/${locale}${item.path}`;
-            const active = item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path);
+            const href = item.key === 'reserve' ? getBookingPath(locale) : `/${locale}${item.path}`;
+            const active = item.key === 'reserve'
+              ? Object.values(bookingPaths).includes(normalized)
+              : item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path);
 
             return (
               <Link
@@ -114,9 +125,12 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
         <div className="hidden items-center gap-3 xl:flex">
           <div className={cn('flex items-center rounded-full border p-1 shadow-[0_8px_24px_rgba(89,63,49,0.08)]', immersive && !scrolled ? 'border-white/14 bg-white/8' : 'border-white/60 bg-[rgba(255,250,245,0.88)]')}>
             {locales.map((entry) => (
+              (() => {
+                const targetPath = getLocalizedNormalizedPath(normalized, entry);
+                return (
               <Link
                 key={entry}
-                href={`/${entry}${normalized === '/' ? '' : normalized}`}
+                href={`/${entry}${targetPath === '/' ? '' : targetPath}`}
                 className={cn(
                   'rounded-full px-3 py-2 text-xs tracking-[0.2em] transition',
                   locale === entry
@@ -128,9 +142,11 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
               >
                 {localeLabels[entry]}
               </Link>
+                );
+              })()
             ))}
           </div>
-          <ButtonLink href={`/${locale}/contact`}>{nav.reserve}</ButtonLink>
+          <ButtonLink href={getBookingPath(locale)}>{nav.reserve}</ButtonLink>
         </div>
 
         <button
@@ -171,10 +187,10 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
                   {navItems.map((item) => (
                     <Link
                       key={item.key}
-                      href={`/${locale}${item.path}`}
+                      href={item.key === 'reserve' ? getBookingPath(locale) : `/${locale}${item.path}`}
                       className={cn(
                         'rounded-[1.35rem] border px-5 py-4 text-base font-medium shadow-[0_12px_24px_rgba(89,63,49,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(89,63,49,0.1)]',
-                        (item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path))
+                        (item.key === 'reserve' ? Object.values(bookingPaths).includes(normalized) : item.path === '' ? normalized === '/' : normalized === item.path || normalized.startsWith(item.path))
                           ? 'border-rose-200 bg-[linear-gradient(135deg,#f2dfd7,#efe2d4)] text-taupe-900'
                           : 'border-white/70 bg-white/96 text-taupe-900',
                       )}
@@ -187,17 +203,22 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
 
                 <div className="relative z-10 mt-8 flex gap-2">
                   {locales.map((entry) => (
-                    <Link
-                      key={entry}
-                      href={`/${entry}${normalized === '/' ? '' : normalized}`}
-                      className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em] transition', locale === entry ? 'bg-[#efe2d4] text-taupe-900' : 'border border-taupe-200 bg-white text-taupe-700 hover:bg-cream-50')}
-                    >
-                      {localeLabels[entry]}
-                    </Link>
+                    (() => {
+                      const targetPath = getLocalizedNormalizedPath(normalized, entry);
+                      return (
+                        <Link
+                          key={entry}
+                          href={`/${entry}${targetPath === '/' ? '' : targetPath}`}
+                          className={cn('rounded-full px-4 py-2 text-xs tracking-[0.2em] transition', locale === entry ? 'bg-[#efe2d4] text-taupe-900' : 'border border-taupe-200 bg-white text-taupe-700 hover:bg-cream-50')}
+                        >
+                          {localeLabels[entry]}
+                        </Link>
+                      );
+                    })()
                   ))}
                 </div>
 
-                <ButtonLink href={`/${locale}/contact`} className="relative z-10 mt-auto w-full justify-center bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_40px_rgba(240,201,198,0.34)]">
+                <ButtonLink href={getBookingPath(locale)} className="relative z-10 mt-auto w-full justify-center bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_40px_rgba(240,201,198,0.34)]">
                   {nav.reserve}
                 </ButtonLink>
               </div>

@@ -76,7 +76,7 @@ export default async function ReviewsPage({
                 <div className="flex flex-col justify-center p-6 md:p-10 lg:p-12">
                   <div className="flex items-center gap-2 text-wood">
                     {[0, 1, 2, 3, 4].map((star) => (
-                      <Star key={star} size={18} fill="currentColor" />
+                      <Star key={star} size={18} fill="currentColor" aria-hidden="true" />
                     ))}
                   </div>
                   <p className="mt-6 font-display text-5xl leading-none text-taupe-900 md:text-6xl">{card.name}</p>

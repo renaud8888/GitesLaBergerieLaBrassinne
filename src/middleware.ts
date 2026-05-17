@@ -8,6 +8,21 @@ const localizedShortRoutes: Record<string, Record<Locale, string>> = {
     en: '/en/contact',
     nl: '/nl/contact',
   },
+  '/reservation': {
+    fr: '/fr/reservation',
+    en: '/en/booking',
+    nl: '/nl/reserveren',
+  },
+  '/booking': {
+    fr: '/fr/reservation',
+    en: '/en/booking',
+    nl: '/nl/reserveren',
+  },
+  '/reserveren': {
+    fr: '/fr/reservation',
+    en: '/en/booking',
+    nl: '/nl/reserveren',
+  },
   '/la-bergerie': {
     fr: '/fr/gites/la-bergerie',
     en: '/en/gites/la-bergerie',
@@ -59,5 +74,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/contact', '/la-bergerie', '/la-brassine', '/experiences', '/guide-pratique', '/avis', '/gites/:path*'],
+  matcher: ['/contact', '/reservation', '/booking', '/reserveren', '/la-bergerie', '/la-brassine', '/experiences', '/guide-pratique', '/avis', '/gites/:path*'],
 };

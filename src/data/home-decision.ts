@@ -1,0 +1,92 @@
+export const homeDecisionContent = {
+  fr: {
+    badges: [
+      'Deux gîtes pour 2 personnes',
+      'Libin, Ardennes belges',
+      'La Bergerie : plus spacieuse',
+      'La Brassine : plus intime',
+      'Parking gratuit',
+      'Wi-Fi',
+      'Cuisine équipée',
+      'Réservation via WhatsApp, formulaire ou Airbnb',
+    ],
+    choice: {
+      eyebrow: 'Choisir simplement',
+      title: 'Deux ambiances, une même parenthèse',
+      description: 'Un aperçu rapide pour choisir le cocon qui correspond le mieux à votre séjour.',
+      book: 'Réserver',
+      bergerie: {
+        title: 'La Bergerie',
+        text: 'Plus spacieuse, lumineuse et romantique, avec jardin à l’arrière.',
+        bullets: ['Plus d’espace', 'Lumière douce', 'Jardin à l’arrière', 'Idéale si vous aimez respirer à deux'],
+        cta: 'Voir La Bergerie',
+      },
+      brassine: {
+        title: 'La Brassine',
+        text: 'Plus intime, cocooning et chaleureuse, de plain-pied avec jardin à l’avant et jardin commun à l’arrière.',
+        bullets: ['Très cosy', 'Plain-pied', 'Jardin à l’avant', 'Idéale pour une parenthèse très douce'],
+        cta: 'Voir La Brassine',
+      },
+    },
+  },
+  en: {
+    badges: [
+      'Two gites for 2 guests',
+      'Libin, Belgian Ardennes',
+      'La Bergerie: more spacious',
+      'La Brassine: more intimate',
+      'Free parking',
+      'Wi-Fi',
+      'Equipped kitchen',
+      'Booking by WhatsApp, form or Airbnb',
+    ],
+    choice: {
+      eyebrow: 'Choose easily',
+      title: 'Two atmospheres, one gentle escape',
+      description: 'A quick overview to help you choose the cocoon that best fits your stay.',
+      book: 'Book',
+      bergerie: {
+        title: 'La Bergerie',
+        text: 'More spacious, luminous and romantic, with a rear garden.',
+        bullets: ['More space', 'Soft light', 'Rear garden', 'Ideal if you want room to breathe together'],
+        cta: 'View La Bergerie',
+      },
+      brassine: {
+        title: 'La Brassine',
+        text: 'More intimate, cosy and warm, with a single-level layout, a front garden and shared rear garden.',
+        bullets: ['Very cosy', 'Single-level layout', 'Front garden', 'Ideal for a very gentle pause'],
+        cta: 'View La Brassine',
+      },
+    },
+  },
+  nl: {
+    badges: [
+      'Twee gîtes voor 2 gasten',
+      'Libin, Belgische Ardennen',
+      'La Bergerie: ruimer',
+      'La Brassine: intiemer',
+      'Gratis parking',
+      'Wi-Fi',
+      'Uitgeruste keuken',
+      'Reserveren via WhatsApp, formulier of Airbnb',
+    ],
+    choice: {
+      eyebrow: 'Eenvoudig kiezen',
+      title: 'Twee sferen, dezelfde zachte pauze',
+      description: 'Een kort overzicht om de cocon te kiezen die het best bij uw verblijf past.',
+      book: 'Reserveren',
+      bergerie: {
+        title: 'La Bergerie',
+        text: 'Ruimer, lichter en romantisch, met tuin achteraan.',
+        bullets: ['Meer ruimte', 'Zacht licht', 'Tuin achteraan', 'Ideaal als u samen meer ademruimte wilt'],
+        cta: 'Bekijk La Bergerie',
+      },
+      brassine: {
+        title: 'La Brassine',
+        text: 'Intiemer, cosy en warm, gelijkvloers met tuin vooraan en gemeenschappelijke tuin achteraan.',
+        bullets: ['Heel cosy', 'Gelijkvloers', 'Tuin vooraan', 'Ideaal voor een heel zachte pauze'],
+        cta: 'Bekijk La Brassine',
+      },
+    },
+  },
+} as const;

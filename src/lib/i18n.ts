@@ -10,6 +10,12 @@ export const localeLabels: Record<Locale, string> = {
   nl: 'NL',
 };
 
+export const bookingPaths: Record<Locale, string> = {
+  fr: '/reservation',
+  en: '/booking',
+  nl: '/reserveren',
+};
+
 export function isLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
 }
@@ -20,4 +26,8 @@ export function stripLocaleFromPath(pathname: string) {
 
 export function withLocale(locale: Locale, path = '') {
   return `/${locale}${path.startsWith('/') ? path : path ? `/${path}` : ''}`;
+}
+
+export function getBookingPath(locale: Locale) {
+  return withLocale(locale, bookingPaths[locale]);
 }

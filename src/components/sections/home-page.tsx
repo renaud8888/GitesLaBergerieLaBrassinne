@@ -1,14 +1,18 @@
 import Link from 'next/link';
-import { ArrowRight, Bath, BedDouble, Gift, Sparkles, Star, Trees, UserRound } from 'lucide-react';
+import { ArrowRight, Bath, BedDouble, Check, Gift, Sparkles, Star, Trees, UserRound } from 'lucide-react';
 
-import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
 import { ImageFallback } from '@/components/common/image-fallback';
+import { InternationalTravelInfo } from '@/components/common/international-travel-info';
 import { SectionHeading } from '@/components/common/section-heading';
 import { StackedGallery } from '@/components/common/stacked-gallery';
-import { featureIcons, getWhatsappLink, giteStats } from '@/data/site';
+import { StayIdeasSection } from '@/components/common/stay-ideas-section';
+import { TrustSection } from '@/components/common/trust-section';
+import { homeDecisionContent } from '@/data/home-decision';
+import { formatAirbnbRating, formatAirbnbReviewCount } from '@/data/review-sources';
+import { featureIcons, giteStats } from '@/data/site';
 import type { SiteDictionary } from '@/lib/dictionaries';
-import type { Locale } from '@/lib/i18n';
+import { getBookingPath, type Locale } from '@/lib/i18n';
 import type { defaultImageContent } from '@/lib/content-store';
 
 export function HomePage({
@@ -22,23 +26,20 @@ export function HomePage({
 }) {
   const home = dict.home;
   const homeUi = dict.ui.home;
+  const decision = homeDecisionContent[locale];
   const gites = [
     {
-      key: 'bergerie',
+      key: 'bergerie' as const,
       href: `/${locale}/gites/la-bergerie`,
       image: '/images/home/2.avif',
       airbnb: giteStats.bergerie.airbnbUrl,
-      rating: giteStats.bergerie.reviews,
-      google: giteStats.bergerie.googleUrl,
       ...home.gites.items.bergerie,
     },
     {
-      key: 'brassine',
+      key: 'brassine' as const,
       href: `/${locale}/gites/la-brassine`,
       image: '/images/home/1b.avif',
       airbnb: giteStats.brassine.airbnbUrl,
-      rating: giteStats.brassine.reviews,
-      google: giteStats.brassine.googleUrl,
       ...home.gites.items.brassine,
     },
   ];
@@ -65,7 +66,7 @@ export function HomePage({
     {
       key: 'extras-photo',
       title: home.intro.highlights[3]?.title,
-      href: `/${locale}/contact`,
+      href: getBookingPath(locale),
       image: '/images/home/6b.avif',
       alt: home.intro.highlights[3]?.title,
       cta: homeUi.introPhotoCtas.extras,
@@ -78,7 +79,6 @@ export function HomePage({
     { icon: Bath, label: homeUi.compactFacts.bathroom },
   ];
   const romanticActions = homeUi.romanticActions;
-  const airbnbScore = locale === 'en' ? '5.0/5' : '5,0/5';
 
   return (
     <>
@@ -102,12 +102,20 @@ export function HomePage({
             <h1 className="mt-4 font-display text-5xl leading-none text-cream-50 md:text-7xl">{home.hero.title}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-cream-100 md:text-xl">{home.hero.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href={`/${locale}/contact`} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] px-6 py-4 text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.4)] ring-1 ring-white/35">
+              <ButtonLink href={getBookingPath(locale)} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] px-6 py-4 text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.4)] ring-1 ring-white/35">
                 {home.hero.primaryCta}
               </ButtonLink>
-              <ButtonLink href={getWhatsappLink(locale)} variant="secondary" external icon={<WhatsAppIcon className="h-4 w-4" />} className="border-white/30 bg-white/14 text-cream-50 backdrop-blur-md">
+              <ButtonLink href={`/${locale}/alentours`} variant="secondary" className="border-white/30 bg-white/14 text-cream-50 backdrop-blur-md">
                 {home.hero.secondaryCta}
               </ButtonLink>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {decision.badges.map((badge) => (
+                <span key={badge} className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-white/12 px-3 py-2 text-sm text-cream-50 backdrop-blur">
+                  <Check size={14} aria-hidden="true" />
+                  {badge}
+                </span>
+              ))}
             </div>
             <div className="mt-10 grid gap-3 rounded-[2rem] border border-white/18 bg-[rgba(255,250,245,0.14)] p-4 shadow-[0_24px_60px_rgba(37,25,20,0.18)] backdrop-blur-md md:grid-cols-[minmax(0,1.2fr)_repeat(2,minmax(0,0.75fr))] md:p-5">
               <div className="rounded-[1.5rem] border border-white/22 bg-[linear-gradient(135deg,rgba(244,216,210,0.32),rgba(255,250,245,0.18))] p-4 text-cream-50 shadow-[0_18px_40px_rgba(37,25,20,0.14)]">
@@ -136,6 +144,51 @@ export function HomePage({
           </div>
         </div>
       </section>
+
+      <section className="section-space bg-white/35">
+        <div className="section-shell">
+          <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-wood">{decision.choice.eyebrow}</p>
+              <h2 className="mt-3 font-display text-4xl leading-none text-taupe-900 md:text-5xl">{decision.choice.title}</h2>
+              <p className="mt-5 text-base leading-8 text-taupe-500">{decision.choice.description}</p>
+              <div className="mt-6">
+                <ButtonLink href={getBookingPath(locale)}>{decision.choice.book}</ButtonLink>
+              </div>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {[
+                { key: 'bergerie' as const, href: `/${locale}/gites/la-bergerie`, ...decision.choice.bergerie },
+                { key: 'brassine' as const, href: `/${locale}/gites/la-brassine`, ...decision.choice.brassine },
+              ].map((item) => (
+                <article key={item.key} className="surface-card-strong p-6">
+                  <p className="font-display text-3xl leading-none text-taupe-900">{item.title}</p>
+                  <p className="mt-3 text-sm leading-7 text-taupe-500">{item.text}</p>
+                  <ul className="mt-5 grid gap-2 text-sm text-taupe-700">
+                    {item.bullets.map((bullet) => (
+                      <li key={bullet} className="inline-flex gap-2 rounded-[1rem] bg-cream-50/70 px-3 py-2">
+                        <Check size={15} className="mt-0.5 text-wood" aria-hidden="true" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6">
+                    <ButtonLink href={item.href} variant="secondary" className="w-full justify-center md:w-fit">
+                      {item.cta}
+                    </ButtonLink>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <InternationalTravelInfo locale={locale} />
+
+      <TrustSection locale={locale} variant="standard" />
+
+      <StayIdeasSection locale={locale} />
 
       <section id="gites" className="section-space scroll-mt-28">
         <div className="section-shell">
@@ -177,7 +230,8 @@ export function HomePage({
                   <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
                     <div>
                       <p className="text-sm text-taupe-500">Airbnb</p>
-                      <p className="font-display text-2xl text-taupe-900">{airbnbScore} · {gite.rating} {dict.gites.common.reviews}</p>
+                      <p className="font-display text-2xl text-taupe-900">{formatAirbnbRating(locale, gite.key)}</p>
+                      <p className="mt-1 text-sm text-taupe-500">{formatAirbnbReviewCount(locale, gite.key)}</p>
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <ButtonLink href={gite.href}>{home.gites.discover}</ButtonLink>

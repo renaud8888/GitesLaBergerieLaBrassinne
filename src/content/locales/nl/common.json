@@ -11,7 +11,7 @@
     "guide": "Praktische gids",
     "reviews": "Reviews",
     "contact": "Contact",
-    "reserve": "Boeken"
+    "reserve": "Reserveren"
   },
   "reviewsPage": {
     "meta": {
@@ -49,10 +49,10 @@
   "home": {
     "hero": {
       "eyebrow": "Romantisch verblijf in de Ardennen",
-      "title": "La Bergerie & La Brassine, twee romantische gîtes in Libin.",
-      "description": "Twee charmante verblijven in de Belgische Ardennen, gemaakt voor koppels: La Bergerie, ruimer en lichter, en La Brassine, intiemer en meer cocooning.",
-      "primaryCta": "Beschikbaarheid bekijken",
-      "secondaryCta": "Schrijf via WhatsApp",
+      "title": "La Bergerie & La Brassine — twee cocons om elkaar terug te vinden",
+      "description": "Twee charmante gîtes voor 2 personen in Libin, in het hart van de Belgische Ardennen. La Bergerie biedt meer ruimte en licht; La Brassine nodigt uit tot een intiemere, cosy pauze.",
+      "primaryCta": "Reserveren",
+      "secondaryCta": "Ontdek de omgeving",
       "imageAlt": "Zicht op het domein van de gîtes in Libin",
       "stats": [
         { "value": "2", "label": "gîtes voor 2 gasten" },
@@ -410,7 +410,7 @@
     ],
     "finalCta": {
       "title": "Hulp nodig bij het plannen van je verblijf?",
-      "text": "De praktische gids beantwoordt de meest voorkomende vragen, en de contactpagina is klaar voor rechtstreekse reservaties of romantische extra's.",
+      "text": "De praktische gids beantwoordt de meest voorkomende vragen, en de reserveringspagina laat gasten kiezen tussen WhatsApp, formulier of Airbnb.",
       "primary": "Ga naar reserveren",
       "secondary": "Lees de praktische gids"
     }
@@ -489,58 +489,53 @@
   },
   "contact": {
     "meta": {
-      "title": "Contact & reserveren - La Bergerie & La Brassine",
-      "description": "Neem eenvoudig contact op via WhatsApp, e-mail of formulier om La Bergerie of La Brassine in Libin te reserveren."
+      "title": "Contact - La Bergerie & La Brassine",
+      "description": "Neem eenvoudig contact op via WhatsApp, e-mail of formulier voor een algemene vraag, attentie of praktische informatie."
     },
     "hero": {
-      "eyebrow": "Contact & reserveren",
-      "title": "Vraag naar een verblijf, stuur een bericht of reserveer rechtstreeks",
-      "description": "WhatsApp blijft de eenvoudigste manier voor een snel antwoord. Via het formulier hieronder kun je ook een volledige aanvraag versturen."
+      "eyebrow": "Contact",
+      "title": "Stel een vraag of bereid een attentie voor",
+      "description": "Voor reserveren is er een aparte pagina met WhatsApp, het volledige formulier en Airbnb. Hier kun je ons schrijven voor een algemene vraag of bijzondere aanvraag."
     },
     "direct": {
       "eyebrow": "Rechtstreeks boeken",
       "title": "De eenvoudigste start",
-      "text": "Voor beschikbaarheid, vragen of romantische extra's is WhatsApp de snelste weg. Je kunt ook een volledige aanvraag via het formulier sturen, per e-mail schrijven of via Airbnb reserveren.",
+      "text": "Voor een praktische vraag of romantische extra is WhatsApp de snelste weg. Gebruik de aparte pagina om te reserveren.",
       "whatsapp": "Contacteer via WhatsApp"
     },
     "practicalTitle": "Nuttige informatie",
     "practicalCards": [
       { "title": "Adres", "text": "Rue du Curé 19, 6890 Libin, België." },
       { "title": "Check-in / check-out", "text": "Aankomst tussen 16:00 en 23:00, vertrek voor 10:00." },
-      { "title": "Reservaties", "text": "Rechtstreeks via WhatsApp, per e-mail, via het formulier of op Airbnb volgens je voorkeur." }
+      { "title": "Reservaties", "text": "De reserveringspagina gidst je tussen WhatsApp, het volledige formulier en Airbnb." }
     ],
     "addressTitle": "Adres",
     "form": {
       "eyebrow": "Contactformulier",
       "title": "Stuur een aanvraag",
-      "text": "Vermeld je data, de gewenste gîte en je bericht: we antwoorden met de nuttige informatie.",
+      "text": "Voor een algemene vraag, praktische info of een bijzondere attentie kunt u ons gewoon uw bericht sturen.",
       "labels": {
         "firstName": "Voornaam",
         "lastName": "Naam",
         "email": "E-mail",
         "phone": "Telefoon",
-        "dates": "Gewenste data",
-        "gîte": "Gewenste gîte",
-        "guests": "Aantal reizigers",
-        "guestsHelp": "Maximum 2 personen",
+        "subject": "Onderwerp",
         "message": "Bericht",
+        "consent": "Ik ga ermee akkoord gecontacteerd te worden over mijn aanvraag.",
         "submit": "Aanvraag versturen",
         "success": "Je aanvraag is goed verzonden. We antwoorden zo snel mogelijk.",
         "sending": "Bezig met verzenden...",
         "invalid": "Controleer de verplichte velden en je e-mailadres.",
         "error": "Er ging iets mis bij het verzenden. Je kunt ons per e-mail contacteren of WhatsApp gebruiken.",
+        "responsePreference": "Antwoord via WhatsApp, e-mail of telefoon volgens uw voorkeur.",
+        "privacy": "Uw gegevens worden alleen gebruikt om op uw aanvraag te antwoorden.",
         "placeholders": {
           "firstName": "Je voornaam",
           "lastName": "Je naam",
           "email": "jij@example.com",
           "phone": "+32 …",
-          "dates": "Bijv. van 12 tot 14 september",
-          "message": "Je aanvraag, je data, een speciale gelegenheid…"
-        },
-        "options": {
-          "bergerie": "La Bergerie",
-          "brassine": "La Brassine",
-          "undecided": "Ik weet het nog niet"
+          "subject": "Bijv. Praktische vraag, romantische attentie…",
+          "message": "Uw vraag of aanvraag…"
         }
       }
     }

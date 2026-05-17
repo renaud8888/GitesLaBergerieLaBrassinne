@@ -5,7 +5,9 @@ import { getContactDestinationEmail, parseContactRequest, validateContactRequest
 export async function POST(request: Request) {
   const payload = parseContactRequest(await request.json());
   const destinationEmail = getContactDestinationEmail();
-  const successMessage = 'Votre demande a bien été envoyée. Nous vous répondrons rapidement.';
+  const successMessage = payload.requestType === 'booking'
+    ? 'Votre demande a bien été envoyée. Nous revenons vers vous rapidement pour confirmer les disponibilités.'
+    : 'Votre demande a bien été envoyée. Nous vous répondrons rapidement.';
 
   if (payload.company) {
     return NextResponse.json({ success: true, message: successMessage });
@@ -30,15 +32,22 @@ export async function POST(request: Request) {
     );
   }
 
-  const subject = `[Demande de réservation] ${payload.firstName} ${payload.lastName}`.trim();
+  const subjectPrefix = payload.requestType === 'booking' ? 'Demande de réservation' : 'Message depuis le site';
+  const subject = `[${subjectPrefix}] ${payload.firstName} ${payload.lastName}`.trim();
   const text = [
+    `Type de demande: ${payload.requestType || 'contact'}`,
     `Prénom: ${payload.firstName || '-'}`,
     `Nom: ${payload.lastName || '-'}`,
     `Adresse e-mail: ${payload.email || '-'}`,
     `Téléphone: ${payload.phone || '-'}`,
     `Dates souhaitées: ${payload.dates || '-'}`,
+    `Arrivée: ${payload.arrivalDate || '-'}`,
+    `Départ: ${payload.departureDate || '-'}`,
     `Gîte souhaité: ${payload.gite || '-'}`,
     `Voyageurs: ${payload.guests || '-'}`,
+    `Préférence de contact: ${payload.contactPreference || '-'}`,
+    `Occasion spéciale: ${payload.occasion || '-'}`,
+    `Consentement: ${payload.consent ? 'oui' : 'non'}`,
     '',
     'Message:',
     payload.message || '-',

@@ -49,10 +49,10 @@
   "home": {
     "hero": {
       "eyebrow": "Escapade romantique en Ardenne",
-      "title": "La Bergerie & La Brassine, deux gîtes romantiques à Libin.",
-      "description": "Deux adresses de charme dans les Ardennes belges, pensées pour les séjours à deux: La Bergerie, plus spacieuse et lumineuse, et La Brassine, plus intime et cocooning.",
+      "title": "La Bergerie & La Brassine — deux cocons pour se retrouver",
+      "description": "Deux gîtes de charme pour 2 personnes à Libin, au cœur des Ardennes belges. La Bergerie offre plus d’espace et de lumière ; La Brassine invite à une parenthèse plus intime et cocooning.",
       "primaryCta": "Réserver",
-      "secondaryCta": "WhatsApp",
+      "secondaryCta": "Explorer les alentours",
       "imageAlt": "Vue du domaine des gîtes à Libin",
       "stats": [
         { "value": "2", "label": "gîtes de charme pour 2 personnes" },
@@ -398,7 +398,7 @@
     ],
     "finalCta": {
       "title": "Besoin d'aide pour organiser votre séjour ?",
-      "text": "Le guide pratique répond aux questions les plus courantes et la page contact permet de préparer une réservation directe ou une surprise romantique.",
+      "text": "Le guide pratique répond aux questions les plus courantes et la page réservation permet de choisir WhatsApp, formulaire ou Airbnb.",
       "primary": "Passer à la réservation",
       "secondary": "Lire le guide pratique"
     }
@@ -477,58 +477,53 @@
   },
   "contact": {
     "meta": {
-      "title": "Contact & réservation - La Bergerie & La Brassine",
-      "description": "Contactez facilement l'hôte via WhatsApp, e-mail ou formulaire pour réserver La Bergerie ou La Brassine à Libin."
+      "title": "Contact - La Bergerie & La Brassine",
+      "description": "Contactez facilement l'hôte via WhatsApp, e-mail ou formulaire pour une question générale, une attention ou une information pratique."
     },
     "hero": {
-      "eyebrow": "Contact & réservation",
-      "title": "Réserver, poser une question ou préparer une attention",
-      "description": "WhatsApp reste le moyen le plus simple pour une réponse rapide. Le formulaire ci-dessous permet aussi d'envoyer une demande complète."
+      "eyebrow": "Contact",
+      "title": "Poser une question ou préparer une attention",
+      "description": "Pour réserver, une page dédiée rassemble WhatsApp, formulaire complet et Airbnb. Ici, vous pouvez nous écrire pour une question générale ou une demande particulière."
     },
     "direct": {
       "eyebrow": "Réservation directe",
       "title": "Le moyen le plus simple pour commencer",
-      "text": "Pour vérifier une disponibilité, poser une question ou préparer une surprise romantique, WhatsApp est le plus direct. Vous pouvez aussi envoyer une demande complète via le formulaire, écrire par e-mail ou réserver sur Airbnb.",
+      "text": "Pour une question pratique ou préparer une surprise romantique, WhatsApp est le plus direct. Pour une réservation, utilisez la page dédiée.",
       "whatsapp": "Contacter sur WhatsApp"
     },
     "practicalTitle": "Informations utiles",
     "practicalCards": [
       { "title": "Adresse", "text": "Rue du Curé 19, 6890 Libin, Belgique." },
       { "title": "Check-in / check-out", "text": "Arrivée entre 16 h et 23 h, départ avant 10 h." },
-      { "title": "Réservations", "text": "En direct via WhatsApp, par e-mail, via le formulaire ou sur Airbnb selon votre préférence." }
+      { "title": "Réservations", "text": "La page Réservation vous guide entre WhatsApp, formulaire complet et Airbnb." }
     ],
     "addressTitle": "Adresse",
     "form": {
       "eyebrow": "Formulaire de prise de contact",
       "title": "Envoyer une demande",
-      "text": "Indiquez vos dates, le gîte souhaité et votre message. Nous reviendrons vers vous dès que possible avec les informations utiles.",
+      "text": "Pour une question générale, une information pratique ou une attention particulière, laissez-nous simplement votre message.",
       "labels": {
         "firstName": "Prénom",
         "lastName": "Nom",
         "email": "Adresse e-mail",
         "phone": "Téléphone",
-        "dates": "Dates souhaitées",
-        "gite": "Gîte souhaité",
-        "guests": "Nombre de voyageurs",
-        "guestsHelp": "Maximum 2 personnes",
+        "subject": "Sujet",
         "message": "Message",
+        "consent": "J’accepte d’être recontacté au sujet de ma demande.",
         "submit": "Envoyer la demande",
         "success": "Votre demande a bien été envoyée. Nous vous répondrons rapidement.",
         "sending": "Envoi en cours...",
         "invalid": "Merci de vérifier les champs obligatoires et votre adresse e-mail.",
         "error": "Une erreur est survenue lors de l'envoi. Vous pouvez nous contacter par e-mail ou utiliser WhatsApp.",
+        "responsePreference": "Réponse par WhatsApp, e-mail ou téléphone selon votre préférence.",
+        "privacy": "Vos informations servent uniquement à répondre à votre demande.",
         "placeholders": {
           "firstName": "Votre prénom",
           "lastName": "Votre nom",
           "email": "vous@example.com",
           "phone": "+32 …",
-          "dates": "Ex. du 12 au 14 septembre",
-          "message": "Votre demande, vos dates, une occasion spéciale…"
-        },
-        "options": {
-          "bergerie": "La Bergerie",
-          "brassine": "La Brassine",
-          "undecided": "Je ne sais pas encore"
+          "subject": "Ex. Question pratique, attention romantique…",
+          "message": "Votre question ou votre demande…"
         }
       }
     }

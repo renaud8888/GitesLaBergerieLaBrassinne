@@ -6,9 +6,15 @@ export type ContactRequestPayload = {
   email: string;
   phone: string;
   dates: string;
+  arrivalDate?: string;
+  departureDate?: string;
   gite: string;
   guests: string;
+  contactPreference?: string;
+  occasion?: string;
   message: string;
+  consent?: boolean;
+  requestType?: 'contact' | 'booking';
   company?: string;
 };
 
@@ -18,9 +24,15 @@ export type ParsedContactRequest = {
   email: string;
   phone: string;
   dates: string;
+  arrivalDate: string;
+  departureDate: string;
   gite: string;
   guests: string;
+  contactPreference: string;
+  occasion: string;
   message: string;
+  consent: boolean;
+  requestType: string;
   company: string;
 };
 
@@ -41,15 +53,22 @@ export function parseContactRequest(payload: unknown): ParsedContactRequest {
     email: normalizeValue(record.email),
     phone: normalizeValue(record.phone),
     dates: normalizeValue(record.dates),
+    arrivalDate: normalizeValue(record.arrivalDate),
+    departureDate: normalizeValue(record.departureDate),
     gite: normalizeValue(record.gite),
     guests: normalizeValue(record.guests),
+    contactPreference: normalizeValue(record.contactPreference),
+    occasion: normalizeValue(record.occasion),
     message: normalizeValue(record.message),
+    consent: record.consent === true,
+    requestType: normalizeValue(record.requestType) || 'contact',
     company: normalizeValue(record.company),
   };
 }
 
 export function validateContactRequest(payload: ParsedContactRequest) {
-  const missingFields = ['firstName', 'email', 'message'].filter((field) => !payload[field as keyof ParsedContactRequest]);
+  const requiredFields = payload.requestType === 'booking' ? ['firstName', 'lastName', 'email'] : ['firstName', 'lastName', 'email', 'message'];
+  const missingFields = requiredFields.filter((field) => !payload[field as keyof ParsedContactRequest]);
   const emailLooksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email);
 
   if (missingFields.length > 0) {
@@ -63,6 +82,13 @@ export function validateContactRequest(payload: ParsedContactRequest) {
     return {
       valid: false as const,
       error: 'invalid_email',
+    };
+  }
+
+  if (!payload.consent) {
+    return {
+      valid: false as const,
+      error: 'missing_consent',
     };
   }
 

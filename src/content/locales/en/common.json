@@ -49,10 +49,10 @@
   "home": {
     "hero": {
       "eyebrow": "Romantic Ardennes escape",
-      "title": "La Bergerie & La Brassine, two romantic cottages in Libin.",
-      "description": "Two charming stays in the Belgian Ardennes, designed for couples: La Bergerie, more spacious and luminous, and La Brassine, more intimate and cocooning.",
-      "primaryCta": "Check availability",
-      "secondaryCta": "Message on WhatsApp",
+      "title": "La Bergerie & La Brassine — two cocoons to reconnect",
+      "description": "Two charming gites for 2 guests in Libin, in the heart of the Belgian Ardennes. La Bergerie offers more space and light; La Brassine invites you into a more intimate and cosy pause.",
+      "primaryCta": "Book",
+      "secondaryCta": "Explore the surroundings",
       "imageAlt": "View of the cottage property in Libin",
       "stats": [
         { "value": "2", "label": "romantic cottages for 2 guests" },
@@ -410,7 +410,7 @@
     ],
     "finalCta": {
       "title": "Need help planning the stay?",
-      "text": "The practical guide answers the most common questions, and the contact page is ready for direct booking requests or romantic extras.",
+      "text": "The practical guide answers the most common questions, and the booking page lets guests choose WhatsApp, the form or Airbnb.",
       "primary": "Move to booking",
       "secondary": "Read the practical guide"
     }
@@ -489,58 +489,53 @@
   },
   "contact": {
     "meta": {
-      "title": "Contact & booking - La Bergerie & La Brassine",
-      "description": "Get in touch easily by WhatsApp, e-mail or form to book La Bergerie or La Brassine in Libin."
+      "title": "Contact - La Bergerie & La Brassine",
+      "description": "Get in touch easily by WhatsApp, e-mail or form for a general question, a special touch or practical information."
     },
     "hero": {
-      "eyebrow": "Contact & booking",
-      "title": "Ask about a stay, send a request or book directly",
-      "description": "WhatsApp is the most direct way to get a quick reply. The form below lets you send a complete enquiry."
+      "eyebrow": "Contact",
+      "title": "Ask a question or prepare a thoughtful extra",
+      "description": "For booking, a dedicated page brings together WhatsApp, the complete form and Airbnb. Here, you can write to us for a general question or a special request."
     },
     "direct": {
       "eyebrow": "Direct booking",
       "title": "The easiest place to start",
-      "text": "For availability, questions or romantic extras, WhatsApp is the fastest route. You can also send a complete enquiry with the form, write by e-mail or book on Airbnb.",
+      "text": "For a practical question or a romantic extra, WhatsApp is the fastest route. For booking, use the dedicated page.",
       "whatsapp": "Contact on WhatsApp"
     },
     "practicalTitle": "Useful information",
     "practicalCards": [
       { "title": "Address", "text": "Rue du Curé 19, 6890 Libin, Belgium." },
       { "title": "Check-in / check-out", "text": "Arrival between 4:00 pm and 11:00 pm, departure before 10:00 am." },
-      { "title": "Bookings", "text": "Directly via WhatsApp, by e-mail, through the form or on Airbnb depending on your preference." }
+      { "title": "Bookings", "text": "The Booking page guides you between WhatsApp, the complete form and Airbnb." }
     ],
     "addressTitle": "Address",
     "form": {
       "eyebrow": "Contact form",
       "title": "Send an enquiry",
-      "text": "Share your dates, preferred cottage and message: we will reply with the useful details.",
+      "text": "For a general question, a practical detail or a special touch, simply leave us your message.",
       "labels": {
         "firstName": "First name",
         "lastName": "Last name",
         "email": "E-mail address",
         "phone": "Phone",
-        "dates": "Preferred dates",
-        "gite": "Preferred cottage",
-        "guests": "Number of guests",
-        "guestsHelp": "Maximum 2 guests",
+        "subject": "Subject",
         "message": "Message",
+        "consent": "I agree to be contacted about my request.",
         "submit": "Send enquiry",
         "success": "Your request has been sent. We will reply as soon as possible.",
         "sending": "Sending...",
         "invalid": "Please check the required fields and your email address.",
         "error": "Something went wrong while sending your message. You can contact us by e-mail or use WhatsApp.",
+        "responsePreference": "Reply by WhatsApp, e-mail or phone according to your preference.",
+        "privacy": "Your information is only used to answer your request.",
         "placeholders": {
           "firstName": "Your first name",
           "lastName": "Your last name",
           "email": "you@example.com",
           "phone": "+32 …",
-          "dates": "E.g. 12 to 14 September",
-          "message": "Your request, your dates, a special occasion…"
-        },
-        "options": {
-          "bergerie": "La Bergerie",
-          "brassine": "La Brassine",
-          "undecided": "I am not sure yet"
+          "subject": "E.g. Practical question, romantic extra…",
+          "message": "Your question or request…"
         }
       }
     }
