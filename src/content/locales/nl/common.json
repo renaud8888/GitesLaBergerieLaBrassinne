@@ -1,12 +1,12 @@
 {
   "meta": {
-    "siteTitle": "La Bergerie & La Brassine - Charmante gîtes in Libin",
-    "siteDescription": "Twee romantische gîtes in Libin, in de Belgische Ardennen, voor een warme, elegante en authentieke uitstap met twee."
+    "siteTitle": "La Bergerie & La Brassinne - Charmante gîtes in Libin",
+    "siteDescription": "Twee charmante gîtes in Libin, in de Belgische Ardennen, bedacht voor een verblijf met twee, een rustige uitstap of een moment om te vertragen."
   },
   "nav": {
     "home": "Home",
     "bergerie": "La Bergerie",
-    "brassine": "La Brassine",
+    "brassine": "La Brassinne",
     "around": "Belevenissen",
     "guide": "Praktische gids",
     "reviews": "Reviews",
@@ -15,8 +15,8 @@
   },
   "reviewsPage": {
     "meta": {
-      "title": "Een Google-review achterlaten - La Bergerie & La Brassine",
-      "description": "Kies de gîte waar je verbleef en laat makkelijk een Google-review achter voor La Bergerie of La Brassine."
+      "title": "Een Google-review achterlaten - La Bergerie & La Brassinne",
+      "description": "Kies de gîte waar je verbleef en laat makkelijk een Google-review achter voor La Bergerie of La Brassinne."
     },
     "hero": {
       "eyebrow": "Google reviews",
@@ -30,9 +30,9 @@
         "text": "Voor gasten die in La Bergerie verbleven."
       },
       "brassine": {
-        "name": "La Brassine",
+        "name": "La Brassinne",
         "tagline": "De intieme cocooning gîte",
-        "text": "Voor gasten die in La Brassine verbleven."
+        "text": "Voor gasten die in La Brassinne verbleven."
       }
     },
     "buttonLabel": "Google-review achterlaten",
@@ -44,63 +44,84 @@
     "contactTitle": "Contact",
     "reserveTitle": "Rechtstreeks boeken",
     "reserveText": "WhatsApp is de eenvoudigste manier om beschikbaarheid te vragen, een vraag te stellen of een romantische extra voor te bereiden.",
-    "copyright": "La Bergerie & La Brassine - Libin, België"
+    "copyright": "La Bergerie & La Brassinne - Libin, België"
   },
   "home": {
     "hero": {
       "eyebrow": "Romantisch verblijf in de Ardennen",
-      "title": "La Bergerie & La Brassine — twee cocons om elkaar terug te vinden",
-      "description": "Twee charmante gîtes voor 2 personen in Libin, in het hart van de Belgische Ardennen. La Bergerie biedt meer ruimte en licht; La Brassine nodigt uit tot een intiemere, cosy pauze.",
+      "title": "La Bergerie & La Brassinne — twee cocons om elkaar terug te vinden",
+      "description": "Twee charmante gîtes bedacht voor een verblijf met twee in Libin, in het hart van de Belgische Ardennen. La Bergerie biedt meer ruimte en licht; La Brassinne is geschikt voor personen met beperkte mobiliteit en volledig gelijkvloers.",
       "primaryCta": "Reserveren",
       "secondaryCta": "Ontdek de omgeving",
       "imageAlt": "Zicht op het domein van de gîtes in Libin",
       "stats": [
-        { "value": "2", "label": "gîtes voor 2 gasten" },
-        { "value": "5,0/5", "label": "Airbnb-score voor beide verblijven" },
-        { "value": "Libin", "label": "in het hart van de Belgische Ardennen" }
+        {
+          "value": "2",
+          "label": "gîtes bedacht voor een verblijf met twee"
+        },
+        {
+          "value": "5,0/5",
+          "label": "Airbnb-score voor beide verblijven"
+        },
+        {
+          "value": "Libin",
+          "label": "in het hart van de Belgische Ardennen"
+        }
       ]
     },
     "intro": {
       "eyebrow": "De sfeer van de plek",
       "title": "Met zorg ontvangen, bijna zoals thuis",
       "paragraphs": [
-        "La Bergerie & La Brassine zijn twee charmante gîtes in Libin, in de Ardennen. Ze werden ingericht in een authentiek oud gebouw, met zachte materialen, mooi comfort en details die meteen de juiste toon zetten.",
+        "La Bergerie & La Brassinne zijn twee charmante gîtes in Libin, in de Ardennen. Ze werden ingericht in een authentiek oud gebouw, met zachte materialen, mooi comfort en details die meteen de juiste toon zetten.",
         "De bedden zijn opgemaakt voor aankomst, de handdoeken liggen klaar, de keuken is echt uitgerust en het onthaal blijft persoonlijk en menselijk.",
         "Voor aankomst vind je makkelijk de sfeer van elke gîte, de praktische info en de eenvoudigste manieren om te reserveren."
       ],
       "highlights": [
-        { "title": "Voor koppels gemaakt", "text": "Elke gîte ontvangt 2 gasten in een romantische, cocooning en geruststellende sfeer." },
-        { "title": "Perfecte streek voor een weekend", "text": "Wandelingen, restaurants, charmante dorpen en mooie ontdekkingen rond Libin, Redu, Mirwart en Saint-Hubert." },
-        { "title": "Eenvoudig rechtstreeks boeken", "text": "Via WhatsApp, e-mail of Airbnb, afhankelijk van wat voor de reiziger het best voelt." },
-        { "title": "Romantische extra's", "text": "Champagne, bloemen, romantische decoratie, cadeaubon of verrassingsbox kunnen makkelijk geïntegreerd worden." }
+        {
+          "title": "Bedacht voor verblijven met twee",
+          "text": "Elke gîte ontvangt 2 gasten in een romantische, cocooning en geruststellende sfeer. Kinderen zijn welkom en huisdieren kunnen op aanvraag."
+        },
+        {
+          "title": "Perfecte streek voor een weekend",
+          "text": "Wandelingen, restaurants, charmante dorpen en mooie ontdekkingen rond Libin, Redu, Mirwart en Saint-Hubert."
+        },
+        {
+          "title": "Eenvoudig rechtstreeks boeken",
+          "text": "Via WhatsApp, e-mail of Airbnb, afhankelijk van wat voor de reiziger het best voelt."
+        },
+        {
+          "title": "Romantische extra's",
+          "text": "Champagne, bloemen, romantische decoratie, cadeaubon of verrassingsbox kunnen makkelijk geïntegreerd worden."
+        }
       ]
     },
     "gites": {
       "eyebrow": "De twee gîtes",
       "title": "Twee sferen, dezelfde charme",
-      "description": "La Bergerie valt op door ruimte en licht. La Brassine is kleiner, knusser en intiemer. Beide delen dezelfde zorg voor detail en warme ontvangst.",
+      "description": "La Bergerie valt op door ruimte en licht. La Brassinne is kleiner, knusser en intiemer. Beide delen dezelfde zorg voor detail en warme ontvangst.",
       "discover": "Ontdek de gîte",
       "items": {
         "bergerie": {
           "name": "La Bergerie",
           "tagline": "Ruimer, romantisch, licht",
           "capacity": "2 gasten",
-          "description": "De grootste van de twee gîtes, ideaal voor wie meer ruimte zoekt, een zachte shabby chic sfeer en rustige ochtenden in de tuin achteraan.",
+          "description": "De grootste van de twee gîtes, ideaal voor wie houdt van een zachte shabby chic sfeer, een tuin aan de achterkant en een klein terras aan de voorkant.",
           "bullets": [
-            "De ruimste van de twee",
-            "Tuin achteraan",
-            "Elegante en warme sfeer"
+            "De ruimste van de twee gîtes",
+            "Tuin achteraan en klein terras vooraan",
+            "Chique en warme sfeer"
           ]
         },
         "brassine": {
-          "name": "La Brassine",
+          "name": "La Brassinne",
           "tagline": "Intiem, zacht, cocooning",
           "capacity": "2 gasten",
-          "description": "Kleiner, knusser en ontworpen voor privacy. Een gelijkvloerse cocon met tuin vooraan en een erg intieme sfeer.",
+          "description": "Kleiner, knusser en ontworpen voor privacy. Een cocon geschikt voor personen met beperkte mobiliteit, volledig gelijkvloers, met tuin aan de voorkant en tuin aan de achterkant.",
           "bullets": [
-            "De meest cocooning gîte",
-            "Gelijkvloers",
-            "Tuin vooraan"
+            "De meest cocooning van de twee",
+            "Geschikt bij beperkte mobiliteit",
+            "Tuin vooraan en achteraan"
           ]
         }
       }
@@ -110,12 +131,36 @@
       "title": "Alles wat gasten nodig hebben, zonder gedoe",
       "description": "Alles is voorzien om je aankomst vlot, je verblijf comfortabel en elk contact eenvoudig te maken tot aan het vertrek.",
       "items": [
-        { "icon": "bed", "title": "Bedden klaar bij aankomst", "text": "Kwaliteitslinnen en meteen een comfortabel gevoel vanaf de eerste minuten." },
-        { "icon": "utensils", "title": "Echt uitgeruste keuken", "text": "Oven, vaatwasser, koffiemachine, wijnglazen en alles om samen te koken." },
-        { "icon": "wifi", "title": "Wi-Fi overal", "text": "Stabiele verbinding in het hele verblijf, met Ethernet indien nodig." },
-        { "icon": "tv", "title": "4K TV en streaming", "text": "Perfect voor knusse avonden, regenachtige namiddagen of trage momenten na een wandeling." },
-        { "icon": "car", "title": "Makkelijk parkeren", "text": "7 parkeerplaatsen in totaal en elektrische laadmogelijkheid op aanvraag." },
-        { "icon": "heart", "title": "Warm onthaal", "text": "Persoonlijke sleuteloverdracht, tips voor de streek en een host die bereikbaar blijft." }
+        {
+          "icon": "bed",
+          "title": "Bedden klaar bij aankomst",
+          "text": "Kwaliteitslinnen en meteen een comfortabel gevoel vanaf de eerste minuten."
+        },
+        {
+          "icon": "utensils",
+          "title": "Echt uitgeruste keuken",
+          "text": "Oven, vaatwasser, koffiemachine, wijnglazen en alles om samen te koken."
+        },
+        {
+          "icon": "wifi",
+          "title": "Wi-Fi overal",
+          "text": "Stabiele verbinding in het hele verblijf, met Ethernet indien nodig."
+        },
+        {
+          "icon": "tv",
+          "title": "4K TV en streaming",
+          "text": "Perfect voor knusse avonden, regenachtige namiddagen of trage momenten na een wandeling."
+        },
+        {
+          "icon": "car",
+          "title": "Makkelijk parkeren",
+          "text": "7 parkeerplaatsen in totaal, betalend elektrisch laden op aanvraag en een persoonlijke ontvangst."
+        },
+        {
+          "icon": "heart",
+          "title": "Warm onthaal",
+          "text": "Persoonlijke sleuteloverdracht, tips voor de streek en een host die bereikbaar blijft."
+        }
       ]
     },
     "romantic": {
@@ -123,10 +168,22 @@
       "title": "Bereid een romantische verrassing voor",
       "description": "Champagne, een box, romantische decoratie of een cadeaubon kunnen op aanvraag worden besproken, volgens je wensen en de mogelijkheden van het moment.",
       "items": [
-        { "title": "Champagnebox", "text": "Een attentie om vooraf te vragen voor een feestelijke start van het verblijf." },
-        { "title": "Box op aanvraag", "text": "Beschrijf wat je graag wilt en we laten weten wat voorbereid kan worden voor je verblijf." },
-        { "title": "Romantische decoratie", "text": "Voor een bijzondere gelegenheid kan een zachtere sfeer op aanvraag worden voorzien." },
-        { "title": "Cadeaubon", "text": "Een idee om een verblijf met twee in de Ardennen cadeau te doen, samen te bekijken volgens de gewenste formule." }
+        {
+          "title": "Champagnebox",
+          "text": "Een attentie om vooraf te vragen voor een feestelijke start van het verblijf."
+        },
+        {
+          "title": "Box op aanvraag",
+          "text": "Beschrijf wat je graag wilt en we laten weten wat voorbereid kan worden voor je verblijf."
+        },
+        {
+          "title": "Romantische decoratie",
+          "text": "Voor een bijzondere gelegenheid kan een zachtere sfeer op aanvraag worden voorzien."
+        },
+        {
+          "title": "Cadeaubon",
+          "text": "Een idee om een verblijf met twee in de Ardennen cadeau te doen, samen te bekijken volgens de gewenste formule."
+        }
       ]
     },
     "region": {
@@ -143,18 +200,54 @@
       "sideTitle": "Beelden die meteen zin geven om er te zijn",
       "sideText": "Zachte materialen, avondlicht, decoratieve details en de sfeer van de tuinen maken het verblijf al voelbaar nog voor aankomst.",
       "images": [
-        { "src": "/images/home/2.avif", "alt": "Sfeer van La Bergerie" },
-        { "src": "/images/home/2b.avif", "alt": "Sfeer van La Brassine" },
-        { "src": "/images/home/4.avif", "alt": "Een chique en warme sfeer" },
-        { "src": "/images/home/4b.avif", "alt": "De charme van een romantisch verblijf in de Ardennen" },
-        { "src": "/images/home/1.avif", "alt": "Een charmante aankomst in Libin" },
-        { "src": "/images/home/1b.avif", "alt": "Een romantisch verblijf in een zachte sfeer" },
-        { "src": "/images/home/3.avif", "alt": "Zorgvuldige details voor een verblijf met twee" },
-        { "src": "/images/home/3b.avif", "alt": "Een cocooning en verfijnde sfeer" },
-        { "src": "/images/home/5.avif", "alt": "De zachtheid van een interieur dat uitnodigt om te vertragen" },
-        { "src": "/images/home/5b.avif", "alt": "Beelden die je meteen laten wegdromen" },
-        { "src": "/images/home/6.avif", "alt": "Een elegant verblijf in het hart van de Ardennen" },
-        { "src": "/images/home/6b.avif", "alt": "Een warme pauze om samen van te genieten" }
+        {
+          "src": "/images/home/2.avif",
+          "alt": "Sfeer van La Bergerie"
+        },
+        {
+          "src": "/images/home/2b.avif",
+          "alt": "Sfeer van La Brassinne"
+        },
+        {
+          "src": "/images/home/4.avif",
+          "alt": "Een chique en warme sfeer"
+        },
+        {
+          "src": "/images/home/4b.avif",
+          "alt": "De charme van een romantisch verblijf in de Ardennen"
+        },
+        {
+          "src": "/images/home/1.avif",
+          "alt": "Een charmante aankomst in Libin"
+        },
+        {
+          "src": "/images/home/1b.avif",
+          "alt": "Een romantisch verblijf in een zachte sfeer"
+        },
+        {
+          "src": "/images/home/3.avif",
+          "alt": "Zorgvuldige details voor een verblijf met twee"
+        },
+        {
+          "src": "/images/home/3b.avif",
+          "alt": "Een cocooning en verfijnde sfeer"
+        },
+        {
+          "src": "/images/home/5.avif",
+          "alt": "De zachtheid van een interieur dat uitnodigt om te vertragen"
+        },
+        {
+          "src": "/images/home/5b.avif",
+          "alt": "Beelden die je meteen laten wegdromen"
+        },
+        {
+          "src": "/images/home/6.avif",
+          "alt": "Een elegant verblijf in het hart van de Ardennen"
+        },
+        {
+          "src": "/images/home/6b.avif",
+          "alt": "Een warme pauze om samen van te genieten"
+        }
       ]
     },
     "reviews": {
@@ -162,9 +255,24 @@
       "title": "Wat gasten waarderen",
       "description": "",
       "items": [
-        { "author": "Marie & Thomas", "origin": "Brussel", "gite": "La Bergerie", "text": "Een verblijf vol charme en zachtheid, met alles klaar bij aankomst en het fijne gevoel dat er echt aan ons gedacht was." },
-        { "author": "Camille & Julien", "origin": "Namen", "gite": "La Brassine", "text": "Een echte pauze met twee. De sfeer is intiem en warm, en alles voelt eenvoudig vanaf de eerste berichten." },
-        { "author": "Sophie & Antoine", "origin": "Luik", "gite": "Verblijf in Libin", "text": "We hielden van de rust, de inrichting en de kleine attenties. Precies zo'n adres dat je onthoudt om terug te komen." }
+        {
+          "author": "Marie & Thomas",
+          "origin": "Brussel",
+          "gite": "La Bergerie",
+          "text": "Een verblijf vol charme en zachtheid, met alles klaar bij aankomst en het fijne gevoel dat er echt aan ons gedacht was."
+        },
+        {
+          "author": "Camille & Julien",
+          "origin": "Namen",
+          "gite": "La Brassinne",
+          "text": "Een echte pauze met twee. De sfeer is intiem en warm, en alles voelt eenvoudig vanaf de eerste berichten."
+        },
+        {
+          "author": "Sophie & Antoine",
+          "origin": "Luik",
+          "gite": "Verblijf in Libin",
+          "text": "We hielden van de rust, de inrichting en de kleine attenties. Precies zo'n adres dat je onthoudt om terug te komen."
+        }
       ]
     },
     "finalCta": {
@@ -203,7 +311,7 @@
       "hero": {
         "eyebrow": "Charmante gîte in Libin",
         "title": "La Bergerie",
-        "description": "Een ruimere, lichtere en romantische uitstap in een zachte shabby chic sfeer voor twee."
+        "description": "Een ruimere, lichtere en zachte uitstap in een zachte shabby chic sfeer voor twee."
       },
       "story": {
         "eyebrow": "Voorstelling",
@@ -219,93 +327,221 @@
       "highlights": [
         "De ruimste van de twee gîtes",
         "Romantische shabby chic sfeer",
-        "Toegang tot de tuin achteraan",
+        "Tuin aan de achterkant en een klein terras aan de voorkant",
         "Goed uitgeruste keuken",
         "4K QLED TV en streaming",
         "Opgemaakte bedden en kwaliteitslinnen",
-        "Ideaal voor een rustig romantisch weekend"
+        "Ideaal voor een rustig romantisch weekend",
+        "Kinderen welkom en huisdieren op aanvraag",
+        "Schoonmaak inbegrepen"
       ],
       "stayInfo": [
-        { "title": "Aankomst & onthaal", "text": "Check-in tussen 16:00 en 23:00, met persoonlijke sleuteloverdracht en een warme ontvangst." },
-        { "title": "Dagelijks comfort", "text": "Handdoeken voorzien, bedden klaar, Wi-Fi, televisie, volledige keuken en een host die bereikbaar blijft." },
-        { "title": "Parkeren", "text": "Gratis parking ter plaatse, met elektrische laadmogelijkheid op aanvraag." }
+        {
+          "title": "Aankomst & onthaal",
+          "text": "Check-in tussen 16u en 21u, met persoonlijke sleuteloverdracht en een warme ontvangst."
+        },
+        {
+          "title": "Dagelijks comfort",
+          "text": "Handdoeken voorzien, bedden klaar, Wi-Fi, televisie, volledige keuken en een host die bereikbaar blijft."
+        },
+        {
+          "title": "Parkeren",
+          "text": "Gratis parking ter plaatse. Een laadpunt voor elektrische wagens is beschikbaar en het gebruik ervan is betalend."
+        }
       ],
       "reviewHighlight": {
         "author": "Uitgelichte review",
         "text": "Een verblijf dat charme, comfort en het gevoel van echte zorg combineert. La Bergerie spreekt vaak koppels aan die wat meer ruimte wensen."
       },
       "outdoor": {
-        "title": "De tuin achteraan",
-        "text": "Een van de mooiste troeven. Deze ruimte verlengt de gîte naar buiten met rust, groen en een fijne sfeer."
+        "title": "De tuin achteraan en het kleine terras vooraan",
+        "text": "La Bergerie heeft een tuin aan de achterkant en een klein terras aan de voorkant, ideaal voor rustige momenten buiten."
       },
       "faqIntro": "Een FAQ specifiek voor deze gîte, zodat gasten zich sneller kunnen inleven en minder praktische vragen hoeven te stellen.",
       "faq": [
-        { "question": "Is La Bergerie groter dan La Brassine?", "answer": "Ja. Het is de ruimere gîte, wat veel koppels appreciëren wanneer ze net wat meer leefruimte willen." },
-        { "question": "Is de tuin makkelijk bereikbaar?", "answer": "Ja, La Bergerie geeft toegang tot de tuin achteraan, een van haar sterkste punten." },
-        { "question": "Kunnen we er echt koken?", "answer": "Ja. De keuken is goed uitgerust met oven, kookplaat, vaatwasser, koffiemachine en alle basisbenodigdheden." },
-        { "question": "Is dit geschikt voor een speciale gelegenheid?", "answer": "Absoluut. Deze gîte werkt heel mooi voor een romantische verrassing, verjaardag of zorgvuldig voorbereid weekendje weg." }
+        {
+          "question": "Is La Bergerie groter dan La Brassinne?",
+          "answer": "Ja. Het is de ruimere gîte, wat veel koppels appreciëren wanneer ze net wat meer leefruimte willen."
+        },
+        {
+          "question": "Is de tuin makkelijk bereikbaar?",
+          "answer": "Ja, La Bergerie geeft toegang tot de tuin achteraan, een van haar sterkste punten."
+        },
+        {
+          "question": "Kunnen we er echt koken?",
+          "answer": "Ja. De keuken is goed uitgerust met oven, kookplaat, vaatwasser, koffiemachine en alle basisbenodigdheden."
+        },
+        {
+          "question": "Is dit geschikt voor een speciale gelegenheid?",
+          "answer": "Absoluut. Deze gîte werkt heel mooi voor een romantische verrassing, verjaardag of zorgvuldig voorbereid weekendje weg."
+        },
+        {
+          "question": "Zijn kinderen en huisdieren welkom?",
+          "answer": "De gîtes zijn in de eerste plaats bedacht voor een verblijf met twee, maar kinderen zijn welkom. Huisdieren kunnen op aanvraag worden toegelaten voor de reservatie."
+        },
+        {
+          "question": "Zijn de schoonmaakkosten inbegrepen?",
+          "answer": "Ja, de schoonmaakkosten zijn inbegrepen."
+        },
+        {
+          "question": "Is er een barbecue?",
+          "answer": "Ja, er is een barbecue beschikbaar. De gebruiksvoorwaarden kunnen afhangen van het seizoen en het weer."
+        }
       ]
     },
     "brassine": {
       "meta": {
-        "title": "La Brassine - Knusse romantische gîte in Libin",
-        "description": "Een kleinere, intiemere en cocooning gîte in Libin, volledig gelijkvloers, met tuin vooraan en een warme sfeer vol privacy."
+        "title": "La Brassinne - Knusse romantische gîte in Libin",
+        "description": "Een kleinere, intiemere en cocooning gîte in Libin, geschikt voor personen met beperkte mobiliteit, volledig gelijkvloers, met tuin aan de voorkant en tuin aan de achterkant."
       },
       "hero": {
         "eyebrow": "Charmante gîte in Libin",
-        "title": "La Brassine",
-        "description": "Een heel knusse retreat, intiemer en omhullender, ideaal voor koppels die zachtheid en privacy zoeken."
+        "title": "La Brassinne",
+        "description": "Een heel knusse retreat, intiemer en omhullender, ideaal voor een moment met twee, rust of een verblijf in alle stilte."
       },
       "story": {
         "eyebrow": "Voorstelling",
         "title": "Een klein nest vol intimiteit",
-        "lead": "La Brassine is kleiner dan La Bergerie, en precies dat maakt haar zo charmant. Ze voelt aan als een warme retreat die erg prettig is voor twee.",
+        "lead": "La Brassinne is kleiner dan La Bergerie, en precies dat maakt haar zo charmant. Ze voelt aan als een warme retreat die erg prettig is voor twee.",
         "paragraphs": [
-          "De gîte is volledig gelijkvloers, wat het verblijf heel eenvoudig en comfortabel maakt. Vanaf de eerste stappen voelt de sfeer zacht, romantisch en cocooning aan.",
+          "De gîte is geschikt voor personen met beperkte mobiliteit en volledig gelijkvloers, wat het verblijf heel eenvoudig en comfortabel maakt. Vanaf de eerste stappen voelt de sfeer zacht, romantisch en cocooning aan.",
           "Elke ruimte werd ontworpen om meteen welzijn te geven: een cosy slaapkamer, een warme leefruimte en alles wat nodig is om samen te koken en te ontspannen.",
-          "De tuin vooraan versterkt dat gevoel van privacy en geeft het verblijf een mooie buitenverlenging."
+          "De tuin vooraan versterkt dat gevoel van privacy en de tuin achteraan biedt ook een meer open buitenruimte."
         ]
       },
-      "galleryIntro": "Ontdek La Brassine in beeld: zachtheid, intimiteit en charme.",
+      "galleryIntro": "Ontdek La Brassinne in beeld: zachtheid, intimiteit en charme.",
       "highlights": [
         "De meest cocooning van de twee gîtes",
         "Intieme en geruststellende sfeer",
-        "Volledig gelijkvloers",
-        "Tuin vooraan",
+        "Geschikt voor personen met beperkte mobiliteit en volledig gelijkvloers",
+        "Tuin aan de voorkant en tuin aan de achterkant",
         "Goed uitgeruste keuken",
         "4K QLED TV en streaming",
-        "Perfect om je partner te verrassen"
+        "Perfect om je partner te verrassen",
+        "Kinderen welkom en huisdieren op aanvraag",
+        "Schoonmaak inbegrepen"
       ],
       "stayInfo": [
-        { "title": "Aankomst & onthaal", "text": "Check-in tussen 16:00 en 23:00, met persoonlijke sleuteloverdracht en een zorgzaam onthaal." },
-        { "title": "Knus comfort", "text": "Bedden opgemaakt, handdoeken klaar, verduisterende gordijnen, Wi-Fi en alles voor een ontspannen verblijf binnen." },
-        { "title": "Toegankelijkheid & buitenruimte", "text": "De gîte is volledig gelijkvloers en heeft een aangename tuin vooraan." }
+        {
+          "title": "Aankomst & onthaal",
+          "text": "Check-in tussen 16u en 21u, met persoonlijke sleuteloverdracht en een zorgzaam onthaal."
+        },
+        {
+          "title": "Knus comfort",
+          "text": "Bedden opgemaakt, handdoeken klaar, Wi-Fi en alles voor een ontspannen verblijf binnen."
+        },
+        {
+          "title": "Toegankelijkheid & buitenruimte",
+          "text": "La Brassinne is geschikt voor personen met beperkte mobiliteit en volledig gelijkvloers. Ze heeft een tuin vooraan en toegang tot een tuin achteraan."
+        }
       ],
       "reviewHighlight": {
         "author": "Uitgelichte review",
-        "text": "La Brassine wordt vaak gekozen om haar heel intieme sfeer. Gasten houden van het cocooning gevoel en het idee van een echt toevluchtsoord met twee."
+        "text": "La Brassinne wordt vaak gekozen om haar heel intieme sfeer. Gasten houden van het cocooning gevoel en het idee van een echt toevluchtsoord met twee."
       },
       "outdoor": {
-        "title": "De tuin vooraan",
-        "text": "Deze buitenruimte versterkt de privacy en is heerlijk voor koffie, aperitief of ontbijt buiten."
+        "title": "De tuin vooraan en achteraan",
+        "text": "La Brassinne heeft een tuin aan de voorkant en een tuin aan de achterkant, als zachte verlenging van de cocon."
       },
-      "faqIntro": "Een gerichte FAQ om meteen duidelijk te maken welke sfeer en ervaring La Brassine biedt.",
+      "faqIntro": "Een gerichte FAQ om meteen duidelijk te maken welke sfeer en ervaring La Brassinne biedt.",
       "faq": [
-        { "question": "Is La Brassine kleiner dan La Bergerie?", "answer": "Ja, ze is compacter, en precies dat maakt haar extra knus en intiem." },
-        { "question": "Is de gîte volledig gelijkvloers?", "answer": "Ja, helemaal. Dat is een echt comfortvoordeel." },
-        { "question": "Voelt ze anders aan dan La Bergerie?", "answer": "Ja. La Brassine is omhullender en intiemer, met een echte cocooning sfeer voor koppels." },
-        { "question": "Kunnen we ook gewoon het hele verblijf ter plaatse beleven?", "answer": "Absoluut. De keuken is uitgerust, de televisie laat streaming toe en alles ondersteunt een comfortabel slow stay binnen." }
+        {
+          "question": "Is La Brassinne kleiner dan La Bergerie?",
+          "answer": "Ja, ze is compacter, en precies dat maakt haar extra knus en intiem."
+        },
+        {
+          "question": "Is La Brassinne geschikt voor personen met beperkte mobiliteit?",
+          "answer": "Ja, La Brassinne is geschikt voor personen met beperkte mobiliteit en is volledig gelijkvloers. Voor specifieke vragen over toegankelijkheid kunt u ons voor uw verblijf contacteren, zodat we kunnen bevestigen dat de accommodatie aan uw noden beantwoordt."
+        },
+        {
+          "question": "Voelt ze anders aan dan La Bergerie?",
+          "answer": "Ja. La Brassinne is omhullender en intiemer, met een echte cocooning sfeer voor koppels."
+        },
+        {
+          "question": "Kunnen we ook gewoon het hele verblijf ter plaatse beleven?",
+          "answer": "Absoluut. De keuken is uitgerust, de televisie laat streaming toe en alles ondersteunt een comfortabel slow stay binnen."
+        },
+        {
+          "question": "Zijn kinderen en huisdieren welkom?",
+          "answer": "De gîtes zijn in de eerste plaats bedacht voor een verblijf met twee, maar kinderen zijn welkom. Huisdieren kunnen op aanvraag worden toegelaten voor de reservatie."
+        },
+        {
+          "question": "Zijn de schoonmaakkosten inbegrepen?",
+          "answer": "Ja, de schoonmaakkosten zijn inbegrepen."
+        },
+        {
+          "question": "Is er een barbecue?",
+          "answer": "Ja, er is een barbecue beschikbaar. De gebruiksvoorwaarden kunnen afhangen van het seizoen en het weer."
+        }
       ]
     }
   },
   "equipment": {
     "title": "Voorzieningen",
     "categories": [
-      { "title": "Comfort & welzijn", "items": ["Haardroger", "Warm water", "Kleerhangers", "Bedlinnen", "Verduisterende gordijnen", "Droogrek", "Kledingopberging", "Airconditioning", "Verwarming"] },
-      { "title": "Keuken", "items": ["Keuken", "Koelkast", "Microgolf", "Basis kookgerei", "Olie, zout, peper", "Servies en bestek", "Diepvries", "Vaatwasser", "Kookplaat", "Oven", "Waterkoker", "Koffiemachine", "Wijnglazen", "Broodrooster"] },
-      { "title": "Ontspanning", "items": ["Televisie", "Ethernetverbinding", "Bordspellen", "Wi-Fi"] },
-      { "title": "Buiten", "items": ["Tuin", "Tuinmeubilair", "Buiten eethoek", "Barbecue", "Barbecuegerei", "Ligstoelen"] },
-      { "title": "Praktisch & veiligheid", "items": ["Privé ingang", "Gratis parking", "Rookmelder", "Brandblusser", "Elektrisch laden op aanvraag"] }
+      {
+        "title": "Comfort & welzijn",
+        "items": [
+          "Haardroger",
+          "Warm water",
+          "Kleerhangers",
+          "Bedlinnen",
+          "Droogrek",
+          "Kledingopberging",
+          "Airconditioning",
+          "Verwarming"
+        ]
+      },
+      {
+        "title": "Keuken",
+        "items": [
+          "Keuken",
+          "Koelkast",
+          "Microgolf",
+          "Basis kookgerei",
+          "Olie, zout, peper",
+          "Servies en bestek",
+          "Diepvries",
+          "Vaatwasser",
+          "Kookplaat",
+          "Oven",
+          "Waterkoker",
+          "Koffiemachine",
+          "Wijnglazen",
+          "Broodrooster",
+          "Citruspers"
+        ]
+      },
+      {
+        "title": "Ontspanning",
+        "items": [
+          "Televisie",
+          "Ethernetverbinding",
+          "Bordspellen",
+          "Wi-Fi"
+        ]
+      },
+      {
+        "title": "Buiten",
+        "items": [
+          "Tuin",
+          "Tuinmeubilair",
+          "Buiten eethoek",
+          "Barbecue",
+          "Barbecuegerei",
+          "Ligstoelen"
+        ]
+      },
+      {
+        "title": "Praktisch & veiligheid",
+        "items": [
+          "Privé ingang",
+          "Gratis parking",
+          "Rookmelder",
+          "Brandblusser",
+          "Betalend elektrisch laden op aanvraag"
+        ]
+      }
     ]
   },
   "around": {
@@ -327,25 +563,116 @@
       {
         "key": "restaurants",
         "eyebrow": "Lekker eten",
-        "title": "Onze favoriete restaurants",
-        "intro": "Adressen om aan te raden voor een romantisch diner, een lokale maaltijd of een verfijnde pauze.",
+        "title": "Restaurants",
+        "intro": "Vijf adressen die makkelijk aan te raden zijn, met Les Frangins eerst omdat het zo dicht bij de gîtes ligt.",
         "items": [
-          { "name": "Le Cor de Chasse", "image": "/images/around/cor.jpg", "location": "nabij Saint-Hubert", "distance": "ongeveer 20 min", "description": "Een verfijnde keuze wanneer je van de avond echt iets bijzonders wilt maken.", "tags": ["gastronomisch", "speciale gelegenheid"] },
-          { "name": "Le Relais de Mirwart", "image": "/images/around/brichpotes.jpg", "location": "Mirwart", "distance": "20 min", "description": "De ligging, het dorp en de natuur rondom maken dit tot een mooie uitstap met twee.", "tags": ["natuur", "charme"] },
-          { "name": "Le Fournil de Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Ideaal voor lunch, brunch of een zoete pauze na een wandeling in het dorp.", "tags": ["tea room", "lekker"] },
-          { "name": "Een lokaal adres in Libin", "image": "/images/around/frangins.jpg", "location": "Libin", "distance": "5 min", "description": "Een lokaal adres om te ontdekken voor een eenvoudige en gezellige maaltijd.", "tags": ["lokaal"] }
+          {
+            "name": "Les Frangins",
+            "image": "/images/around/frangins.jpg",
+            "location": "Libin",
+            "distance": "ongeveer 5 min",
+            "description": "Een familiale brasserie-grill in Libin, ideaal voor een maaltijd dicht bij de gîtes in een warme sfeer.",
+            "tags": [
+              "brasserie",
+              "grill"
+            ]
+          },
+          {
+            "name": "Le Moulin de la Dîme",
+            "image": "/images/around/p_redu.jpg",
+            "location": "Redu",
+            "distance": "ongeveer 10 min",
+            "description": "Een warm restaurant in Redu, rond streekproducten en de sfeer van de molen.",
+            "tags": [
+              "streekproducten",
+              "molen"
+            ]
+          },
+          {
+            "name": "Le Cor de Chasse",
+            "image": "/images/around/cor.jpg",
+            "location": "nabij Saint-Hubert",
+            "distance": "ongeveer 20 min",
+            "description": "Een verfijnde keuze wanneer je van de avond echt iets bijzonders wilt maken.",
+            "tags": [
+              "gastronomisch",
+              "speciale gelegenheid"
+            ]
+          },
+          {
+            "name": "Le Relais de Mirwart",
+            "image": "/images/around/brichpotes.jpg",
+            "location": "Mirwart",
+            "distance": "20 min",
+            "description": "De ligging, het dorp en de natuur rondom maken dit tot een mooie uitstap met twee.",
+            "tags": [
+              "natuur",
+              "charme"
+            ]
+          }
         ]
       },
       {
         "key": "walks",
         "eyebrow": "Natuur",
-        "title": "Onze favoriete wandelingen",
+        "title": "Wandelingen",
         "intro": "Makkelijk aan te raden wandelingen volgens de stemming: bos, dorp, water en uitzicht.",
         "items": [
-          { "name": "Domein van Mirwart", "image": "/images/around/p_mirwart.jpg", "location": "Mirwart", "distance": "20 min", "description": "Een Ardense klassieker met erfgoed, bosgevoel en mooie landschappen.", "tags": ["bos", "mooie omgeving"] },
-          { "name": "Rond Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Perfect om een zachte wandeling te combineren met boekwinkels, galerijen en koffie.", "tags": ["dorp", "romantisch"] },
-          { "name": "Saint-Hubert en natuur", "image": "/images/around/p_sainthubert.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Een goede keuze voor reizigers die erfgoed en bos willen combineren.", "tags": ["erfgoed", "bos"] },
-          { "name": "Wandelen bij Libin", "image": "/images/around/p_libin.jpg", "location": "Libin", "distance": "ter plaatse", "description": "De omgeving is ideaal voor rustige avondwandelingen of frisse ochtenden.", "tags": ["eenvoudig", "dichtbij"] }
+          {
+            "name": "Domein van Mirwart",
+            "image": "/images/around/p_mirwart.jpg",
+            "location": "Mirwart",
+            "distance": "20 min",
+            "description": "Een Ardense klassieker met erfgoed, bosgevoel en mooie landschappen.",
+            "tags": [
+              "bos",
+              "mooie omgeving"
+            ]
+          },
+          {
+            "name": "Rond Redu",
+            "image": "/images/around/p_redu.jpg",
+            "location": "Redu",
+            "distance": "10 min",
+            "description": "Perfect om een zachte wandeling te combineren met boekwinkels, galerijen en koffie.",
+            "tags": [
+              "dorp",
+              "romantisch"
+            ]
+          },
+          {
+            "name": "Saint-Hubert en natuur",
+            "image": "/images/around/p_sainthubert.jpg",
+            "location": "Saint-Hubert",
+            "distance": "15 min",
+            "description": "Een goede keuze voor reizigers die erfgoed en bos willen combineren.",
+            "tags": [
+              "erfgoed",
+              "bos"
+            ]
+          },
+          {
+            "name": "Balade du Bourgmestre",
+            "image": "/images/around/p_libin.jpg",
+            "location": "Libin",
+            "distance": "ter plaatse",
+            "description": "Een bewegwijzerde lus vanaf de kerk van Libin, ideaal om de bossen en plateaus rond het dorp te ontdekken.",
+            "tags": [
+              "eenvoudig",
+              "dichtbij"
+            ]
+          },
+          {
+            "name": "Wandeling langs de Lesse",
+            "image": "/images/around/lesse.png",
+            "location": "Lesse / Redu",
+            "distance": "ongeveer 10 à 15 min",
+            "description": "Een natuurwandeling langs de Lesse, tussen bos, rivier en ruigere landschappen.",
+            "tags": [
+              "rivier",
+              "natuur"
+            ]
+          }
         ]
       },
       {
@@ -354,34 +681,138 @@
         "title": "Ideeën voor een romantisch weekend",
         "intro": "Een paar eenvoudige combinaties die van twee dagen een echte herinnering maken.",
         "items": [
-          { "name": "Aankomen en vertragen", "image": "/images/home/5b.avif", "description": "Een drankje, een warme douche, een eenvoudig diner in de gîte en een cocooning avond binnen.", "tags": ["slow stay", "gezellig"] },
-          { "name": "Wandelen en daarna dineren", "image": "/images/around/p_mirwart.jpg", "description": "Een wandeling in Mirwart of Redu en daarna een mooie tafel voor twee.", "tags": ["wandeling", "diner"] },
-          { "name": "Verras je partner", "image": "/images/home/6b.avif", "description": "Voeg champagne, bloemen of romantische decoratie toe om het verblijf nog memorabeler te maken.", "tags": ["verrassing", "romantische extra"] },
-          { "name": "Geen zwaar programma", "image": "/images/home/4b.avif", "description": "Enkele fijne ideeën, weinig druk en veel tijd om gewoon samen te zijn.", "tags": ["ontspanning", "met twee"] }
+          {
+            "name": "Aankomen en vertragen",
+            "image": "/images/home/5b.avif",
+            "description": "Een drankje, een warme douche, een eenvoudig diner in de gîte en een cocooning avond binnen.",
+            "tags": [
+              "slow stay",
+              "gezellig"
+            ]
+          },
+          {
+            "name": "Wandelen en daarna dineren",
+            "image": "/images/around/p_mirwart.jpg",
+            "description": "Een wandeling in Mirwart of Redu en daarna een mooie tafel voor twee.",
+            "tags": [
+              "wandeling",
+              "diner"
+            ]
+          },
+          {
+            "name": "Verras je partner",
+            "image": "/images/home/6b.avif",
+            "description": "Voeg champagne, bloemen of romantische decoratie toe om het verblijf nog memorabeler te maken.",
+            "tags": [
+              "verrassing",
+              "romantische extra"
+            ]
+          },
+          {
+            "name": "Geen zwaar programma",
+            "image": "/images/home/4b.avif",
+            "description": "Enkele fijne ideeën, weinig druk en veel tijd om gewoon samen te zijn.",
+            "tags": [
+              "ontspanning",
+              "met twee"
+            ]
+          }
         ]
       },
       {
         "key": "activities",
-        "eyebrow": "Samen doen",
-        "title": "Activiteiten voor twee",
+        "eyebrow": "Mooi weer",
+        "title": "Activiteiten bij mooi weer",
         "intro": "Voor gasten die hun verblijf graag aanvullen met een paar goed gekozen uitstappen.",
         "items": [
-          { "name": "Boekendorp Redu", "image": "/images/around/v_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Een heel aangename uitstap langs boekwinkels, ateliers en een unieke sfeer.", "tags": ["cultuur", "flaneren"] },
-          { "name": "Euro Space Center", "image": "/images/around/euro.jpg", "location": "Transinne", "distance": "10 min", "description": "Een originele en makkelijke uitstap als je eens iets anders wilt.", "tags": ["origineel", "koppel"] },
-          { "name": "Fietstochten", "image": "/images/around/velo.jpg", "location": "rond Libin", "distance": "variabel", "description": "Wegen en landschappen lenen zich perfect voor een rustige of actievere rit.", "tags": ["fiets", "natuur"] },
-          { "name": "Erfgoed van Saint-Hubert", "image": "/images/around/p_sainthubert.jpg", "location": "Saint-Hubert", "distance": "15 min", "description": "Een mooie keuze om architectuur, sfeer en een terrasje te combineren.", "tags": ["stad", "erfgoed"] }
+          {
+            "name": "Boekendorp Redu",
+            "image": "/images/around/v_redu.jpg",
+            "location": "Redu",
+            "distance": "10 min",
+            "description": "Een heel aangename uitstap langs boekwinkels, ateliers en een unieke sfeer.",
+            "tags": [
+              "cultuur",
+              "flaneren"
+            ]
+          },
+          {
+            "name": "Euro Space Center",
+            "image": "/images/around/euro.jpg",
+            "location": "Transinne",
+            "distance": "10 min",
+            "description": "Een originele en makkelijke uitstap als je eens iets anders wilt.",
+            "tags": [
+              "origineel",
+              "koppel"
+            ]
+          },
+          {
+            "name": "Fietstochten",
+            "image": "/images/around/velo.jpg",
+            "location": "rond Libin",
+            "distance": "variabel",
+            "description": "Wegen en landschappen lenen zich perfect voor een rustige of actievere rit.",
+            "tags": [
+              "fiets",
+              "natuur"
+            ]
+          },
+          {
+            "name": "Erfgoed van Saint-Hubert",
+            "image": "/images/around/p_sainthubert.jpg",
+            "location": "Saint-Hubert",
+            "distance": "15 min",
+            "description": "Een mooie keuze om architectuur, sfeer en een terrasje te combineren.",
+            "tags": [
+              "stad",
+              "erfgoed"
+            ]
+          }
         ]
       },
       {
         "key": "rainy",
         "eyebrow": "Regenweer",
-        "title": "Wat te doen als het regent",
+        "title": "Activiteiten bij regen",
         "intro": "Een geslaagd verblijf hangt niet af van zon. Regen past verrassend goed bij de Ardennen.",
         "items": [
-          { "name": "Knusse dag in de gîte", "image": "/images/home/5b.avif", "description": "Streaming, bordspellen, samen koken en het plezier van binnen warm te blijven.", "tags": ["ter plaatse", "zachtheid"] },
-          { "name": "Boekwinkels en galerijen in Redu", "image": "/images/around/p_redu.jpg", "location": "Redu", "distance": "10 min", "description": "Het boekendorp blijft charmant, ook onder een grijze hemel.", "tags": ["cultuur", "gedeeltelijk overdekt"] },
-          { "name": "Lange lunch", "image": "/images/around/cor.jpg", "description": "Gebruik de regen als excuus voor een trage en gezellige maaltijd.", "tags": ["lekker eten"] },
-          { "name": "Lokaal erfgoed", "image": "/images/around/v_bouillon.jpg", "description": "Musea, basiliek of dorpsbezoeken afhankelijk van de stemming van de dag.", "tags": ["ontdekking"] }
+          {
+            "name": "Knusse dag in de gîte",
+            "image": "/images/home/5b.avif",
+            "description": "Streaming, bordspellen, samen koken en het plezier van binnen warm te blijven.",
+            "tags": [
+              "ter plaatse",
+              "zachtheid"
+            ]
+          },
+          {
+            "name": "Boekwinkels en galerijen in Redu",
+            "image": "/images/around/p_redu.jpg",
+            "location": "Redu",
+            "distance": "10 min",
+            "description": "Het boekendorp blijft charmant, ook onder een grijze hemel.",
+            "tags": [
+              "cultuur",
+              "gedeeltelijk overdekt"
+            ]
+          },
+          {
+            "name": "Lange lunch",
+            "image": "/images/around/cor.jpg",
+            "description": "Gebruik de regen als excuus voor een trage en gezellige maaltijd.",
+            "tags": [
+              "lekker eten"
+            ]
+          },
+          {
+            "name": "Lokaal erfgoed",
+            "image": "/images/around/v_bouillon.jpg",
+            "description": "Musea, basiliek of dorpsbezoeken afhankelijk van de stemming van de dag.",
+            "tags": [
+              "ontdekking"
+            ]
+          }
         ]
       },
       {
@@ -390,10 +821,55 @@
         "title": "Dorpen & erfgoed",
         "intro": "Makkelijke lokale referenties voor gasten die willen ontdekken zonder ver te rijden.",
         "items": [
-          { "name": "Libin", "image": "/images/around/p_libin.jpg", "distance": "ter plaatse", "description": "Een ideale basis om de streek te verkennen zonder lange verplaatsingen.", "tags": ["goede basis"] },
-          { "name": "Redu", "image": "/images/around/v_redu.jpg", "distance": "10 min", "description": "Het bekende boekendorp blijft een van de charmantste uitstappen in de streek.", "tags": ["boeken", "charme"] },
-          { "name": "Saint-Hubert", "image": "/images/around/p_sainthubert.jpg", "distance": "15 min", "description": "Een stad met karakter, makkelijk aan te raden voor erfgoed en sfeer.", "tags": ["basiliek", "terrassen"] },
-          { "name": "Mirwart", "image": "/images/around/v_mirwart.jpg", "distance": "20 min", "description": "Een rustig en fotogeniek dorp dat perfect past bij de sfeer van het verblijf.", "tags": ["natuur", "erfgoed"] }
+          {
+            "name": "Libin",
+            "image": "/images/around/p_libin.jpg",
+            "distance": "ter plaatse",
+            "description": "Een ideale basis om de streek te verkennen zonder lange verplaatsingen.",
+            "tags": [
+              "goede basis"
+            ]
+          },
+          {
+            "name": "Redu",
+            "image": "/images/around/v_redu.jpg",
+            "distance": "10 min",
+            "description": "Het bekende boekendorp blijft een van de charmantste uitstappen in de streek.",
+            "tags": [
+              "boeken",
+              "charme"
+            ]
+          },
+          {
+            "name": "Saint-Hubert",
+            "image": "/images/around/p_sainthubert.jpg",
+            "distance": "15 min",
+            "description": "Een stad met karakter, makkelijk aan te raden voor erfgoed en sfeer.",
+            "tags": [
+              "basiliek",
+              "terrassen"
+            ]
+          },
+          {
+            "name": "Mirwart",
+            "image": "/images/around/v_mirwart.jpg",
+            "distance": "20 min",
+            "description": "Een rustig en fotogeniek dorp dat perfect past bij de sfeer van het verblijf.",
+            "tags": [
+              "natuur",
+              "erfgoed"
+            ]
+          },
+          {
+            "name": "Lesse",
+            "image": "/images/around/lesse.png",
+            "distance": "ongeveer 10 à 15 min",
+            "description": "Een landelijk gehucht aan de Lesse, perfect voor een natuurwandeling rond Redu.",
+            "tags": [
+              "lesse",
+              "natuur"
+            ]
+          }
         ]
       },
       {
@@ -402,9 +878,33 @@
         "title": "Fietstochten",
         "intro": "Mooie fietslussen om de streek op een rustige of sportievere manier te ontdekken.",
         "items": [
-          { "name": "Zachte lus rond Libin", "image": "/images/around/velo_libinredu.jpg", "distance": "variabel", "description": "Voor koppels die rustig willen fietsen zonder een sportieve dag te plannen.", "tags": ["makkelijk"] },
-          { "name": "Naar Redu en omliggende dorpen", "image": "/images/around/velo_lesse.png", "distance": "25 km", "description": "Een mooie rit die platteland, charme en een lekkere tussenstop combineert.", "tags": ["panorama"] },
-          { "name": "Sportievere Ardennenversie", "image": "/images/around/velo_laroche.jpg", "distance": "te bepalen", "description": "Een meer uitdagende route voor wie graag klimmetjes en langere ritten combineert.", "tags": ["sportief"] }
+          {
+            "name": "Zachte lus rond Libin",
+            "image": "/images/around/velo_libinredu.jpg",
+            "distance": "variabel",
+            "description": "Voor koppels die rustig willen fietsen zonder een sportieve dag te plannen.",
+            "tags": [
+              "makkelijk"
+            ]
+          },
+          {
+            "name": "Naar Redu en omliggende dorpen",
+            "image": "/images/around/velo_lesse.png",
+            "distance": "25 km",
+            "description": "Een mooie rit die platteland, charme en een lekkere tussenstop combineert.",
+            "tags": [
+              "panorama"
+            ]
+          },
+          {
+            "name": "Sportievere Ardennenversie",
+            "image": "/images/around/velo_laroche.jpg",
+            "distance": "te bepalen",
+            "description": "Een meer uitdagende route voor wie graag klimmetjes en langere ritten combineert.",
+            "tags": [
+              "sportief"
+            ]
+          }
         ]
       }
     ],
@@ -426,47 +926,110 @@
       "description": "Vind de nuttige info om rustig aan te komen, volop te genieten en zonder stress te vertrekken."
     },
     "quickFacts": [
-      { "title": "Check-in", "text": "Tussen 16:00 en 23:00" },
-      { "title": "Check-out", "text": "Voor 10:00" },
-      { "title": "Sleutels", "text": "Persoonlijke overdracht" },
-      { "title": "Parking", "text": "7 plaatsen in totaal" }
+      {
+        "title": "Check-in",
+        "text": "Tussen 16u en 21u"
+      },
+      {
+        "title": "Check-out",
+        "text": "Voor 10:00"
+      },
+      {
+        "title": "Sleutels",
+        "text": "Persoonlijke overdracht"
+      },
+      {
+        "title": "Parking",
+        "text": "7 plaatsen in totaal"
+      }
     ],
     "sections": [
       {
         "eyebrow": "Voor aankomst",
-        "title": "Aankomst, onthaal en installatie",
-        "text": "Check-in gebeurt tussen 16:00 en 23:00. De sleutels worden persoonlijk overhandigd op een eenvoudige en warme manier. Een geschatte aankomsttijd vooraf delen is handig.",
+        "title": "Voor aankomst",
+        "text": "Een paar eenvoudige punten helpen om het verblijf zonder stress voor te bereiden: uw uur bevestigen, de route plannen, nagaan wat u meebrengt en ons een eventuele bijzondere vraag doorgeven.",
         "points": [
-          { "title": "Linnen inbegrepen", "text": "Handdoeken liggen klaar en de bedden zijn opgemaakt voor aankomst." },
-          { "title": "Host naast de deur", "text": "De woning van de host is aanpalend, wat snelle hulp mogelijk maakt als dat nodig is." }
+          {
+            "title": "Checklist voor aankomst",
+            "text": "Bevestig uw aankomstuur, bereid uw route voor, geef een bijzondere vraag door en contacteer ons bij een toegankelijkheidsvraag."
+          },
+          {
+            "title": "Al voorzien",
+            "text": "Linnen is voorzien, de bedden zijn opgemaakt, Wi-Fi is beschikbaar en er is parking ter plaatse."
+          }
         ]
       },
       {
-        "eyebrow": "Ter plaatse",
-        "title": "Comfort, keuken, Wi-Fi en televisie",
+        "eyebrow": "Aankomst & check-in",
+        "title": "Aankomst & check-in",
+        "text": "Check-in gebeurt tussen 16u en 21u met een persoonlijke ontvangst. We spreken samen uw aankomstuur af zodat we u in de beste omstandigheden kunnen verwelkomen.",
+        "points": [
+          {
+            "title": "Ontvangst ter plaatse",
+            "text": "De sleutels worden persoonlijk overhandigd op een eenvoudige, warme en geruststellende manier."
+          },
+          {
+            "title": "Route",
+            "text": "Het adres is Rue du Curé 19, 6890 Libin. De routeknop in de gids opent Google Maps."
+          }
+        ]
+      },
+      {
+        "eyebrow": "Tijdens het verblijf",
+        "title": "Tijdens het verblijf",
         "text": "Alles is voorzien zodat gasten volop kunnen genieten zonder te improviseren. De keuken is echt uitgerust, Wi-Fi werkt in het hele verblijf en de televisie ondersteunt streaming.",
         "points": [
-          { "title": "Keuken", "text": "Oven, kookplaat, microgolf, vaatwasser, koelkast, diepvries, koffiemachine, waterkoker, broodrooster, servies, wijnglazen en basisbenodigdheden." },
-          { "title": "TV & streaming", "text": "Zet de televisie aan, kies de juiste ingang of app en meld je eventueel aan met je eigen account. Vergeet niet uit te loggen voor vertrek." },
-          { "title": "Wi-Fi", "text": "Wi-Fi dekt het hele verblijf. Ethernet is ook beschikbaar." },
-          { "title": "Elektrisch laden", "text": "Laden kan op aanvraag. Het is beter dit vooraf te melden." }
+          {
+            "title": "Keuken",
+            "text": "Oven, kookplaat, microgolf, vaatwasser, koelkast, diepvries, koffiemachine, waterkoker, broodrooster, servies, wijnglazen en basisbenodigdheden., citruspers."
+          },
+          {
+            "title": "TV & streaming",
+            "text": "Meld u eventueel aan met uw eigen streamingaccount en vergeet niet uit te loggen voor vertrek."
+          },
+          {
+            "title": "Wi-Fi",
+            "text": "Wi-Fi dekt het hele verblijf. De precieze verbindingsgegevens worden ter plaatse gedeeld."
+          },
+          {
+            "title": "Elektrisch laden",
+            "text": "Een laadpunt voor elektrische wagens is beschikbaar. Het gebruik is betalend, dus meldt u dit best voor aankomst."
+          },
+          {
+            "title": "Warmtepomp",
+            "text": "Het systeem is al ingesteld op een comfortabele temperatuur. Als iets vreemd aanvoelt, neem dan liever contact op met de host dan zelf meerdere instellingen te wijzigen."
+          },
+          {
+            "title": "Afval sorteren",
+            "text": "Gasten worden gevraagd om afval te sorteren. De zakken mogen voor de deur gezet worden nadat de host verwittigd is, en de host doet de rest."
+          }
         ]
       },
       {
-        "eyebrow": "Goed om te weten",
-        "title": "Verwarming, afval en een paar nuttige afspraken",
-        "text": "De verwarming werkt met een warmtepomp. Om het systeem goed te laten werken, is het beter om de instellingen niet sterk te veranderen tenzij echt nodig.",
+        "eyebrow": "Restaurants & winkels",
+        "title": "Restaurants & nuttige winkels",
+        "text": "De pagina Belevenissen bundelt restaurants, wandelingen en uitstapideeën rond Libin. De snelle knoppen in deze gids brengen u er rechtstreeks naartoe.",
         "points": [
-          { "title": "Warmtepomp", "text": "Het systeem is al ingesteld op een comfortabele temperatuur. Als iets vreemd aanvoelt, neem dan liever contact op met de host dan zelf meerdere instellingen te wijzigen." },
-          { "title": "Afval sorteren", "text": "Gasten worden gevraagd om afval te sorteren. De zakken mogen voor de deur gezet worden nadat de host verwittigd is, en de host doet de rest." },
-          { "title": "Kleine herinnering", "text": "Respecteer graag de rust, het materiaal en de warme sfeer van het huis." }
+          {
+            "title": "Restaurants",
+            "text": "Vind favoriete restaurants rond Libin, met afstand, keukenstijl en route wanneer beschikbaar."
+          },
+          {
+            "title": "Wandelingen",
+            "text": "Aanbevolen wandelingen tonen duur, afstand en niveau wanneer die informatie beschikbaar is."
+          },
+          {
+            "title": "Nuttige winkels",
+            "text": "Voor een praktische winkel of een precies adres kunt u ons contacteren. We wijzen u graag naar de eenvoudigste optie voor uw verblijf."
+          }
         ]
       },
       {
-        "eyebrow": "Voor vertrek",
-        "title": "Wat te doen voor check-out",
+        "eyebrow": "Vertrek & check-out",
+        "title": "Vertrek & check-out",
         "text": "Het idee is niet om van het vertrek een klus te maken. Enkele eenvoudige handelingen zijn genoeg.",
         "bullets": [
+          "Checklist op de dag van vertrek",
           "Controleren of er niets achterblijft in de gîte",
           "De keuken redelijk netjes achterlaten",
           "Het afval sorteren en klaarzetten indien nodig",
@@ -479,17 +1042,35 @@
     "faqTitle": "Praktische FAQ",
     "faqDescription": "Een geruststellende FAQ die terugkerende berichten helpt verminderen zonder streng te klinken.",
     "faq": [
-      { "question": "Kunnen we laat aankomen?", "answer": "Check-in is voorzien tussen 16:00 en 23:00. Als je aan het einde van die periode aankomt, meld dit best even." },
-      { "question": "Is parkeren eenvoudig?", "answer": "Ja. Er zijn 7 parkeerplaatsen in totaal, dus aankomen gaat vlot." },
-      { "question": "Moeten we lakens of handdoeken meebrengen?", "answer": "Nee. Alles is voorzien en de bedden zijn opgemaakt voor aankomst." },
-      { "question": "Mogen we de verwarming zelf regelen?", "answer": "De warmtepomp is al comfortabel ingesteld. Als iets vreemd aanvoelt, neem dan best eerst contact op met de host." },
-      { "question": "Hoe doen we het met afval?", "answer": "Gasten sorteren het afval. Zakjes mogen voor de deur staan nadat de host verwittigd is, waarna de host de rest regelt." },
-      { "question": "Is er makkelijk iemand bereikbaar bij een probleem?", "answer": "Ja. De host blijft beschikbaar en de aanpalende woning maakt snelle hulp mogelijk." }
+      {
+        "question": "Kunnen we laat aankomen?",
+        "answer": "Aankomst is voorzien tussen 16u en 21u. Als u aan het einde van die periode aankomt, meldt u dit best even."
+      },
+      {
+        "question": "Is parkeren eenvoudig?",
+        "answer": "Ja. Er zijn 7 parkeerplaatsen in totaal, dus aankomen gaat vlot."
+      },
+      {
+        "question": "Moeten we lakens of handdoeken meebrengen?",
+        "answer": "Nee. Alles is voorzien en de bedden zijn opgemaakt voor aankomst."
+      },
+      {
+        "question": "Mogen we de verwarming zelf regelen?",
+        "answer": "De warmtepomp is al comfortabel ingesteld. Als iets vreemd aanvoelt, neem dan best eerst contact op met de host."
+      },
+      {
+        "question": "Hoe doen we het met afval?",
+        "answer": "Gasten sorteren het afval. Zakjes mogen voor de deur staan nadat de host verwittigd is, waarna de host de rest regelt."
+      },
+      {
+        "question": "Is er makkelijk iemand bereikbaar bij een probleem?",
+        "answer": "Ja. De host blijft beschikbaar en de aanpalende woning maakt snelle hulp mogelijk."
+      }
     ]
   },
   "contact": {
     "meta": {
-      "title": "Contact - La Bergerie & La Brassine",
+      "title": "Contact - La Bergerie & La Brassinne",
       "description": "Neem eenvoudig contact op via WhatsApp, e-mail of formulier voor een algemene vraag, attentie of praktische informatie."
     },
     "hero": {
@@ -505,9 +1086,18 @@
     },
     "practicalTitle": "Nuttige informatie",
     "practicalCards": [
-      { "title": "Adres", "text": "Rue du Curé 19, 6890 Libin, België." },
-      { "title": "Check-in / check-out", "text": "Aankomst tussen 16:00 en 23:00, vertrek voor 10:00." },
-      { "title": "Reservaties", "text": "De reserveringspagina gidst je tussen WhatsApp, het volledige formulier en Airbnb." }
+      {
+        "title": "Adres",
+        "text": "Rue du Curé 19, 6890 Libin, België."
+      },
+      {
+        "title": "Check-in / check-out",
+        "text": "Aankomst tussen 16u en 21u, vertrek voor 10:00."
+      },
+      {
+        "title": "Reservaties",
+        "text": "De reserveringspagina gidst je tussen WhatsApp, het volledige formulier en Airbnb."
+      }
     ],
     "addressTitle": "Adres",
     "form": {
@@ -528,15 +1118,7 @@
         "invalid": "Controleer de verplichte velden en je e-mailadres.",
         "error": "Er ging iets mis bij het verzenden. Je kunt ons per e-mail contacteren of WhatsApp gebruiken.",
         "responsePreference": "Antwoord via WhatsApp, e-mail of telefoon volgens uw voorkeur.",
-        "privacy": "Uw gegevens worden alleen gebruikt om op uw aanvraag te antwoorden.",
-        "placeholders": {
-          "firstName": "Je voornaam",
-          "lastName": "Je naam",
-          "email": "jij@example.com",
-          "phone": "+32 …",
-          "subject": "Bijv. Praktische vraag, romantische attentie…",
-          "message": "Uw vraag of aanvraag…"
-        }
+        "privacy": "Uw gegevens worden alleen gebruikt om op uw aanvraag te antwoorden."
       }
     }
   }

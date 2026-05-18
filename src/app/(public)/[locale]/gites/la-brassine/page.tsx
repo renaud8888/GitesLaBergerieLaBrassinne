@@ -34,7 +34,7 @@ export default async function BrassinePage({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Accommodation',
-    name: 'La Brassine',
+    name: 'La Brassinne',
     url: `https://bergerie-brassine.com/${locale}/gites/la-brassine`,
     image: ['https://bergerie-brassine.com/images/la-brassine/1.avif'],
     numberOfRooms: 1,

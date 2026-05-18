@@ -5,6 +5,7 @@ import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
 import { ContactForm } from '@/components/common/contact-form';
 import { ImageFallback } from '@/components/common/image-fallback';
+import { OwnerStorySection } from '@/components/common/owner-story-section';
 import { SectionHeading } from '@/components/common/section-heading';
 import { getWhatsappLink, siteConfig } from '@/data/site';
 import { getSiteImages } from '@/lib/content-store';
@@ -43,7 +44,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </div>
         <div className="section-shell relative z-10">
           <p className="eyebrow-chip border-white/16 bg-white/8 text-cream-100">{contact.hero.eyebrow}</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl md:text-7xl">{contact.hero.title}</h1>
+          <h1 className="text-balance mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-5xl md:text-7xl">{contact.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100/84">{contact.hero.description}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={getBookingPath(locale)} className="bg-[linear-gradient(135deg,#f4d8d2,#eec3be)] text-taupe-900 shadow-[0_24px_52px_rgba(240,201,198,0.38)]" icon={<CalendarCheck className="h-4 w-4" />}>
@@ -59,6 +60,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <section className="section-space">
         <div className="section-shell-wide grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="grid gap-4">
+            <OwnerStorySection locale={locale} compact />
+
             <article className="surface-card-strong overflow-hidden p-0">
               <div className="grid gap-3 p-6 md:p-8">
                 <div className="rounded-[1.35rem] border border-rose-200/60 bg-white/86 p-4">

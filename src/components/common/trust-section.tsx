@@ -26,10 +26,11 @@ const proofIconMap = {
   whatsapp: MessageCircle,
   airbnb: Star,
   couples: Heart,
+  handmade: Sparkles,
 } as const;
 
 const compactProofs = ['wifi', 'parking', 'linen', 'kitchen'] as const;
-const standardProofs = ['parking', 'wifi', 'linen', 'bedReady', 'kitchen', 'whatsapp'] as const;
+const standardProofs = ['parking', 'wifi', 'linen', 'bedReady', 'kitchen', 'handmade', 'whatsapp'] as const;
 const comfortProofs = ['parking', 'wifi', 'linen', 'bedReady', 'kitchen'] as const;
 const bookingProofs = ['whatsapp', 'airbnb'] as const;
 const coupleProofs = ['couples'] as const;
@@ -54,7 +55,7 @@ function ProofBadges({ locale, keys }: { locale: Locale; keys: readonly (keyof t
 }
 
 function AirbnbMiniCard({ locale, gite }: { locale: Locale; gite: TrustGite }) {
-  const title = gite === 'bergerie' ? 'La Bergerie' : 'La Brassine';
+  const title = gite === 'bergerie' ? 'La Bergerie' : 'La Brassinne';
 
   return (
     <div className="rounded-[1.25rem] border border-white/70 bg-white/82 p-4">

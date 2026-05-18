@@ -35,6 +35,7 @@ type BookingFormLabels = {
 type BookingFormOptions = {
   bergerie: string;
   brassine: string;
+  both: string;
   undecided: string;
   whatsapp: string;
   email: string;
@@ -175,12 +176,13 @@ export function BookingForm({ labels, options, locale }: BookingFormProps) {
         <select className={inputClass} name="gite" defaultValue="undecided">
           <option value="bergerie">{options.bergerie}</option>
           <option value="brassine">{options.brassine}</option>
+          <option value="both">{options.both}</option>
           <option value="undecided">{options.undecided}</option>
         </select>
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.guests}</span>
-        <input className={inputClass} name="guests" type="number" min="1" max="2" defaultValue="2" />
+        <input className={inputClass} name="guests" type="number" min="1" max="4" defaultValue="2" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.arrivalDate}</span>

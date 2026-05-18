@@ -24,14 +24,6 @@ type ContactFormProps = {
     error: string;
     responsePreference: string;
     privacy: string;
-    placeholders: {
-      firstName: string;
-      lastName: string;
-      email: string;
-      phone: string;
-      subject: string;
-      message: string;
-    };
   };
   locale: Locale;
 };
@@ -41,6 +33,8 @@ type ApiResult = {
   message?: string;
   error?: string;
 };
+
+const inputClass = 'rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white';
 
 export function ContactForm({ labels, locale }: ContactFormProps) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -135,23 +129,23 @@ export function ContactForm({ labels, locale }: ContactFormProps) {
     >
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.firstName} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="firstName" placeholder={labels.placeholders.firstName} required aria-required="true" />
+        <input className={inputClass} name="firstName" autoComplete="given-name" required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.lastName} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="lastName" placeholder={labels.placeholders.lastName} required aria-required="true" />
+        <input className={inputClass} name="lastName" autoComplete="family-name" required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.email} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="email" type="email" placeholder={labels.placeholders.email} required aria-required="true" />
+        <input className={inputClass} name="email" type="email" autoComplete="email" required aria-required="true" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.phone}</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="phone" type="tel" placeholder={labels.placeholders.phone} />
+        <input className={inputClass} name="phone" type="tel" autoComplete="tel" />
       </label>
       <label className="grid gap-2 text-sm text-taupe-700">
         <span className="font-medium tracking-[0.01em]">{labels.subject} *</span>
-        <input className="rounded-[1.2rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="subject" placeholder={labels.placeholders.subject} required aria-required="true" />
+        <input className={inputClass} name="subject" autoComplete="off" required aria-required="true" />
       </label>
       <div
         aria-hidden="true"
@@ -164,7 +158,7 @@ export function ContactForm({ labels, locale }: ContactFormProps) {
       </div>
       <label className="grid gap-2 text-sm text-taupe-700 md:col-span-2">
         <span className="font-medium tracking-[0.01em]">{labels.message} *</span>
-        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" placeholder={labels.placeholders.message} required aria-required="true" />
+        <textarea className="min-h-40 rounded-[1.35rem] border border-taupe-200 bg-white/92 px-4 py-3.5 text-taupe-900 shadow-[0_8px_20px_rgba(89,63,49,0.05)] outline-none transition focus:border-rose-300 focus:bg-white" name="message" required aria-required="true" />
       </label>
       <label className="flex items-start gap-3 rounded-[1.25rem] border border-taupe-100 bg-white/78 p-4 text-sm leading-6 text-taupe-700 md:col-span-2">
         <input className="mt-1 h-4 w-4 rounded border-taupe-300 accent-taupe-900" type="checkbox" name="consent" value="accepted" required aria-required="true" />

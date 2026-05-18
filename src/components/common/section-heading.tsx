@@ -20,7 +20,7 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className={cn('font-display text-[2.6rem] leading-[0.92] md:text-[3.7rem]', light ? 'text-cream-50' : 'text-taupe-900')}>
+      <h2 className={cn('text-balance font-display text-[2.15rem] leading-[1.02] sm:text-[2.6rem] sm:leading-[0.96] md:text-[3.7rem] md:leading-[0.92]', light ? 'text-cream-50' : 'text-taupe-900')}>
         {title}
       </h2>
       {description ? (

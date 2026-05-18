@@ -2,8 +2,10 @@ import Link from 'next/link';
 import { ArrowRight, Bath, BedDouble, Check, Gift, Sparkles, Star, Trees, UserRound } from 'lucide-react';
 
 import { ButtonLink } from '@/components/common/button-link';
+import { DualGiteNote } from '@/components/common/dual-gite-note';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { InternationalTravelInfo } from '@/components/common/international-travel-info';
+import { OwnerStorySection } from '@/components/common/owner-story-section';
 import { SectionHeading } from '@/components/common/section-heading';
 import { StackedGallery } from '@/components/common/stacked-gallery';
 import { StayIdeasSection } from '@/components/common/stay-ideas-section';
@@ -183,6 +185,14 @@ export function HomePage({
           </div>
         </div>
       </section>
+
+      <section className="section-space pt-0 bg-white/35">
+        <div className="section-shell">
+          <DualGiteNote locale={locale} />
+        </div>
+      </section>
+
+      <OwnerStorySection locale={locale} />
 
       <InternationalTravelInfo locale={locale} />
 

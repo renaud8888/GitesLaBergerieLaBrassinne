@@ -4,11 +4,15 @@ import { CalendarCheck, ExternalLink, FileText, Heart, Home, MessageCircle, Spar
 import { BookingForm } from '@/components/booking/booking-form';
 import { WhatsAppIcon } from '@/components/common/brand-icons';
 import { ButtonLink } from '@/components/common/button-link';
+import { DualGiteNote } from '@/components/common/dual-gite-note';
+import { FaqAccordion } from '@/components/common/faq-accordion';
 import { ImageFallback } from '@/components/common/image-fallback';
 import { InternationalTravelInfo } from '@/components/common/international-travel-info';
+import { OwnerStorySection } from '@/components/common/owner-story-section';
 import { SectionHeading } from '@/components/common/section-heading';
 import { TrustSection } from '@/components/common/trust-section';
 import { bookingConfig, bookingContent, getBookingWhatsappLink, type BookingTarget } from '@/data/booking';
+import { faqSectionText, getBookingFaq } from '@/data/faq';
 import { formatAirbnbRating, formatAirbnbReviewCount } from '@/data/review-sources';
 import { getSiteImages } from '@/lib/content-store';
 import { createPageMetadata } from '@/lib/metadata';
@@ -98,7 +102,7 @@ function ComparisonSummary({ locale }: { locale: Locale }) {
       <div className="grid border-b border-taupe-100 bg-white/64 px-5 py-4 text-sm font-semibold text-taupe-900 md:grid-cols-[0.7fr_1fr_1fr] md:px-6">
         <span>{locale === 'fr' ? 'Critère' : locale === 'en' ? 'Criteria' : 'Criterium'}</span>
         <span className="hidden md:block">La Bergerie</span>
-        <span className="hidden md:block">La Brassine</span>
+        <span className="hidden md:block">La Brassinne</span>
       </div>
       <div className="divide-y divide-taupe-100/80">
         {rows.map((row) => (
@@ -109,7 +113,7 @@ function ComparisonSummary({ locale }: { locale: Locale }) {
               {row.bergerie}
             </p>
             <p className="text-taupe-500">
-              <span className="mb-1 block font-medium text-taupe-900 md:hidden">La Brassine</span>
+              <span className="mb-1 block font-medium text-taupe-900 md:hidden">La Brassinne</span>
               {row.brassine}
             </p>
           </div>
@@ -121,6 +125,8 @@ function ComparisonSummary({ locale }: { locale: Locale }) {
 
 export async function BookingPage({ locale }: { locale: Locale }) {
   const content = bookingContent[locale];
+  const faqText = faqSectionText[locale];
+  const bookingFaq = getBookingFaq(locale);
   const images = await getSiteImages();
   const whatsappUrl = getBookingWhatsappLink(locale);
   const airbnbLinks = [
@@ -137,7 +143,7 @@ export async function BookingPage({ locale }: { locale: Locale }) {
         </div>
         <div className="section-shell relative z-10">
           <p className="eyebrow-chip border-white/16 bg-white/8 text-cream-100">{content.hero.eyebrow}</p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl md:text-7xl">{content.hero.title}</h1>
+          <h1 className="text-balance mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-5xl md:text-7xl">{content.hero.title}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-cream-100/84">{content.hero.description}</p>
           <div className="mt-8">
             <a href="#options-reservation" className="button-primary inline-flex">
@@ -192,6 +198,12 @@ export async function BookingPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <section className="section-space pt-0">
+        <div className="section-shell">
+          <OwnerStorySection locale={locale} compact />
+        </div>
+      </section>
+
       <InternationalTravelInfo locale={locale} />
 
       <TrustSection locale={locale} variant="detailed" />
@@ -202,6 +214,9 @@ export async function BookingPage({ locale }: { locale: Locale }) {
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
             <GiteChoiceCard locale={locale} target="bergerie" image="/images/home/2.avif" />
             <GiteChoiceCard locale={locale} target="brassine" image="/images/home/1b.avif" />
+          </div>
+          <div className="mt-6">
+            <DualGiteNote locale={locale} />
           </div>
           <ComparisonSummary locale={locale} />
         </div>
@@ -217,6 +232,20 @@ export async function BookingPage({ locale }: { locale: Locale }) {
             </div>
           </div>
           <BookingForm labels={content.form.labels} options={content.form.options} locale={locale} />
+        </div>
+      </section>
+
+      <section className="section-space pt-0 bg-white/35">
+        <div className="section-shell">
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+            <div>
+              <SectionHeading eyebrow={faqText.bookingEyebrow} title={faqText.bookingTitle} description={faqText.bookingDescription} />
+              <ButtonLink href={`/${locale}/guide-pratique`} variant="secondary" className="mt-6">
+                {faqText.guideLink}
+              </ButtonLink>
+            </div>
+            <FaqAccordion items={bookingFaq} />
+          </div>
         </div>
       </section>
 

@@ -70,7 +70,7 @@ export function Footer({
             <div className="mt-5 grid gap-3 text-sm text-cream-100/80">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 transition hover:text-cream-50">
                 <MessageCircle size={16} />
-                <span>{ui.whatsappLabel} · {siteConfig.phone}</span>
+                <span>{ui.whatsappLabel} · {siteConfig.displayPhone}</span>
               </a>
               <a href={`mailto:${siteConfig.email}`} className="inline-flex items-center gap-3 transition hover:text-cream-50">
                 <Mail size={16} />

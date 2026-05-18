@@ -264,7 +264,7 @@ function humanizeSegment(segment: string) {
     supportButton: 'Bouton aide',
     faqCta: 'Bouton FAQ',
     directAirbnbBergerie: 'Bouton Airbnb La Bergerie',
-    directAirbnbBrassine: 'Bouton Airbnb La Brassine',
+    directAirbnbBrassine: 'Bouton Airbnb La Brassinne',
     quickResponseTitle: 'Titre réponse rapide',
     quickResponseText: 'Texte réponse rapide',
     clearBookingTitle: 'Titre réservation claire',

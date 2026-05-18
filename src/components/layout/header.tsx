@@ -54,6 +54,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const normalized = stripLocaleFromPath(pathname);
+  const closeMenuLabel = locale === 'fr' ? 'Fermer le menu' : locale === 'en' ? 'Close menu' : 'Menu sluiten';
   const immersive = normalized === '/' || normalized.startsWith('/gites') || normalized === '/guide-pratique' || normalized === '/avis' || normalized === '/contact' || Object.values(bookingPaths).includes(normalized);
 
   useEffect(() => {
@@ -157,6 +158,8 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
             immersive && !scrolled ? 'border-white/60 bg-[rgba(255,250,245,0.94)] text-taupe-900' : 'border-white/60 bg-[rgba(255,250,245,0.88)] text-taupe-900',
           )}
           aria-label={menuAriaLabel}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
@@ -167,6 +170,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
             <div className={cn('fixed inset-0 z-[70] transition xl:hidden', open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0')}>
               <div className="absolute inset-0 bg-taupe-900/40 backdrop-blur-[2px]" onClick={() => setOpen(false)} />
               <div
+                id="mobile-navigation"
                 className={cn(
                   'absolute right-0 top-0 isolate flex h-dvh min-h-screen w-[82vw] max-w-sm flex-col overflow-hidden border-l border-[#ead8cb] bg-[#f6eee6] px-5 pb-8 pt-5 text-taupe-900 shadow-[0_30px_90px_rgba(0,0,0,0.22)] transition-transform',
                   open ? 'translate-x-0' : 'translate-x-full',
@@ -178,7 +182,7 @@ export function Header({ locale, nav, brand, menuAriaLabel }: HeaderProps) {
                     <p className="font-display text-4xl leading-none">{brand.name}</p>
                     <p className="mt-2 text-[11px] uppercase tracking-[0.28em] text-taupe-500">{brand.tagline}</p>
                   </div>
-                  <button type="button" onClick={() => setOpen(false)} className="relative z-10 rounded-full border border-taupe-200 bg-[#fffaf5] p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50">
+                  <button type="button" onClick={() => setOpen(false)} className="relative z-10 rounded-full border border-taupe-200 bg-[#fffaf5] p-3 shadow-[0_10px_24px_rgba(89,63,49,0.08)] transition hover:bg-cream-50" aria-label={closeMenuLabel}>
                     <X size={18} />
                   </button>
                 </div>

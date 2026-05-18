@@ -43,12 +43,12 @@ export default async function LocaleLayout({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'BedAndBreakfast',
-    name: 'La Bergerie & La Brassine',
+    name: 'La Bergerie & La Brassinne',
     description: dict.meta.siteDescription,
     image: ['https://bergerie-brassine.com/images/branding/og-image.png'],
     url: `https://bergerie-brassine.com/${locale}`,
-    telephone: '+32496929355',
-    email: 'contact@bergerie-brassine.com',
+    telephone: siteConfig.phone,
+    email: siteConfig.email,
     priceRange: '€€',
     address: {
       '@type': 'PostalAddress',

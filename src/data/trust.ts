@@ -27,7 +27,7 @@ export const trustContent = {
       },
       couples: {
         title: 'Séjour pensé pour deux',
-        text: 'Deux ambiances, une même attention au détail : La Bergerie plus spacieuse, La Brassine plus intime.',
+        text: 'Deux ambiances, une même attention au détail : La Bergerie plus spacieuse, La Brassinne plus intime, avec un décor fait main avec passion par Clara.',
       },
     },
     proofs: {
@@ -39,6 +39,7 @@ export const trustContent = {
       whatsapp: 'Contact direct par WhatsApp',
       airbnb: 'Réservation possible via Airbnb',
       couples: 'Deux gîtes pensés pour un séjour à deux',
+      handmade: 'Fait main avec passion par Clara',
     },
   },
   en: {
@@ -65,7 +66,7 @@ export const trustContent = {
       },
       couples: {
         title: 'Designed for two',
-        text: 'Two atmospheres, one attention to detail: La Bergerie is more spacious, La Brassine more intimate.',
+        text: 'Two atmospheres, one attention to detail: La Bergerie is more spacious, La Brassinne more intimate, with decor handmade with passion by Clara.',
       },
     },
     proofs: {
@@ -77,6 +78,7 @@ export const trustContent = {
       whatsapp: 'Direct contact via WhatsApp',
       airbnb: 'Booking available via Airbnb',
       couples: 'Two gites designed for a stay for two',
+      handmade: 'Handmade with passion by Clara',
     },
   },
   nl: {
@@ -103,7 +105,7 @@ export const trustContent = {
       },
       couples: {
         title: 'Ontworpen voor twee',
-        text: 'Twee sferen, dezelfde aandacht voor detail: La Bergerie is ruimer, La Brassine intiemer.',
+        text: 'Twee sferen, dezelfde aandacht voor detail: La Bergerie is ruimer, La Brassinne intiemer, met decoratie die met passie door Clara werd gemaakt.',
       },
     },
     proofs: {
@@ -115,6 +117,7 @@ export const trustContent = {
       whatsapp: 'Direct contact via WhatsApp',
       airbnb: 'Reserveren mogelijk via Airbnb',
       couples: 'Twee gîtes voor een verblijf met twee',
+      handmade: 'Met passie door Clara gemaakt',
     },
   },
 } as const satisfies Record<Locale, Record<string, unknown>>;

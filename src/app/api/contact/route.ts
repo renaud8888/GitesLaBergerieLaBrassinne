@@ -23,7 +23,7 @@ export async function POST(request: Request) {
   }
 
   const resendApiKey = process.env.RESEND_API_KEY?.trim();
-  const senderEmail = process.env.CONTACT_FORM_FROM?.trim() || 'La Bergerie & La Brassine <onboarding@resend.dev>';
+  const senderEmail = process.env.CONTACT_FORM_FROM?.trim() || 'La Bergerie & La Brassinne <onboarding@resend.dev>';
 
   if (!resendApiKey) {
     return NextResponse.json(

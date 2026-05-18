@@ -4,7 +4,7 @@ export const extraLocaleContent = {
   fr: {
     ui: {
       brand: {
-        name: 'La Bergerie & La Brassine',
+        name: 'La Bergerie & La Brassinne',
         tagline: 'Gîtes de charme à Libin',
       },
       header: {
@@ -73,15 +73,15 @@ export const extraLocaleContent = {
             'Une adresse pensée pour les couples qui aiment l’espace, la lumière et les détails soignés.',
           airbnbLabel: 'Voir La Bergerie sur Airbnb',
           galleryAltPrefix: 'La Bergerie, photo du gîte',
-          summaryItems: ['Le plus spacieux des deux', 'Jardin à l’arrière', 'Ambiance douce et romantique'],
+          summaryItems: ['Le plus spacieux des deux', 'Jardin arrière et petite terrasse avant', 'Décor pensé dans les moindres détails'],
         },
         brassine: {
           firstImpressionsTitle: 'Plus intime, plus enveloppante, pensée comme un cocon.',
           highlightsDescription:
             'Un cocon plus compact, plus intime, très agréable pour ralentir et se retrouver à deux.',
-          airbnbLabel: 'Voir La Brassine sur Airbnb',
-          galleryAltPrefix: 'La Brassine, photo du gîte',
-          summaryItems: ['Plain-pied', 'Jardin à l’avant', 'Cocon intime pour deux'],
+          airbnbLabel: 'Voir La Brassinne sur Airbnb',
+          galleryAltPrefix: 'La Brassinne, photo du gîte',
+          summaryItems: ['Adaptée PMR et de plain-pied', 'Jardin à l’avant et à l’arrière', 'Cocon intime pour deux'],
         },
       },
       guide: {
@@ -102,7 +102,7 @@ export const extraLocaleContent = {
         heroWhatsappLabel: 'WhatsApp',
         heroAirbnbLabel: 'Voir les annonces Airbnb',
         directAirbnbBergerie: 'Airbnb · La Bergerie',
-        directAirbnbBrassine: 'Airbnb · La Brassine',
+        directAirbnbBrassine: 'Airbnb · La Brassinne',
         emailButtonLabel: 'Envoyer un e-mail',
         emailAddressLabel: 'Adresse e-mail',
         formButtonLabel: 'Envoyer une demande',
@@ -138,7 +138,7 @@ export const extraLocaleContent = {
   en: {
     ui: {
       brand: {
-        name: 'La Bergerie & La Brassine',
+        name: 'La Bergerie & La Brassinne',
         tagline: 'Charming cottages in Libin',
       },
       header: {
@@ -207,15 +207,15 @@ export const extraLocaleContent = {
             'A cottage designed for couples who love space, light and carefully chosen details.',
           airbnbLabel: 'View La Bergerie on Airbnb',
           galleryAltPrefix: 'La Bergerie cottage photo',
-          summaryItems: ['The more spacious cottage', 'Rear garden', 'Soft romantic atmosphere'],
+          summaryItems: ['The more spacious cottage', 'Back garden and small front terrace', 'Every detail carefully designed'],
         },
         brassine: {
           firstImpressionsTitle: 'More intimate, more enveloping, designed like a cocoon.',
           highlightsDescription:
             'A more compact, intimate cocoon that feels perfect for slowing down and reconnecting together.',
-          airbnbLabel: 'View La Brassine on Airbnb',
-          galleryAltPrefix: 'La Brassine cottage photo',
-          summaryItems: ['Single-level layout', 'Front garden', 'Intimate cocoon for two'],
+          airbnbLabel: 'View La Brassinne on Airbnb',
+          galleryAltPrefix: 'La Brassinne cottage photo',
+          summaryItems: ['Reduced-mobility suitable and single-level', 'Front and back garden', 'Intimate cocoon for two'],
         },
       },
       guide: {
@@ -236,7 +236,7 @@ export const extraLocaleContent = {
         heroWhatsappLabel: 'WhatsApp',
         heroAirbnbLabel: 'View Airbnb listings',
         directAirbnbBergerie: 'Airbnb · La Bergerie',
-        directAirbnbBrassine: 'Airbnb · La Brassine',
+        directAirbnbBrassine: 'Airbnb · La Brassinne',
         emailButtonLabel: 'Send an e-mail',
         emailAddressLabel: 'E-mail address',
         formButtonLabel: 'Send an enquiry',
@@ -272,7 +272,7 @@ export const extraLocaleContent = {
   nl: {
     ui: {
       brand: {
-        name: 'La Bergerie & La Brassine',
+        name: 'La Bergerie & La Brassinne',
         tagline: 'Charmante gîtes in Libin',
       },
       header: {
@@ -341,15 +341,15 @@ export const extraLocaleContent = {
             'Een adres voor koppels die houden van ruimte, licht en verzorgde details.',
           airbnbLabel: 'Bekijk La Bergerie op Airbnb',
           galleryAltPrefix: 'La Bergerie, foto van de gîte',
-          summaryItems: ['De ruimste van de twee', 'Tuin achteraan', 'Zachte romantische sfeer'],
+          summaryItems: ['De ruimste van de twee', 'Tuin achteraan en klein terras vooraan', 'Elk detail zorgvuldig bedacht'],
         },
         brassine: {
           firstImpressionsTitle: 'Intiemer, meer omhullend, ontworpen als een cocon.',
           highlightsDescription:
             'Een compactere, intiemere cocon die ideaal is om te vertragen en met twee te genieten.',
-          airbnbLabel: 'Bekijk La Brassine op Airbnb',
-          galleryAltPrefix: 'La Brassine, foto van de gîte',
-          summaryItems: ['Gelijkvloers', 'Tuin vooraan', 'Intieme cocon voor twee'],
+          airbnbLabel: 'Bekijk La Brassinne op Airbnb',
+          galleryAltPrefix: 'La Brassinne, foto van de gîte',
+          summaryItems: ['Geschikt bij beperkte mobiliteit en gelijkvloers', 'Tuin vooraan en achteraan', 'Intieme cocon voor twee'],
         },
       },
       guide: {
@@ -370,7 +370,7 @@ export const extraLocaleContent = {
         heroWhatsappLabel: 'WhatsApp',
         heroAirbnbLabel: 'Bekijk Airbnb-advertenties',
         directAirbnbBergerie: 'Airbnb · La Bergerie',
-        directAirbnbBrassine: 'Airbnb · La Brassine',
+        directAirbnbBrassine: 'Airbnb · La Brassinne',
         emailButtonLabel: 'E-mail sturen',
         emailAddressLabel: 'E-mailadres',
         formButtonLabel: 'Aanvraag versturen',

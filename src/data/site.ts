@@ -3,11 +3,14 @@ import { BedDouble, CarFront, CookingPot, Gift, Heart, Leaf, MessageCircle, Moni
 import type { Locale } from '@/lib/i18n';
 import { formatWhatsappLink } from '@/lib/utils';
 
+const sitePhone = '+32496929355';
+
 export const siteConfig = {
-  name: 'La Bergerie & La Brassine – Gîtes de charme à Libin',
-  shortName: 'La Bergerie & La Brassine',
+  name: 'La Bergerie & La Brassinne – Gîtes de charme à Libin',
+  shortName: 'La Bergerie & La Brassinne',
   url: 'https://bergerie-brassine.com',
-  phone: '+32496929355',
+  phone: sitePhone,
+  displayPhone: '+32 496 92 93 55',
   email: 'contact@bergerie-brassine.com',
   address: {
     street: 'Rue du Curé 19',
@@ -28,29 +31,29 @@ export const siteConfig = {
       'https://www.google.com/maps/place/Gite+La+Brassinne/@49.9785957,5.2596728,17z/data=!3m1!4b1!4m6!3m5!1s0x47c02b720e0a7291:0x4716f2598b1e71ce!8m2!3d49.9785957!4d5.2596728!16s%2Fg%2F11q4hdygts?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D',
   },
   mapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=La%20Bergerie%20La%20Brassine%20Rue%20du%20Cur%C3%A9%2019%206890%20Libin%20Belgique',
+    'https://www.google.com/maps/search/?api=1&query=La%20Bergerie%20La%20Brassinne%20Rue%20du%20Cur%C3%A9%2019%206890%20Libin%20Belgique',
   googleReviewRequests: {
     bergerie: 'https://g.page/r/CTm6wjToGNkeEAE/review',
     brassine: 'https://g.page/r/Cc5xHotZ8hZHEBM/review',
   },
   whatsapp: {
     fr: {
-      default: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite des informations pour un séjour à Libin.'),
-      bergerie: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite réserver La Bergerie.'),
-      brassine: formatWhatsappLink('+32496929355', 'Bonjour, je souhaite réserver La Brassine.'),
+      default: formatWhatsappLink(sitePhone, 'Bonjour, je souhaite des informations pour un séjour à Libin.'),
+      bergerie: formatWhatsappLink(sitePhone, 'Bonjour, je souhaite réserver La Bergerie.'),
+      brassine: formatWhatsappLink(sitePhone, 'Bonjour, je souhaite réserver La Brassinne.'),
     },
     en: {
-      default: formatWhatsappLink('+32496929355', 'Hello, I would like some information about a stay in Libin.'),
-      bergerie: formatWhatsappLink('+32496929355', 'Hello, I would like to book La Bergerie.'),
-      brassine: formatWhatsappLink('+32496929355', 'Hello, I would like to book La Brassine.'),
+      default: formatWhatsappLink(sitePhone, 'Hello, I would like some information about a stay in Libin.'),
+      bergerie: formatWhatsappLink(sitePhone, 'Hello, I would like to book La Bergerie.'),
+      brassine: formatWhatsappLink(sitePhone, 'Hello, I would like to book La Brassinne.'),
     },
     nl: {
-      default: formatWhatsappLink('+32496929355', 'Hallo, ik zou graag informatie ontvangen over een verblijf in Libin.'),
-      bergerie: formatWhatsappLink('+32496929355', 'Hallo, ik zou graag La Bergerie reserveren.'),
-      brassine: formatWhatsappLink('+32496929355', 'Hallo, ik zou graag La Brassine reserveren.'),
+      default: formatWhatsappLink(sitePhone, 'Hallo, ik zou graag informatie ontvangen over een verblijf in Libin.'),
+      bergerie: formatWhatsappLink(sitePhone, 'Hallo, ik zou graag La Bergerie reserveren.'),
+      brassine: formatWhatsappLink(sitePhone, 'Hallo, ik zou graag La Brassinne reserveren.'),
     },
   },
-  checkIn: '16:00 - 23:00',
+  checkIn: '16:00 - 21:00',
   checkOut: '10:00',
   coordinates: {
     lat: 49.9786837,
@@ -66,9 +69,9 @@ const homeGalleryFrames = [
   {
     src: '/images/home/1.avif',
     alt: {
-      fr: 'La Bergerie et la Brassine, une arrivée romantique à Libin',
-      en: 'La Bergerie and La Brassine, a romantic arrival in Libin',
-      nl: 'La Bergerie en La Brassine, een romantische aankomst in Libin',
+      fr: 'La Bergerie et La Brassinne, une arrivée romantique à Libin',
+      en: 'La Bergerie and La Brassinne, a romantic arrival in Libin',
+      nl: 'La Bergerie en La Brassinne, een romantische aankomst in Libin',
     },
   },
   {
@@ -82,9 +85,9 @@ const homeGalleryFrames = [
   {
     src: '/images/home/2b.avif',
     alt: {
-      fr: 'La Brassine, plus intime et enveloppante',
-      en: 'La Brassine, more intimate and cocooning',
-      nl: 'La Brassine, intiemer en omhullend',
+      fr: 'La Brassinne, plus intime et enveloppante',
+      en: 'La Brassinne, more intimate and cocooning',
+      nl: 'La Brassinne, intiemer en omhullend',
     },
   },
   {

@@ -42,7 +42,7 @@ export const internationalTravelContent = {
     eyebrow: 'Getting here',
     title: 'Planning your stay in the Belgian Ardennes',
     subtitle:
-      'La Bergerie & La Brassine are located in Libin, a peaceful village in the Belgian Ardennes, ideal for a romantic stay surrounded by nature.',
+      'La Bergerie & La Brassinne are located in Libin, a peaceful village in the Belgian Ardennes, ideal for a romantic stay surrounded by nature.',
     locationTitle: 'Where we are',
     locationText:
       'Libin is located in the Province of Luxembourg, Belgium, in a quiet natural area with forests, villages and Ardennes landscapes nearby.',
@@ -63,7 +63,7 @@ export const internationalTravelContent = {
     eyebrow: 'Er geraken',
     title: 'Uw verblijf in de Belgische Ardennen voorbereiden',
     subtitle:
-      'La Bergerie & La Brassine liggen in Libin, een rustig dorp in de Belgische Ardennen, ideaal voor een romantisch verblijf in de natuur.',
+      'La Bergerie & La Brassinne liggen in Libin, een rustig dorp in de Belgische Ardennen, ideaal voor een romantisch verblijf in de natuur.',
     locationTitle: 'Waar we zijn',
     locationText:
       'Libin ligt in de provincie Luxemburg, België, in een rustige natuurlijke omgeving met bossen, dorpen en Ardense landschappen dichtbij.',
